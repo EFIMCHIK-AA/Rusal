@@ -9,7 +9,6 @@ using System.Timers;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
-using System.Reflection;
 
 namespace Rusal
 {
@@ -27,15 +26,38 @@ namespace Rusal
 
         private void GetParamDB()
         {
-            NameDB_S.Text = SystemArgs.NameDB;
-            UserDB_S.Text = SystemArgs.OwnerDB;
+            NameDB_S.Text = $"Название: {SystemArgs.NameDB}";
+            UserDB_S.Text = $"Владелец: {SystemArgs.OwnerDB}";
         }
 
         private void Main_F_Load(object sender, EventArgs e)
         {
             Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            GetStatusConnect();
+            //GetStatusConnect();
+            Files.GetParamDB();
             GetParamDB();
+            Operations.GetAllPosition();
+            PositionToDGV();
+        }
+
+        private void PositionToDGV()
+        {
+            ProgressBar_PB.Value = 2;
+
+            Operations.GetAllPosition();
+            ProgressBar_PB.Value = 50;
+
+            foreach(Position Position in SystemArgs.Positions)
+            {
+                Position_DGV.RowCount++;
+
+                Position_DGV[0, Position_DGV.RowCount - 1].Value = Position.DateFormation;
+                Position_DGV[1, Position_DGV.RowCount - 1].Value = Position.Diameter;
+                Position_DGV[2, Position_DGV.RowCount - 1].Value = Position.NumTS;
+                Position_DGV[3, Position_DGV.RowCount - 1].Value = Position.Count;
+                Position_DGV[4, Position_DGV.RowCount - 1].Value = Position.Weight;
+            }
+            ProgressBar_PB.Value = 100;
         }
 
         private void ButtonMode(bool Mode)

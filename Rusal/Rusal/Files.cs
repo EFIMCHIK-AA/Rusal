@@ -23,7 +23,7 @@ namespace Rusal
                     SystemArgs.OwnerDB = sr.ReadLine();
                     SystemArgs.IPDB = sr.ReadLine();
                     SystemArgs.PortDB = sr.ReadLine();
-                    SystemArgs.PasswordDB = Encryption.DecryptRSA(sr.ReadLine());
+                    SystemArgs.PasswordDB = sr.ReadLine();//Encryption.DecryptRSA(sr.ReadLine())
 
                     SystemArgs.ConnectString = $@"Server = {SystemArgs.IPDB}; Port = {SystemArgs.PortDB}; User Id = {SystemArgs.OwnerDB}; Password = {SystemArgs.PasswordDB}; Database = {SystemArgs.NameDB};";
                 }
@@ -44,7 +44,7 @@ namespace Rusal
                     sw.WriteLine(SystemArgs.OwnerDB);
                     sw.WriteLine(SystemArgs.IPDB);
                     sw.WriteLine(SystemArgs.PortDB);
-                    sw.WriteLine(Encryption.EncryptRSA(SystemArgs.PasswordDB));
+                    sw.WriteLine(SystemArgs.PasswordDB); //Encryption.EncryptRSA()
                 }
             }
             else

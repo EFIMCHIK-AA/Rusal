@@ -11,7 +11,7 @@ namespace Rusal
         private DateTime _DateCreate; //Дата создания позиции в ПО
         private DateTime _DateFormation; //Дата возникновения
         private String _NumMelt; //Номер плавки
-        private Int32 _Count; //Количество
+        private Int64 _Count; //Количество
         private Double _Weight; //Вес
         private String _DefectLocIngot; //Место дефекта на слитке
         private String _Correction; // Меры коррекции
@@ -26,7 +26,7 @@ namespace Rusal
         private Double _Diameter; // Даиметр слитка
         private String _ProgressMark; //Метка о выполнении
 
-        public Position(DateTime DateCreate, DateTime DateFormation, String NumMelt, Int32 Count, Double Weight,
+        public Position(DateTime DateCreate, DateTime DateFormation, String NumMelt, Int64 Count, Double Weight,
                         String DefectLocIngot, String Correction, String Address, String NumTS, String NumBrigade,
                         String DefectLocProduction, String NumSmeny, String Defect, String TypeAlloy, String Description, Double Diameter,
                         String ProgressMark)
@@ -168,7 +168,7 @@ namespace Rusal
             }
         }
 
-        public Int32 Count
+        public Int64 Count
         {
             get
             {
