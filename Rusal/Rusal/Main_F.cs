@@ -36,7 +36,6 @@ namespace Rusal
             //GetStatusConnect();
             Files.GetParamDB();
             GetParamDB();
-            Operations.GetAllPosition();
             PositionToDGV();
         }
 

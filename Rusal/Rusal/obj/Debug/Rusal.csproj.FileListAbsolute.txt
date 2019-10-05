@@ -63,3 +63,25 @@ C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CoreCompileInputs.
 C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
 C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
 C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe.config
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Rusal.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\EPPlus.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\EPPlus.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Npgsql.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Npgsql.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\de\Npgsql.resources.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\es\Npgsql.resources.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\policy.2.0.Npgsql.config
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csprojAssemblyReference.cache
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Main_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Properties.Resources.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateResource.cache
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CoreCompileInputs.cache
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb

@@ -46,23 +46,21 @@ namespace Rusal
                 {
                     Connect.Open();
 
-                    String TempCommand = $"START TRANSACTION;" +
-                                         $"SELECT public.\"Ingot\".\"SysDateCreate\", public.\"Ingot\".\"DateFormation\", public.\"Ingot\".\"NumMelt\", public.\"Ingot\".\"CountIngot\", public.\"Ingot\".\"WeightIngots\", public.\"Ingot\".\"DefectLocIngot\", public.\"Ingot\".\"Correction\", public.\"Ingot\".\"Address\"," +
-                                          "public.\"TSN\".\"N_TSN\", public.\"ListBrigades\".\"N_Brigade\", public.\"DefectLocationProduction\".\"N_Location\", public.\"ListSmen\".\"N_Smena\", public.\"TypesDefect\".\"N_Defect\", public.\"TypesAlloy\".\"N_Alloy\"," +
-                                          "public.\"DescriptionDefect\".\"N_Description\", public.\"DiameterIngot\".\"N_Diameter\", public.\"ProgressMark\".\"N_ProgressMark\"" +
-                                          "FROM public.\"Ingot\", public.\"DefectLocationProduction\", public.\"DescriptionDefect\", public.\"DiameterIngot\", public.\"ListBrigades\", public.\"ListSmen\", public.\"ProgressMark\", public.\"TSN\", public.\"TypesAlloy\", public.\"TypesDefect\"" +
-                                          "WHERE public.\"TSN\".\"ID\" = public.\"Ingot\".\"NumTSN\" AND " +
-                                          "public.\"ListBrigades\".\"ID\" = public.\"Ingot\".\"NumBrigade\" AND " +
-                                          "public.\"DefectLocationProduction\".\"ID\" = public.\"Ingot\".\"DefLocProduction\" AND " +
-                                          "public.\"ListSmen\".\"ID\" = public.\"Ingot\".\"NumSmen\" AND " +
-                                          "public.\"TypesDefect\".\"ID\" = public.\"Ingot\".\"Defect\" AND " +
-                                          "public.\"TypesAlloy\".\"ID\" = public.\"Ingot\".\"TypeAlloy\" AND " +
-                                          "public.\"DescriptionDefect\".\"ID\" = public.\"Ingot\".\"Description\" AND " +
-                                          "public.\"DiameterIngot\".\"ID\" = public.\"Ingot\".\"Diameter\" AND " +
-                                          "public.\"ProgressMark\".\"ID\" = public.\"Ingot\".\"ProgressMark\";" +
-                                          "COMMIT;";
-
-                    using (var Command = new NpgsqlCommand(TempCommand, Connect))
+                    using (var Command = new NpgsqlCommand($"START TRANSACTION;" +
+                                                           $"SELECT public.\"Ingot\".\"SysDateCreate\", public.\"Ingot\".\"DateFormation\", public.\"Ingot\".\"NumMelt\", public.\"Ingot\".\"CountIngot\", public.\"Ingot\".\"WeightIngots\", public.\"Ingot\".\"DefectLocIngot\", public.\"Ingot\".\"Correction\", public.\"Ingot\".\"Address\"," +
+                                                           "public.\"TSN\".\"N_TSN\", public.\"ListBrigades\".\"N_Brigade\", public.\"DefectLocationProduction\".\"N_Location\", public.\"ListSmen\".\"N_Smena\", public.\"TypesDefect\".\"N_Defect\", public.\"TypesAlloy\".\"N_Alloy\"," +
+                                                           "public.\"DescriptionDefect\".\"N_Description\", public.\"DiameterIngot\".\"N_Diameter\", public.\"ProgressMark\".\"N_ProgressMark\"" +
+                                                           "FROM public.\"Ingot\", public.\"DefectLocationProduction\", public.\"DescriptionDefect\", public.\"DiameterIngot\", public.\"ListBrigades\", public.\"ListSmen\", public.\"ProgressMark\", public.\"TSN\", public.\"TypesAlloy\", public.\"TypesDefect\"" +
+                                                           "WHERE public.\"TSN\".\"ID\" = public.\"Ingot\".\"NumTSN\"" +
+                                                           "AND public.\"ListBrigades\".\"ID\" = public.\"Ingot\".\"NumBrigade\"" +
+                                                           "AND public.\"DefectLocationProduction\".\"ID\" = public.\"Ingot\".\"DefLocProduction\"" +
+                                                           "AND public.\"ListSmen\".\"ID\" = public.\"Ingot\".\"NumSmen\"" +
+                                                           "AND public.\"TypesDefect\".\"ID\" = public.\"Ingot\".\"Defect\"" +
+                                                           "AND public.\"TypesAlloy\".\"ID\" = public.\"Ingot\".\"TypeAlloy\"" +
+                                                           "AND public.\"DescriptionDefect\".\"ID\" = public.\"Ingot\".\"Description\"" +
+                                                           "AND public.\"DiameterIngot\".\"ID\" = public.\"Ingot\".\"Diameter\"" +
+                                                           "AND public.\"ProgressMark\".\"ID\" = public.\"Ingot\".\"ProgressMark\";" +
+                                                           "COMMIT;", Connect))
                     {
                         using (var Reader = Command.ExecuteReader())
                         {
@@ -73,6 +71,8 @@ namespace Rusal
                             }
                         }
                     }
+
+                    Connect.Close();
                 }
             }
             catch (Exception)
