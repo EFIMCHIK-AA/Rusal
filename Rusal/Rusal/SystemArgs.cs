@@ -20,15 +20,15 @@ namespace Rusal
 
         public static List<Position> Positions = new List<Position>(); //Список позиций
 
-        public static List<String> DefectLocProduction = new List<String>(); //Список мест дефектов в производственном процессе
-        public static List<String> TypesDefect = new List<String>(); //Типы дефектов (устранимый или брак)
-        public static List<String> TypesAlloy = new List<String>(); //Марки сплавов
-        public static List<String> ProgressMark = new List<String>(); //Отметка о выполнении
-        public static List<String> NumbersTS = new List<String>(); //Номера технических спецификаций
-        public static List<String> Brigades = new List<String>(); //Список бригад
-        public static List<String> Smeny = new List<String>(); //Список смен
-        public static List<String> Descriptions = new List<String>(); //Список описаний дефекта
-        public static List<Double> Diameters = new List<Double>(); // Диаметры слитков
+        public static List<DefectProduction> DefectLocProduction = new List<DefectProduction>(); //Список мест дефектов в производственном процессе
+        public static List<TypesDefect> TypesDefect = new List<TypesDefect>(); //Типы дефектов (устранимый или брак)
+        public static List<TypesAlloy> TypesAlloy = new List<TypesAlloy>(); //Марки сплавов
+        public static List<ProgressMark> ProgressMark = new List<ProgressMark>(); //Отметка о выполнении
+        public static List<TSN> TSN = new List<TSN>(); //Номера технических спецификаций
+        public static List<ListBrigades> Brigades = new List<ListBrigades>(); //Список бригад
+        public static List<ListSmen> Smeny = new List<ListSmen>(); //Список смен
+        public static List<DescriptionDefect> Descriptions = new List<DescriptionDefect>(); //Список описаний дефекта
+        public static List<DiameterIngot> Diameters = new List<DiameterIngot>(); // Диаметры слитков
 
         public static void PrintLog(String Message)
         {

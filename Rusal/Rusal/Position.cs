@@ -8,6 +8,7 @@ namespace Rusal
 {
     public class Position
     {
+        private Int32 _ID; //ID из БД
         private DateTime _DateCreate; //Дата создания позиции в ПО
         private DateTime _DateFormation; //Дата возникновения
         private String _NumMelt; //Номер плавки
@@ -16,21 +17,26 @@ namespace Rusal
         private String _DefectLocIngot; //Место дефекта на слитке
         private String _Correction; // Меры коррекции
         private String _Address; // Адрес слитка
-        private String _NumTS; //Номер технической спецификации
-        private String _NumBrigade; //Номер бригады
-        private String _DefectLocProduction; // Место дефекта в производстве
-        private String _NumSmeny; //Номер смены
-        private String _Defect; //Тип дефекта
-        private String _TypeAlloy; //Марка сплава
-        private String _Description; //Описание или вид дефекта
-        private Double _Diameter; // Даиметр слитка
-        private String _ProgressMark; //Метка о выполнении
+        private TSN _NumTS; //Номер технической спецификации
+        private ListBrigades _NumBrigade; //Номер бригады
+        private DefectProduction _DefectLocProduction; // Место дефекта в производстве
+        private ListSmen _NumSmeny; //Номер смены
+        private TypesDefect _Defect; //Тип дефекта
+        private TypesAlloy _TypeAlloy; //Марка сплава
+        private DescriptionDefect _Description; //Описание или вид дефекта
+        private DiameterIngot _Diameter; // Даиметр слитка
+        private ProgressMark _ProgressMark; //Метка о выполнении
 
-        public Position(DateTime DateCreate, DateTime DateFormation, String NumMelt, Int64 Count, Double Weight,
-                        String DefectLocIngot, String Correction, String Address, String NumTS, String NumBrigade,
-                        String DefectLocProduction, String NumSmeny, String Defect, String TypeAlloy, String Description, Double Diameter,
-                        String ProgressMark)
+        public Position(Int32 ID, DateTime DateCreate, DateTime DateFormation, String NumMelt, Int64 Count, Double Weight,
+                        String DefectLocIngot, String Correction, String Address, TSN NumTS, ListBrigades NumBrigade,
+                        DefectProduction DefectLocProduction, ListSmen NumSmeny, TypesDefect Defect, TypesAlloy TypeAlloy,
+                        DescriptionDefect Description, DiameterIngot Diameter,ProgressMark ProgressMark)
         {
+            if(ID >= 0)
+            {
+                _ID = ID;
+            }
+
             if(DateCreate != null)
             {
                 _DateCreate = DateCreate;
@@ -71,54 +77,70 @@ namespace Rusal
                 _Address = Address;
             }
 
-            if (!String.IsNullOrEmpty(NumTS))
+            if (NumTS != null)
             {
                 _NumTS = NumTS;
             }
 
-            if (!String.IsNullOrEmpty(NumBrigade))
+            if (NumBrigade != null)
             {
                 _NumBrigade = NumBrigade;
             }
 
-            if (!String.IsNullOrEmpty(DefectLocProduction))
+            if (DefectLocProduction != null)
             {
                 _DefectLocProduction = DefectLocProduction;
             }
 
-            if (!String.IsNullOrEmpty(NumSmeny))
+            if (NumSmeny != null)
             {
                 _NumSmeny = NumSmeny;
             }
 
-            if (!String.IsNullOrEmpty(Defect))
+            if (Defect != null)
             {
                 _Defect = Defect;
             }
 
-            if (!String.IsNullOrEmpty(TypeAlloy))
+            if (TypeAlloy != null)
             {
                 _TypeAlloy = TypeAlloy;
             }
 
-            if (!String.IsNullOrEmpty(Description))
+            if (Description != null)
             {
                 _Description = Description;
             }
 
-            if(Diameter >= 0)
+            if(Diameter != null)
             {
                 _Diameter = Diameter;
             }
 
-            if (!String.IsNullOrEmpty(ProgressMark))
+            if (ProgressMark != null)
             {
                 _ProgressMark = ProgressMark;
             }
         }
 
-        public Position() : this(DateTime.Now, DateTime.Now, "Без номера плавки", 0, 0, "Без места дефекта на слитке", "Без коррекции", "Без адреса", "Без номера ТС",
-                                 "Без номера бригады","Без места дефекта в производстве", "Без номера смены", "Без типа дефекта", "Без марки сплава", "Без описания", 0, "Без маркера выполнения") { }
+        public Position() : this(0, DateTime.Now, DateTime.Now, "Без номера плавки", 0, 0, "Без места дефекта на слитке", "Без коррекции", "Без адреса", null,
+                                 null, null, null, null, null, null, null, null) { }
+
+        public Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+
+            set
+            {
+                if (value >= 0)
+                {
+                    _ID = value;
+                }
+            }
+        }
 
         public DateTime DateCreate
         {
@@ -248,7 +270,7 @@ namespace Rusal
             }
         }
 
-        public String NumTS
+        public TSN NumTS
         {
             get
             {
@@ -257,14 +279,14 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _NumTS = value;
                 }
             }
         }
 
-        public String NumBrigade
+        public ListBrigades NumBrigade
         {
             get
             {
@@ -273,14 +295,14 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _NumBrigade = value;
                 }
             }
         }
 
-        public String DefectLocProduction
+        public DefectProduction DefectLocProduction
         {
             get
             {
@@ -289,14 +311,14 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _DefectLocProduction = value;
                 }
             }
         }
 
-        public String NumSmeny
+        public ListSmen NumSmeny
         {
             get
             {
@@ -305,14 +327,14 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _NumSmeny = value;
                 }
             }
         }
 
-        public String Defect
+        public TypesDefect Defect
         {
             get
             {
@@ -321,14 +343,14 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _Defect = value;
                 }
             }
         }
 
-        public String TypeAlloy
+        public TypesAlloy TypeAlloy
         {
             get
             {
@@ -337,14 +359,14 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _TypeAlloy = value;
                 }
             }
         }
 
-        public String Description
+        public DescriptionDefect Description
         {
             get
             {
@@ -353,14 +375,14 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _Description = value;
                 }
             }
         }
 
-        public Double Diameter
+        public DiameterIngot Diameter
         {
             get
             {
@@ -369,14 +391,14 @@ namespace Rusal
 
             set
             {
-                if (value >= 0)
+                if (value != null)
                 {
                     _Diameter = value;
                 }
             }
         }
 
-        public String ProgressMark
+        public ProgressMark ProgressMark
         {
             get
             {
@@ -385,7 +407,7 @@ namespace Rusal
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _ProgressMark = value;
                 }

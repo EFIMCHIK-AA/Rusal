@@ -62,7 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analysis.cs" />
+    <Compile Include="BaseDictionary.cs" />
+    <Compile Include="DefectProduction.cs" />
+    <Compile Include="DescriptionDefect.cs" />
+    <Compile Include="DiameterIngot.cs" />
     <Compile Include="Encryption.cs" />
+    <Compile Include="ListBrigades.cs" />
+    <Compile Include="ListSmen.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Main_F.cs">
       <SubType>Form</SubType>
@@ -73,10 +79,14 @@
     <Compile Include="Operations.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressMark.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports.cs" />
     <Compile Include="SystemArgs.cs" />
     <Compile Include="Files.cs" />
+    <Compile Include="TSN.cs" />
+    <Compile Include="TypesAlloy.cs" />
+    <Compile Include="TypesDefect.cs" />
     <EmbeddedResource Include="Main_F.resx">
       <DependentUpon>Main_F.cs</DependentUpon>
     </EmbeddedResource>

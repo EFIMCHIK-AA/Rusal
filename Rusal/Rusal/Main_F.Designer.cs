@@ -99,6 +99,7 @@
             this.UserDB_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressBar_PB = new System.Windows.Forms.ToolStripProgressBar();
             this.Timer_T = new System.Windows.Forms.Timer(this.components);
+            this.Description_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -179,6 +180,7 @@
             this.Add_B.TabIndex = 6;
             this.Add_B.Text = "Добавить";
             this.Add_B.UseVisualStyleBackColor = true;
+            this.Add_B.Click += new System.EventHandler(this.Add_B_Click);
             // 
             // Change_B
             // 
@@ -763,10 +765,11 @@
             this.CennectDB_S,
             this.NameDB_S,
             this.UserDB_S,
+            this.Description_S,
             this.ProgressBar_PB});
             this.Status_SS.Location = new System.Drawing.Point(-3, 717);
             this.Status_SS.Name = "Status_SS";
-            this.Status_SS.Size = new System.Drawing.Size(1337, 22);
+            this.Status_SS.Size = new System.Drawing.Size(1337, 27);
             this.Status_SS.SizingGrip = false;
             this.Status_SS.Stretch = false;
             this.Status_SS.TabIndex = 43;
@@ -801,19 +804,26 @@
             this.ProgressBar_PB.AutoSize = false;
             this.ProgressBar_PB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProgressBar_PB.Name = "ProgressBar_PB";
-            this.ProgressBar_PB.Size = new System.Drawing.Size(582, 16);
+            this.ProgressBar_PB.Size = new System.Drawing.Size(450, 16);
             // 
             // Timer_T
             // 
             this.Timer_T.Interval = 3000;
             this.Timer_T.Tick += new System.EventHandler(this.Timer_T_Tick);
             // 
+            // Description_S
+            // 
+            this.Description_S.Margin = new System.Windows.Forms.Padding(0);
+            this.Description_S.Name = "Description_S";
+            this.Description_S.Size = new System.Drawing.Size(134, 22);
+            this.Description_S.Text = "Выполнение операции";
+            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1334, 739);
+            this.ClientSize = new System.Drawing.Size(1334, 744);
             this.Controls.Add(this.Status_SS);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -911,6 +921,7 @@
         public System.Windows.Forms.ToolStripStatusLabel CennectDB_S;
         public System.Windows.Forms.ToolStripProgressBar ProgressBar_PB;
         private System.Windows.Forms.Timer Timer_T;
+        private System.Windows.Forms.ToolStripStatusLabel Description_S;
     }
 }
 

@@ -33,7 +33,7 @@ namespace Rusal
         private void Main_F_Load(object sender, EventArgs e)
         {
             Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            //GetStatusConnect();
+            GetStatusConnect();
             Files.GetParamDB();
             GetParamDB();
             PositionToDGV();
@@ -43,7 +43,7 @@ namespace Rusal
         {
             ProgressBar_PB.Value = 2;
 
-            Operations.GetAllPosition();
+            Operations.GetAllData();
             ProgressBar_PB.Value = 50;
 
             foreach(Position Position in SystemArgs.Positions)
@@ -51,8 +51,8 @@ namespace Rusal
                 Position_DGV.RowCount++;
 
                 Position_DGV[0, Position_DGV.RowCount - 1].Value = Position.DateFormation;
-                Position_DGV[1, Position_DGV.RowCount - 1].Value = Position.Diameter;
-                Position_DGV[2, Position_DGV.RowCount - 1].Value = Position.NumTS;
+                Position_DGV[1, Position_DGV.RowCount - 1].Value = Position.Diameter.Name;
+                Position_DGV[2, Position_DGV.RowCount - 1].Value = Position.NumTS.Name;
                 Position_DGV[3, Position_DGV.RowCount - 1].Value = Position.Count;
                 Position_DGV[4, Position_DGV.RowCount - 1].Value = Position.Weight;
             }
@@ -92,13 +92,18 @@ namespace Rusal
                 CennectDB_S.Text = "Соеднинение: Не установлено";
                 CennectDB_S.BackColor = Color.Red;
 
-                //MessageBox.Show("Связь с сервером потеряна. Управление формой будет заблокировано до восстановления подключения", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Связь с сервером потеряна. Управление формой будет заблокировано до восстановления подключения", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 ButtonMode(false);
             }
         }
 
         private void ReportStart_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_B_Click(object sender, EventArgs e)
         {
 
         }
