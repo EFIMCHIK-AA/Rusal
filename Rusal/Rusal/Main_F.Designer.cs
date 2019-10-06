@@ -43,23 +43,21 @@
             this.ReportStart_B = new System.Windows.Forms.Button();
             this.Exit_B = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Address_TB = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.StatusCorrection_TB = new System.Windows.Forms.TextBox();
-            this.LocIngot_PB = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Reason_TB = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.LocProduction_TB = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.Weight_TB = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Type_TB = new System.Windows.Forms.TextBox();
@@ -97,14 +95,24 @@
             this.CennectDB_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.NameDB_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.UserDB_S = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Description_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressBar_PB = new System.Windows.Forms.ToolStripProgressBar();
             this.Timer_T = new System.Windows.Forms.Timer(this.components);
-            this.Description_S = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Six_CB = new System.Windows.Forms.CheckBox();
+            this.Five_CB = new System.Windows.Forms.CheckBox();
+            this.Four_CB = new System.Windows.Forms.CheckBox();
+            this.Three_CB = new System.Windows.Forms.CheckBox();
+            this.Two_CB = new System.Windows.Forms.CheckBox();
+            this.One_CB = new System.Windows.Forms.CheckBox();
+            this.East_CB = new System.Windows.Forms.CheckBox();
+            this.West_CB = new System.Windows.Forms.CheckBox();
+            this.South_CB = new System.Windows.Forms.CheckBox();
+            this.North_CB = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LocIngot_PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).BeginInit();
             this.panel6.SuspendLayout();
             this.Status_SS.SuspendLayout();
@@ -257,21 +265,29 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.panel2.Controls.Add(this.Six_CB);
+            this.panel2.Controls.Add(this.Five_CB);
+            this.panel2.Controls.Add(this.Four_CB);
+            this.panel2.Controls.Add(this.Three_CB);
+            this.panel2.Controls.Add(this.Two_CB);
+            this.panel2.Controls.Add(this.One_CB);
+            this.panel2.Controls.Add(this.East_CB);
+            this.panel2.Controls.Add(this.West_CB);
+            this.panel2.Controls.Add(this.South_CB);
+            this.panel2.Controls.Add(this.North_CB);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.Address_TB);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.StatusCorrection_TB);
-            this.panel2.Controls.Add(this.LocIngot_PB);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.Correction_TB);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.Reason_TB);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.LocProduction_TB);
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.Weight_TB);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.Type_TB);
@@ -301,6 +317,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1079, 717);
             this.panel2.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(702, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 18);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Место дефекта на слитке";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(507, 260);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(560, 188);
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
             // 
             // panel10
             // 
@@ -346,16 +380,6 @@
             this.label23.TabIndex = 76;
             this.label23.Text = "Корректирущие меры";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(687, 228);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 18);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Место дефекта на слитке";
-            // 
             // Address_TB
             // 
             this.Address_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -382,14 +406,6 @@
             this.StatusCorrection_TB.ReadOnly = true;
             this.StatusCorrection_TB.Size = new System.Drawing.Size(87, 20);
             this.StatusCorrection_TB.TabIndex = 72;
-            // 
-            // LocIngot_PB
-            // 
-            this.LocIngot_PB.Location = new System.Drawing.Point(506, 260);
-            this.LocIngot_PB.Name = "LocIngot_PB";
-            this.LocIngot_PB.Size = new System.Drawing.Size(560, 160);
-            this.LocIngot_PB.TabIndex = 71;
-            this.LocIngot_PB.TabStop = false;
             // 
             // label15
             // 
@@ -440,24 +456,6 @@
             this.label13.Size = new System.Drawing.Size(114, 15);
             this.label13.TabIndex = 65;
             this.label13.Text = "Причины дефекта";
-            // 
-            // LocProduction_TB
-            // 
-            this.LocProduction_TB.Location = new System.Drawing.Point(791, 428);
-            this.LocProduction_TB.Name = "LocProduction_TB";
-            this.LocProduction_TB.ReadOnly = true;
-            this.LocProduction_TB.Size = new System.Drawing.Size(275, 20);
-            this.LocProduction_TB.TabIndex = 64;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(503, 428);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(282, 15);
-            this.label12.TabIndex = 63;
-            this.label12.Text = "Место дефекта в производственном процессе";
             // 
             // Weight_TB
             // 
@@ -780,7 +778,7 @@
             this.CennectDB_S.AutoSize = false;
             this.CennectDB_S.Margin = new System.Windows.Forms.Padding(0);
             this.CennectDB_S.Name = "CennectDB_S";
-            this.CennectDB_S.Size = new System.Drawing.Size(256, 22);
+            this.CennectDB_S.Size = new System.Drawing.Size(256, 27);
             this.CennectDB_S.Text = "CennectDB_S";
             // 
             // NameDB_S
@@ -788,7 +786,7 @@
             this.NameDB_S.AutoSize = false;
             this.NameDB_S.Margin = new System.Windows.Forms.Padding(0);
             this.NameDB_S.Name = "NameDB_S";
-            this.NameDB_S.Size = new System.Drawing.Size(236, 22);
+            this.NameDB_S.Size = new System.Drawing.Size(236, 27);
             this.NameDB_S.Text = "NameDB_S";
             // 
             // UserDB_S
@@ -796,27 +794,129 @@
             this.UserDB_S.AutoSize = false;
             this.UserDB_S.Margin = new System.Windows.Forms.Padding(0);
             this.UserDB_S.Name = "UserDB_S";
-            this.UserDB_S.Size = new System.Drawing.Size(256, 22);
+            this.UserDB_S.Size = new System.Drawing.Size(256, 27);
             this.UserDB_S.Text = "UserDB_S";
+            // 
+            // Description_S
+            // 
+            this.Description_S.Margin = new System.Windows.Forms.Padding(0);
+            this.Description_S.Name = "Description_S";
+            this.Description_S.Size = new System.Drawing.Size(134, 27);
+            this.Description_S.Text = "Выполнение операции";
             // 
             // ProgressBar_PB
             // 
             this.ProgressBar_PB.AutoSize = false;
             this.ProgressBar_PB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProgressBar_PB.Name = "ProgressBar_PB";
-            this.ProgressBar_PB.Size = new System.Drawing.Size(450, 16);
+            this.ProgressBar_PB.Size = new System.Drawing.Size(450, 21);
             // 
             // Timer_T
             // 
             this.Timer_T.Interval = 3000;
             this.Timer_T.Tick += new System.EventHandler(this.Timer_T_Tick);
             // 
-            // Description_S
+            // Six_CB
             // 
-            this.Description_S.Margin = new System.Windows.Forms.Padding(0);
-            this.Description_S.Name = "Description_S";
-            this.Description_S.Size = new System.Drawing.Size(134, 22);
-            this.Description_S.Text = "Выполнение операции";
+            this.Six_CB.AutoSize = true;
+            this.Six_CB.Location = new System.Drawing.Point(1020, 277);
+            this.Six_CB.Name = "Six_CB";
+            this.Six_CB.Size = new System.Drawing.Size(32, 17);
+            this.Six_CB.TabIndex = 100;
+            this.Six_CB.Text = "6";
+            this.Six_CB.UseVisualStyleBackColor = true;
+            this.Six_CB.CheckedChanged += new System.EventHandler(this.Six_CB_CheckedChanged);
+            // 
+            // Five_CB
+            // 
+            this.Five_CB.AutoSize = true;
+            this.Five_CB.Location = new System.Drawing.Point(982, 277);
+            this.Five_CB.Name = "Five_CB";
+            this.Five_CB.Size = new System.Drawing.Size(32, 17);
+            this.Five_CB.TabIndex = 99;
+            this.Five_CB.Text = "5";
+            this.Five_CB.UseVisualStyleBackColor = true;
+            // 
+            // Four_CB
+            // 
+            this.Four_CB.AutoSize = true;
+            this.Four_CB.Location = new System.Drawing.Point(944, 277);
+            this.Four_CB.Name = "Four_CB";
+            this.Four_CB.Size = new System.Drawing.Size(32, 17);
+            this.Four_CB.TabIndex = 98;
+            this.Four_CB.Text = "4";
+            this.Four_CB.UseVisualStyleBackColor = true;
+            // 
+            // Three_CB
+            // 
+            this.Three_CB.AutoSize = true;
+            this.Three_CB.Location = new System.Drawing.Point(906, 277);
+            this.Three_CB.Name = "Three_CB";
+            this.Three_CB.Size = new System.Drawing.Size(32, 17);
+            this.Three_CB.TabIndex = 97;
+            this.Three_CB.Text = "3";
+            this.Three_CB.UseVisualStyleBackColor = true;
+            // 
+            // Two_CB
+            // 
+            this.Two_CB.AutoSize = true;
+            this.Two_CB.Location = new System.Drawing.Point(868, 277);
+            this.Two_CB.Name = "Two_CB";
+            this.Two_CB.Size = new System.Drawing.Size(32, 17);
+            this.Two_CB.TabIndex = 96;
+            this.Two_CB.Text = "2";
+            this.Two_CB.UseVisualStyleBackColor = true;
+            // 
+            // One_CB
+            // 
+            this.One_CB.AutoSize = true;
+            this.One_CB.Location = new System.Drawing.Point(830, 277);
+            this.One_CB.Name = "One_CB";
+            this.One_CB.Size = new System.Drawing.Size(32, 17);
+            this.One_CB.TabIndex = 95;
+            this.One_CB.Text = "1";
+            this.One_CB.UseVisualStyleBackColor = true;
+            // 
+            // East_CB
+            // 
+            this.East_CB.AutoSize = true;
+            this.East_CB.Location = new System.Drawing.Point(657, 344);
+            this.East_CB.Name = "East_CB";
+            this.East_CB.Size = new System.Drawing.Size(62, 17);
+            this.East_CB.TabIndex = 94;
+            this.East_CB.Text = "Восток";
+            this.East_CB.UseVisualStyleBackColor = true;
+            // 
+            // West_CB
+            // 
+            this.West_CB.AutoSize = true;
+            this.West_CB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.West_CB.Location = new System.Drawing.Point(531, 344);
+            this.West_CB.Name = "West_CB";
+            this.West_CB.Size = new System.Drawing.Size(57, 17);
+            this.West_CB.TabIndex = 93;
+            this.West_CB.Text = "Запад";
+            this.West_CB.UseVisualStyleBackColor = true;
+            // 
+            // South_CB
+            // 
+            this.South_CB.AutoSize = true;
+            this.South_CB.Location = new System.Drawing.Point(612, 388);
+            this.South_CB.Name = "South_CB";
+            this.South_CB.Size = new System.Drawing.Size(40, 17);
+            this.South_CB.TabIndex = 92;
+            this.South_CB.Text = "Юг";
+            this.South_CB.UseVisualStyleBackColor = true;
+            // 
+            // North_CB
+            // 
+            this.North_CB.AutoSize = true;
+            this.North_CB.Location = new System.Drawing.Point(612, 291);
+            this.North_CB.Name = "North_CB";
+            this.North_CB.Size = new System.Drawing.Size(57, 17);
+            this.North_CB.TabIndex = 91;
+            this.North_CB.Text = "Север";
+            this.North_CB.UseVisualStyleBackColor = true;
             // 
             // Main_F
             // 
@@ -839,9 +939,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LocIngot_PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).EndInit();
             this.panel6.ResumeLayout(false);
             this.Status_SS.ResumeLayout(false);
@@ -875,18 +975,14 @@
         public System.Windows.Forms.DataGridView Position_DGV;
         public System.Windows.Forms.Label label21;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox Address_TB;
         public System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox StatusCorrection_TB;
-        public System.Windows.Forms.PictureBox LocIngot_PB;
         public System.Windows.Forms.Label label15;
         public System.Windows.Forms.TextBox Correction_TB;
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox Reason_TB;
         public System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox LocProduction_TB;
-        public System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox Weight_TB;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox Type_TB;
@@ -922,6 +1018,18 @@
         public System.Windows.Forms.ToolStripProgressBar ProgressBar_PB;
         private System.Windows.Forms.Timer Timer_T;
         private System.Windows.Forms.ToolStripStatusLabel Description_S;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.CheckBox Six_CB;
+        public System.Windows.Forms.CheckBox Five_CB;
+        public System.Windows.Forms.CheckBox Four_CB;
+        public System.Windows.Forms.CheckBox Three_CB;
+        public System.Windows.Forms.CheckBox Two_CB;
+        public System.Windows.Forms.CheckBox One_CB;
+        public System.Windows.Forms.CheckBox East_CB;
+        public System.Windows.Forms.CheckBox West_CB;
+        public System.Windows.Forms.CheckBox South_CB;
+        public System.Windows.Forms.CheckBox North_CB;
     }
 }
 

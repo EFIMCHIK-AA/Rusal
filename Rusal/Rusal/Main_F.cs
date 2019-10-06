@@ -56,6 +56,7 @@ namespace Rusal
                 Position_DGV[3, Position_DGV.RowCount - 1].Value = Position.Count;
                 Position_DGV[4, Position_DGV.RowCount - 1].Value = Position.Weight;
             }
+
             ProgressBar_PB.Value = 100;
         }
 
@@ -104,6 +105,18 @@ namespace Rusal
         }
 
         private void Add_B_Click(object sender, EventArgs e)
+        {
+            Add_F Dialog = new Add_F();
+
+            Dialog.ShowDialog();
+        }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Six_CB_CheckedChanged(object sender, EventArgs e)
         {
 
         }

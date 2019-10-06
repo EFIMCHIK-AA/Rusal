@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_F.Designer.cs">
+      <DependentUpon>Add_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="Analysis.cs" />
     <Compile Include="BaseDictionary.cs" />
     <Compile Include="DefectProduction.cs" />
@@ -87,6 +93,9 @@
     <Compile Include="TSN.cs" />
     <Compile Include="TypesAlloy.cs" />
     <Compile Include="TypesDefect.cs" />
+    <EmbeddedResource Include="Add_F.resx">
+      <DependentUpon>Add_F.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_F.resx">
       <DependentUpon>Main_F.cs</DependentUpon>
     </EmbeddedResource>
