@@ -36,26 +36,31 @@ namespace Rusal
             GetStatusConnect();
             Files.GetParamDB();
             GetParamDB();
-            PositionToDGV();
+            GetAllData();
+            ShowPosition();
         }
 
-        private void PositionToDGV()
+        private void ShowPosition()
         {
-            ProgressBar_PB.Value = 2;
+            Position_DGV.RowCount = 0;
 
-            Operations.GetAllData();
-            ProgressBar_PB.Value = 50;
-
-            foreach(Position Position in SystemArgs.Positions)
+            foreach (Position Position in SystemArgs.Positions)
             {
                 Position_DGV.RowCount++;
 
-                Position_DGV[0, Position_DGV.RowCount - 1].Value = Position.DateFormation;
+                Position_DGV[0, Position_DGV.RowCount - 1].Value = Position.DateFormation.ToShortDateString();
                 Position_DGV[1, Position_DGV.RowCount - 1].Value = Position.Diameter.Name;
                 Position_DGV[2, Position_DGV.RowCount - 1].Value = Position.NumTS.Name;
                 Position_DGV[3, Position_DGV.RowCount - 1].Value = Position.Count;
                 Position_DGV[4, Position_DGV.RowCount - 1].Value = Position.Weight;
             }
+        }
+
+        private void GetAllData()
+        {
+            ProgressBar_PB.Value = 2;
+
+            Operations.GetAllData();
 
             ProgressBar_PB.Value = 100;
         }
@@ -106,9 +111,8 @@ namespace Rusal
 
         private void Add_B_Click(object sender, EventArgs e)
         {
-            Add_F Dialog = new Add_F();
-
-            Dialog.ShowDialog();
+            Operations.AddPosition();
+            ShowPosition();
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
@@ -119,6 +123,22 @@ namespace Rusal
         private void Six_CB_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Change_B_Click(object sender, EventArgs e)
+        {
+            Operations.ChangePosition(SystemArgs.Positions[SystemArgs.IndexRow]);
+        }
+
+        private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SystemArgs.IndexRow = Position_DGV.CurrentCell.RowIndex;
+        }
+
+        private void Delete_B_Click(object sender, EventArgs e)
+        {
+            Operations.DeletePosition(SystemArgs.Positions[SystemArgs.IndexRow]);
+            ShowPosition();
         }
     }
 }

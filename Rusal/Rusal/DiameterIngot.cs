@@ -52,5 +52,10 @@ namespace Rusal
                 }
             }
         }
+
+        public String GetNameString()
+        {
+            return _Name.ToString();
+        }
     }
 }

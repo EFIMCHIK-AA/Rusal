@@ -45,15 +45,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DateCreate_TB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.Calendar_MC = new System.Windows.Forms.MonthCalendar();
             this.label12 = new System.Windows.Forms.Label();
             this.NumMelt_TB = new System.Windows.Forms.TextBox();
             this.NumTS_CB = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.Check_CB = new System.Windows.Forms.CheckBox();
             this.Description_CB = new System.Windows.Forms.ComboBox();
             this.TypeDefect_CB = new System.Windows.Forms.ComboBox();
             this.Diameter_CB = new System.Windows.Forms.ComboBox();
@@ -78,6 +75,9 @@
             this.Reason_TB = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
+            this.Calendar_MC = new System.Windows.Forms.MonthCalendar();
+            this.ProgressMark_CB = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +108,6 @@
             this.Address_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Address_TB.Location = new System.Drawing.Point(465, 149);
             this.Address_TB.Name = "Address_TB";
-            this.Address_TB.ReadOnly = true;
             this.Address_TB.Size = new System.Drawing.Size(263, 21);
             this.Address_TB.TabIndex = 97;
             // 
@@ -127,7 +126,6 @@
             this.Weight_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Weight_TB.Location = new System.Drawing.Point(837, 66);
             this.Weight_TB.Name = "Weight_TB";
-            this.Weight_TB.ReadOnly = true;
             this.Weight_TB.Size = new System.Drawing.Size(270, 21);
             this.Weight_TB.TabIndex = 95;
             // 
@@ -156,7 +154,6 @@
             this.Count_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Count_TB.Location = new System.Drawing.Point(837, 39);
             this.Count_TB.Name = "Count_TB";
-            this.Count_TB.ReadOnly = true;
             this.Count_TB.Size = new System.Drawing.Size(270, 21);
             this.Count_TB.TabIndex = 91;
             // 
@@ -250,14 +247,14 @@
             this.label22.TabIndex = 75;
             this.label22.Text = "Укажите данные позиции";
             // 
-            // textBox1
+            // DateCreate_TB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(126, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(219, 21);
-            this.textBox1.TabIndex = 99;
+            this.DateCreate_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateCreate_TB.Location = new System.Drawing.Point(126, 41);
+            this.DateCreate_TB.Name = "DateCreate_TB";
+            this.DateCreate_TB.ReadOnly = true;
+            this.DateCreate_TB.Size = new System.Drawing.Size(219, 21);
+            this.DateCreate_TB.TabIndex = 99;
             // 
             // label1
             // 
@@ -268,15 +265,6 @@
             this.label1.Size = new System.Drawing.Size(110, 15);
             this.label1.TabIndex = 98;
             this.label1.Text = "Дата добавления";
-            // 
-            // Calendar_MC
-            // 
-            this.Calendar_MC.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Calendar_MC.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.Calendar_MC.Location = new System.Drawing.Point(13, 92);
-            this.Calendar_MC.Margin = new System.Windows.Forms.Padding(0);
-            this.Calendar_MC.Name = "Calendar_MC";
-            this.Calendar_MC.TabIndex = 100;
             // 
             // label12
             // 
@@ -293,7 +281,6 @@
             this.NumMelt_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NumMelt_TB.Location = new System.Drawing.Point(465, 95);
             this.NumMelt_TB.Name = "NumMelt_TB";
-            this.NumMelt_TB.ReadOnly = true;
             this.NumMelt_TB.Size = new System.Drawing.Size(263, 21);
             this.NumMelt_TB.TabIndex = 102;
             // 
@@ -315,17 +302,6 @@
             this.label13.Size = new System.Drawing.Size(282, 15);
             this.label13.TabIndex = 104;
             this.label13.Text = "Место дефекта в производственном процессе";
-            // 
-            // Check_CB
-            // 
-            this.Check_CB.AutoSize = true;
-            this.Check_CB.Location = new System.Drawing.Point(731, 526);
-            this.Check_CB.Name = "Check_CB";
-            this.Check_CB.Size = new System.Drawing.Size(144, 17);
-            this.Check_CB.TabIndex = 106;
-            this.Check_CB.Text = "Отметка о выполнении";
-            this.Check_CB.UseVisualStyleBackColor = true;
-            this.Check_CB.CheckedChanged += new System.EventHandler(this.Check_CB_CheckedChanged);
             // 
             // Description_CB
             // 
@@ -535,7 +511,6 @@
             this.Reason_TB.Location = new System.Drawing.Point(731, 329);
             this.Reason_TB.Multiline = true;
             this.Reason_TB.Name = "Reason_TB";
-            this.Reason_TB.ReadOnly = true;
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Reason_TB.Size = new System.Drawing.Size(376, 85);
             this.Reason_TB.TabIndex = 115;
@@ -557,10 +532,36 @@
             this.Correction_TB.Location = new System.Drawing.Point(731, 435);
             this.Correction_TB.Multiline = true;
             this.Correction_TB.Name = "Correction_TB";
-            this.Correction_TB.ReadOnly = true;
             this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Correction_TB.Size = new System.Drawing.Size(376, 85);
             this.Correction_TB.TabIndex = 119;
+            // 
+            // Calendar_MC
+            // 
+            this.Calendar_MC.CalendarDimensions = new System.Drawing.Size(2, 1);
+            this.Calendar_MC.Location = new System.Drawing.Point(13, 96);
+            this.Calendar_MC.MaxSelectionCount = 1;
+            this.Calendar_MC.Name = "Calendar_MC";
+            this.Calendar_MC.TabIndex = 120;
+            // 
+            // ProgressMark_CB
+            // 
+            this.ProgressMark_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProgressMark_CB.FormattingEnabled = true;
+            this.ProgressMark_CB.Location = new System.Drawing.Point(880, 524);
+            this.ProgressMark_CB.Name = "ProgressMark_CB";
+            this.ProgressMark_CB.Size = new System.Drawing.Size(227, 21);
+            this.ProgressMark_CB.TabIndex = 122;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(730, 525);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(144, 15);
+            this.label18.TabIndex = 121;
+            this.label18.Text = "Отметка о выполнении";
             // 
             // Add_F
             // 
@@ -569,6 +570,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_B;
             this.ClientSize = new System.Drawing.Size(1121, 590);
+            this.Controls.Add(this.ProgressMark_CB);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.Calendar_MC);
             this.Controls.Add(this.Correction_TB);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label15);
@@ -589,16 +593,14 @@
             this.Controls.Add(this.East_CB);
             this.Controls.Add(this.Description_CB);
             this.Controls.Add(this.West_CB);
-            this.Controls.Add(this.Check_CB);
             this.Controls.Add(this.South_CB);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.North_CB);
             this.Controls.Add(this.NumTS_CB);
             this.Controls.Add(this.NumMelt_TB);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.Calendar_MC);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DateCreate_TB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Address_TB);
             this.Controls.Add(this.pictureBox1);
@@ -649,22 +651,17 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox DateCreate_TB;
         public System.Windows.Forms.Label label1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        public System.Windows.Forms.MonthCalendar Calendar_MC;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox NumMelt_TB;
         public System.Windows.Forms.Label label13;
-        private System.Windows.Forms.CheckBox Check_CB;
         public System.Windows.Forms.ComboBox NumTS_CB;
         public System.Windows.Forms.ComboBox Description_CB;
         public System.Windows.Forms.ComboBox TypeDefect_CB;
         public System.Windows.Forms.ComboBox Diameter_CB;
         public System.Windows.Forms.ComboBox NumBrigade_CB;
         public System.Windows.Forms.ComboBox NumSmeny_CB;
-        private System.Windows.Forms.ComboBox TypeAlloy_CB;
-        private System.Windows.Forms.ComboBox LocationProduction_CB;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label23;
@@ -682,5 +679,10 @@
         public System.Windows.Forms.CheckBox Four_CB;
         public System.Windows.Forms.CheckBox Five_CB;
         public System.Windows.Forms.CheckBox Six_CB;
+        public System.Windows.Forms.ComboBox TypeAlloy_CB;
+        public System.Windows.Forms.ComboBox LocationProduction_CB;
+        public System.Windows.Forms.MonthCalendar Calendar_MC;
+        public System.Windows.Forms.ComboBox ProgressMark_CB;
+        public System.Windows.Forms.Label label18;
     }
 }

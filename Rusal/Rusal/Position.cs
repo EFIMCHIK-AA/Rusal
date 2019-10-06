@@ -8,7 +8,7 @@ namespace Rusal
 {
     public class Position
     {
-        private Int32 _ID; //ID из БД
+        private Int64 _ID; //ID из БД
         private DateTime _DateCreate; //Дата создания позиции в ПО
         private DateTime _DateFormation; //Дата возникновения
         private String _NumMelt; //Номер плавки
@@ -17,6 +17,7 @@ namespace Rusal
         private String _DefectLocIngot; //Место дефекта на слитке
         private String _Correction; // Меры коррекции
         private String _Address; // Адрес слитка
+        private String _Reason; //Возможные причины дефекта
         private TSN _NumTS; //Номер технической спецификации
         private ListBrigades _NumBrigade; //Номер бригады
         private DefectProduction _DefectLocProduction; // Место дефекта в производстве
@@ -27,8 +28,8 @@ namespace Rusal
         private DiameterIngot _Diameter; // Даиметр слитка
         private ProgressMark _ProgressMark; //Метка о выполнении
 
-        public Position(Int32 ID, DateTime DateCreate, DateTime DateFormation, String NumMelt, Int64 Count, Double Weight,
-                        String DefectLocIngot, String Correction, String Address, TSN NumTS, ListBrigades NumBrigade,
+        public Position(Int64 ID, DateTime DateCreate, DateTime DateFormation, String NumMelt, Int64 Count, Double Weight,
+                        String DefectLocIngot, String Correction, String Address, String Reason, TSN NumTS, ListBrigades NumBrigade,
                         DefectProduction DefectLocProduction, ListSmen NumSmeny, TypesDefect Defect, TypesAlloy TypeAlloy,
                         DescriptionDefect Description, DiameterIngot Diameter,ProgressMark ProgressMark)
         {
@@ -77,6 +78,11 @@ namespace Rusal
                 _Address = Address;
             }
 
+            if (!String.IsNullOrEmpty(Reason))
+            {
+                _Reason = Reason;
+            }
+
             if (NumTS != null)
             {
                 _NumTS = NumTS;
@@ -123,10 +129,10 @@ namespace Rusal
             }
         }
 
-        public Position() : this(0, DateTime.Now, DateTime.Now, "Без номера плавки", 0, 0, "Без места дефекта на слитке", "Без коррекции", "Без адреса", null,
+        public Position() : this(0, DateTime.Now, DateTime.Now, "Без номера плавки", 0, 0, "Без места дефекта на слитке", "Без коррекции", "Без адреса","Без возможной причины", null,
                                  null, null, null, null, null, null, null, null) { }
 
-        public Int32 ID
+        public Int64 ID
         {
             get
             {
@@ -266,6 +272,22 @@ namespace Rusal
                 if (!String.IsNullOrEmpty(value))
                 {
                     _Address = value;
+                }
+            }
+        }
+
+        public String Reason
+        {
+            get
+            {
+                return _Reason;
+            }
+
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _Reason = value;
                 }
             }
         }

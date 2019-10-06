@@ -43,6 +43,16 @@
             this.ReportStart_B = new System.Windows.Forms.Button();
             this.Exit_B = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Six_CB = new System.Windows.Forms.CheckBox();
+            this.Five_CB = new System.Windows.Forms.CheckBox();
+            this.Four_CB = new System.Windows.Forms.CheckBox();
+            this.Three_CB = new System.Windows.Forms.CheckBox();
+            this.Two_CB = new System.Windows.Forms.CheckBox();
+            this.One_CB = new System.Windows.Forms.CheckBox();
+            this.East_CB = new System.Windows.Forms.CheckBox();
+            this.West_CB = new System.Windows.Forms.CheckBox();
+            this.South_CB = new System.Windows.Forms.CheckBox();
+            this.North_CB = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -98,16 +108,6 @@
             this.Description_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressBar_PB = new System.Windows.Forms.ToolStripProgressBar();
             this.Timer_T = new System.Windows.Forms.Timer(this.components);
-            this.Six_CB = new System.Windows.Forms.CheckBox();
-            this.Five_CB = new System.Windows.Forms.CheckBox();
-            this.Four_CB = new System.Windows.Forms.CheckBox();
-            this.Three_CB = new System.Windows.Forms.CheckBox();
-            this.Two_CB = new System.Windows.Forms.CheckBox();
-            this.One_CB = new System.Windows.Forms.CheckBox();
-            this.East_CB = new System.Windows.Forms.CheckBox();
-            this.West_CB = new System.Windows.Forms.CheckBox();
-            this.South_CB = new System.Windows.Forms.CheckBox();
-            this.North_CB = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -199,6 +199,7 @@
             this.Change_B.TabIndex = 7;
             this.Change_B.Text = "Изменить";
             this.Change_B.UseVisualStyleBackColor = true;
+            this.Change_B.Click += new System.EventHandler(this.Change_B_Click);
             // 
             // Delete_B
             // 
@@ -209,6 +210,7 @@
             this.Delete_B.TabIndex = 10;
             this.Delete_B.Text = "Удалить";
             this.Delete_B.UseVisualStyleBackColor = true;
+            this.Delete_B.Click += new System.EventHandler(this.Delete_B_Click);
             // 
             // Report_CB
             // 
@@ -317,6 +319,108 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1079, 717);
             this.panel2.TabIndex = 36;
+            // 
+            // Six_CB
+            // 
+            this.Six_CB.AutoSize = true;
+            this.Six_CB.Location = new System.Drawing.Point(1020, 277);
+            this.Six_CB.Name = "Six_CB";
+            this.Six_CB.Size = new System.Drawing.Size(32, 17);
+            this.Six_CB.TabIndex = 100;
+            this.Six_CB.Text = "6";
+            this.Six_CB.UseVisualStyleBackColor = true;
+            this.Six_CB.CheckedChanged += new System.EventHandler(this.Six_CB_CheckedChanged);
+            // 
+            // Five_CB
+            // 
+            this.Five_CB.AutoSize = true;
+            this.Five_CB.Location = new System.Drawing.Point(982, 277);
+            this.Five_CB.Name = "Five_CB";
+            this.Five_CB.Size = new System.Drawing.Size(32, 17);
+            this.Five_CB.TabIndex = 99;
+            this.Five_CB.Text = "5";
+            this.Five_CB.UseVisualStyleBackColor = true;
+            // 
+            // Four_CB
+            // 
+            this.Four_CB.AutoSize = true;
+            this.Four_CB.Location = new System.Drawing.Point(944, 277);
+            this.Four_CB.Name = "Four_CB";
+            this.Four_CB.Size = new System.Drawing.Size(32, 17);
+            this.Four_CB.TabIndex = 98;
+            this.Four_CB.Text = "4";
+            this.Four_CB.UseVisualStyleBackColor = true;
+            // 
+            // Three_CB
+            // 
+            this.Three_CB.AutoSize = true;
+            this.Three_CB.Location = new System.Drawing.Point(906, 277);
+            this.Three_CB.Name = "Three_CB";
+            this.Three_CB.Size = new System.Drawing.Size(32, 17);
+            this.Three_CB.TabIndex = 97;
+            this.Three_CB.Text = "3";
+            this.Three_CB.UseVisualStyleBackColor = true;
+            // 
+            // Two_CB
+            // 
+            this.Two_CB.AutoSize = true;
+            this.Two_CB.Location = new System.Drawing.Point(868, 277);
+            this.Two_CB.Name = "Two_CB";
+            this.Two_CB.Size = new System.Drawing.Size(32, 17);
+            this.Two_CB.TabIndex = 96;
+            this.Two_CB.Text = "2";
+            this.Two_CB.UseVisualStyleBackColor = true;
+            // 
+            // One_CB
+            // 
+            this.One_CB.AutoSize = true;
+            this.One_CB.Location = new System.Drawing.Point(830, 277);
+            this.One_CB.Name = "One_CB";
+            this.One_CB.Size = new System.Drawing.Size(32, 17);
+            this.One_CB.TabIndex = 95;
+            this.One_CB.Text = "1";
+            this.One_CB.UseVisualStyleBackColor = true;
+            // 
+            // East_CB
+            // 
+            this.East_CB.AutoSize = true;
+            this.East_CB.Location = new System.Drawing.Point(657, 344);
+            this.East_CB.Name = "East_CB";
+            this.East_CB.Size = new System.Drawing.Size(62, 17);
+            this.East_CB.TabIndex = 94;
+            this.East_CB.Text = "Восток";
+            this.East_CB.UseVisualStyleBackColor = true;
+            // 
+            // West_CB
+            // 
+            this.West_CB.AutoSize = true;
+            this.West_CB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.West_CB.Location = new System.Drawing.Point(531, 344);
+            this.West_CB.Name = "West_CB";
+            this.West_CB.Size = new System.Drawing.Size(57, 17);
+            this.West_CB.TabIndex = 93;
+            this.West_CB.Text = "Запад";
+            this.West_CB.UseVisualStyleBackColor = true;
+            // 
+            // South_CB
+            // 
+            this.South_CB.AutoSize = true;
+            this.South_CB.Location = new System.Drawing.Point(612, 388);
+            this.South_CB.Name = "South_CB";
+            this.South_CB.Size = new System.Drawing.Size(40, 17);
+            this.South_CB.TabIndex = 92;
+            this.South_CB.Text = "Юг";
+            this.South_CB.UseVisualStyleBackColor = true;
+            // 
+            // North_CB
+            // 
+            this.North_CB.AutoSize = true;
+            this.North_CB.Location = new System.Drawing.Point(612, 291);
+            this.North_CB.Name = "North_CB";
+            this.North_CB.Size = new System.Drawing.Size(57, 17);
+            this.North_CB.TabIndex = 91;
+            this.North_CB.Text = "Север";
+            this.North_CB.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -699,6 +803,7 @@
             this.Position_DGV.RowHeadersVisible = false;
             this.Position_DGV.Size = new System.Drawing.Size(469, 664);
             this.Position_DGV.TabIndex = 36;
+            this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             // 
             // Column1
             // 
@@ -815,108 +920,6 @@
             // 
             this.Timer_T.Interval = 3000;
             this.Timer_T.Tick += new System.EventHandler(this.Timer_T_Tick);
-            // 
-            // Six_CB
-            // 
-            this.Six_CB.AutoSize = true;
-            this.Six_CB.Location = new System.Drawing.Point(1020, 277);
-            this.Six_CB.Name = "Six_CB";
-            this.Six_CB.Size = new System.Drawing.Size(32, 17);
-            this.Six_CB.TabIndex = 100;
-            this.Six_CB.Text = "6";
-            this.Six_CB.UseVisualStyleBackColor = true;
-            this.Six_CB.CheckedChanged += new System.EventHandler(this.Six_CB_CheckedChanged);
-            // 
-            // Five_CB
-            // 
-            this.Five_CB.AutoSize = true;
-            this.Five_CB.Location = new System.Drawing.Point(982, 277);
-            this.Five_CB.Name = "Five_CB";
-            this.Five_CB.Size = new System.Drawing.Size(32, 17);
-            this.Five_CB.TabIndex = 99;
-            this.Five_CB.Text = "5";
-            this.Five_CB.UseVisualStyleBackColor = true;
-            // 
-            // Four_CB
-            // 
-            this.Four_CB.AutoSize = true;
-            this.Four_CB.Location = new System.Drawing.Point(944, 277);
-            this.Four_CB.Name = "Four_CB";
-            this.Four_CB.Size = new System.Drawing.Size(32, 17);
-            this.Four_CB.TabIndex = 98;
-            this.Four_CB.Text = "4";
-            this.Four_CB.UseVisualStyleBackColor = true;
-            // 
-            // Three_CB
-            // 
-            this.Three_CB.AutoSize = true;
-            this.Three_CB.Location = new System.Drawing.Point(906, 277);
-            this.Three_CB.Name = "Three_CB";
-            this.Three_CB.Size = new System.Drawing.Size(32, 17);
-            this.Three_CB.TabIndex = 97;
-            this.Three_CB.Text = "3";
-            this.Three_CB.UseVisualStyleBackColor = true;
-            // 
-            // Two_CB
-            // 
-            this.Two_CB.AutoSize = true;
-            this.Two_CB.Location = new System.Drawing.Point(868, 277);
-            this.Two_CB.Name = "Two_CB";
-            this.Two_CB.Size = new System.Drawing.Size(32, 17);
-            this.Two_CB.TabIndex = 96;
-            this.Two_CB.Text = "2";
-            this.Two_CB.UseVisualStyleBackColor = true;
-            // 
-            // One_CB
-            // 
-            this.One_CB.AutoSize = true;
-            this.One_CB.Location = new System.Drawing.Point(830, 277);
-            this.One_CB.Name = "One_CB";
-            this.One_CB.Size = new System.Drawing.Size(32, 17);
-            this.One_CB.TabIndex = 95;
-            this.One_CB.Text = "1";
-            this.One_CB.UseVisualStyleBackColor = true;
-            // 
-            // East_CB
-            // 
-            this.East_CB.AutoSize = true;
-            this.East_CB.Location = new System.Drawing.Point(657, 344);
-            this.East_CB.Name = "East_CB";
-            this.East_CB.Size = new System.Drawing.Size(62, 17);
-            this.East_CB.TabIndex = 94;
-            this.East_CB.Text = "Восток";
-            this.East_CB.UseVisualStyleBackColor = true;
-            // 
-            // West_CB
-            // 
-            this.West_CB.AutoSize = true;
-            this.West_CB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.West_CB.Location = new System.Drawing.Point(531, 344);
-            this.West_CB.Name = "West_CB";
-            this.West_CB.Size = new System.Drawing.Size(57, 17);
-            this.West_CB.TabIndex = 93;
-            this.West_CB.Text = "Запад";
-            this.West_CB.UseVisualStyleBackColor = true;
-            // 
-            // South_CB
-            // 
-            this.South_CB.AutoSize = true;
-            this.South_CB.Location = new System.Drawing.Point(612, 388);
-            this.South_CB.Name = "South_CB";
-            this.South_CB.Size = new System.Drawing.Size(40, 17);
-            this.South_CB.TabIndex = 92;
-            this.South_CB.Text = "Юг";
-            this.South_CB.UseVisualStyleBackColor = true;
-            // 
-            // North_CB
-            // 
-            this.North_CB.AutoSize = true;
-            this.North_CB.Location = new System.Drawing.Point(612, 291);
-            this.North_CB.Name = "North_CB";
-            this.North_CB.Size = new System.Drawing.Size(57, 17);
-            this.North_CB.TabIndex = 91;
-            this.North_CB.Text = "Север";
-            this.North_CB.UseVisualStyleBackColor = true;
             // 
             // Main_F
             // 

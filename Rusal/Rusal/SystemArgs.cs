@@ -17,6 +17,7 @@ namespace Rusal
         public static String ConnectString; //Строка подключения к БД
 
         public static bool StatusConnect; //Статус подключения к БД
+        public static Int32 IndexRow; //Индекст выделенной ячейки
 
         public static List<Position> Positions = new List<Position>(); //Список позиций
 
