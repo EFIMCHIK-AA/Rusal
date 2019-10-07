@@ -37,14 +37,14 @@ namespace Rusal
             Files.GetParamDB();
             GetParamDB();
             GetAllData();
-            ShowPosition();
+            ShowPosition(SystemArgs.Positions);
         }
 
-        private void ShowPosition()
+        private void ShowPosition(List<Position> List)
         {
             Position_DGV.RowCount = 0;
 
-            foreach (Position Position in SystemArgs.Positions)
+            foreach (Position Position in List)
             {
                 Position_DGV.RowCount++;
 
@@ -89,7 +89,7 @@ namespace Rusal
             if (Operations.StatusConnect())
             {
                 CennectDB_S.Text = "Соеднинение: Установлено";
-                CennectDB_S.BackColor = Color.Blue;
+                CennectDB_S.BackColor = Color.Green;
 
                 ButtonMode(true);
             }
@@ -112,12 +112,25 @@ namespace Rusal
         private void Add_B_Click(object sender, EventArgs e)
         {
             Operations.AddPosition();
-            ShowPosition();
+
+            ResetSearch();
+
+            ShowPosition(SystemArgs.Positions);
         }
 
         private void Change_B_Click(object sender, EventArgs e)
         {
-            Operations.ChangePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
+            if(SystemArgs.ModePosition)
+            {
+                Operations.ChangePosition(SystemArgs.Result[Position_DGV.CurrentCell.RowIndex]);
+                ResetSearch();
+            }
+            else
+            {
+                Operations.ChangePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
+            }
+
+            ShowPosition(SystemArgs.Positions);
         }
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -127,8 +140,17 @@ namespace Rusal
 
         private void Delete_B_Click(object sender, EventArgs e)
         {
-            Operations.DeletePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
-            ShowPosition();
+            if (SystemArgs.ModePosition)
+            {
+                Operations.DeletePosition(SystemArgs.Result[Position_DGV.CurrentCell.RowIndex]);
+                ResetSearch();
+            }
+            else
+            {
+                Operations.DeletePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
+            }
+
+            ShowPosition(SystemArgs.Positions);
         }
 
         private void Position_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,9 +158,46 @@ namespace Rusal
 
         }
 
-        private void весToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void Search_TSB_Click(object sender, EventArgs e)
         {
+            if(!String.IsNullOrEmpty(Search_TSTB.Text.Trim()))
+            {
+                SystemArgs.ModePosition = true;
 
+                String SearchText = Search_TSTB.Text.Trim();
+
+                SystemArgs.Result = Operations.ResultSearch(SearchText);
+
+                if(SystemArgs.Result.Count > 0)
+                {
+                    ShowPosition(SystemArgs.Result);
+                }
+                else
+                {
+                    Search_TSTB.Focus();
+                    MessageBox.Show("Поиск не дал результатов", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                Search_TSTB.Focus();
+                MessageBox.Show("Для поиска необходимо ввести значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ResetSearch()
+        {
+            Search_TSTB.Text = String.Empty;
+
+            SystemArgs.ModePosition = false;
+
+            SystemArgs.Result.Clear();
+        }
+
+        private void Reset_TSB_Click(object sender, EventArgs e)
+        {
+            ResetSearch();
+            ShowPosition(SystemArgs.Positions);
         }
     }
 }

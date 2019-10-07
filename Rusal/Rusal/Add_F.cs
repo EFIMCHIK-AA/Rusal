@@ -40,12 +40,6 @@ namespace Rusal
                         throw new Exception(Error);
                     }
 
-                    if (String.IsNullOrEmpty(Correction_TB.Text))
-                    {
-                        Correction_TB.Focus();
-                        Error = "Поле коррекции должно содержать значение";
-                        throw new Exception(Error);
-                    }
 
                     if (String.IsNullOrEmpty(Count_TB.Text))
                     {
@@ -81,6 +75,22 @@ namespace Rusal
                         Weight_TB.Focus();
                         Error = "Значение веса слитков должно состоять из цифр";
                         throw;
+                    }
+
+
+                    if (String.IsNullOrEmpty(Correction_TB.Text))
+                    {
+                        Correction_TB.Focus();
+                        Error = "Поле коррекции должно содержать значение";
+                        throw new Exception(Error);
+                    }
+
+
+                    if (String.IsNullOrEmpty(Reason_TB.Text))
+                    {
+                        Reason_TB.Focus();
+                        Error = "Поле коррекции должно содержать значение";
+                        throw new Exception(Error);
                     }
                 }
                 catch(Exception)

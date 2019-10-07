@@ -429,5 +429,23 @@ namespace Rusal
                 Connect.Close();
             }
         }
+
+        public static List<Position> ResultSearch(String TextSearch)
+        {
+            List<Position> Result = new List<Position>();
+
+            if (!String.IsNullOrEmpty(TextSearch))
+            {
+                foreach (Position Temp in SystemArgs.Positions)
+                {
+                    if (Temp.GetSearchString().IndexOf(TextSearch) != -1)
+                    {
+                        Result.Add(Temp);
+                    }
+                }
+            }
+
+            return Result;
+        }
     }
 }

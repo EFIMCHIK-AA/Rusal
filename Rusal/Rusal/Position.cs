@@ -435,5 +435,11 @@ namespace Rusal
                 }
             }
         }
+
+        public String GetSearchString()
+        {
+            return $"{_DateFormation.ToShortDateString()}_{_NumMelt}_{_Count}_{_Weight}_{_DefectLocIngot}_{_Correction}_{_Address}_{_Reason}_{_NumTS.Name}_" +
+                   $"{_NumBrigade.Name}_{_DefectLocProduction.Name}_{_NumSmeny}_{_Defect.Name}_{_NumTS.Name}_{_TypeAlloy.Name}_{_Description.Name}_{Diameter.Name}_{_ProgressMark.Name}";
+        }
     }
 }
