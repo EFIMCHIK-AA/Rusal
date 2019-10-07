@@ -115,30 +115,30 @@ namespace Rusal
             ShowPosition();
         }
 
-        private void checkBox10_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Six_CB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Change_B_Click(object sender, EventArgs e)
         {
-            Operations.ChangePosition(SystemArgs.Positions[SystemArgs.IndexRow]);
+            Operations.ChangePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
         }
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            SystemArgs.IndexRow = Position_DGV.CurrentCell.RowIndex;
+
         }
 
         private void Delete_B_Click(object sender, EventArgs e)
         {
-            Operations.DeletePosition(SystemArgs.Positions[SystemArgs.IndexRow]);
+            Operations.DeletePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
             ShowPosition();
+        }
+
+        private void Position_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void весToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

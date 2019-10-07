@@ -255,7 +255,7 @@ namespace Rusal
                 }
             }
 
-            if (LocaDefectIngot[LocaDefectIngot.Length - 1] == '_')
+            if (LocaDefectIngot != String.Empty && LocaDefectIngot[LocaDefectIngot.Length - 1] == '_')
             {
                 LocaDefectIngot = LocaDefectIngot.Remove(LocaDefectIngot.Length - 1, 1);
             }
@@ -315,13 +315,13 @@ namespace Rusal
                         Connect.Close();
                     }
                 }
-            }
+        }
             catch (Exception)
             {
                 MessageBox.Show("Ошибка при добавлении данных на сервер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
+}
 
         private static void GetLocalDefectIngot(Add_F Dialog, String [] DefectLocIngot)
         {
@@ -373,9 +373,12 @@ namespace Rusal
             Dialog.Reason_TB.Text = Position.Reason;
             Dialog.Weight_TB.Text = Position.Weight.ToString();
 
-            String[] DefectLocIngot = Position.DefectLocIngot.Split('_');
+            if(Position.DefectLocIngot != null)
+            {
+                String[] DefectLocIngot = Position.DefectLocIngot.Split('_');
 
-            GetLocalDefectIngot(Dialog, DefectLocIngot);
+                GetLocalDefectIngot(Dialog, DefectLocIngot);
+            }
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {

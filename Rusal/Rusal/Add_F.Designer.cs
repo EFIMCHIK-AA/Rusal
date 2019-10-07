@@ -494,7 +494,6 @@
             this.label23.Size = new System.Drawing.Size(187, 18);
             this.label23.TabIndex = 118;
             this.label23.Text = "Корректирущие меры";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label15
             // 
@@ -514,7 +513,6 @@
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Reason_TB.Size = new System.Drawing.Size(376, 85);
             this.Reason_TB.TabIndex = 115;
-            this.Reason_TB.TextChanged += new System.EventHandler(this.Reason_TB_TextChanged);
             // 
             // label17
             // 
@@ -525,7 +523,6 @@
             this.label17.Size = new System.Drawing.Size(114, 15);
             this.label17.TabIndex = 114;
             this.label17.Text = "Причины дефекта";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // Correction_TB
             // 
@@ -538,6 +535,7 @@
             // 
             // Calendar_MC
             // 
+            this.Calendar_MC.BackColor = System.Drawing.SystemColors.Control;
             this.Calendar_MC.CalendarDimensions = new System.Drawing.Size(2, 1);
             this.Calendar_MC.Location = new System.Drawing.Point(13, 96);
             this.Calendar_MC.MaxSelectionCount = 1;
@@ -626,6 +624,8 @@
             this.Name = "Add_F";
             this.ShowInTaskbar = false;
             this.Text = "Добавление позиции";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_F_FormClosing);
+            this.Load += new System.EventHandler(this.Add_F_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
