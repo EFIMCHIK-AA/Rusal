@@ -1,4 +1,5 @@
 ﻿using System;
+using Equin.ApplicationFramework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,18 +43,23 @@ namespace Rusal
 
         private void ShowPosition(List<Position> List)
         {
-            Position_DGV.RowCount = 0;
+            SystemArgs.View = new BindingListView<Position>(List);
 
-            foreach (Position Position in List)
-            {
-                Position_DGV.RowCount++;
+            Position_DGV.AutoGenerateColumns = false;
+            Position_DGV.DataSource = SystemArgs.View;
 
-                Position_DGV[0, Position_DGV.RowCount - 1].Value = Position.DateFormation.ToShortDateString();
-                Position_DGV[1, Position_DGV.RowCount - 1].Value = Position.Diameter.Name;
-                Position_DGV[2, Position_DGV.RowCount - 1].Value = Position.NumTS.Name;
-                Position_DGV[3, Position_DGV.RowCount - 1].Value = Position.Count;
-                Position_DGV[4, Position_DGV.RowCount - 1].Value = Position.Weight;
-            }
+            //Position_DGV.RowCount = 0;
+
+            //foreach (Position Position in List)
+            //{
+            //    Position_DGV.RowCount++;
+
+            //    Position_DGV[0, Position_DGV.RowCount - 1].Value = Position.DateFormation.ToShortDateString();
+            //    Position_DGV[1, Position_DGV.RowCount - 1].Value = Position.Diameter.Name;
+            //    Position_DGV[2, Position_DGV.RowCount - 1].Value = Position.NumTS.Name;
+            //    Position_DGV[3, Position_DGV.RowCount - 1].Value = Position.Count;
+            //    Position_DGV[4, Position_DGV.RowCount - 1].Value = Position.Weight;
+            //}
         }
 
         private void GetAllData()
@@ -120,15 +126,8 @@ namespace Rusal
 
         private void Change_B_Click(object sender, EventArgs e)
         {
-            if(SystemArgs.ModePosition)
-            {
-                Operations.ChangePosition(SystemArgs.Result[Position_DGV.CurrentCell.RowIndex]);
-                ResetSearch();
-            }
-            else
-            {
-                Operations.ChangePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
-            }
+            Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+            ResetSearch();
 
             ShowPosition(SystemArgs.Positions);
         }
@@ -140,15 +139,8 @@ namespace Rusal
 
         private void Delete_B_Click(object sender, EventArgs e)
         {
-            if (SystemArgs.ModePosition)
-            {
-                Operations.DeletePosition(SystemArgs.Result[Position_DGV.CurrentCell.RowIndex]);
-                ResetSearch();
-            }
-            else
-            {
-                Operations.DeletePosition(SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex]);
-            }
+            Operations.DeletePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+            ResetSearch();
 
             ShowPosition(SystemArgs.Positions);
         }
@@ -198,6 +190,11 @@ namespace Rusal
         {
             ResetSearch();
             ShowPosition(SystemArgs.Positions);
+        }
+
+        private void Position_DGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
         }
     }
 }

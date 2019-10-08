@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Equin.ApplicationFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,10 +18,11 @@ namespace Rusal
         public static String ConnectString; //Строка подключения к БД
 
         public static bool StatusConnect; //Статус подключения к БД
-        public static bool ModePosition; //Статус активации фильтра
+        public static bool ModePosition = false; //Статус активации фильтра
 
         public static List<Position> Positions = new List<Position>(); //Список позиций
         public static List<Position> Result = new List<Position>(); //Список позиций по фильтру
+        public static BindingListView<Position> View; //Источник-конвертер данных
 
         public static List<DefectProduction> DefectLocProduction = new List<DefectProduction>(); //Список мест дефектов в производственном процессе
         public static List<TypesDefect> TypesDefect = new List<TypesDefect>(); //Типы дефектов (устранимый или брак)

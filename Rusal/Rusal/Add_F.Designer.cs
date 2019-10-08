@@ -541,6 +541,7 @@
             this.Calendar_MC.MaxSelectionCount = 1;
             this.Calendar_MC.Name = "Calendar_MC";
             this.Calendar_MC.TabIndex = 120;
+            this.Calendar_MC.TrailingForeColor = System.Drawing.Color.Tomato;
             // 
             // ProgressMark_CB
             // 

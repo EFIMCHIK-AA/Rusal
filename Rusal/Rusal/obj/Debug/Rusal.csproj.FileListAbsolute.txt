@@ -86,3 +86,4 @@ C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusa
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Add_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Equin.ApplicationFramework.BindingListView.dll

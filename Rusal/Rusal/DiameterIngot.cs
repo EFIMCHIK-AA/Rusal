@@ -53,7 +53,7 @@ namespace Rusal
             }
         }
 
-        public String GetNameString()
+        public override String ToString()
         {
             return _Name.ToString();
         }

@@ -94,11 +94,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Position_DGV = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -134,6 +129,11 @@
             this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
             this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -832,35 +832,7 @@
             this.Position_DGV.TabIndex = 36;
             this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Дата";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Диаметр";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "ТС";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 96;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Кол - во";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Вес";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 90;
+            this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting);
             // 
             // panel4
             // 
@@ -1150,6 +1122,40 @@
             this.Reset_TSB.Text = "Сбросить фильтр";
             this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DateFormation";
+            this.Column1.HeaderText = "Дата";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Diameter";
+            this.Column2.HeaderText = "Диаметр";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NumTS";
+            this.Column3.HeaderText = "ТС";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 96;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Count";
+            this.Column4.HeaderText = "Количество";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Weight";
+            this.Column5.HeaderText = "Вес";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 90;
+            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1246,11 +1252,6 @@
         public System.Windows.Forms.Label label23;
         public System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         public System.Windows.Forms.ToolStripStatusLabel UserDB_S;
         public System.Windows.Forms.ToolStripStatusLabel NameDB_S;
         public System.Windows.Forms.StatusStrip Status_SS;
@@ -1295,6 +1296,11 @@
         public System.Windows.Forms.ToolStripLabel Search_TSL;
         public System.Windows.Forms.ToolStripTextBox Search_TSTB;
         private System.Windows.Forms.ToolStripButton Reset_TSB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
 

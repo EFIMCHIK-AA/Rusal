@@ -271,7 +271,7 @@ namespace Rusal
 
                 DateTime DateCreate = DateTime.Now;
 
-                Dialog.DateCreate_TB.Text = DateCreate.ToString();
+                Dialog.DateCreate_TB.Text = DateCreate.ToShortDateString();
 
                 SetComboBox(Dialog);
 
@@ -351,7 +351,7 @@ namespace Rusal
 
             DateTime DateCreate = Position.DateCreate;
 
-            Dialog.DateCreate_TB.Text = DateCreate.ToString();
+            Dialog.DateCreate_TB.Text = DateCreate.ToShortDateString();
 
             SetComboBox(Dialog);
 
