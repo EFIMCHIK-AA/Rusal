@@ -87,3 +87,26 @@ C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusa
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Add_F.resources
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe.config
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\Rusal.pdb
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\EPPlus.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\EPPlus.xml
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\Npgsql.pdb
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\Npgsql.xml
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\de\Npgsql.resources.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\es\Npgsql.resources.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\policy.2.0.Npgsql.config
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.Add_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.Main_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.Properties.Resources.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb

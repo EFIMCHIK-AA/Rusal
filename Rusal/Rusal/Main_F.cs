@@ -112,7 +112,7 @@ namespace Rusal
 
         private void ReportStart_B_Click(object sender, EventArgs e)
         {
-
+            Reports.ReportCreate(new DateTime(2019,10,1),new DateTime(2019,10,30));
         }
 
         private void Add_B_Click(object sender, EventArgs e)
