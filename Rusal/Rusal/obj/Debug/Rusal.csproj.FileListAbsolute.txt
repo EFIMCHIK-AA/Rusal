@@ -110,3 +110,4 @@ C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateResource.
 C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
 C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
 C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Report_F.resources

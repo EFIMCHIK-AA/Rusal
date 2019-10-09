@@ -14,13 +14,15 @@ namespace Rusal
 {
     public static class Reports
     {
-        public static void ReportCreate(DateTime DateStart, DateTime DateFinish)
+        public static void ByDate(DateTime DateStart, DateTime DateFinish)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.DefaultExt = "";
             sfd.Title = "Сохранение отчета";
-            sfd.Filter = "xlsx files (*.xlsx)| *.xlsx";
+            sfd.Filter = "Файл Excel| *.xlsx";
             sfd.FileName = "Отчет от " + DateTime.Now.ToString().Replace('.', '_').Replace(':', '_');
+            sfd.RestoreDirectory = true;
+
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 if (!String.IsNullOrEmpty(sfd.FileName))
@@ -33,7 +35,7 @@ namespace Rusal
                         excelPackage.Workbook.Properties.Created = DateTime.Now;
 
                         //Создания листа
-                        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+                        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Отчет");
                         //Добавление шапки
                         worksheet.Cells["G1:M1"].Merge = true;
                         worksheet.Cells["G1"].Value = "Отчет по дефектности";
