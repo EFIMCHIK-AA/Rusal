@@ -201,5 +201,32 @@ namespace Rusal
         {
 
         }
+
+        private void базаДанныхToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingDB_F Dialog = new SettingDB_F();
+
+            Dialog.Name_TB.Text = SystemArgs.NameDB;
+            Dialog.Server_TB.Text = SystemArgs.IPDB;
+            Dialog.Owner_TB.Text = SystemArgs.OwnerDB;
+            Dialog.Port_TB.Text = SystemArgs.PortDB;
+            Dialog.Password_TB.Text = SystemArgs.PasswordDB;
+            Dialog.Path_TB.Text = Files.GetBackupPath();
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void конфигурацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingConfiguration_F Dialog = new SettingConfiguration_F();
+
+            if(Dialog.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
     }
 }

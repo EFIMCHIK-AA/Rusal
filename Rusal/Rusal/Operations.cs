@@ -447,5 +447,28 @@ namespace Rusal
 
             return Result;
         }
+
+        public static void RequestAdd(Int64 ID, String Name, String NameTable, String NameColumn)
+        {
+            String ConvertName = $@"'{Name}'";
+
+            if(NameTable == "DiameterIngot")
+            {
+                ConvertName = $@"{Name}";
+            }
+
+            using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
+            {
+                Connect.Open();
+
+                using (var Command = new NpgsqlCommand($"INSERT INTO public.\"{NameTable}\"(\"{NameColumn}\")" +
+                                                        $"VALUES({ConvertName});", Connect))
+                {
+                    Command.ExecuteNonQuery();
+                }
+
+                Connect.Close();
+            }
+        }
     }
 }

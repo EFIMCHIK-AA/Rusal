@@ -94,6 +94,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Position_DGV = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -129,11 +134,6 @@
             this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
             this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -834,6 +834,40 @@
             this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
             this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DateFormation";
+            this.Column1.HeaderText = "Дата";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Diameter";
+            this.Column2.HeaderText = "Диаметр";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NumTS";
+            this.Column3.HeaderText = "ТС";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 96;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Count";
+            this.Column4.HeaderText = "Количество";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Weight";
+            this.Column5.HeaderText = "Вес";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 90;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DimGray;
@@ -864,6 +898,7 @@
             this.Status_SS.AutoSize = false;
             this.Status_SS.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Status_SS.Dock = System.Windows.Forms.DockStyle.None;
+            this.Status_SS.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Status_SS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CennectDB_S,
             this.NameDB_S,
@@ -923,6 +958,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.позицияToolStripMenuItem,
             this.анализToolStripMenuItem,
@@ -1036,14 +1072,16 @@
             // конфигурацияToolStripMenuItem
             // 
             this.конфигурацияToolStripMenuItem.Name = "конфигурацияToolStripMenuItem";
-            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.конфигурацияToolStripMenuItem.Text = "Конфигурация";
+            this.конфигурацияToolStripMenuItem.Click += new System.EventHandler(this.конфигурацияToolStripMenuItem_Click);
             // 
             // базаДанныхToolStripMenuItem
             // 
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
             this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.базаДанныхToolStripMenuItem.Text = "База данных";
+            this.базаДанныхToolStripMenuItem.Click += new System.EventHandler(this.базаДанныхToolStripMenuItem_Click);
             // 
             // Tool_TS
             // 
@@ -1121,40 +1159,6 @@
             this.Reset_TSB.Size = new System.Drawing.Size(34, 35);
             this.Reset_TSB.Text = "Сбросить фильтр";
             this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "DateFormation";
-            this.Column1.HeaderText = "Дата";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Diameter";
-            this.Column2.HeaderText = "Диаметр";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "NumTS";
-            this.Column3.HeaderText = "ТС";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 96;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Count";
-            this.Column4.HeaderText = "Количество";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Weight";
-            this.Column5.HeaderText = "Вес";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 90;
             // 
             // Main_F
             // 

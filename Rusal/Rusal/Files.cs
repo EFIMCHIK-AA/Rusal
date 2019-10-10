@@ -12,6 +12,7 @@ namespace Rusal
     {
         public static String LogPath = $@"Log"; //Место записи логов
         public static String ParamDBPath = $@"System\Connect\Param.conf"; //Место аргументов БД
+        public static String BackupPath = $@"System\Backup\Backup.conf"; //Место хранения файла бэкапа
 
         public static void GetParamDB()
         {
@@ -50,6 +51,37 @@ namespace Rusal
             else
             {
                 MessageBox.Show("Файл Param.conf не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void SetBackupPath(String Path)
+        {
+            if (File.Exists(BackupPath))
+            {
+                using (StreamWriter sw = new StreamWriter(File.Open(BackupPath, FileMode.Create)))
+                {
+                    sw.WriteLine(Path);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Файл Backup.conf не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static String GetBackupPath()
+        {
+            if (File.Exists(BackupPath))
+            {
+                using (StreamReader sr = new StreamReader(File.Open(BackupPath, FileMode.Open)))
+                {
+                    return sr.ReadLine();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Файл Backup.conf не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return String.Empty;
             }
         }
     }

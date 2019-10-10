@@ -111,3 +111,6 @@ C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
 C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
 C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Report_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingDB_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingConfiguration_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.DescriptionArg_F.resources

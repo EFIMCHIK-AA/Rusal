@@ -73,6 +73,12 @@
     <Compile Include="Analysis.cs" />
     <Compile Include="BaseDictionary.cs" />
     <Compile Include="DefectProduction.cs" />
+    <Compile Include="DescriptionArg_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DescriptionArg_F.Designer.cs">
+      <DependentUpon>DescriptionArg_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="DescriptionDefect.cs" />
     <Compile Include="DiameterIngot.cs" />
     <Compile Include="Encryption.cs" />
@@ -97,6 +103,18 @@
     <Compile Include="Report_F.Designer.cs">
       <DependentUpon>Report_F.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingConfiguration_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingConfiguration_F.Designer.cs">
+      <DependentUpon>SettingConfiguration_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingDB_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingDB_F.Designer.cs">
+      <DependentUpon>SettingDB_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemArgs.cs" />
     <Compile Include="Files.cs" />
     <Compile Include="TSN.cs" />
@@ -104,6 +122,9 @@
     <Compile Include="TypesDefect.cs" />
     <EmbeddedResource Include="Add_F.resx">
       <DependentUpon>Add_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DescriptionArg_F.resx">
+      <DependentUpon>DescriptionArg_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_F.resx">
       <DependentUpon>Main_F.cs</DependentUpon>
@@ -119,6 +140,12 @@
     </Compile>
     <EmbeddedResource Include="Report_F.resx">
       <DependentUpon>Report_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingConfiguration_F.resx">
+      <DependentUpon>SettingConfiguration_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingDB_F.resx">
+      <DependentUpon>SettingDB_F.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
