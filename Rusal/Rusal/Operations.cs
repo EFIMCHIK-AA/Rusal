@@ -448,7 +448,7 @@ namespace Rusal
             return Result;
         }
 
-        public static void RequestAdd(Int64 ID, String Name, String NameTable, String NameColumn)
+        public static void RequestAdd(String Name, String NameTable, String NameColumn)
         {
             String ConvertName = $@"'{Name}'";
 
@@ -463,6 +463,46 @@ namespace Rusal
 
                 using (var Command = new NpgsqlCommand($"INSERT INTO public.\"{NameTable}\"(\"{NameColumn}\")" +
                                                         $"VALUES({ConvertName});", Connect))
+                {
+                    Command.ExecuteNonQuery();
+                }
+
+                Connect.Close();
+            }
+        }
+
+        public static void RequestChange(Int64 ID, String Name, String NameTable, String NameColumn)
+        {
+            String ConvertName = $@"'{Name}'";
+
+            if (NameTable == "DiameterIngot")
+            {
+                ConvertName = $@"{Name}";
+            }
+
+            using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
+            {
+                Connect.Open();
+
+                using (var Command = new NpgsqlCommand($"UPDATE public.\"{NameTable}\"" +
+                                                       $"SET \"{NameColumn}\" = {ConvertName}" +
+                                                       $"WHERE \"ID\" = {ID}; ", Connect))
+                {
+                    Command.ExecuteNonQuery();
+                }
+
+                Connect.Close();
+            }
+        }
+
+        public static void RequestDelete(Int64 ID, String NameTable)
+        {
+            using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
+            {
+                Connect.Open();
+
+                using (var Command = new NpgsqlCommand($"DELETE FROM public.\"{NameTable}\"" +
+                                                       $"WHERE \"ID\" = {ID}; ", Connect))
                 {
                     Command.ExecuteNonQuery();
                 }

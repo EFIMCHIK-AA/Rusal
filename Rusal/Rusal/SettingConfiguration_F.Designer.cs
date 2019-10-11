@@ -90,12 +90,14 @@
             resources.ApplyResources(this.Change_B, "Change_B");
             this.Change_B.Name = "Change_B";
             this.Change_B.UseVisualStyleBackColor = true;
+            this.Change_B.Click += new System.EventHandler(this.Change_B_Click);
             // 
             // Delete_B
             // 
             resources.ApplyResources(this.Delete_B, "Delete_B");
             this.Delete_B.Name = "Delete_B";
             this.Delete_B.UseVisualStyleBackColor = true;
+            this.Delete_B.Click += new System.EventHandler(this.Delete_B_Click);
             // 
             // SettingConfiguration_F
             // 

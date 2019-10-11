@@ -32,55 +32,129 @@ namespace Rusal
         }
 
         object CurrentArgument = null;
+        String NameTable = String.Empty;
+        String NameColumn = String.Empty;
 
         delegate void Request(Int64 ID, String Name, String NameTable, String NameColumn);
 
-        private void RequestStart(Request Request)
+        private void RequestStart(bool Type, String Name)
         {
             if (CurrentArgument is ListBrigades)
             {
                 ListBrigades Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as ListBrigades;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else if (CurrentArgument is ListSmen)
             {
                 ListSmen Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as ListSmen;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else if (CurrentArgument is TypesAlloy)
             {
                 TypesAlloy Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as TypesAlloy;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else if (CurrentArgument is DiameterIngot)
             {
                 TypesAlloy Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as TypesAlloy;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else if (CurrentArgument is DescriptionDefect)
             {
                 DescriptionDefect Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as DescriptionDefect;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else if (CurrentArgument is TypesDefect)
             {
                 TypesDefect Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as TypesDefect;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else if (CurrentArgument is TSN)
             {
                 TSN Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as TSN;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else if (CurrentArgument is DefectProduction)
             {
                 DefectProduction Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as DefectProduction;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
             else
             {
                 ProgressMark Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as ProgressMark;
-                Request(Temp.ID, Temp.Name);
+
+                if (Type)
+                {
+                    Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+                }
+                else
+                {
+                    Operations.RequestDelete(Temp.ID, NameTable);
+                }
             }
         }
 
@@ -92,30 +166,48 @@ namespace Rusal
             {
                 case 0:
                     Spisok_LB.DataSource = SystemArgs.Brigades;
+                    NameTable = "ListBrigades";
+                    NameColumn = "N_Brigade";
                     break;
                 case 1:
                     Spisok_LB.DataSource = SystemArgs.Smeny;
+                    NameTable = "ListSmen";
+                    NameColumn = "N_Smena";
                     break;
                 case 2:
                     Spisok_LB.DataSource = SystemArgs.TypesAlloy;
+                    NameTable = "TypesAlloy";
+                    NameColumn = "N_Alloy";
                     break;
                 case 3:
                     Spisok_LB.DataSource = SystemArgs.Diameters;
+                    NameTable = "DiameterIngot";
+                    NameColumn = "N_Diameter";
                     break;
                 case 4:
                     Spisok_LB.DataSource = SystemArgs.Descriptions;
+                    NameTable = "DescriptionDefect";
+                    NameColumn = "N_Description";
                     break;
                 case 5:
                     Spisok_LB.DataSource = SystemArgs.TypesDefect;
+                    NameTable = "TypesDefect";
+                    NameColumn = "N_Defect";
                     break;
                 case 6:
                     Spisok_LB.DataSource = SystemArgs.TSN;
+                    NameTable = "TSN";
+                    NameColumn = "N_TSN";
                     break;
                 case 7:
                     Spisok_LB.DataSource = SystemArgs.DefectLocProduction;
+                    NameTable = "DefectLocationProduction";
+                    NameColumn = "N_Location";
                     break;
                 case 8:
                     Spisok_LB.DataSource = SystemArgs.ProgressMark;
+                    NameTable = "ProgressMark";
+                    NameColumn = "N_ProgressMark";
                     break;
             }
         }
@@ -135,10 +227,35 @@ namespace Rusal
             DescriptionArg_F Dialog = new DescriptionArg_F();
 
             Dialog.Name_L.Text = "Добавление аргумента";
+            Dialog.ID_TB.Text = "Формируется после запроса";
 
             if(Dialog.ShowDialog() == DialogResult.OK)
             {
-                Request Request = Operations.RequestAdd;
+                Operations.RequestAdd(Dialog.Value_TB.Text.Trim(), NameTable, NameColumn);
+            }
+        }
+
+        private void Change_B_Click(object sender, EventArgs e)
+        {
+            DescriptionArg_F Dialog = new DescriptionArg_F();
+
+            Dialog.Name_L.Text = "Изменение аргумента";
+            Dialog.ID_TB.Text = (Spisok_LB.Items[Spisok_LB.SelectedIndex] as BaseDictionary).ID.ToString();
+
+            
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+                CurrentArgument = Spisok_LB.SelectedItem;
+                RequestStart(true, Dialog.Value_TB.Text.Trim());
+            }
+        }
+
+        private void Delete_B_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Тест", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                CurrentArgument = Spisok_LB.SelectedItem;
+                RequestStart(false, null);
             }
         }
     }
