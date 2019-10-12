@@ -5,36 +5,64 @@ using System.Linq;
 using System.Text;
 using Npgsql;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Drawing;
 
 namespace Rusal
 {
     public static class Operations
     {
-        public static bool StatusConnect()
+        public static async void StatusConnectAsync(Main_F Form)
         {
-            try
-            {
-                using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
-                {
-                    Connect.Open();
+            await Task.Run(() => StatusConnect(Form));
+        }
 
-                    using (var Command = new NpgsqlCommand("SELECT 1", Connect))
+        private static bool StatusConnect(Main_F Form)
+        {
+            while (true)
+            {
+                bool Status = false;
+                try
+                {
+                    using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
                     {
-                        using (var Reader = Command.ExecuteReader())
+                        Connect.Open();
+
+                        using (var Command = new NpgsqlCommand("SELECT 1", Connect))
                         {
-                            while (Reader.Read())
+                            using (var Reader = Command.ExecuteReader())
                             {
-                                return true;
+                                while (Reader.Read())
+                                {
+                                    Status = true;
+                                }
                             }
                         }
                     }
                 }
+                catch (Exception)
+                {
+                    Status = false;
+                }
 
-                return false;
-            }
-            catch(Exception)
-            {
-                return false;
+                if (Status)
+                {
+                    Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
+                    {
+                        Form.ConnectDB_TB.Text = "Соединение: Установлено";
+                        Form.ConnectDB_TB.BackColor = Color.Green;
+                    }));
+                }
+                else
+                {
+                    Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
+                    {
+                        Form.ConnectDB_TB.Text = "Соединение: Не установлено";
+                        Form.ConnectDB_TB.BackColor = Color.Red;
+                    }));
+                }
+
+                Thread.Sleep(3000);
             }
         }
 

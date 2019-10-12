@@ -103,7 +103,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.Status_SS = new System.Windows.Forms.StatusStrip();
-            this.CennectDB_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.NameDB_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.UserDB_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.Description_S = new System.Windows.Forms.ToolStripStatusLabel();
@@ -134,6 +133,7 @@
             this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
             this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
+            this.ConnectDB_TB = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -900,26 +900,17 @@
             this.Status_SS.Dock = System.Windows.Forms.DockStyle.None;
             this.Status_SS.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Status_SS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CennectDB_S,
             this.NameDB_S,
             this.UserDB_S,
             this.Description_S,
             this.ProgressBar_PB});
-            this.Status_SS.Location = new System.Drawing.Point(-3, 717);
+            this.Status_SS.Location = new System.Drawing.Point(254, 717);
             this.Status_SS.Name = "Status_SS";
-            this.Status_SS.Size = new System.Drawing.Size(1337, 26);
+            this.Status_SS.Size = new System.Drawing.Size(1080, 26);
             this.Status_SS.SizingGrip = false;
             this.Status_SS.Stretch = false;
             this.Status_SS.TabIndex = 43;
             this.Status_SS.Text = "StatusBar_S";
-            // 
-            // CennectDB_S
-            // 
-            this.CennectDB_S.AutoSize = false;
-            this.CennectDB_S.Margin = new System.Windows.Forms.Padding(0);
-            this.CennectDB_S.Name = "CennectDB_S";
-            this.CennectDB_S.Size = new System.Drawing.Size(256, 26);
-            this.CennectDB_S.Text = "CennectDB_S";
             // 
             // NameDB_S
             // 
@@ -1072,7 +1063,7 @@
             // конфигурацияToolStripMenuItem
             // 
             this.конфигурацияToolStripMenuItem.Name = "конфигурацияToolStripMenuItem";
-            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.конфигурацияToolStripMenuItem.Text = "Конфигурация";
             this.конфигурацияToolStripMenuItem.Click += new System.EventHandler(this.конфигурацияToolStripMenuItem_Click);
             // 
@@ -1160,12 +1151,20 @@
             this.Reset_TSB.Text = "Сбросить фильтр";
             this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
             // 
+            // ConnectDB_TB
+            // 
+            this.ConnectDB_TB.Location = new System.Drawing.Point(0, 723);
+            this.ConnectDB_TB.Name = "ConnectDB_TB";
+            this.ConnectDB_TB.Size = new System.Drawing.Size(256, 20);
+            this.ConnectDB_TB.TabIndex = 46;
+            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1334, 743);
+            this.Controls.Add(this.ConnectDB_TB);
             this.Controls.Add(this.Tool_TS);
             this.Controls.Add(this.Status_SS);
             this.Controls.Add(this.menuStrip1);
@@ -1259,7 +1258,6 @@
         public System.Windows.Forms.ToolStripStatusLabel UserDB_S;
         public System.Windows.Forms.ToolStripStatusLabel NameDB_S;
         public System.Windows.Forms.StatusStrip Status_SS;
-        public System.Windows.Forms.ToolStripStatusLabel CennectDB_S;
         public System.Windows.Forms.ToolStripProgressBar ProgressBar_PB;
         private System.Windows.Forms.Timer Timer_T;
         private System.Windows.Forms.ToolStripStatusLabel Description_S;
@@ -1305,6 +1303,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        public System.Windows.Forms.TextBox ConnectDB_TB;
     }
 }
 

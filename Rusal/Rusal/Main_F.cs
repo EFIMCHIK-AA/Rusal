@@ -35,6 +35,7 @@ namespace Rusal
         {
             Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             GetStatusConnect();
+            Operations.StatusConnectAsync(this);
             Files.GetParamDB();
             GetParamDB();
             GetAllData();
@@ -47,19 +48,6 @@ namespace Rusal
 
             Position_DGV.AutoGenerateColumns = false;
             Position_DGV.DataSource = SystemArgs.View;
-
-            //Position_DGV.RowCount = 0;
-
-            //foreach (Position Position in List)
-            //{
-            //    Position_DGV.RowCount++;
-
-            //    Position_DGV[0, Position_DGV.RowCount - 1].Value = Position.DateFormation.ToShortDateString();
-            //    Position_DGV[1, Position_DGV.RowCount - 1].Value = Position.Diameter.Name;
-            //    Position_DGV[2, Position_DGV.RowCount - 1].Value = Position.NumTS.Name;
-            //    Position_DGV[3, Position_DGV.RowCount - 1].Value = Position.Count;
-            //    Position_DGV[4, Position_DGV.RowCount - 1].Value = Position.Weight;
-            //}
         }
 
         private void GetAllData()
@@ -92,22 +80,7 @@ namespace Rusal
 
         private void Timer_T_Tick(object sender, EventArgs e)
         {
-            if (Operations.StatusConnect())
-            {
-                CennectDB_S.Text = "Соеднинение: Установлено";
-                CennectDB_S.BackColor = Color.Green;
 
-                ButtonMode(true);
-            }
-            else
-            {
-                CennectDB_S.Text = "Соеднинение: Не установлено";
-                CennectDB_S.BackColor = Color.Red;
-
-                MessageBox.Show("Связь с сервером потеряна. Управление формой будет заблокировано до восстановления подключения", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                ButtonMode(false);
-            }
         }
 
         private void ReportStart_B_Click(object sender, EventArgs e)
