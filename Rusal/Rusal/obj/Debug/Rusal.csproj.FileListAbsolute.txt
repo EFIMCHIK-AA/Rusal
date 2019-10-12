@@ -134,3 +134,38 @@ C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\OxyP
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.xml
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Analysis_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe.config
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Rusal.pdb
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\EPPlus.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\EPPlus.xml
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Npgsql.pdb
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Npgsql.xml
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.pdb
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.xml
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\policy.2.0.Npgsql.config
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csprojAssemblyReference.cache
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Add_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Analysis_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.DescriptionArg_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Main_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Properties.Resources.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Report_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingConfiguration_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingDB_F.resources
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateResource.cache
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CoreCompileInputs.cache
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
+C:\Users\Tom\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb

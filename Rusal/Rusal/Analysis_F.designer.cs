@@ -32,6 +32,7 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pv = new OxyPlot.WindowsForms.PlotView();
+            this.Export_B = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -72,12 +73,23 @@
             this.pv.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.pv.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
+            // Export_B
+            // 
+            this.Export_B.Location = new System.Drawing.Point(591, 415);
+            this.Export_B.Name = "Export_B";
+            this.Export_B.Size = new System.Drawing.Size(97, 23);
+            this.Export_B.TabIndex = 4;
+            this.Export_B.Text = "Export";
+            this.Export_B.UseVisualStyleBackColor = true;
+            this.Export_B.Click += new System.EventHandler(this.Export_B_Click);
+            // 
             // Analysis_F
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Export_B);
             this.Controls.Add(this.pv);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox2);
@@ -94,5 +106,6 @@
         public System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.ListBox listBox2;
         public OxyPlot.WindowsForms.PlotView pv;
+        public System.Windows.Forms.Button Export_B;
     }
 }
