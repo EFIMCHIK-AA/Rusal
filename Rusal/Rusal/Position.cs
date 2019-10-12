@@ -228,6 +228,14 @@ namespace Rusal
             }
         }
 
+        public String WeightDB
+        {
+            get
+            {
+                return _Weight.ToString().Replace(',','.');
+            }
+        }
+
         public String DefectLocIngot
         {
             get

@@ -305,8 +305,8 @@ namespace Rusal
 
         public static void AddPosition()
         {
-            try
-            {
+            //try
+            //{
                 Add_F Dialog = new Add_F();
 
                 DateTime DateCreate = DateTime.Now;
@@ -344,7 +344,7 @@ namespace Rusal
                         using (var Command = new NpgsqlCommand($"INSERT INTO public.\"Ingot\"(" +
                                                                             "\"SysDateCreate\", \"DateFormation\", \"NumMelt\", \"CountIngot\", \"WeightIngots\", \"DefectLocIngot\", \"Correction\"," +
                                                                             " \"Address\", \"Reason\", \"NumTSN\", \"NumBrigade\", \"DefLocProduction\", \"NumSmen\", \"Defect\", \"TypeAlloy\", \"Description\", \"Diameter\", \"ProgressMark\")" +
-                                                                $"VALUES('{Temp.DateCreate}', '{Temp.DateFormation}', '{Temp.NumMelt}', {Temp.Count}, {Temp.Weight}, '{Temp.DefectLocIngot}', '{Temp.Correction}', '{Temp.Address}', '{Temp.Reason}' ," +
+                                                                $"VALUES('{Temp.DateCreate}', '{Temp.DateFormation}', '{Temp.NumMelt}', {Temp.Count}, {Temp.WeightDB}, '{Temp.DefectLocIngot}', '{Temp.Correction}', '{Temp.Address}', '{Temp.Reason}' ," +
                                                                             $" {Temp.NumTS.ID}, {Temp.NumBrigade.ID}, {Temp.DefectLocProduction.ID}, {Temp.NumSmeny.ID}, {Temp.Defect.ID}, {Temp.TypeAlloy.ID}, {Temp.Description.ID}, {Temp.Diameter.ID}, {Temp.ProgressMark.ID});", Connect))
                         {
                             Command.ExecuteNonQuery();
@@ -355,13 +355,13 @@ namespace Rusal
                         Connect.Close();
                     }
                 }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Ошибка при добавлении данных на сервер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
         }
-            catch (Exception)
-            {
-                MessageBox.Show("Ошибка при добавлении данных на сервер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-}
 
         private static void GetLocalDefectIngot(Add_F Dialog, String [] DefectLocIngot)
         {
@@ -435,7 +435,7 @@ namespace Rusal
 
                     using (var Command = new NpgsqlCommand($"UPDATE public.\"Ingot\"" +
                                                             $"SET   \"SysDateCreate\" = '{Temp.DateCreate}', \"DateFormation\" ='{Temp.DateFormation}', \"NumMelt\" = '{Temp.NumMelt}', \"CountIngot\" = {Temp.Count}," +
-                                                                $"  \"WeightIngots\" = {Temp.Weight}, \"DefectLocIngot\" = '{Temp.DefectLocIngot}', \"Correction\" = '{Temp.Correction}', \"Address\" = '{Temp.Address}'," +
+                                                                $"  \"WeightIngots\" = {Temp.WeightDB}, \"DefectLocIngot\" = '{Temp.DefectLocIngot}', \"Correction\" = '{Temp.Correction}', \"Address\" = '{Temp.Address}'," +
                                                                 $"  \"Reason\" ='{Temp.Reason}', \"NumTSN\" = {Temp.NumTS.ID}, \"NumBrigade\" = {Temp.NumBrigade.ID}, \"DefLocProduction\" = {Temp.DefectLocProduction.ID}," +
                                                                 $"  \"NumSmen\" = {Temp.NumSmeny.ID}, \"Defect\" = {Temp.Defect.ID}, \"TypeAlloy\" = {Temp.TypeAlloy.ID}, \"Description\" = {Temp.Description.ID}, \"Diameter\" = {Temp.Diameter.ID}," +
                                                                 $"  \"ProgressMark\" = {Temp.ProgressMark.ID}" +
