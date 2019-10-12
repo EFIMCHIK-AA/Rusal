@@ -45,6 +45,12 @@
     <Reference Include="Npgsql">
       <HintPath>..\..\Npgsql2.0.11.91-bin-ms.net3.5sp1\Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=245eacd6b5d2d338, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.WindowsForms.1.0.0\lib\net45\OxyPlot.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="policy.2.0.Npgsql">
       <HintPath>..\..\Npgsql2.0.11.91-bin-ms.net3.5sp1\policy.2.0.Npgsql.dll</HintPath>
     </Reference>
@@ -71,6 +77,12 @@
       <DependentUpon>Add_F.cs</DependentUpon>
     </Compile>
     <Compile Include="Analysis.cs" />
+    <Compile Include="Analysis_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis_F.designer.cs">
+      <DependentUpon>Analysis_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseDictionary.cs" />
     <Compile Include="DefectProduction.cs" />
     <Compile Include="DescriptionArg_F.cs">
@@ -122,6 +134,9 @@
     <Compile Include="TypesDefect.cs" />
     <EmbeddedResource Include="Add_F.resx">
       <DependentUpon>Add_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis_F.resx">
+      <DependentUpon>Analysis_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DescriptionArg_F.resx">
       <DependentUpon>DescriptionArg_F.cs</DependentUpon>

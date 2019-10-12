@@ -1008,6 +1008,7 @@
             this.весToolStripMenuItem.Name = "весToolStripMenuItem";
             this.весToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.весToolStripMenuItem.Text = "Вес | Диаметр ";
+            this.весToolStripMenuItem.Click += new System.EventHandler(this.ВесToolStripMenuItem_Click);
             // 
             // весToolStripMenuItem1
             // 
