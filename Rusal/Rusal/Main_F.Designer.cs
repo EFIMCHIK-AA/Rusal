@@ -411,7 +411,7 @@
             // East_CB
             // 
             this.East_CB.AutoSize = true;
-            this.East_CB.Location = new System.Drawing.Point(657, 344);
+            this.East_CB.Location = new System.Drawing.Point(681, 344);
             this.East_CB.Name = "East_CB";
             this.East_CB.Size = new System.Drawing.Size(62, 17);
             this.East_CB.TabIndex = 94;
@@ -432,7 +432,7 @@
             // South_CB
             // 
             this.South_CB.AutoSize = true;
-            this.South_CB.Location = new System.Drawing.Point(612, 388);
+            this.South_CB.Location = new System.Drawing.Point(612, 398);
             this.South_CB.Name = "South_CB";
             this.South_CB.Size = new System.Drawing.Size(40, 17);
             this.South_CB.TabIndex = 92;
@@ -442,7 +442,7 @@
             // North_CB
             // 
             this.North_CB.AutoSize = true;
-            this.North_CB.Location = new System.Drawing.Point(612, 291);
+            this.North_CB.Location = new System.Drawing.Point(612, 286);
             this.North_CB.Name = "North_CB";
             this.North_CB.Size = new System.Drawing.Size(57, 17);
             this.North_CB.TabIndex = 91;
@@ -974,19 +974,19 @@
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             // 
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // анализToolStripMenuItem
@@ -1064,14 +1064,14 @@
             // конфигурацияToolStripMenuItem
             // 
             this.конфигурацияToolStripMenuItem.Name = "конфигурацияToolStripMenuItem";
-            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.конфигурацияToolStripMenuItem.Text = "Конфигурация";
             this.конфигурацияToolStripMenuItem.Click += new System.EventHandler(this.конфигурацияToolStripMenuItem_Click);
             // 
             // базаДанныхToolStripMenuItem
             // 
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.базаДанныхToolStripMenuItem.Text = "База данных";
             this.базаДанныхToolStripMenuItem.Click += new System.EventHandler(this.базаДанныхToolStripMenuItem_Click);
             // 

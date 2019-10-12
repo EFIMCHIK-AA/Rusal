@@ -54,7 +54,8 @@ namespace Rusal
         {
             ProgressBar_PB.Value = 2;
 
-            Operations.GetAllData();
+            Operations.GetArguments();
+            Operations.GetPosition();
 
             ProgressBar_PB.Value = 100;
         }
@@ -198,7 +199,7 @@ namespace Rusal
 
             if(Dialog.ShowDialog() == DialogResult.OK)
             {
-
+                Operations.GetPosition();
             }
         }
 

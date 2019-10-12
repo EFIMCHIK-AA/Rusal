@@ -66,16 +66,65 @@ namespace Rusal
             }
         }
 
-        public static void  GetAllData()
+        public static void GetPosition()
+        {
+            try
+            {
+                SystemArgs.Positions.Clear();
+                SystemArgs.Result.Clear();
+
+                using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
+                {
+                    Connect.Open();
+
+                    //Получаем список всех позиций из БД
+
+                    using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"SysDateCreate\", \"DateFormation\", \"NumMelt\", \"CountIngot\", \"WeightIngots\"," +
+                                                                 $" \"DefectLocIngot\", \"Correction\", \"Address\", \"Reason\", \"NumTSN\", \"NumBrigade\", \"DefLocProduction\"," +
+                                                                 $" \"NumSmen\", \"Defect\", \"TypeAlloy\", \"Description\", \"Diameter\", \"ProgressMark\"" +
+                                                            "FROM public.\"Ingot\";", Connect))
+                    {
+                        using (var Reader = Command.ExecuteReader())
+                        {
+                            while (Reader.Read())
+                            {
+                                //Текущие значения позиции
+                                TSN[] TSN = SystemArgs.TSN.Where(t => t.ID == Reader.GetInt64(10)).ToArray();
+                                ListBrigades[] Brigade = SystemArgs.Brigades.Where(t => t.ID == Reader.GetInt64(11)).ToArray();
+                                DefectProduction[] DefProduction = SystemArgs.DefectLocProduction.Where(t => t.ID == Reader.GetInt64(12)).ToArray();
+                                ListSmen[] Smena = SystemArgs.Smeny.Where(t => t.ID == Reader.GetInt64(13)).ToArray();
+                                TypesDefect[] Defect = SystemArgs.TypesDefect.Where(t => t.ID == Reader.GetInt64(14)).ToArray();
+                                TypesAlloy[] Alloy = SystemArgs.TypesAlloy.Where(t => t.ID == Reader.GetInt64(15)).ToArray();
+                                DescriptionDefect[] Description = SystemArgs.Descriptions.Where(t => t.ID == Reader.GetInt64(16)).ToArray();
+                                DiameterIngot[] Diameter = SystemArgs.Diameters.Where(t => t.ID == Reader.GetInt64(17)).ToArray();
+                                ProgressMark[] ProgressMark = SystemArgs.ProgressMark.Where(t => t.ID == Reader.GetInt64(18)).ToArray();
+
+                                //Добавляем позиция в список
+                                SystemArgs.Positions.Add(new Position(Reader.GetInt32(0), Reader.GetDateTime(1), Reader.GetDateTime(2), Reader.GetString(3), Reader.GetInt64(4), Reader.GetDouble(5),
+                                                                      Reader.GetString(6), Reader.GetString(7), Reader.GetString(8), Reader.GetString(9), TSN[0], Brigade[0], DefProduction[0], Smena[0], Defect[0], Alloy[0],
+                                                                      Description[0], Diameter[0], ProgressMark[0]));
+                            }
+                        }
+                    }
+
+                    Connect.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка при получении данных с сервера", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        public static void  GetArguments()
         {
             SystemArgs.DefectLocProduction.Clear();
-            SystemArgs.Positions.Clear();
             SystemArgs.TSN.Clear();
             SystemArgs.Brigades.Clear();
             SystemArgs.Descriptions.Clear();
             SystemArgs.Diameters.Clear();
             SystemArgs.ProgressMark.Clear();
-            SystemArgs.Result.Clear();
             SystemArgs.TypesDefect.Clear();
             SystemArgs.TypesDefect.Clear();
             SystemArgs.Smeny.Clear();
@@ -195,36 +244,6 @@ namespace Rusal
                         }
                     }
 
-                    //Получаем список всех позиций из БД
-
-                    using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"SysDateCreate\", \"DateFormation\", \"NumMelt\", \"CountIngot\", \"WeightIngots\"," +
-                                                                 $" \"DefectLocIngot\", \"Correction\", \"Address\", \"Reason\", \"NumTSN\", \"NumBrigade\", \"DefLocProduction\"," +
-                                                                 $" \"NumSmen\", \"Defect\", \"TypeAlloy\", \"Description\", \"Diameter\", \"ProgressMark\"" +
-                                                            "FROM public.\"Ingot\";", Connect))
-                    {
-                        using (var Reader = Command.ExecuteReader())
-                        {
-                            while (Reader.Read())
-                            {
-                                //Текущие значения позиции
-                                TSN [] TSN = SystemArgs.TSN.Where(t => t.ID == Reader.GetInt64(10)).ToArray();
-                                ListBrigades [] Brigade = SystemArgs.Brigades.Where(t => t.ID == Reader.GetInt64(11)).ToArray();
-                                DefectProduction [] DefProduction = SystemArgs.DefectLocProduction.Where(t => t.ID == Reader.GetInt64(12)).ToArray();
-                                ListSmen [] Smena = SystemArgs.Smeny.Where(t => t.ID == Reader.GetInt64(13)).ToArray();
-                                TypesDefect [] Defect = SystemArgs.TypesDefect.Where(t => t.ID == Reader.GetInt64(14)).ToArray();
-                                TypesAlloy[] Alloy = SystemArgs.TypesAlloy.Where(t => t.ID == Reader.GetInt64(15)).ToArray();
-                                DescriptionDefect[] Description = SystemArgs.Descriptions.Where(t => t.ID == Reader.GetInt64(16)).ToArray();
-                                DiameterIngot[] Diameter = SystemArgs.Diameters.Where(t => t.ID == Reader.GetInt64(17)).ToArray();
-                                ProgressMark[] ProgressMark = SystemArgs.ProgressMark.Where(t => t.ID == Reader.GetInt64(18)).ToArray();
-
-                                //Добавляем позиция в список
-                                SystemArgs.Positions.Add(new Position(Reader.GetInt32(0), Reader.GetDateTime(1), Reader.GetDateTime(2), Reader.GetString(3), Reader.GetInt64(4), Reader.GetDouble(5),
-                                                                      Reader.GetString(6), Reader.GetString(7), Reader.GetString(8), Reader.GetString(9), TSN[0], Brigade[0], DefProduction[0], Smena[0], Defect[0], Alloy[0],
-                                                                      Description[0], Diameter[0], ProgressMark[0]));
-                            }
-                        }
-                    }
-
                     Connect.Close();
                 }
             }
@@ -305,8 +324,8 @@ namespace Rusal
 
         public static void AddPosition()
         {
-            //try
-            //{
+            try
+            {
                 Add_F Dialog = new Add_F();
 
                 DateTime DateCreate = DateTime.Now;
@@ -355,12 +374,12 @@ namespace Rusal
                         Connect.Close();
                     }
                 }
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Ошибка при добавлении данных на сервер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка при добавлении данных на сервер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private static void GetLocalDefectIngot(Add_F Dialog, String [] DefectLocIngot)
@@ -510,7 +529,7 @@ namespace Rusal
                 Connect.Close();
             }
 
-            GetAllData();
+            GetArguments();
         }
 
         public static void RequestChange(Int64 ID, String Name, String NameTable, String NameColumn)
@@ -536,7 +555,7 @@ namespace Rusal
                 Connect.Close();
             }
 
-            GetAllData();
+            GetArguments();
         }
 
         public static void RequestDelete(Int64 ID, String NameTable)
@@ -554,7 +573,7 @@ namespace Rusal
                 Connect.Close();
             }
 
-            GetAllData();
+            GetArguments();
         }
     }
 }

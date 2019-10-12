@@ -35,8 +35,6 @@ namespace Rusal
         String NameTable = String.Empty;
         String NameColumn = String.Empty;
 
-        delegate void Request(Int64 ID, String Name, String NameTable, String NameColumn);
-
         private void RequestStart(bool Type, String Name)
         {
             if (CurrentArgument is ListBrigades)
