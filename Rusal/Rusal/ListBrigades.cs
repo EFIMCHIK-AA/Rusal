@@ -52,5 +52,10 @@ namespace Rusal
                 }
             }
         }
+
+        public override String ToString()
+        {
+            return _Name;
+        }
     }
 }

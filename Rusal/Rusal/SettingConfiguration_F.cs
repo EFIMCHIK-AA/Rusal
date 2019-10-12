@@ -22,12 +22,12 @@ namespace Rusal
 
         }
 
-        private void SettingConfiguration_F_Load(object sender, EventArgs e)
-        {
-            String[] ListParams = {"Номер бригады", "Номер смены", "Марка сплава", "Диаметер",
+        String []ListParams = {"Номер бригады", "Номер смены", "Марка сплава", "Диаметер",
                                   "Описание", "Тип дефекта", "Номет ТС", "Место дефекта в производственном процессе",
                                   "Отметка о выполнении" };
 
+        private void SettingConfiguration_F_Load(object sender, EventArgs e)
+        {
             Params_CB.DataSource = ListParams;
         }
 
@@ -156,12 +156,15 @@ namespace Rusal
                     Operations.RequestDelete(Temp.ID, NameTable);
                 }
             }
+
+            RefreshDataSource();
         }
 
         private void ShowPosition(Int32 Key)
         {
+            Spisok_LB.DataSource = null;
             Spisok_LB.ValueMember = "Name";
-           
+
             switch (Key)
             {
                 case 0:
@@ -222,9 +225,16 @@ namespace Rusal
 
         }
 
+        private void RefreshDataSource()
+        {
+            Params_CB.DataSource = null;
+            Params_CB.DataSource = ListParams;
+        }
+
         private void Add_B_Click(object sender, EventArgs e)
         {
-            DescriptionArg_F Dialog = new DescriptionArg_F();
+            CurrentArgument = Spisok_LB.SelectedItem;
+            DescriptionArg_F Dialog = new DescriptionArg_F(CurrentArgument);
 
             Dialog.Name_L.Text = "Добавление аргумента";
             Dialog.ID_TB.Text = "Формируется после запроса";
@@ -232,29 +242,33 @@ namespace Rusal
             if(Dialog.ShowDialog() == DialogResult.OK)
             {
                 Operations.RequestAdd(Dialog.Value_TB.Text.Trim(), NameTable, NameColumn);
+                RefreshDataSource();
             }
         }
 
         private void Change_B_Click(object sender, EventArgs e)
         {
-            DescriptionArg_F Dialog = new DescriptionArg_F();
-
-            Dialog.Name_L.Text = "Изменение аргумента";
-            Dialog.ID_TB.Text = (Spisok_LB.Items[Spisok_LB.SelectedIndex] as BaseDictionary).ID.ToString();
-
-            
-            if (Dialog.ShowDialog() == DialogResult.OK)
+            if (MessageBox.Show("Изменение аргумента приведет к изменению всех позиций, которые ссылаются на выбранный аргумент. Продолжить?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 CurrentArgument = Spisok_LB.SelectedItem;
-                RequestStart(true, Dialog.Value_TB.Text.Trim());
+                DescriptionArg_F Dialog = new DescriptionArg_F(CurrentArgument);
+
+                Dialog.Name_L.Text = "Изменение аргумента";
+                Dialog.ID_TB.Text = (Spisok_LB.Items[Spisok_LB.SelectedIndex] as BaseDictionary).ID.ToString();
+
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    CurrentArgument = Spisok_LB.SelectedItem;
+                    RequestStart(true, Dialog.Value_TB.Text.Trim());
+                }
             }
         }
 
         private void Delete_B_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Тест", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if(MessageBox.Show("Удаление аргумента приведет к удалению всех позиций, которые ссылаются на выбранный аргумент. Продолжить?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                CurrentArgument = Spisok_LB.SelectedItem;
                 RequestStart(false, null);
             }
         }

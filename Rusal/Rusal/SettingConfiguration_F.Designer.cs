@@ -67,9 +67,11 @@
             // 
             // Spisok_LB
             // 
+            this.Spisok_LB.DisplayMember = "Name";
             this.Spisok_LB.FormattingEnabled = true;
             resources.ApplyResources(this.Spisok_LB, "Spisok_LB");
             this.Spisok_LB.Name = "Spisok_LB";
+            this.Spisok_LB.ValueMember = "Name";
             this.Spisok_LB.Click += new System.EventHandler(this.Spisok_LB_Click);
             // 
             // label1

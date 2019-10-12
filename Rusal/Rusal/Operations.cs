@@ -40,6 +40,18 @@ namespace Rusal
 
         public static void  GetAllData()
         {
+            SystemArgs.DefectLocProduction.Clear();
+            SystemArgs.Positions.Clear();
+            SystemArgs.TSN.Clear();
+            SystemArgs.Brigades.Clear();
+            SystemArgs.Descriptions.Clear();
+            SystemArgs.Diameters.Clear();
+            SystemArgs.ProgressMark.Clear();
+            SystemArgs.Result.Clear();
+            SystemArgs.TypesDefect.Clear();
+            SystemArgs.TypesDefect.Clear();
+            SystemArgs.Smeny.Clear();
+
             try
             {
                 using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
@@ -469,6 +481,8 @@ namespace Rusal
 
                 Connect.Close();
             }
+
+            GetAllData();
         }
 
         public static void RequestChange(Int64 ID, String Name, String NameTable, String NameColumn)
@@ -493,6 +507,8 @@ namespace Rusal
 
                 Connect.Close();
             }
+
+            GetAllData();
         }
 
         public static void RequestDelete(Int64 ID, String NameTable)
@@ -509,6 +525,8 @@ namespace Rusal
 
                 Connect.Close();
             }
+
+            GetAllData();
         }
     }
 }
