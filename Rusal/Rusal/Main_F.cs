@@ -20,11 +20,6 @@ namespace Rusal
             InitializeComponent();
         }
 
-        private void GetStatusConnect()
-        {
-            Timer_T.Start();
-        }
-
         private void GetParamDB()
         {
             NameDB_S.Text = $"Название: {SystemArgs.NameDB}";
@@ -33,13 +28,23 @@ namespace Rusal
 
         private void Main_F_Load(object sender, EventArgs e)
         {
-            Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            GetStatusConnect();
-            Operations.StatusConnectAsync(this);
             Files.GetParamDB();
-            GetParamDB();
-            GetAllData();
-            ShowPosition(SystemArgs.Positions);
+            Operations.StatusConnectAsync(this);
+
+            Thread.Sleep(1000);
+
+            if (SystemArgs.StatusConnect)
+            {
+                Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                GetParamDB();
+                GetAllData();
+                ShowPosition(SystemArgs.Positions);
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться к базе данных. Запуск программного обеспечения остановлен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
         }
 
         private void ShowPosition(List<Position> List)
@@ -79,49 +84,73 @@ namespace Rusal
             }
         }
 
-        private void Timer_T_Tick(object sender, EventArgs e)
-        {
-
-        }
-
         private void ReportStart_B_Click(object sender, EventArgs e)
         {
-            Report_F Dialog = new Report_F();
-
-            if(Dialog.ShowDialog() == DialogResult.OK)
+            if(SystemArgs.StatusConnect)
             {
-                Reports.ByDate(Dialog.First_MC.SelectionStart, Dialog.Second_MC.SelectionStart);
+                Report_F Dialog = new Report_F();
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    Reports.ByDate(Dialog.First_MC.SelectionStart, Dialog.Second_MC.SelectionStart);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Add_B_Click(object sender, EventArgs e)
         {
-            Operations.AddPosition();
+            if (SystemArgs.StatusConnect)
+            {
+                Operations.AddPosition();
 
-            ResetSearch();
+                ResetSearch();
 
-            ShowPosition(SystemArgs.Positions);
+                ShowPosition(SystemArgs.Positions);
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Change_B_Click(object sender, EventArgs e)
         {
-            Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
-            ResetSearch();
+            if (SystemArgs.StatusConnect)
+            {
+                if (Position_DGV.CurrentCell != null)
+                {
+                    Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+                    ResetSearch();
 
-            ShowPosition(SystemArgs.Positions);
-        }
-
-        private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+                    ShowPosition(SystemArgs.Positions);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Delete_B_Click(object sender, EventArgs e)
         {
-            Operations.DeletePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
-            ResetSearch();
+            if (SystemArgs.StatusConnect)
+            {
+                if (Position_DGV.CurrentCell != null)
+                {
+                    Operations.DeletePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+                    ResetSearch();
 
-            ShowPosition(SystemArgs.Positions);
+                    ShowPosition(SystemArgs.Positions);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Position_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -131,28 +160,35 @@ namespace Rusal
 
         private void Search_TSB_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(Search_TSTB.Text.Trim()))
+            if (SystemArgs.StatusConnect)
             {
-                SystemArgs.ModePosition = true;
-
-                String SearchText = Search_TSTB.Text.Trim();
-
-                SystemArgs.Result = Operations.ResultSearch(SearchText);
-
-                if(SystemArgs.Result.Count > 0)
+                if (!String.IsNullOrEmpty(Search_TSTB.Text.Trim()))
                 {
-                    ShowPosition(SystemArgs.Result);
+                    SystemArgs.ModePosition = true;
+
+                    String SearchText = Search_TSTB.Text.Trim();
+
+                    SystemArgs.Result = Operations.ResultSearch(SearchText);
+
+                    if (SystemArgs.Result.Count > 0)
+                    {
+                        ShowPosition(SystemArgs.Result);
+                    }
+                    else
+                    {
+                        Search_TSTB.Focus();
+                        MessageBox.Show("Поиск не дал результатов", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
                     Search_TSTB.Focus();
-                    MessageBox.Show("Поиск не дал результатов", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Для поиска необходимо ввести значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                Search_TSTB.Focus();
-                MessageBox.Show("Для поиска необходимо ввести значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

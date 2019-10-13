@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_F));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -107,7 +106,6 @@
             this.UserDB_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.Description_S = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressBar_PB = new System.Windows.Forms.ToolStripProgressBar();
-            this.Timer_T = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.позицияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -830,7 +828,6 @@
             this.Position_DGV.RowHeadersVisible = false;
             this.Position_DGV.Size = new System.Drawing.Size(469, 664);
             this.Position_DGV.TabIndex = 36;
-            this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
             this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting);
             // 
@@ -941,11 +938,6 @@
             this.ProgressBar_PB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProgressBar_PB.Name = "ProgressBar_PB";
             this.ProgressBar_PB.Size = new System.Drawing.Size(450, 20);
-            // 
-            // Timer_T
-            // 
-            this.Timer_T.Interval = 3000;
-            this.Timer_T.Tick += new System.EventHandler(this.Timer_T_Tick);
             // 
             // menuStrip1
             // 
@@ -1266,7 +1258,6 @@
         public System.Windows.Forms.ToolStripStatusLabel NameDB_S;
         public System.Windows.Forms.StatusStrip Status_SS;
         public System.Windows.Forms.ToolStripProgressBar ProgressBar_PB;
-        private System.Windows.Forms.Timer Timer_T;
         private System.Windows.Forms.ToolStripStatusLabel Description_S;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;

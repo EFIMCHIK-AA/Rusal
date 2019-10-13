@@ -17,11 +17,12 @@ namespace Rusal
             await Task.Run(() => StatusConnect(Form));
         }
 
-        private static bool StatusConnect(Main_F Form)
+        private static void StatusConnect(Main_F Form)
         {
             while (true)
             {
                 bool Status = false;
+
                 try
                 {
                     using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
@@ -44,7 +45,9 @@ namespace Rusal
                 {
                     Status = false;
                 }
+
                 SystemArgs.StatusConnect = Status;
+
                 if (Status)
                 {
                     Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
@@ -68,6 +71,12 @@ namespace Rusal
 
         public static void GetPosition()
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 SystemArgs.Positions.Clear();
@@ -78,7 +87,6 @@ namespace Rusal
                     Connect.Open();
 
                     //Получаем список всех позиций из БД
-
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"SysDateCreate\", \"DateFormation\", \"NumMelt\", \"CountIngot\", \"WeightIngots\"," +
                                                                  $" \"DefectLocIngot\", \"Correction\", \"Address\", \"Reason\", \"NumTSN\", \"NumBrigade\", \"DefLocProduction\"," +
                                                                  $" \"NumSmen\", \"Defect\", \"TypeAlloy\", \"Description\", \"Diameter\", \"ProgressMark\"" +
@@ -119,6 +127,12 @@ namespace Rusal
 
         public static void  GetArguments()
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             SystemArgs.DefectLocProduction.Clear();
             SystemArgs.TSN.Clear();
             SystemArgs.Brigades.Clear();
@@ -324,6 +338,12 @@ namespace Rusal
 
         public static void AddPosition()
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 Add_F Dialog = new Add_F();
@@ -405,6 +425,12 @@ namespace Rusal
 
         public static void ChangePosition(Position Position)
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Add_F Dialog = new Add_F();
             Dialog.Text = "Изменение параметров позиции";
 
@@ -473,6 +499,12 @@ namespace Rusal
 
         public static void DeletePosition(Position Position)
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось полдлючиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
             {
                 Connect.Open();
@@ -509,6 +541,12 @@ namespace Rusal
 
         public static void RequestAdd(String Name, String NameTable, String NameColumn)
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             String ConvertName = $@"'{Name}'";
 
             if(NameTable == "DiameterIngot")
@@ -534,6 +572,12 @@ namespace Rusal
 
         public static void RequestChange(Int64 ID, String Name, String NameTable, String NameColumn)
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось полдлючиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             String ConvertName = $@"'{Name}'";
 
             if (NameTable == "DiameterIngot")
@@ -560,6 +604,12 @@ namespace Rusal
 
         public static void RequestDelete(Int64 ID, String NameTable)
         {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось полдлючиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
             {
                 Connect.Open();
