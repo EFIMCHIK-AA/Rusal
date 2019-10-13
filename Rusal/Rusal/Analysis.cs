@@ -12,31 +12,41 @@ using OfficeOpenXml.Drawing.Chart;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
+using Equin.ApplicationFramework;
 
 namespace Rusal
 {
     public static class Analysis
     {
-        private struct DataExport
+        public struct DataFullExport
+        {
+            public DateTime date;
+            public double SumWeight;
+            public double AccumulationWeight;
+            public double DiameterWeight;
+            public double AccumulationDiameter;
+        }
+        private struct DataBriefExport
         {
             public string Name;
             public double Value;
         }
-        private static List<DataExport> dataExports;
+        public static List<DataFullExport> dataFullExports = new List<DataFullExport>();
+        private static List<DataBriefExport> dataBriefExports;
         private static CategoryAxis xaxis;
         private static LinearAxis yaxis;
         private static ColumnSeries histogramm;
-        public static Analysis_F Dialog;
+        public static BriefAnalysis_F Dialog;
         private static string Title;
         private static string TitleX;
         private static string TitleY;
         private static void SetParamHistogramm()
         {
-            Dialog = new Analysis_F();
+            Dialog = new BriefAnalysis_F();
             Dialog.Text = Title;
             Dialog.label_x.Text = TitleX;
             Dialog.label_y.Text = TitleY;
-            dataExports = new List<DataExport>();
+            dataBriefExports = new List<DataBriefExport>();
             xaxis = new CategoryAxis()
             {
                 Position = AxisPosition.Bottom,
@@ -87,7 +97,7 @@ namespace Rusal
                 Dialog.listBox2.Items.Add(item.Value);
                 histogramm.Items.Add(new ColumnItem(item.Value));
                 xaxis.Labels.Add(item.Name.ToString());
-                dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value=item.Value });
+                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
             }
 
             Dialog.ShowDialog();
@@ -109,7 +119,7 @@ namespace Rusal
                 Dialog.listBox2.Items.Add(item.Value);
                 histogramm.Items.Add(new ColumnItem(item.Value));
                 xaxis.Labels.Add(item.Name.ToString());
-                dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
             }
 
             Dialog.ShowDialog();
@@ -133,7 +143,7 @@ namespace Rusal
                 Dialog.listBox2.Items.Add(item.Value);
                 histogramm.Items.Add(new ColumnItem(item.Value));
                 xaxis.Labels.Add(item.Name.ToString());
-                dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
             }
 
             Dialog.ShowDialog();
@@ -157,7 +167,7 @@ namespace Rusal
                 Dialog.listBox2.Items.Add(item.Value);
                 histogramm.Items.Add(new ColumnItem(item.Value));
                 xaxis.Labels.Add(item.Name.ToString());
-                dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
             }
 
             Dialog.ShowDialog();
@@ -181,7 +191,7 @@ namespace Rusal
                 Dialog.listBox2.Items.Add(item.Value);
                 histogramm.Items.Add(new ColumnItem(item.Value));
                 xaxis.Labels.Add(item.Name.ToString());
-                dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
             }
 
             Dialog.ShowDialog();
@@ -205,7 +215,7 @@ namespace Rusal
                 Dialog.listBox2.Items.Add(item.Value);
                 histogramm.Items.Add(new ColumnItem(item.Value));
                 xaxis.Labels.Add(item.Name.ToString());
-                dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
             }
 
             Dialog.ShowDialog();
@@ -229,10 +239,33 @@ namespace Rusal
                 Dialog.listBox2.Items.Add(item.Value);
                 histogramm.Items.Add(new ColumnItem(item.Value));
                 xaxis.Labels.Add(item.Name.ToString());
-                dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
             }
 
             Dialog.ShowDialog();
+        }
+        public static void FullDiameterWeight(DateTime datestart, DateTime datefinish, double Diameter)
+        {
+            var Group = from gp in SystemArgs.Positions
+                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        orderby gp.DateCreate ascending
+                        group gp by gp.DateCreate into g
+                        select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiameter = g.Where(t => t.Diameter.Name == Diameter).Sum(t => t.Weight) };
+            foreach (var item in Group)
+            {
+                if (dataFullExports.Count > 0)
+                {
+                    dataFullExports.Add(new DataFullExport() { date = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
+                }
+                else
+                {
+                    dataFullExports.Add(new DataFullExport() { date = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
+                }
+            }
+        }
+        public static void GetDataDGV(DataGridView DGV)
+        {
+            DGV.DataSource = dataFullExports;
         }
         public static void ExcelBriefExport(DateTime datestart, DateTime datefinish)
         {
@@ -240,7 +273,7 @@ namespace Rusal
             sfd.DefaultExt = "";
             sfd.Title = "Сохранение анализа";
             sfd.Filter = "Файл Excel| *.xlsx";
-            sfd.FileName = Title+" от " + DateTime.Now.ToString().Replace('.', '_').Replace(':', '_');
+            sfd.FileName = Title + " от " + DateTime.Now.ToString().Replace('.', '_').Replace(':', '_');
             sfd.RestoreDirectory = true;
 
             if (sfd.ShowDialog() == DialogResult.OK)
@@ -272,10 +305,10 @@ namespace Rusal
                         worksheet.Cells["B7"].Value = TitleX;
                         worksheet.Cells["D7"].Value = TitleY;
                         int DimensionEndRow;
-                        foreach (var item in dataExports)
+                        foreach (var item in dataBriefExports)
                         {
                             DimensionEndRow = worksheet.Dimension.End.Row + 1;
-                            worksheet.Cells["B"+ DimensionEndRow.ToString()+":C" + DimensionEndRow.ToString()].Merge = true;
+                            worksheet.Cells["B" + DimensionEndRow.ToString() + ":C" + DimensionEndRow.ToString()].Merge = true;
                             worksheet.Cells["D" + DimensionEndRow.ToString() + ":E" + DimensionEndRow.ToString()].Merge = true;
                             worksheet.Cells["D5:E5"].Merge = true;
                             worksheet.Cells["B" + DimensionEndRow.ToString()].Value = item.Name;
@@ -296,7 +329,7 @@ namespace Rusal
                         chart.Series.Add(ExcelRange.GetAddress(8, 4, DimensionEndRow, 4), ExcelRange.GetAddress(8, 2, DimensionEndRow, 2));
                         chart.Legend.Remove();
                         chart.XAxis.Title.Text = TitleX;
-                        chart.YAxis.Title.Font.Size=14;
+                        chart.YAxis.Title.Font.Size = 14;
                         chart.XAxis.Title.Font.Size = 14;
                         chart.YAxis.Title.Text = TitleY;
                         //Изменение шрифта во всем документе

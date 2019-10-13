@@ -77,11 +77,11 @@
       <DependentUpon>Add_F.cs</DependentUpon>
     </Compile>
     <Compile Include="Analysis.cs" />
-    <Compile Include="Analysis_F.cs">
+    <Compile Include="BriefAnalysis_F.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Analysis_F.designer.cs">
-      <DependentUpon>Analysis_F.cs</DependentUpon>
+    <Compile Include="BriefAnalysis_F.designer.cs">
+      <DependentUpon>BriefAnalysis_F.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseDictionary.cs" />
     <Compile Include="DefectProduction.cs" />
@@ -94,6 +94,12 @@
     <Compile Include="DescriptionDefect.cs" />
     <Compile Include="DiameterIngot.cs" />
     <Compile Include="Encryption.cs" />
+    <Compile Include="FullAnalysis_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullAnalysis_F.designer.cs">
+      <DependentUpon>FullAnalysis_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListBrigades.cs" />
     <Compile Include="ListSmen.cs" />
     <Compile Include="Log.cs" />
@@ -135,11 +141,14 @@
     <EmbeddedResource Include="Add_F.resx">
       <DependentUpon>Add_F.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Analysis_F.resx">
-      <DependentUpon>Analysis_F.cs</DependentUpon>
+    <EmbeddedResource Include="BriefAnalysis_F.resx">
+      <DependentUpon>BriefAnalysis_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DescriptionArg_F.resx">
       <DependentUpon>DescriptionArg_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullAnalysis_F.resx">
+      <DependentUpon>FullAnalysis_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_F.resx">
       <DependentUpon>Main_F.cs</DependentUpon>

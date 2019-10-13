@@ -1,6 +1,6 @@
 ﻿namespace Rusal
 {
-    partial class Analysis_F
+    partial class BriefAnalysis_F
     {
         /// <summary>
         /// Required designer variable.
