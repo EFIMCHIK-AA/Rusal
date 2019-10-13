@@ -67,13 +67,13 @@
             // 
             // Export_B
             // 
-            this.Export_B.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.Export_B.Location = new System.Drawing.Point(653, 415);
             this.Export_B.Name = "Export_B";
             this.Export_B.Size = new System.Drawing.Size(97, 23);
             this.Export_B.TabIndex = 4;
             this.Export_B.Text = "Export";
             this.Export_B.UseVisualStyleBackColor = true;
+            this.Export_B.Click += new System.EventHandler(this.Export_B_Click);
             // 
             // Exit_B
             // 

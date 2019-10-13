@@ -26,7 +26,7 @@ namespace Rusal
         private static CategoryAxis xaxis;
         private static LinearAxis yaxis;
         private static ColumnSeries histogramm;
-        private static Analysis_F Dialog;
+        public static Analysis_F Dialog;
         private static string Title;
         private static string TitleX;
         private static string TitleY;
@@ -89,10 +89,8 @@ namespace Rusal
                 xaxis.Labels.Add(item.Name.ToString());
                 dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value=item.Value });
             }
-            if (Dialog.ShowDialog() == DialogResult.Yes)
-            {
-                ExcelBriefExport(datestart, datefinish);
-            }
+
+            Dialog.ShowDialog();
 
         }
         public static void BriefBrigadeWeight(DateTime datestart, DateTime datefinish)
@@ -113,21 +111,22 @@ namespace Rusal
                 xaxis.Labels.Add(item.Name.ToString());
                 dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
             }
-            if (Dialog.ShowDialog() == DialogResult.Yes)
-            {
-                ExcelBriefExport(datestart, datefinish);
-            }
+
+            Dialog.ShowDialog();
         }
         public static void BriefNumTSWeight(DateTime datestart, DateTime datefinish)
         {
-            Title = "Дефектность по номерам тс за период";
+            Title = "Дефектность по номерам ТС за период";
             TitleX = "Номер ТС";
             TitleY = "Брак, тонн";
+
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
                         group gp by gp.NumTS.Name into g
                         select new { Name = g.Key, Value = g.Sum(w => w.Weight) };
+
             SetParamHistogramm();
+
             foreach (var item in Group)
             {
                 Dialog.listBox1.Items.Add(item.Name);
@@ -136,21 +135,22 @@ namespace Rusal
                 xaxis.Labels.Add(item.Name.ToString());
                 dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
             }
-            if (Dialog.ShowDialog() == DialogResult.Yes)
-            {
-                ExcelBriefExport(datestart, datefinish);
-            }
+
+            Dialog.ShowDialog();
         }
         public static void BriefDescriptionWeight(DateTime datestart, DateTime datefinish)
         {
             Title = "Дефектность по типам дефектов за период";
             TitleX = "Дефект";
             TitleY = "Брак, тонн";
+
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
                         group gp by gp.Description.Name into g
                         select new { Name = g.Key, Value = g.Sum(w => w.Weight) };
+
             SetParamHistogramm();
+
             foreach (var item in Group)
             {
                 Dialog.listBox1.Items.Add(item.Name);
@@ -159,21 +159,22 @@ namespace Rusal
                 xaxis.Labels.Add(item.Name.ToString());
                 dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
             }
-            if (Dialog.ShowDialog() == DialogResult.Yes)
-            {
-                ExcelBriefExport(datestart, datefinish);
-            }
+
+            Dialog.ShowDialog();
         }
         public static void BriefBrigadeCount(DateTime datestart, DateTime datefinish)
         {
             Title = "Дефектность по бригадам за период";
             TitleX = "Бригада";
             TitleY = "Количество";
+
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
                         group gp by gp.NumBrigade.Name into g
                         select new { Name = g.Key, Value = g.Count() };
+
             SetParamHistogramm();
+
             foreach (var item in Group)
             {
                 Dialog.listBox1.Items.Add(item.Name);
@@ -182,21 +183,22 @@ namespace Rusal
                 xaxis.Labels.Add(item.Name.ToString());
                 dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
             }
-            if (Dialog.ShowDialog() == DialogResult.Yes)
-            {
-                ExcelBriefExport(datestart, datefinish);
-            }
+
+            Dialog.ShowDialog();
         }
         public static void BriefNumTSCount(DateTime datestart, DateTime datefinish)
         {
             Title = "Дефектность по номерам тс за период";
             TitleX = "Номер ТС";
             TitleY = "Количество";
+
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
                         group gp by gp.NumBrigade.Name into g
                         select new { Name = g.Key, Value = g.Count() };
+
             SetParamHistogramm();
+
             foreach (var item in Group)
             {
                 Dialog.listBox1.Items.Add(item.Name);
@@ -205,21 +207,22 @@ namespace Rusal
                 xaxis.Labels.Add(item.Name.ToString());
                 dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
             }
-            if (Dialog.ShowDialog() == DialogResult.Yes)
-            {
-                ExcelBriefExport(datestart, datefinish);
-            }
+
+            Dialog.ShowDialog();
         }
         public static void BriefDescriptionCount(DateTime datestart, DateTime datefinish)
         {
             Title = "Дефектность по типам дефектов за период";
             TitleX = "Дефект";
             TitleY = "Количество";
+
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
                         group gp by gp.Description.Name into g
                         select new { Name = g.Key, Value = g.Count() };
+
             SetParamHistogramm();
+
             foreach (var item in Group)
             {
                 Dialog.listBox1.Items.Add(item.Name);
@@ -228,11 +231,8 @@ namespace Rusal
                 xaxis.Labels.Add(item.Name.ToString());
                 dataExports.Add(new DataExport() { Name = item.Name.ToString(), Value = item.Value });
             }
-            if (Dialog.ShowDialog() == DialogResult.Yes)
-            {
-                ExcelBriefExport(datestart, datefinish);
-            }
 
+            Dialog.ShowDialog();
         }
         public static void ExcelBriefExport(DateTime datestart, DateTime datefinish)
         {
@@ -242,6 +242,7 @@ namespace Rusal
             sfd.Filter = "Файл Excel| *.xlsx";
             sfd.FileName = Title+" от " + DateTime.Now.ToString().Replace('.', '_').Replace(':', '_');
             sfd.RestoreDirectory = true;
+
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 if (!String.IsNullOrEmpty(sfd.FileName))
@@ -266,10 +267,10 @@ namespace Rusal
                         worksheet.Cells["G3"].Value = "за период с " + datestart.ToShortDateString() + " по " + datefinish.ToShortDateString();
                         worksheet.Cells["G3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                         //Создание таблицы
-                        worksheet.Cells["B5:C5"].Merge = true;
-                        worksheet.Cells["D5:E5"].Merge = true;
-                        worksheet.Cells["B5"].Value = TitleX;
-                        worksheet.Cells["D5"].Value = TitleY;
+                        worksheet.Cells["B7:C7"].Merge = true;
+                        worksheet.Cells["D7:E7"].Merge = true;
+                        worksheet.Cells["B7"].Value = TitleX;
+                        worksheet.Cells["D7"].Value = TitleY;
                         int DimensionEndRow;
                         foreach (var item in dataExports)
                         {
@@ -281,7 +282,7 @@ namespace Rusal
                             worksheet.Cells["D" + DimensionEndRow.ToString()].Value = item.Value;
                         }
                         DimensionEndRow = worksheet.Dimension.End.Row;
-                        var modelTable = worksheet.Cells["B5:E" + DimensionEndRow.ToString()];
+                        var modelTable = worksheet.Cells["B7:E" + DimensionEndRow.ToString()];
                         modelTable.Style.Border.Top.Style = ExcelBorderStyle.Thin;
                         modelTable.Style.Border.Left.Style = ExcelBorderStyle.Thin;
                         modelTable.Style.Border.Right.Style = ExcelBorderStyle.Thin;
@@ -289,10 +290,10 @@ namespace Rusal
                         modelTable.AutoFitColumns();
                         //Добавление диаграммы
                         var chart = (ExcelBarChart)worksheet.Drawings.AddChart(Title, eChartType.ColumnClustered);
-                        chart.SetSize(600, 300);
-                        chart.SetPosition(4, 0, 10, 0);
+                        chart.SetSize(600, 600);
+                        chart.SetPosition(6, 0, 10, 0);
                         chart.Title.Text = Title;
-                        chart.Series.Add(ExcelRange.GetAddress(6, 4, DimensionEndRow, 4), ExcelRange.GetAddress(6, 2, DimensionEndRow, 2));
+                        chart.Series.Add(ExcelRange.GetAddress(8, 4, DimensionEndRow, 4), ExcelRange.GetAddress(8, 2, DimensionEndRow, 2));
                         chart.Legend.Remove();
                         chart.XAxis.Title.Text = TitleX;
                         chart.YAxis.Title.Font.Size=14;

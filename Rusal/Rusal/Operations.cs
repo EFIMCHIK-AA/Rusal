@@ -44,7 +44,7 @@ namespace Rusal
                 {
                     Status = false;
                 }
-
+                SystemArgs.StatusConnect = Status;
                 if (Status)
                 {
                     Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
