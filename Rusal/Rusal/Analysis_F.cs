@@ -21,9 +21,5 @@ namespace Rusal
             InitializeComponent();
         }
 
-        private void Export_B_Click(object sender, EventArgs e)
-        {
-            Analysis.ExcelExport(new DateTime(2019,10,1),new DateTime(2019,10,30));
-        }
     }
 }
