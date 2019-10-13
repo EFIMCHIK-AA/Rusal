@@ -162,6 +162,7 @@ namespace Rusal
         {
             Spisok_LB.DataSource = null;
             Spisok_LB.ValueMember = "Name";
+            Spisok_LB.Items.Clear();
 
             switch (Key)
             {

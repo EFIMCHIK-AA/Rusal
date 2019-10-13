@@ -52,7 +52,7 @@ namespace Rusal
                 {
                     Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
                     {
-                        Form.ConnectDB_TB.Text = "Соединение: Установлено";
+                        Form.ConnectDB_TB.Text = "Установлено";
                         Form.ConnectDB_TB.BackColor = Color.Green;
                     }));
                 }
@@ -60,7 +60,7 @@ namespace Rusal
                 {
                     Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
                     {
-                        Form.ConnectDB_TB.Text = "Соединение: Не установлено";
+                        Form.ConnectDB_TB.Text = "Не установлено";
                         Form.ConnectDB_TB.BackColor = Color.Red;
                     }));
                 }
@@ -142,6 +142,7 @@ namespace Rusal
             SystemArgs.TypesDefect.Clear();
             SystemArgs.TypesDefect.Clear();
             SystemArgs.Smeny.Clear();
+            SystemArgs.TypesAlloy.Clear();
 
             try
             {

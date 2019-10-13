@@ -20,12 +20,6 @@ namespace Rusal
             InitializeComponent();
         }
 
-        private void GetParamDB()
-        {
-            NameDB_S.Text = $"Название: {SystemArgs.NameDB}";
-            UserDB_S.Text = $"Владелец: {SystemArgs.OwnerDB}";
-        }
-
         private void Main_F_Load(object sender, EventArgs e)
         {
             Files.GetParamDB();
@@ -36,7 +30,6 @@ namespace Rusal
             if (SystemArgs.StatusConnect)
             {
                 Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                GetParamDB();
                 GetAllData();
                 ShowPosition(SystemArgs.Positions);
             }
@@ -53,6 +46,8 @@ namespace Rusal
 
             Position_DGV.AutoGenerateColumns = false;
             Position_DGV.DataSource = SystemArgs.View;
+
+            CountPos_TB.Text = SystemArgs.View.Count.ToString();
         }
 
         private void GetAllData()
@@ -127,6 +122,7 @@ namespace Rusal
                     ResetSearch();
 
                     ShowPosition(SystemArgs.Positions);
+                    ClearField();
                 }
             }
             else
@@ -145,6 +141,7 @@ namespace Rusal
                     ResetSearch();
 
                     ShowPosition(SystemArgs.Positions);
+                    ClearField();
                 }
             }
             else
@@ -272,6 +269,101 @@ namespace Rusal
         private void КоличествоОписаниеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Analysis.BriefDescriptionCount(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30));
+        }
+
+        private void ClearField()
+        {
+            Date_TB.Text = String.Empty;
+            NumBrigade_TB.Text = String.Empty;
+            NumSmeny_TB.Text = String.Empty;
+            Melt_TB.Text = String.Empty;
+            NumTC_TB.Text = String.Empty;
+            Address_TB.Text = String.Empty;
+            Description_TB.Text = String.Empty;
+            Type_TB.Text = String.Empty;
+            Count_TB.Text = String.Empty;
+            Weight_TB.Text = String.Empty;
+            Diameter_TB.Text = String.Empty;
+            Reason_TB.Text = String.Empty;
+            Correction_TB.Text = String.Empty;
+            StatusCorrection_TB.Text = String.Empty;
+            DefectLocProduction_TB.Text = String.Empty;
+
+            North_CB.Checked = false;
+            West_CB.Checked = false;
+            East_CB.Checked = false;
+            South_CB.Checked = false;
+            One_CB.Checked = false;
+            Two_CB.Checked = false;
+            Three_CB.Checked = false;
+            Four_CB.Checked = false;
+            Five_CB.Checked = false;
+            Six_CB.Checked = false;
+        }
+
+        private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
+
+            Date_TB.Text = Temp.DateFormation.ToShortDateString();
+            NumBrigade_TB.Text = Temp.NumBrigade.Name;
+            NumSmeny_TB.Text = Temp.NumSmeny.Name;
+            Melt_TB.Text = Temp.NumMelt;
+            NumTC_TB.Text = Temp.NumTS.Name;
+            Address_TB.Text = Temp.Address;
+            Description_TB.Text = Temp.Description.Name;
+            Type_TB.Text = Temp.Defect.Name;
+            Count_TB.Text = Temp.Count.ToString();
+            Weight_TB.Text = Temp.Weight.ToString();
+            Diameter_TB.Text = Temp.Diameter.Name.ToString();
+            Reason_TB.Text = Temp.Reason;
+            Correction_TB.Text = Temp.Correction;
+            StatusCorrection_TB.Text = Temp.ProgressMark.Name.ToString();
+            DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
+
+            North_CB.Checked = false;
+            West_CB.Checked = false;
+            East_CB.Checked = false;
+            South_CB.Checked = false;
+            One_CB.Checked = false;
+            Two_CB.Checked = false;
+            Three_CB.Checked = false;
+            Four_CB.Checked = false;
+            Five_CB.Checked = false;
+            Six_CB.Checked = false;
+            
+            if (Temp.DefectLocIngot != null)
+            {
+                String[] DefectLocIngot = Temp.DefectLocIngot.Split('_');
+
+                foreach (String Name in DefectLocIngot)
+                {
+                    foreach (Control TypeControl in panel2.Controls)
+                    {
+                        if (TypeControl is CheckBox)
+                        {
+                            if (TypeControl.Text == Name)
+                            {
+                                (TypeControl as CheckBox).Checked = true;
+                            }
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_MS_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

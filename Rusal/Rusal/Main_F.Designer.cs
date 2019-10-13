@@ -80,7 +80,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Diameter_TB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Mark_TB = new System.Windows.Forms.TextBox();
+            this.Melt_TB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.NumSmeny_TB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -98,15 +98,9 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.Status_SS = new System.Windows.Forms.StatusStrip();
-            this.NameDB_S = new System.Windows.Forms.ToolStripStatusLabel();
-            this.UserDB_S = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Description_S = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ProgressBar_PB = new System.Windows.Forms.ToolStripProgressBar();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Menu_MS = new System.Windows.Forms.MenuStrip();
             this.позицияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,6 +126,13 @@
             this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
             this.ConnectDB_TB = new System.Windows.Forms.TextBox();
+            this.CountPos_TB = new System.Windows.Forms.TextBox();
+            this.ProgressBar_PB = new System.Windows.Forms.ProgressBar();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.DefectLocProduction_TB = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,8 +140,7 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).BeginInit();
             this.panel6.SuspendLayout();
-            this.Status_SS.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,14 +162,14 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(0, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 655);
+            this.panel1.Size = new System.Drawing.Size(256, 717);
             this.panel1.TabIndex = 34;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(39, 652);
+            this.label20.Location = new System.Drawing.Point(35, 644);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(176, 18);
             this.label20.TabIndex = 17;
@@ -293,6 +293,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.panel2.Controls.Add(this.DefectLocProduction_TB);
+            this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.Six_CB);
             this.panel2.Controls.Add(this.Five_CB);
             this.panel2.Controls.Add(this.Four_CB);
@@ -328,7 +330,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.Diameter_TB);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.Mark_TB);
+            this.panel2.Controls.Add(this.Melt_TB);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.NumSmeny_TB);
             this.panel2.Controls.Add(this.label4);
@@ -343,7 +345,7 @@
             this.panel2.Controls.Add(this.Position_DGV);
             this.panel2.Location = new System.Drawing.Point(255, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1079, 655);
+            this.panel2.Size = new System.Drawing.Size(1079, 717);
             this.panel2.TabIndex = 36;
             // 
             // Six_CB
@@ -589,10 +591,10 @@
             // Weight_TB
             // 
             this.Weight_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Weight_TB.Location = new System.Drawing.Point(887, 130);
+            this.Weight_TB.Location = new System.Drawing.Point(896, 130);
             this.Weight_TB.Name = "Weight_TB";
             this.Weight_TB.ReadOnly = true;
-            this.Weight_TB.Size = new System.Drawing.Size(178, 21);
+            this.Weight_TB.Size = new System.Drawing.Size(169, 21);
             this.Weight_TB.TabIndex = 62;
             // 
             // label11
@@ -608,10 +610,10 @@
             // Type_TB
             // 
             this.Type_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Type_TB.Location = new System.Drawing.Point(887, 78);
+            this.Type_TB.Location = new System.Drawing.Point(896, 78);
             this.Type_TB.Name = "Type_TB";
             this.Type_TB.ReadOnly = true;
-            this.Type_TB.Size = new System.Drawing.Size(178, 21);
+            this.Type_TB.Size = new System.Drawing.Size(169, 21);
             this.Type_TB.TabIndex = 60;
             // 
             // label10
@@ -627,10 +629,10 @@
             // Count_TB
             // 
             this.Count_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Count_TB.Location = new System.Drawing.Point(887, 104);
+            this.Count_TB.Location = new System.Drawing.Point(896, 104);
             this.Count_TB.Name = "Count_TB";
             this.Count_TB.ReadOnly = true;
-            this.Count_TB.Size = new System.Drawing.Size(178, 21);
+            this.Count_TB.Size = new System.Drawing.Size(169, 21);
             this.Count_TB.TabIndex = 58;
             // 
             // label9
@@ -646,10 +648,10 @@
             // Description_TB
             // 
             this.Description_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Description_TB.Location = new System.Drawing.Point(887, 52);
+            this.Description_TB.Location = new System.Drawing.Point(896, 52);
             this.Description_TB.Name = "Description_TB";
             this.Description_TB.ReadOnly = true;
-            this.Description_TB.Size = new System.Drawing.Size(178, 21);
+            this.Description_TB.Size = new System.Drawing.Size(169, 21);
             this.Description_TB.TabIndex = 56;
             // 
             // label8
@@ -684,10 +686,10 @@
             // Diameter_TB
             // 
             this.Diameter_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Diameter_TB.Location = new System.Drawing.Point(887, 156);
+            this.Diameter_TB.Location = new System.Drawing.Point(896, 156);
             this.Diameter_TB.Name = "Diameter_TB";
             this.Diameter_TB.ReadOnly = true;
-            this.Diameter_TB.Size = new System.Drawing.Size(178, 21);
+            this.Diameter_TB.Size = new System.Drawing.Size(169, 21);
             this.Diameter_TB.TabIndex = 52;
             // 
             // label6
@@ -700,14 +702,14 @@
             this.label6.TabIndex = 51;
             this.label6.Text = "Диаметр";
             // 
-            // Mark_TB
+            // Melt_TB
             // 
-            this.Mark_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Mark_TB.Location = new System.Drawing.Point(599, 130);
-            this.Mark_TB.Name = "Mark_TB";
-            this.Mark_TB.ReadOnly = true;
-            this.Mark_TB.Size = new System.Drawing.Size(178, 21);
-            this.Mark_TB.TabIndex = 50;
+            this.Melt_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Melt_TB.Location = new System.Drawing.Point(599, 130);
+            this.Melt_TB.Name = "Melt_TB";
+            this.Melt_TB.ReadOnly = true;
+            this.Melt_TB.Size = new System.Drawing.Size(178, 21);
+            this.Melt_TB.TabIndex = 50;
             // 
             // label5
             // 
@@ -828,6 +830,7 @@
             this.Position_DGV.RowHeadersVisible = false;
             this.Position_DGV.Size = new System.Drawing.Size(469, 664);
             this.Position_DGV.TabIndex = 36;
+            this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
             this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting);
             // 
@@ -865,14 +868,6 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 90;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DimGray;
-            this.panel4.Location = new System.Drawing.Point(0, 715);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1334, 2);
-            this.panel4.TabIndex = 40;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.DimGray;
@@ -890,68 +885,20 @@
             this.panel8.Size = new System.Drawing.Size(3, 700);
             this.panel8.TabIndex = 40;
             // 
-            // Status_SS
+            // Menu_MS
             // 
-            this.Status_SS.AutoSize = false;
-            this.Status_SS.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Status_SS.Dock = System.Windows.Forms.DockStyle.None;
-            this.Status_SS.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.Status_SS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NameDB_S,
-            this.UserDB_S,
-            this.Description_S,
-            this.ProgressBar_PB});
-            this.Status_SS.Location = new System.Drawing.Point(254, 717);
-            this.Status_SS.Name = "Status_SS";
-            this.Status_SS.Size = new System.Drawing.Size(1080, 26);
-            this.Status_SS.SizingGrip = false;
-            this.Status_SS.Stretch = false;
-            this.Status_SS.TabIndex = 43;
-            this.Status_SS.Text = "StatusBar_S";
-            // 
-            // NameDB_S
-            // 
-            this.NameDB_S.AutoSize = false;
-            this.NameDB_S.Margin = new System.Windows.Forms.Padding(0);
-            this.NameDB_S.Name = "NameDB_S";
-            this.NameDB_S.Size = new System.Drawing.Size(236, 26);
-            this.NameDB_S.Text = "NameDB_S";
-            // 
-            // UserDB_S
-            // 
-            this.UserDB_S.AutoSize = false;
-            this.UserDB_S.Margin = new System.Windows.Forms.Padding(0);
-            this.UserDB_S.Name = "UserDB_S";
-            this.UserDB_S.Size = new System.Drawing.Size(256, 26);
-            this.UserDB_S.Text = "UserDB_S";
-            // 
-            // Description_S
-            // 
-            this.Description_S.Margin = new System.Windows.Forms.Padding(0);
-            this.Description_S.Name = "Description_S";
-            this.Description_S.Size = new System.Drawing.Size(134, 26);
-            this.Description_S.Text = "Выполнение операции";
-            // 
-            // ProgressBar_PB
-            // 
-            this.ProgressBar_PB.AutoSize = false;
-            this.ProgressBar_PB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ProgressBar_PB.Name = "ProgressBar_PB";
-            this.ProgressBar_PB.Size = new System.Drawing.Size(450, 20);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_MS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Menu_MS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.позицияToolStripMenuItem,
             this.анализToolStripMenuItem,
             this.отчетToolStripMenuItem,
             this.настройкиToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1334, 24);
-            this.menuStrip1.TabIndex = 44;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Menu_MS.Location = new System.Drawing.Point(0, 0);
+            this.Menu_MS.Name = "Menu_MS";
+            this.Menu_MS.Size = new System.Drawing.Size(1334, 24);
+            this.Menu_MS.TabIndex = 44;
+            this.Menu_MS.Text = "menuStrip1";
+            this.Menu_MS.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_MS_ItemClicked);
             // 
             // позицияToolStripMenuItem
             // 
@@ -1152,27 +1099,91 @@
             // 
             // ConnectDB_TB
             // 
-            this.ConnectDB_TB.Location = new System.Drawing.Point(0, 723);
+            this.ConnectDB_TB.Location = new System.Drawing.Point(98, 785);
             this.ConnectDB_TB.Name = "ConnectDB_TB";
             this.ConnectDB_TB.Size = new System.Drawing.Size(256, 20);
             this.ConnectDB_TB.TabIndex = 46;
+            // 
+            // CountPos_TB
+            // 
+            this.CountPos_TB.Location = new System.Drawing.Point(525, 785);
+            this.CountPos_TB.Name = "CountPos_TB";
+            this.CountPos_TB.Size = new System.Drawing.Size(225, 20);
+            this.CountPos_TB.TabIndex = 48;
+            // 
+            // ProgressBar_PB
+            // 
+            this.ProgressBar_PB.Location = new System.Drawing.Point(919, 785);
+            this.ProgressBar_PB.Name = "ProgressBar_PB";
+            this.ProgressBar_PB.Size = new System.Drawing.Size(403, 20);
+            this.ProgressBar_PB.TabIndex = 49;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(843, 788);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 13);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Выполнение";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(395, 788);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(124, 13);
+            this.label24.TabIndex = 51;
+            this.label24.Text = "Количество элементов";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(12, 788);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(68, 13);
+            this.label25.TabIndex = 52;
+            this.label25.Text = "Соединение";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
+            // 
+            // DefectLocProduction_TB
+            // 
+            this.DefectLocProduction_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefectLocProduction_TB.Location = new System.Drawing.Point(896, 183);
+            this.DefectLocProduction_TB.Name = "DefectLocProduction_TB";
+            this.DefectLocProduction_TB.ReadOnly = true;
+            this.DefectLocProduction_TB.Size = new System.Drawing.Size(169, 21);
+            this.DefectLocProduction_TB.TabIndex = 102;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(805, 186);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(85, 15);
+            this.label26.TabIndex = 101;
+            this.label26.Text = "Производтво";
             // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1334, 743);
+            this.ClientSize = new System.Drawing.Size(1334, 811);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.ProgressBar_PB);
+            this.Controls.Add(this.CountPos_TB);
             this.Controls.Add(this.ConnectDB_TB);
             this.Controls.Add(this.Tool_TS);
-            this.Controls.Add(this.Status_SS);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Menu_MS);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.Menu_MS;
             this.MaximizeBox = false;
             this.Name = "Main_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1187,10 +1198,8 @@
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.Status_SS.ResumeLayout(false);
-            this.Status_SS.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Menu_MS.ResumeLayout(false);
+            this.Menu_MS.PerformLayout();
             this.Tool_TS.ResumeLayout(false);
             this.Tool_TS.PerformLayout();
             this.ResumeLayout(false);
@@ -1202,7 +1211,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
@@ -1243,7 +1251,7 @@
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox Diameter_TB;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox Mark_TB;
+        public System.Windows.Forms.TextBox Melt_TB;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox NumSmeny_TB;
         public System.Windows.Forms.Label label4;
@@ -1254,11 +1262,6 @@
         public System.Windows.Forms.Label label23;
         public System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.Panel panel10;
-        public System.Windows.Forms.ToolStripStatusLabel UserDB_S;
-        public System.Windows.Forms.ToolStripStatusLabel NameDB_S;
-        public System.Windows.Forms.StatusStrip Status_SS;
-        public System.Windows.Forms.ToolStripProgressBar ProgressBar_PB;
-        private System.Windows.Forms.ToolStripStatusLabel Description_S;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.CheckBox Six_CB;
@@ -1271,7 +1274,7 @@
         public System.Windows.Forms.CheckBox West_CB;
         public System.Windows.Forms.CheckBox South_CB;
         public System.Windows.Forms.CheckBox North_CB;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip Menu_MS;
         private System.Windows.Forms.ToolStripMenuItem позицияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
@@ -1302,6 +1305,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         public System.Windows.Forms.TextBox ConnectDB_TB;
+        public System.Windows.Forms.TextBox CountPos_TB;
+        public System.Windows.Forms.ProgressBar ProgressBar_PB;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        public System.Windows.Forms.TextBox DefectLocProduction_TB;
+        public System.Windows.Forms.Label label26;
     }
 }
 
