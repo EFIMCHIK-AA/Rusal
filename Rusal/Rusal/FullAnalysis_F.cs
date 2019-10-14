@@ -22,5 +22,10 @@ namespace Rusal
             Analysis.FullDiameterWeight(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30), 123,plotView1,plotView2);
             Analysis.GetDataDGV(dataGridView1);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
