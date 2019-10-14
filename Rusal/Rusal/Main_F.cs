@@ -238,7 +238,8 @@ namespace Rusal
 
         private void ВесToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Analysis.BriefDiametrWeight(new DateTime(2019,10,1),new DateTime(2019,10,30));
+            FullAnalysis_F fullAnalysis_F = new FullAnalysis_F();
+            fullAnalysis_F.ShowDialog();
         }
 
         private void ВесToolStripMenuItem1_Click(object sender, EventArgs e)

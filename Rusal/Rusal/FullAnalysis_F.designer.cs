@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plotView1 = new OxyPlot.WindowsForms.PlotView();
             this.Exit_B = new System.Windows.Forms.Button();
             this.Export_B = new System.Windows.Forms.Button();
@@ -42,6 +37,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Form_B = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plotView2 = new OxyPlot.WindowsForms.PlotView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,50 +61,15 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 186);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(452, 355);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 535);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "date";
-            this.Column1.HeaderText = "Дата";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 58;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "SumWeight";
-            this.Column2.HeaderText = "Брак, тонн";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 79;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "AccumulationWeight";
-            this.Column3.HeaderText = "Накопление брак, тонн";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 116;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "DiameterWeight";
-            this.Column4.HeaderText = "Диаметр брак, тонн";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 102;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "AccumulationDiameter";
-            this.Column5.HeaderText = "Накопление диаметр, тонн";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 133;
             // 
             // plotView1
             // 
-            this.plotView1.Location = new System.Drawing.Point(515, 186);
+            this.plotView1.Location = new System.Drawing.Point(576, 39);
             this.plotView1.Name = "plotView1";
             this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.plotView1.Size = new System.Drawing.Size(520, 326);
+            this.plotView1.Size = new System.Drawing.Size(653, 326);
             this.plotView1.TabIndex = 1;
             this.plotView1.Text = "plotView1";
             this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
@@ -113,7 +79,7 @@
             // Exit_B
             // 
             this.Exit_B.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Exit_B.Location = new System.Drawing.Point(938, 518);
+            this.Exit_B.Location = new System.Drawing.Point(1132, 698);
             this.Exit_B.Name = "Exit_B";
             this.Exit_B.Size = new System.Drawing.Size(97, 23);
             this.Exit_B.TabIndex = 7;
@@ -122,7 +88,7 @@
             // 
             // Export_B
             // 
-            this.Export_B.Location = new System.Drawing.Point(835, 518);
+            this.Export_B.Location = new System.Drawing.Point(1029, 698);
             this.Export_B.Name = "Export_B";
             this.Export_B.Size = new System.Drawing.Size(97, 23);
             this.Export_B.TabIndex = 6;
@@ -167,11 +133,60 @@
             this.comboBox2.Size = new System.Drawing.Size(194, 21);
             this.comboBox2.TabIndex = 12;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "DateCreate";
+            this.Column1.HeaderText = "Дата";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 58;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "SumWeight";
+            this.Column2.HeaderText = "Брак, тонн";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 86;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "AccumulationWeight";
+            this.Column3.HeaderText = "Накопление брак, тонн";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 116;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "DiameterWeight";
+            this.Column4.HeaderText = "Диаметр брак, тонн";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 102;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "AccumulationDiameter";
+            this.Column5.HeaderText = "Накопление диаметр, тонн";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 133;
+            // 
+            // plotView2
+            // 
+            this.plotView2.Location = new System.Drawing.Point(576, 366);
+            this.plotView2.Name = "plotView2";
+            this.plotView2.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView2.Size = new System.Drawing.Size(653, 326);
+            this.plotView2.TabIndex = 13;
+            this.plotView2.Text = "plotView2";
+            this.plotView2.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView2.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView2.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
             // FullAnalysis_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 553);
+            this.ClientSize = new System.Drawing.Size(1241, 733);
+            this.Controls.Add(this.plotView2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.Form_B);
             this.Controls.Add(this.comboBox1);
@@ -193,7 +208,6 @@
         }
 
         #endregion
-        private OxyPlot.WindowsForms.PlotView plotView1;
         private System.Windows.Forms.Button Exit_B;
         public System.Windows.Forms.Button Export_B;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
@@ -207,5 +221,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        public OxyPlot.WindowsForms.PlotView plotView1;
+        public OxyPlot.WindowsForms.PlotView plotView2;
     }
 }

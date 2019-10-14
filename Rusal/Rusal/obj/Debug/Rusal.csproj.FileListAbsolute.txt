@@ -171,3 +171,15 @@ C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.BriefAnalysis_F.resources
 C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.FullAnalysis_F.resources
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.BriefAnalysis_F.resources
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.FullAnalysis_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.pdb
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.xml
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.BriefAnalysis_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.DescriptionArg_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.FullAnalysis_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.Report_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingConfiguration_F.resources
+C:\Users\User\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingDB_F.resources

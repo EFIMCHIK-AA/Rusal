@@ -10,6 +10,7 @@ using OfficeOpenXml.Style;
 using System.Drawing;
 using OfficeOpenXml.Drawing.Chart;
 using OxyPlot;
+using OxyPlot.WindowsForms;
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using Equin.ApplicationFramework;
@@ -18,28 +19,69 @@ namespace Rusal
 {
     public static class Analysis
     {
-        public struct DataFullExport
-        {
-            public DateTime date;
-            public double SumWeight;
-            public double AccumulationWeight;
-            public double DiameterWeight;
-            public double AccumulationDiameter;
-        }
         private struct DataBriefExport
         {
             public string Name;
             public double Value;
         }
-        public static List<DataFullExport> dataFullExports = new List<DataFullExport>();
+        public static List<WrapData> dataFullExports = new List<WrapData>();
         private static List<DataBriefExport> dataBriefExports;
         private static CategoryAxis xaxis;
         private static LinearAxis yaxis;
         private static ColumnSeries histogramm;
+        private static LineSeries diagrammline1;
+        private static LineSeries diagrammline2;
         public static BriefAnalysis_F Dialog;
         private static string Title;
         private static string TitleX;
         private static string TitleY;
+        private static void SetParamDiagramm(PlotView pv,DateTime start,DateTime finish)
+        {
+            diagrammline1 = new LineSeries()
+            {
+                Title = "Накопление брака, тонн",
+                StrokeThickness = 3,
+                LineStyle = LineStyle.Automatic,
+                MarkerType = MarkerType.Circle,
+                MarkerSize = 5,
+                MarkerStroke = OxyColors.White,
+                MarkerFill = OxyColors.Automatic,
+                MarkerStrokeThickness = 1.5
+            };
+            diagrammline2 = new LineSeries()
+            {
+                Title = "Сумма брака, тонн",
+                StrokeThickness = 3,
+                LineStyle = LineStyle.Automatic,
+                MarkerType = MarkerType.Circle,
+                MarkerSize = 5,
+                MarkerStroke = OxyColors.White,
+                MarkerFill = OxyColors.Automatic,
+                MarkerStrokeThickness = 1.5
+            };
+            pv.Model = new PlotModel
+            {
+                Title = Title
+            };
+            var minValue = DateTimeAxis.ToDouble(start);
+            var maxValue = DateTimeAxis.ToDouble(finish);
+            pv.Model.Axes.Add(new DateTimeAxis 
+            {   
+                Position = AxisPosition.Bottom,
+                IntervalType = DateTimeIntervalType.Days,
+                MajorStep = 1,
+                MinorIntervalType = DateTimeIntervalType.Days,
+                MinorStep = 3,
+                Minimum = minValue,
+                Maximum = maxValue,
+                Angle = 90,
+                StringFormat = "dd.MM.yy" 
+            });
+            var leftAxisY = new LinearAxis { Position = AxisPosition.Left };
+            pv.Model.Axes.Add(leftAxisY);
+            pv.Model.Series.Add(diagrammline1);
+            pv.Model.Series.Add(diagrammline2);
+        }
         private static void SetParamHistogramm()
         {
             Dialog = new BriefAnalysis_F();
@@ -244,28 +286,35 @@ namespace Rusal
 
             Dialog.ShowDialog();
         }
-        public static void FullDiameterWeight(DateTime datestart, DateTime datefinish, double Diameter)
+        public static void FullDiameterWeight(DateTime datestart, DateTime datefinish, double Diameter,PlotView pv1,PlotView pv2)
         {
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
                         orderby gp.DateCreate ascending
                         group gp by gp.DateCreate into g
                         select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiameter = g.Where(t => t.Diameter.Name == Diameter).Sum(t => t.Weight) };
+            SetParamDiagramm(pv1,datestart,datefinish);
             foreach (var item in Group)
             {
                 if (dataFullExports.Count > 0)
                 {
-                    dataFullExports.Add(new DataFullExport() { date = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
+                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
+                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(item.Date), item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight));
                 }
                 else
                 {
-                    dataFullExports.Add(new DataFullExport() { date = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
+                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
+                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(item.Date), item.SumWeight));
                 }
+                diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(item.Date), item.SumWeight));
             }
+            SetParamDiagramm(pv2, datestart, datefinish);
+
         }
         public static void GetDataDGV(DataGridView DGV)
         {
             DGV.DataSource = dataFullExports;
+            DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
         public static void ExcelBriefExport(DateTime datestart, DateTime datefinish)
         {
