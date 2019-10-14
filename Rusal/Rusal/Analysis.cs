@@ -13,7 +13,6 @@ using OxyPlot;
 using OxyPlot.WindowsForms;
 using OxyPlot.Axes;
 using OxyPlot.Series;
-using Equin.ApplicationFramework;
 
 namespace Rusal
 {
@@ -24,7 +23,7 @@ namespace Rusal
             public string Name;
             public double Value;
         }
-        public static List<WrapData> dataFullExports = new List<WrapData>();
+        public static List<WrapData> dataFullExports;
         private static List<DataBriefExport> dataBriefExports;
         private static CategoryAxis xaxis;
         private static LinearAxis yaxis;
@@ -33,13 +32,15 @@ namespace Rusal
         private static LineSeries diagrammline2;
         public static BriefAnalysis_F Dialog;
         private static string Title;
+        private static string TitleL1;
+        private static string TitleL2;
         private static string TitleX;
         private static string TitleY;
         private static void SetParamDiagramm(PlotView pv,DateTime start,DateTime finish)
         {
             diagrammline1 = new LineSeries()
             {
-                Title = "Накопление брака, тонн",
+                Title = TitleL1,
                 StrokeThickness = 3,
                 LineStyle = LineStyle.Automatic,
                 MarkerType = MarkerType.Circle,
@@ -50,7 +51,7 @@ namespace Rusal
             };
             diagrammline2 = new LineSeries()
             {
-                Title = "Сумма брака, тонн",
+                Title = TitleL2,
                 StrokeThickness = 3,
                 LineStyle = LineStyle.Automatic,
                 MarkerType = MarkerType.Circle,
@@ -77,7 +78,14 @@ namespace Rusal
                 Angle = 90,
                 StringFormat = "dd.MM.yy" 
             });
-            var leftAxisY = new LinearAxis { Position = AxisPosition.Left };
+            var leftAxisY = new LinearAxis 
+            { 
+                Position = AxisPosition.Left,
+                MajorGridlineStyle = LineStyle.Dot,
+                Title = TitleY,
+                AxisDistance = 10,
+                TitleFontSize = 14
+            };
             pv.Model.Axes.Add(leftAxisY);
             pv.Model.Series.Add(diagrammline1);
             pv.Model.Series.Add(diagrammline2);
@@ -288,27 +296,54 @@ namespace Rusal
         }
         public static void FullDiameterWeight(DateTime datestart, DateTime datefinish, double Diameter,PlotView pv1,PlotView pv2)
         {
+            //Создание листа для хранения данных
+            dataFullExports = new List<WrapData>();
+            //Запрос на получение данных
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
                         orderby gp.DateCreate ascending
                         group gp by gp.DateCreate into g
                         select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiameter = g.Where(t => t.Diameter.Name == Diameter).Sum(t => t.Weight) };
-            SetParamDiagramm(pv1,datestart,datefinish);
+            //Запись данных
             foreach (var item in Group)
             {
                 if (dataFullExports.Count > 0)
                 {
+
                     dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
-                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(item.Date), item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight));
+
                 }
                 else
                 {
+
                     dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
-                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(item.Date), item.SumWeight));
+
                 }
-                diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(item.Date), item.SumWeight));
             }
+            //Задание тайтлов первой диаграммы
+            Title = "Общая дефектность за период";
+            TitleL1 = "Сумма брака, тонн";
+            TitleL2 = "Накопление брака, тонн";
+            TitleY = "Брак, тонн";
+            SetParamDiagramm(pv1, datestart, datefinish);
+            //Внесение данных в первую диаграмму
+            for(int i=0;i<dataFullExports.Count;i++)
+            {
+                diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].SumWeight));
+                diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].AccumulationWeight));
+            }
+            //Задание тайтлов второй диаграммы
+            Title = "Дефектность по диаметру "+Diameter.ToString()+" за период";
+            TitleL1 = "Накопление брака, тонн";
+            TitleL2 = "Сумма брака по диаметру " + Diameter.ToString() + ", тонн";
+            TitleY = "Брак, тонн";
             SetParamDiagramm(pv2, datestart, datefinish);
+            //Внесение данных во вторую диаграмму
+            for (int i = 0; i < dataFullExports.Count; i++)
+            {
+                diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].DiameterWeight));
+                diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].AccumulationDiameter));
+            }
 
         }
         public static void GetDataDGV(DataGridView DGV)
