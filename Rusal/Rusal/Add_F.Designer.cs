@@ -624,6 +624,7 @@
             this.MinimizeBox = false;
             this.Name = "Add_F";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление позиции";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_F_FormClosing);
             this.Load += new System.EventHandler(this.Add_F_Load);

@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plotView1 = new OxyPlot.WindowsForms.PlotView();
             this.Exit_B = new System.Windows.Forms.Button();
             this.Export_B = new System.Windows.Forms.Button();
@@ -38,11 +43,6 @@
             this.Show_B = new System.Windows.Forms.Button();
             this.ListArgumnts_CB = new System.Windows.Forms.ComboBox();
             this.plotView2 = new OxyPlot.WindowsForms.PlotView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label21 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,89 +70,6 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(571, 434);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // plotView1
-            // 
-            this.plotView1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.plotView1.Location = new System.Drawing.Point(597, 69);
-            this.plotView1.Name = "plotView1";
-            this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.plotView1.Size = new System.Drawing.Size(650, 315);
-            this.plotView1.TabIndex = 1;
-            this.plotView1.Text = "plotView1";
-            this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
-            this.plotView1.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.plotView1.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
-            // 
-            // Exit_B
-            // 
-            this.Exit_B.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Exit_B.Location = new System.Drawing.Point(14, 207);
-            this.Exit_B.Name = "Exit_B";
-            this.Exit_B.Size = new System.Drawing.Size(230, 23);
-            this.Exit_B.TabIndex = 7;
-            this.Exit_B.Text = "Завершить просмотр";
-            this.Exit_B.UseVisualStyleBackColor = true;
-            // 
-            // Export_B
-            // 
-            this.Export_B.Location = new System.Drawing.Point(14, 174);
-            this.Export_B.Name = "Export_B";
-            this.Export_B.Size = new System.Drawing.Size(230, 27);
-            this.Export_B.TabIndex = 6;
-            this.Export_B.Text = "Экспорт";
-            this.Export_B.UseVisualStyleBackColor = true;
-            // 
-            // FirstDate_CM
-            // 
-            this.FirstDate_CM.Location = new System.Drawing.Point(256, 68);
-            this.FirstDate_CM.Name = "FirstDate_CM";
-            this.FirstDate_CM.TabIndex = 8;
-            // 
-            // SecondDate_CM
-            // 
-            this.SecondDate_CM.Location = new System.Drawing.Point(421, 68);
-            this.SecondDate_CM.Name = "SecondDate_CM";
-            this.SecondDate_CM.TabIndex = 9;
-            // 
-            // TypeArgument_CB
-            // 
-            this.TypeArgument_CB.FormattingEnabled = true;
-            this.TypeArgument_CB.Location = new System.Drawing.Point(14, 69);
-            this.TypeArgument_CB.Name = "TypeArgument_CB";
-            this.TypeArgument_CB.Size = new System.Drawing.Size(230, 21);
-            this.TypeArgument_CB.TabIndex = 10;
-            // 
-            // Show_B
-            // 
-            this.Show_B.Location = new System.Drawing.Point(14, 141);
-            this.Show_B.Name = "Show_B";
-            this.Show_B.Size = new System.Drawing.Size(230, 27);
-            this.Show_B.TabIndex = 11;
-            this.Show_B.Text = "Сформировать";
-            this.Show_B.UseVisualStyleBackColor = true;
-            this.Show_B.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // ListArgumnts_CB
-            // 
-            this.ListArgumnts_CB.FormattingEnabled = true;
-            this.ListArgumnts_CB.Location = new System.Drawing.Point(14, 114);
-            this.ListArgumnts_CB.Name = "ListArgumnts_CB";
-            this.ListArgumnts_CB.Size = new System.Drawing.Size(230, 21);
-            this.ListArgumnts_CB.TabIndex = 12;
-            // 
-            // plotView2
-            // 
-            this.plotView2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.plotView2.Location = new System.Drawing.Point(597, 390);
-            this.plotView2.Name = "plotView2";
-            this.plotView2.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.plotView2.Size = new System.Drawing.Size(650, 315);
-            this.plotView2.TabIndex = 13;
-            this.plotView2.Text = "plotView2";
-            this.plotView2.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
-            this.plotView2.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.plotView2.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
             // Column1
             // 
@@ -189,6 +106,95 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 140;
             // 
+            // plotView1
+            // 
+            this.plotView1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.plotView1.Location = new System.Drawing.Point(597, 69);
+            this.plotView1.Name = "plotView1";
+            this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView1.Size = new System.Drawing.Size(650, 315);
+            this.plotView1.TabIndex = 1;
+            this.plotView1.Text = "plotView1";
+            this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView1.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView1.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // Exit_B
+            // 
+            this.Exit_B.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Exit_B.Location = new System.Drawing.Point(14, 207);
+            this.Exit_B.Name = "Exit_B";
+            this.Exit_B.Size = new System.Drawing.Size(230, 23);
+            this.Exit_B.TabIndex = 7;
+            this.Exit_B.Text = "Завершить просмотр";
+            this.Exit_B.UseVisualStyleBackColor = true;
+            // 
+            // Export_B
+            // 
+            this.Export_B.Location = new System.Drawing.Point(14, 174);
+            this.Export_B.Name = "Export_B";
+            this.Export_B.Size = new System.Drawing.Size(230, 27);
+            this.Export_B.TabIndex = 6;
+            this.Export_B.Text = "Экспорт";
+            this.Export_B.UseVisualStyleBackColor = true;
+            this.Export_B.Click += new System.EventHandler(this.Export_B_Click);
+            // 
+            // FirstDate_CM
+            // 
+            this.FirstDate_CM.Location = new System.Drawing.Point(256, 68);
+            this.FirstDate_CM.MaxSelectionCount = 1;
+            this.FirstDate_CM.Name = "FirstDate_CM";
+            this.FirstDate_CM.TabIndex = 8;
+            // 
+            // SecondDate_CM
+            // 
+            this.SecondDate_CM.Location = new System.Drawing.Point(421, 68);
+            this.SecondDate_CM.MaxSelectionCount = 1;
+            this.SecondDate_CM.Name = "SecondDate_CM";
+            this.SecondDate_CM.TabIndex = 9;
+            // 
+            // TypeArgument_CB
+            // 
+            this.TypeArgument_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TypeArgument_CB.FormattingEnabled = true;
+            this.TypeArgument_CB.Location = new System.Drawing.Point(14, 69);
+            this.TypeArgument_CB.Name = "TypeArgument_CB";
+            this.TypeArgument_CB.Size = new System.Drawing.Size(230, 21);
+            this.TypeArgument_CB.TabIndex = 10;
+            this.TypeArgument_CB.SelectedIndexChanged += new System.EventHandler(this.TypeArgument_CB_SelectedIndexChanged);
+            // 
+            // Show_B
+            // 
+            this.Show_B.Location = new System.Drawing.Point(14, 141);
+            this.Show_B.Name = "Show_B";
+            this.Show_B.Size = new System.Drawing.Size(230, 27);
+            this.Show_B.TabIndex = 11;
+            this.Show_B.Text = "Сформировать";
+            this.Show_B.UseVisualStyleBackColor = true;
+            this.Show_B.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // ListArgumnts_CB
+            // 
+            this.ListArgumnts_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ListArgumnts_CB.FormattingEnabled = true;
+            this.ListArgumnts_CB.Location = new System.Drawing.Point(14, 114);
+            this.ListArgumnts_CB.Name = "ListArgumnts_CB";
+            this.ListArgumnts_CB.Size = new System.Drawing.Size(230, 21);
+            this.ListArgumnts_CB.TabIndex = 12;
+            // 
+            // plotView2
+            // 
+            this.plotView2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.plotView2.Location = new System.Drawing.Point(597, 390);
+            this.plotView2.Name = "plotView2";
+            this.plotView2.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView2.Size = new System.Drawing.Size(650, 315);
+            this.plotView2.TabIndex = 13;
+            this.plotView2.Text = "plotView2";
+            this.plotView2.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView2.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView2.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -218,7 +224,6 @@
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 48;
             this.label1.Text = "Начало  периода";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -298,7 +303,9 @@
             this.MinimizeBox = false;
             this.Name = "FullAnalysis_F";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FullAnalysis_F";
+            this.Load += new System.EventHandler(this.FullAnalysis_F_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -308,8 +315,6 @@
         #endregion
         private System.Windows.Forms.Button Exit_B;
         public System.Windows.Forms.Button Export_B;
-        private System.Windows.Forms.MonthCalendar FirstDate_CM;
-        private System.Windows.Forms.MonthCalendar SecondDate_CM;
         private System.Windows.Forms.Button Show_B;
         public System.Windows.Forms.DataGridView dataGridView1;
         public OxyPlot.WindowsForms.PlotView plotView1;
@@ -329,5 +334,7 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.MonthCalendar FirstDate_CM;
+        public System.Windows.Forms.MonthCalendar SecondDate_CM;
     }
 }

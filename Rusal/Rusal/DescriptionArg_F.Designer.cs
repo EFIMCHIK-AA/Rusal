@@ -121,6 +121,7 @@
             this.MinimizeBox = false;
             this.Name = "DescriptionArg_F";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Аргумент";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DescriptionArg_F_FormClosing);
             this.Load += new System.EventHandler(this.DescriptionArg_F_Load);

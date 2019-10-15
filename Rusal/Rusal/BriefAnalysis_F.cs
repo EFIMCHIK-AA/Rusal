@@ -23,7 +23,88 @@ namespace Rusal
 
         private void Export_B_Click(object sender, EventArgs e)
         {
-            Analysis.ExcelBriefExport(new DateTime(2019,10,1),new DateTime(2019,10,30));
+            //GetExport(Индекс);
+        }
+
+        private Int32 IndexExport;//Индекс экспорта
+        DateTime FirstDate;//Начало периода
+        DateTime SecondDate; //Конец периода
+
+        String[] ListParams = { "Вес | Бригада", "Вес | Диаметр", "Вес | Описание", "Вес | Номер ТС", "Количество | Бригада", "Количество | Номер ТС", "Количество | Описание"};
+
+        private void GetAnalisys(Int32 Key)
+        {
+            FirstDate = FirstDate_CM.SelectionStart;
+            SecondDate = SecondDate_CM.SelectionStart;
+
+            switch (Key)
+            {
+                case 0: //Вес | Бригада
+                    //Вызвать метод
+                    break;
+                case 1: //Вес | Диаметр
+                    //Вызвать метод
+                    break;
+                case 2://Вес | Описание
+                   //Вызвать метод
+                    break;
+                case 3://Вес | Номер ТС
+                    //Вызвать метод
+                    break;
+                case 4://Количество | Бригада
+                    //Вызвать метод
+                    break;
+                case 5://Количество | Номер ТС
+                    //Вызвать метод
+                    break;
+                case 6://Количество | Описание
+                    //Вызвать метод
+                    break;
+            }
+        }
+
+        private void GetExport(Int32 Key)
+        {
+            switch (Key)
+            {
+                case 0: //Вес | Бригада
+                    //Вызвать метод
+                    break;
+                case 1: //Вес | Диаметр
+                    //Вызвать метод
+                    break;
+                case 2://Вес | Описание
+                       //Вызвать метод
+                    break;
+                case 3://Вес | Номер ТС
+                    //Вызвать метод
+                    break;
+                case 4://Количество | Бригада
+                    //Вызвать метод
+                    break;
+                case 5://Количество | Номер ТС
+                    //Вызвать метод
+                    break;
+                case 6://Количество | Описание
+                    //Вызвать метод
+                    break;
+            }
+        }
+
+        private void BriefAnalysis_F_Load(object sender, EventArgs e)
+        {
+            TypeArgumnts_CB.DataSource = ListParams;
+        }
+
+        private void TypeArgumnts_CB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Show_B_Click(object sender, EventArgs e)
+        {
+            GetAnalisys(TypeArgumnts_CB.SelectedIndex);
+            IndexExport = TypeArgumnts_CB.SelectedIndex;
         }
     }
 }

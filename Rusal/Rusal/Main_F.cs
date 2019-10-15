@@ -60,16 +60,16 @@ namespace Rusal
             ProgressBar_PB.Value = 100;
         }
 
-        private void ButtonMode(bool Mode)
-        {
-            Add_B.Enabled = Mode;
-            Change_B.Enabled = Mode;
-            Delete_B.Enabled = Mode;
-            Analysis_CB.Enabled = Mode;
-            AnalysisStart_B.Enabled = Mode;
-            Report_CB.Enabled = Mode;
-            ReportStart_B.Enabled = Mode;
-        }
+        //private void ButtonMode(bool Mode)
+        //{
+        //    Add_B.Enabled = Mode;
+        //    Change_B.Enabled = Mode;
+        //    Delete_B.Enabled = Mode;
+        //    Analysis_CB.Enabled = Mode;
+        //    AnalysisStart_B.Enabled = Mode;
+        //    Report_CB.Enabled = Mode;
+        //    ReportStart_B.Enabled = Mode;
+        //}
 
         private void Exit_B_Click(object sender, EventArgs e)
         {
@@ -81,73 +81,22 @@ namespace Rusal
 
         private void ReportStart_B_Click(object sender, EventArgs e)
         {
-            if(SystemArgs.StatusConnect)
-            {
-                Report_F Dialog = new Report_F();
 
-                if (Dialog.ShowDialog() == DialogResult.OK)
-                {
-                    Reports.ByDate(Dialog.First_MC.SelectionStart, Dialog.Second_MC.SelectionStart);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void Add_B_Click(object sender, EventArgs e)
         {
-            if (SystemArgs.StatusConnect)
-            {
-                Operations.AddPosition();
 
-                ResetSearch();
-
-                ShowPosition(SystemArgs.Positions);
-            }
-            else
-            {
-                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void Change_B_Click(object sender, EventArgs e)
         {
-            if (SystemArgs.StatusConnect)
-            {
-                if (Position_DGV.CurrentCell != null)
-                {
-                    Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
-                    ResetSearch();
 
-                    ShowPosition(SystemArgs.Positions);
-                    ClearField();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void Delete_B_Click(object sender, EventArgs e)
         {
-            if (SystemArgs.StatusConnect)
-            {
-                if (Position_DGV.CurrentCell != null)
-                {
-                    Operations.DeletePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
-                    ResetSearch();
 
-                    ShowPosition(SystemArgs.Positions);
-                    ClearField();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void Position_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -365,6 +314,102 @@ namespace Rusal
         private void Menu_MS_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void обычныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BriefAnalysis_F Dialog = new BriefAnalysis_F();
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void расширенныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FullAnalysis_F Dialog = new FullAnalysis_F();
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void заПериодToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SystemArgs.StatusConnect)
+            {
+                Report_F Dialog = new Report_F();
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    Reports.ByDate(Dialog.First_MC.SelectionStart, Dialog.Second_MC.SelectionStart);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AnalysisStart_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SystemArgs.StatusConnect)
+            {
+                Operations.AddPosition();
+
+                ResetSearch();
+
+                ShowPosition(SystemArgs.Positions);
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SystemArgs.StatusConnect)
+            {
+                if (Position_DGV.CurrentCell != null)
+                {
+                    Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+                    ResetSearch();
+
+                    ShowPosition(SystemArgs.Positions);
+                    ClearField();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SystemArgs.StatusConnect)
+            {
+                if (Position_DGV.CurrentCell != null)
+                {
+                    Operations.DeletePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+                    ResetSearch();
+
+                    ShowPosition(SystemArgs.Positions);
+                    ClearField();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

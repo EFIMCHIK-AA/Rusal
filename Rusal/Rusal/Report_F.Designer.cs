@@ -41,36 +41,36 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(133, 24);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(100, 20);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(240, 25);
+            this.label21.Size = new System.Drawing.Size(192, 18);
             this.label21.TabIndex = 42;
             this.label21.Text = "Формирование отчета";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 84);
+            this.label1.Location = new System.Drawing.Point(27, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 17);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 44;
             this.label1.Text = "Начало  периода";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 84);
+            this.label2.Location = new System.Drawing.Point(198, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 17);
+            this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 46;
             this.label2.Text = "Окончание периода";
             // 
             // First_MC
             // 
             this.First_MC.BackColor = System.Drawing.SystemColors.Control;
-            this.First_MC.Location = new System.Drawing.Point(39, 112);
-            this.First_MC.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.First_MC.Location = new System.Drawing.Point(29, 91);
             this.First_MC.MaxSelectionCount = 1;
             this.First_MC.Name = "First_MC";
             this.First_MC.TabIndex = 121;
@@ -79,8 +79,7 @@
             // Second_MC
             // 
             this.Second_MC.BackColor = System.Drawing.SystemColors.Control;
-            this.Second_MC.Location = new System.Drawing.Point(267, 112);
-            this.Second_MC.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.Second_MC.Location = new System.Drawing.Point(200, 91);
             this.Second_MC.MaxSelectionCount = 1;
             this.Second_MC.Name = "Second_MC";
             this.Second_MC.TabIndex = 122;
@@ -90,10 +89,9 @@
             // 
             this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.OK_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OK_B.Location = new System.Drawing.Point(39, 347);
-            this.OK_B.Margin = new System.Windows.Forms.Padding(4);
+            this.OK_B.Location = new System.Drawing.Point(29, 282);
             this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(206, 33);
+            this.OK_B.Size = new System.Drawing.Size(154, 27);
             this.OK_B.TabIndex = 124;
             this.OK_B.Text = "ОК";
             this.OK_B.UseVisualStyleBackColor = true;
@@ -102,19 +100,18 @@
             // 
             this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cancel_B.Location = new System.Drawing.Point(253, 347);
-            this.Cancel_B.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancel_B.Location = new System.Drawing.Point(210, 282);
             this.Cancel_B.Name = "Cancel_B";
-            this.Cancel_B.Size = new System.Drawing.Size(206, 33);
+            this.Cancel_B.Size = new System.Drawing.Size(154, 27);
             this.Cancel_B.TabIndex = 123;
             this.Cancel_B.Text = "Отмена";
             this.Cancel_B.UseVisualStyleBackColor = true;
             // 
             // Report_F
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 398);
+            this.ClientSize = new System.Drawing.Size(403, 323);
             this.Controls.Add(this.OK_B);
             this.Controls.Add(this.Cancel_B);
             this.Controls.Add(this.Second_MC);
@@ -123,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label21);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Report_F";
