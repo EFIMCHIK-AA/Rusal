@@ -20,7 +20,6 @@ namespace Rusal
         String[] ListParams = { "Номер бригады", "Диаметер", "Описание", "Номет ТС" };
         DateTime FirstDate; //Начало периода
         DateTime SecondDate; //Конец периода
-        Int32 IndexExport; // Индекс Экспорта
 
         private void GetAnalisys(Int32 Key)
         {
@@ -41,25 +40,6 @@ namespace Rusal
                     break;
                 case 3://Номер ТС
                     Analysis.FullNumTSWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
-                    break;
-            }
-        }
-
-        private void GetExport(Int32 Key)
-        {
-            switch (Key)
-            {
-                case 0: //Бригады
-                    //Вызвать метод
-                    break;
-                case 1: //Диаметр
-                        //Вызвать метод
-                    break;
-                case 2://Описание
-                       //Вызвать метод
-                    break;
-                case 3://Номер ТС
-                       //Вызвать метод
                     break;
             }
         }
@@ -89,7 +69,6 @@ namespace Rusal
         private void Button1_Click(object sender, EventArgs e)
         {
             GetAnalisys(TypeArgument_CB.SelectedIndex);
-            IndexExport = TypeArgument_CB.SelectedIndex;
         }
 
         private void FullAnalysis_F_Load(object sender, EventArgs e)

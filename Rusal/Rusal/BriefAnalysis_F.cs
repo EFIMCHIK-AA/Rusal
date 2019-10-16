@@ -23,10 +23,9 @@ namespace Rusal
 
         private void Export_B_Click(object sender, EventArgs e)
         {
-            //GetExport(Индекс);
+            Analysis.ExcelBriefExport(FirstDate, SecondDate);
         }
 
-        private Int32 IndexExport;//Индекс экспорта
         DateTime FirstDate;//Начало периода
         DateTime SecondDate; //Конец периода
 
@@ -63,34 +62,6 @@ namespace Rusal
             }
         }
 
-        private void GetExport(Int32 Key)
-        {
-            switch (Key)
-            {
-                case 0: //Вес | Бригада
-                    //Вызвать метод
-                    break;
-                case 1: //Вес | Диаметр
-                    //Вызвать метод
-                    break;
-                case 2://Вес | Описание
-                       //Вызвать метод
-                    break;
-                case 3://Вес | Номер ТС
-                    //Вызвать метод
-                    break;
-                case 4://Количество | Бригада
-                    //Вызвать метод
-                    break;
-                case 5://Количество | Номер ТС
-                    //Вызвать метод
-                    break;
-                case 6://Количество | Описание
-                    //Вызвать метод
-                    break;
-            }
-        }
-
         private void BriefAnalysis_F_Load(object sender, EventArgs e)
         {
             TypeArgumnts_CB.DataSource = ListParams;
@@ -104,7 +75,6 @@ namespace Rusal
         private void Show_B_Click(object sender, EventArgs e)
         {
             GetAnalisys(TypeArgumnts_CB.SelectedIndex);
-            IndexExport = TypeArgumnts_CB.SelectedIndex;
         }
     }
 }
