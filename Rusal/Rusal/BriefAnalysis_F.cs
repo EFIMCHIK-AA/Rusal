@@ -40,25 +40,25 @@ namespace Rusal
             switch (Key)
             {
                 case 0: //Вес | Бригада
-                    //Вызвать метод
+                    Analysis.BriefBrigadeWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
                     break;
                 case 1: //Вес | Диаметр
-                    //Вызвать метод
+                    Analysis.BriefDiametrWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
                     break;
                 case 2://Вес | Описание
-                   //Вызвать метод
+                    Analysis.BriefDescriptionWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
                     break;
                 case 3://Вес | Номер ТС
-                    //Вызвать метод
+                    Analysis.BriefNumTSWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
                     break;
                 case 4://Количество | Бригада
-                    //Вызвать метод
+                    Analysis.BriefBrigadeCount(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
                     break;
                 case 5://Количество | Номер ТС
-                    //Вызвать метод
+                    Analysis.BriefNumTSCount(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
                     break;
                 case 6://Количество | Описание
-                    //Вызвать метод
+                    Analysis.BriefDescriptionCount(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
                     break;
             }
         }

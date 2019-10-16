@@ -31,16 +31,16 @@ namespace Rusal
             switch (Key)
             {
                 case 0: //Бригады
-                    //Вызвать метод
+                    Analysis.FullBrigadeWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
                     break;
                 case 1: //Диаметр
-                        //Вызвать метод
+                    Analysis.FullDiameterWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
                     break;
                 case 2://Описание
-                       //Вызвать метод
+                    Analysis.FullDiscriptionWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
                     break;
                 case 3://Номер ТС
-                       //Вызвать метод
+                    Analysis.FullNumTSWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
                     break;
             }
         }

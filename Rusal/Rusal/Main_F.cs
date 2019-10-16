@@ -185,42 +185,6 @@ namespace Rusal
             }
         }
 
-        private void ВесToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FullAnalysis_F fullAnalysis_F = new FullAnalysis_F();
-            fullAnalysis_F.ShowDialog();
-        }
-
-        private void ВесToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Analysis.BriefBrigadeWeight(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30));
-        }
-
-        private void ВесНомерТСToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Analysis.BriefNumTSWeight(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30));
-        }
-
-        private void ВесТипДефектаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Analysis.BriefDescriptionWeight(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30));
-        }
-
-        private void КоличествоБригадаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Analysis.BriefBrigadeCount(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30));
-        }
-
-        private void КоличествоToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Analysis.BriefNumTSCount(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30));
-        }
-
-        private void КоличествоОписаниеToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Analysis.BriefDescriptionCount(new DateTime(2019, 10, 1), new DateTime(2019, 10, 30));
-        }
-
         private void ClearField()
         {
             Date_TB.Text = String.Empty;
