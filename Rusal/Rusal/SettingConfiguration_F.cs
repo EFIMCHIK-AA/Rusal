@@ -23,7 +23,7 @@ namespace Rusal
         }
 
         String []ListParams = {"Номер бригады", "Номер смены", "Марка сплава", "Диаметер",
-                                  "Описание", "Тип дефекта", "Номет ТС", "Место дефекта в производственном процессе"};
+                                  "Описание", "Тип дефекта", "Номет ТС", "Место дефекта в производственном процессе", "Прогресс"};
 
         private void SettingConfiguration_F_Load(object sender, EventArgs e)
         {
@@ -77,7 +77,7 @@ namespace Rusal
             }
             else if (CurrentArgument is DiameterIngot)
             {
-                TypesAlloy Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as TypesAlloy;
+                DiameterIngot Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as DiameterIngot;
 
                 if (Type)
                 {
@@ -205,11 +205,11 @@ namespace Rusal
                     NameTable = "DefectLocationProduction";
                     NameColumn = "N_Location";
                     break;
-                //case 8:
-                //    Spisok_LB.DataSource = SystemArgs.ProgressMark;
-                //    NameTable = "ProgressMark";
-                //    NameColumn = "N_ProgressMark";
-                //    break;
+                case 8:
+                    Spisok_LB.DataSource = SystemArgs.ProgressMark;
+                    NameTable = "ProgressMark";
+                    NameColumn = "N_ProgressMark";
+                    break;
             }
         }
 

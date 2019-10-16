@@ -182,6 +182,7 @@ namespace Rusal
             if(Dialog.ShowDialog() == DialogResult.OK)
             {
                 Operations.GetPosition();
+                ShowPosition(SystemArgs.Positions);
             }
         }
 
@@ -217,57 +218,7 @@ namespace Rusal
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
 
-            Date_TB.Text = Temp.DateFormation.ToShortDateString();
-            NumBrigade_TB.Text = Temp.NumBrigade.Name;
-            NumSmeny_TB.Text = Temp.NumSmeny.Name;
-            Melt_TB.Text = Temp.NumMelt;
-            NumTC_TB.Text = Temp.NumTS.Name;
-            Address_TB.Text = Temp.Address;
-            Description_TB.Text = Temp.Description.Name;
-            Type_TB.Text = Temp.Defect.Name;
-            Count_TB.Text = Temp.Count.ToString();
-            Weight_TB.Text = Temp.Weight.ToString();
-            Diameter_TB.Text = Temp.Diameter.Name.ToString();
-            Reason_TB.Text = Temp.Reason;
-            Correction_TB.Text = Temp.Correction;
-            StatusCorrection_TB.Text = Temp.ProgressMark.Name.ToString();
-            DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
-
-            North_CB.Checked = false;
-            West_CB.Checked = false;
-            East_CB.Checked = false;
-            South_CB.Checked = false;
-            One_CB.Checked = false;
-            Two_CB.Checked = false;
-            Three_CB.Checked = false;
-            Four_CB.Checked = false;
-            Five_CB.Checked = false;
-            Six_CB.Checked = false;
-            
-            if (Temp.DefectLocIngot != null)
-            {
-                String[] DefectLocIngot = Temp.DefectLocIngot.Split('_');
-
-                foreach (String Name in DefectLocIngot)
-                {
-                    foreach (Control TypeControl in panel2.Controls)
-                    {
-                        if (TypeControl is CheckBox)
-                        {
-                            if (TypeControl.Text == Name)
-                            {
-                                (TypeControl as CheckBox).Checked = true;
-                            }
-                        }
-                        else
-                        {
-                            continue;
-                        }
-                    }
-                }
-            }
         }
 
         private void label25_Click(object sender, EventArgs e)
@@ -374,6 +325,84 @@ namespace Rusal
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Position_DGV_SelectionChanged(object sender, EventArgs e)
+        {
+            if(Position_DGV.CurrentCell == null)
+            {
+                return;
+            }
+
+            Position_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
+
+            Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
+
+            Date_TB.Text = Temp.DateFormation.ToShortDateString();
+            NumBrigade_TB.Text = Temp.NumBrigade.Name;
+            NumSmeny_TB.Text = Temp.NumSmeny.Name;
+            Melt_TB.Text = Temp.NumMelt;
+            NumTC_TB.Text = Temp.NumTS.Name;
+            Address_TB.Text = Temp.Address;
+            Description_TB.Text = Temp.Description.Name;
+            Type_TB.Text = Temp.Defect.Name;
+            Count_TB.Text = Temp.Count.ToString();
+            Weight_TB.Text = Temp.Weight.ToString();
+            Diameter_TB.Text = Temp.Diameter.Name.ToString();
+            Reason_TB.Text = Temp.Reason;
+            Correction_TB.Text = Temp.Correction;
+            StatusCorrection_TB.Text = Temp.ProgressMark.Name.ToString();
+
+            if(Temp.ProgressMark.ID == 4)
+            {
+                StatusCorrection_TB.BackColor = Color.FromArgb(6, 176, 37);
+            }
+            else
+            {
+                StatusCorrection_TB.BackColor = Color.FromArgb(255, 144, 0);
+            }
+
+            DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
+
+            North_CB.Checked = false;
+            West_CB.Checked = false;
+            East_CB.Checked = false;
+            South_CB.Checked = false;
+            One_CB.Checked = false;
+            Two_CB.Checked = false;
+            Three_CB.Checked = false;
+            Four_CB.Checked = false;
+            Five_CB.Checked = false;
+            Six_CB.Checked = false;
+
+            if (Temp.DefectLocIngot != null)
+            {
+                String[] DefectLocIngot = Temp.DefectLocIngot.Split('_');
+
+                foreach (String Name in DefectLocIngot)
+                {
+                    foreach (Control TypeControl in panel2.Controls)
+                    {
+                        if (TypeControl is CheckBox)
+                        {
+                            if (TypeControl.Text == Name)
+                            {
+                                (TypeControl as CheckBox).Checked = true;
+                            }
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void Position_DGV_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(206, 200, 200);
+            e.CellStyle.SelectionForeColor = Color.Black;
         }
     }
 }

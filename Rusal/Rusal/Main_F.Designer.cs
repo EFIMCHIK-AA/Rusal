@@ -350,6 +350,7 @@
             this.StatusCorrection_TB.ReadOnly = true;
             this.StatusCorrection_TB.Size = new System.Drawing.Size(87, 20);
             this.StatusCorrection_TB.TabIndex = 129;
+            this.StatusCorrection_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -726,14 +727,14 @@
             // конфигурацияToolStripMenuItem
             // 
             this.конфигурацияToolStripMenuItem.Name = "конфигурацияToolStripMenuItem";
-            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.конфигурацияToolStripMenuItem.Text = "Конфигурация";
             this.конфигурацияToolStripMenuItem.Click += new System.EventHandler(this.конфигурацияToolStripMenuItem_Click);
             // 
             // базаДанныхToolStripMenuItem
             // 
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.базаДанныхToolStripMenuItem.Text = "База данных";
             this.базаДанныхToolStripMenuItem.Click += new System.EventHandler(this.базаДанныхToolStripMenuItem_Click);
             // 
@@ -820,25 +821,27 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ConnectDB_TB.Location = new System.Drawing.Point(83, 9);
             this.ConnectDB_TB.Name = "ConnectDB_TB";
-            this.ConnectDB_TB.Size = new System.Drawing.Size(256, 20);
+            this.ConnectDB_TB.Size = new System.Drawing.Size(112, 20);
             this.ConnectDB_TB.TabIndex = 46;
+            this.ConnectDB_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CountPos_TB
             // 
             this.CountPos_TB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.CountPos_TB.Location = new System.Drawing.Point(555, 10);
+            this.CountPos_TB.Location = new System.Drawing.Point(336, 9);
             this.CountPos_TB.Name = "CountPos_TB";
-            this.CountPos_TB.Size = new System.Drawing.Size(225, 20);
+            this.CountPos_TB.Size = new System.Drawing.Size(61, 20);
             this.CountPos_TB.TabIndex = 48;
+            this.CountPos_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ProgressBar_PB
             // 
             this.ProgressBar_PB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.ProgressBar_PB.Location = new System.Drawing.Point(918, 10);
+            this.ProgressBar_PB.Location = new System.Drawing.Point(961, 6);
             this.ProgressBar_PB.Name = "ProgressBar_PB";
-            this.ProgressBar_PB.Size = new System.Drawing.Size(403, 8);
+            this.ProgressBar_PB.Size = new System.Drawing.Size(361, 20);
             this.ProgressBar_PB.TabIndex = 49;
             // 
             // label12
@@ -846,7 +849,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(842, 13);
+            this.label12.Location = new System.Drawing.Point(880, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 13);
             this.label12.TabIndex = 50;
@@ -857,7 +860,7 @@
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(425, 13);
+            this.label24.Location = new System.Drawing.Point(206, 12);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(124, 13);
             this.label24.TabIndex = 51;
@@ -907,12 +910,16 @@
             this.Column4,
             this.Column5});
             this.Position_DGV.Location = new System.Drawing.Point(9, 48);
+            this.Position_DGV.MultiSelect = false;
             this.Position_DGV.Name = "Position_DGV";
+            this.Position_DGV.ReadOnly = true;
             this.Position_DGV.RowHeadersVisible = false;
             this.Position_DGV.Size = new System.Drawing.Size(567, 664);
             this.Position_DGV.TabIndex = 42;
             this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
+            this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting_1);
+            this.Position_DGV.SelectionChanged += new System.EventHandler(this.Position_DGV_SelectionChanged);
             // 
             // Column1
             // 

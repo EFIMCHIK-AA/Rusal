@@ -53,7 +53,7 @@ namespace Rusal
                     Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
                     {
                         Form.ConnectDB_TB.Text = "Установлено";
-                        Form.ConnectDB_TB.BackColor = Color.Green;
+                        Form.ConnectDB_TB.BackColor = Color.FromArgb(188, 220, 244);
                     }));
                 }
                 else
