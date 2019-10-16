@@ -18,13 +18,8 @@ namespace Rusal
 {
     public static class Analysis
     {
-        private struct DataBriefExport
-        {
-            public string Name;
-            public double Value;
-        }
-        private static List<WrapData> dataFullExports;
-        private static List<DataBriefExport> dataBriefExports;
+        private static List<WrapFullData> dataFullExports;
+        private static List<WrapBriefData> dataBriefExports;
         private static CategoryAxis xaxis;
         private static LinearAxis yaxis;
         private static ColumnSeries histogramm;
@@ -66,17 +61,19 @@ namespace Rusal
             };
             var minValue = DateTimeAxis.ToDouble(start);
             var maxValue = DateTimeAxis.ToDouble(finish);
-            pv.Model.Axes.Add(new DateTimeAxis 
-            {   
+            pv.Model.Axes.Add(new DateTimeAxis
+            {
                 Position = AxisPosition.Bottom,
                 IntervalType = DateTimeIntervalType.Days,
-                MajorStep = 1,
+                MajorStep = 7,
                 MinorIntervalType = DateTimeIntervalType.Days,
                 MinorStep = 3,
                 Minimum = minValue,
                 Maximum = maxValue,
                 Angle = 90,
-                StringFormat = "dd.MM.yy" 
+                StringFormat = "dd.MM.yy",
+                IsZoomEnabled = false,
+                IsPanEnabled = false
             });
             var leftAxisY = new LinearAxis 
             { 
@@ -84,8 +81,10 @@ namespace Rusal
                 MajorGridlineStyle = LineStyle.Dot,
                 Title = TitleY,
                 AxisDistance = 10,
-                TitleFontSize = 14
-            };
+                TitleFontSize = 14,
+                IsZoomEnabled = false,
+                IsPanEnabled = false
+        };
             pv.Model.Axes.Add(leftAxisY);
             pv.Model.Series.Add(diagrammline1);
             pv.Model.Series.Add(diagrammline2);
@@ -93,16 +92,16 @@ namespace Rusal
             {
                 for (int i = 0; i < dataFullExports.Count; i++)
                 {
-                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].SumWeight));
-                    diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].AccumulationWeight));
+                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].SumWeight));
+                    diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].AccumulationWeight));
                 }
             }
             else
             {
                 for (int i = 0; i < dataFullExports.Count; i++)
                 {
-                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].DiameterWeight));
-                    diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateCreate), dataFullExports[i].AccumulationDiameter));
+                    diagrammline1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].DiameterWeight));
+                    diagrammline2.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].AccumulationDiameter));
                 }
             }
         }
@@ -116,7 +115,9 @@ namespace Rusal
                 MinorGridlineStyle = LineStyle.Dot,
                 Title = TitleX,
                 AxisDistance = 5,
-                TitleFontSize = 14
+                TitleFontSize = 14,
+                IsZoomEnabled = false,
+                IsPanEnabled = false
 
             };
             histogramm = new ColumnSeries()
@@ -129,6 +130,8 @@ namespace Rusal
                 MajorGridlineStyle = LineStyle.Dot,
                 Title = TitleY,
                 AxisDistance = 10,
+                IsZoomEnabled = false,
+                IsPanEnabled = false,
                 TitleFontSize = 14
             };
             pv.Model = new PlotModel
@@ -148,158 +151,158 @@ namespace Rusal
                 xaxis.Labels.Add(dataBriefExports[i].Name);
             }
         }
-        private static void SetDataListbox(ListBox lb1,ListBox lb2,Label l1,Label l2)
+        private static void SetBriefDataGridView(DataGridView DGV)
         {
-            lb1.Items.Clear();
-            lb2.Items.Clear();
-            l1.Text = TitleX;
-            l2.Text = TitleY;
-            for (int i = 0; i < dataBriefExports.Count; i++)
-            {
-                lb1.Items.Add(dataBriefExports[i].Name);
-                lb2.Items.Add(dataBriefExports[i].Value);
-            }
+            DGV.DataSource = dataBriefExports;
+            DGV.Columns[0].HeaderText = TitleX;
+            DGV.Columns[1].HeaderText = TitleY;
+            DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
-        public static void BriefDiametrWeight(PlotView pv,DateTime datestart, DateTime datefinish,ListBox lb1,ListBox lb2,Label l1,Label l2)
+        private static void SetFullDataGridView(DataGridView DGV)
         {
-            dataBriefExports = new List<DataBriefExport>();
+            DGV.DataSource = dataFullExports;
+            DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+        public static void BriefDiametrWeight(PlotView pv,DateTime datestart, DateTime datefinish,DataGridView DGV)
+        {
+            dataBriefExports = new List<WrapBriefData>();
             Title = "Дефектность по диаметрам за период";
             TitleX = "Диаметр";
             TitleY = "Брак, тонн";
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
                         group gp by gp.Diameter.Name into g
                         select new { Name = g.Key, Value = g.Sum(w => w.Weight) };
 
             foreach (var item in Group)
             {     
-                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new WrapBriefData() { Name = item.Name.ToString(), Value = item.Value });
             }
             SetParamHistogramm(pv);
-            SetDataListbox(lb1,lb2,l1,l2);
+            SetBriefDataGridView(DGV);
 
         }
-        public static void BriefBrigadeWeight(PlotView pv, DateTime datestart, DateTime datefinish, ListBox lb1, ListBox lb2, Label l1, Label l2)
+        public static void BriefBrigadeWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
-            dataBriefExports = new List<DataBriefExport>();
+            dataBriefExports = new List<WrapBriefData>();
             Title = "Дефектность по бригадам за период";
             TitleX = "Бригада";
             TitleY = "Брак, тонн";
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
                         group gp by gp.NumBrigade.Name into g
                         select new { Name = g.Key, Value = g.Sum(w => w.Weight) };
             foreach (var item in Group)
             {
-                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new WrapBriefData() { Name = item.Name.ToString(), Value = item.Value });
             }
             SetParamHistogramm(pv);
-            SetDataListbox(lb1, lb2, l1, l2);
+            SetBriefDataGridView(DGV);
         }
-        public static void BriefNumTSWeight(PlotView pv, DateTime datestart, DateTime datefinish, ListBox lb1, ListBox lb2, Label l1, Label l2)
+        public static void BriefNumTSWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
-            dataBriefExports = new List<DataBriefExport>();
+            dataBriefExports = new List<WrapBriefData>();
             Title = "Дефектность по номерам ТС за период";
             TitleX = "Номер ТС";
             TitleY = "Брак, тонн";
 
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
                         group gp by gp.NumTS.Name into g
                         select new { Name = g.Key, Value = g.Sum(w => w.Weight) };
 
             foreach (var item in Group)
             {
-                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new WrapBriefData() { Name = item.Name.ToString(), Value = item.Value });
             }
             SetParamHistogramm(pv);
-            SetDataListbox(lb1, lb2, l1, l2);
+            SetBriefDataGridView(DGV);
         }
-        public static void BriefDescriptionWeight(PlotView pv, DateTime datestart, DateTime datefinish, ListBox lb1, ListBox lb2, Label l1, Label l2)
+        public static void BriefDescriptionWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
-            dataBriefExports = new List<DataBriefExport>();
+            dataBriefExports = new List<WrapBriefData>();
             Title = "Дефектность по типам дефектов за период";
             TitleX = "Дефект";
             TitleY = "Брак, тонн";
 
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
                         group gp by gp.Description.Name into g
                         select new { Name = g.Key, Value = g.Sum(w => w.Weight) };
 
             foreach (var item in Group)
             {
-                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new WrapBriefData() { Name = item.Name.ToString(), Value = item.Value });
             }
             SetParamHistogramm(pv);
-            SetDataListbox(lb1, lb2, l1, l2);
+            SetBriefDataGridView(DGV);
         }
-        public static void BriefBrigadeCount(PlotView pv, DateTime datestart, DateTime datefinish, ListBox lb1, ListBox lb2, Label l1, Label l2)
+        public static void BriefBrigadeCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
-            dataBriefExports = new List<DataBriefExport>();
+            dataBriefExports = new List<WrapBriefData>();
             Title = "Дефектность по бригадам за период";
             TitleX = "Бригада";
             TitleY = "Количество";
 
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
                         group gp by gp.NumBrigade.Name into g
                         select new { Name = g.Key, Value = g.Count() };
 
             foreach (var item in Group)
             {
-                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new WrapBriefData() { Name = item.Name.ToString(), Value = item.Value });
             }
             SetParamHistogramm(pv);
-            SetDataListbox(lb1, lb2, l1, l2);
+            SetBriefDataGridView(DGV);
         }
-        public static void BriefNumTSCount(PlotView pv, DateTime datestart, DateTime datefinish, ListBox lb1, ListBox lb2, Label l1, Label l2)
+        public static void BriefNumTSCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
-            dataBriefExports = new List<DataBriefExport>();
+            dataBriefExports = new List<WrapBriefData>();
             Title = "Дефектность по номерам тс за период";
             TitleX = "Номер ТС";
             TitleY = "Количество";
 
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
                         group gp by gp.NumBrigade.Name into g
                         select new { Name = g.Key, Value = g.Count() };
 
             foreach (var item in Group)
             {
-                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new WrapBriefData() { Name = item.Name.ToString(), Value = item.Value });
             }
             SetParamHistogramm(pv);
-            SetDataListbox(lb1, lb2, l1, l2);
+            SetBriefDataGridView(DGV);
         }
-        public static void BriefDescriptionCount(PlotView pv, DateTime datestart, DateTime datefinish, ListBox lb1, ListBox lb2, Label l1, Label l2)
+        public static void BriefDescriptionCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
-            dataBriefExports = new List<DataBriefExport>();
+            dataBriefExports = new List<WrapBriefData>();
             Title = "Дефектность по типам дефектов за период";
             TitleX = "Дефект";
             TitleY = "Количество";
 
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
                         group gp by gp.Description.Name into g
                         select new { Name = g.Key, Value = g.Count() };
 
             foreach (var item in Group)
             {
-                dataBriefExports.Add(new DataBriefExport() { Name = item.Name.ToString(), Value = item.Value });
+                dataBriefExports.Add(new WrapBriefData() { Name = item.Name.ToString(), Value = item.Value });
             }
             SetParamHistogramm(pv);
-            SetDataListbox(lb1, lb2, l1, l2);
+            SetBriefDataGridView(DGV);
         }
         public static void FullDiameterWeight(DateTime datestart, DateTime datefinish, string Diameter,PlotView pv1,PlotView pv2,DataGridView DGV)
         {
             //Создание листа для хранения данных
-            dataFullExports = new List<WrapData>();
+            dataFullExports = new List<WrapFullData>();
             //Запрос на получение данных
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
-                        orderby gp.DateCreate ascending
-                        group gp by gp.DateCreate into g
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
+                        orderby gp.DateFormation ascending
+                        group gp by gp.DateFormation into g
                         select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiameter = g.Where(t => t.Diameter.Name == Convert.ToDouble(Diameter)).Sum(t => t.Weight) };
             //Запись данных
             foreach (var item in Group)
@@ -307,13 +310,13 @@ namespace Rusal
                 if (dataFullExports.Count > 0)
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
 
                 }
                 else
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
 
                 }
             }
@@ -326,36 +329,36 @@ namespace Rusal
             SetParamDiagramm(pv1, datestart, datefinish,true);
             //Задание тайтлов второй диаграммы
             Title = "Дефектность по диаметру "+Diameter.ToString()+" за период";
-            TitleL1 = "Накопление брака, тонн";
-            TitleL2 = "Сумма брака по диаметру " + Diameter.ToString() + ", тонн";
+            TitleL1 = "Сумма брака по диаметру " + Diameter.ToString() + ", тонн";
+            TitleL2 = "Накопление брака, тонн";
             TitleY = "Брак, тонн";
             SetParamDiagramm(pv2, datestart, datefinish,false);
-            GetDataDGV(DGV);
+            SetFullDataGridView(DGV);
 
         }
         public static void FullDiscriptionWeight(DateTime datestart, DateTime datefinish, string Discription, PlotView pv1, PlotView pv2, DataGridView DGV)
         {
             //Создание листа для хранения данных
-            dataFullExports = new List<WrapData>();
+            dataFullExports = new List<WrapFullData>();
             //Запрос на получение данных
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
-                        orderby gp.DateCreate ascending
-                        group gp by gp.DateCreate into g
-                        select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiameter = g.Where(t => t.Description.Name == Discription).Sum(t => t.Weight) };
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
+                        orderby gp.DateFormation ascending
+                        group gp by gp.DateFormation into g
+                        select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiscription = g.Where(t => t.Description.Name == Discription).Sum(t => t.Weight) };
             //Запись данных
             foreach (var item in Group)
             {
                 if (dataFullExports.Count > 0)
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiscription, AccumulationDiameter = item.SumDiscription + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
 
                 }
                 else
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiscription, AccumulationDiameter = item.SumDiscription });
 
                 }
             }
@@ -368,36 +371,36 @@ namespace Rusal
             SetParamDiagramm(pv1, datestart, datefinish, true);
             //Задание тайтлов второй диаграммы
             Title = "Дефектность по дефекту " + Discription + " за период";
-            TitleL1 = "Накопление брака, тонн";
-            TitleL2 = "Сумма брака по дефекту " + Discription + ", тонн";
+            TitleL1 = "Сумма брака по дефекту " + Discription + ", тонн";
+            TitleL2 = "Накопление брака, тонн";
             TitleY = "Брак, тонн";
             SetParamDiagramm(pv2, datestart, datefinish, false);
-            GetDataDGV(DGV);
+            SetFullDataGridView(DGV);
 
         }
         public static void FullNumTSWeight(DateTime datestart, DateTime datefinish, string NumTS, PlotView pv1, PlotView pv2, DataGridView DGV)
         {
             //Создание листа для хранения данных
-            dataFullExports = new List<WrapData>();
+            dataFullExports = new List<WrapFullData>();
             //Запрос на получение данных
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
-                        orderby gp.DateCreate ascending
-                        group gp by gp.DateCreate into g
-                        select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiameter = g.Where(t => t.NumTS.Name == NumTS).Sum(t => t.Weight) };
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
+                        orderby gp.DateFormation ascending
+                        group gp by gp.DateFormation into g
+                        select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumNumTS = g.Where(t => t.NumTS.Name == NumTS).Sum(t => t.Weight) };
             //Запись данных
             foreach (var item in Group)
             {
                 if (dataFullExports.Count > 0)
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumNumTS, AccumulationDiameter = item.SumNumTS + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
 
                 }
                 else
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumNumTS, AccumulationDiameter = item.SumNumTS });
 
                 }
             }
@@ -410,36 +413,36 @@ namespace Rusal
             SetParamDiagramm(pv1, datestart, datefinish, true);
             //Задание тайтлов второй диаграммы
             Title = "Дефектность по номеру ТС " + NumTS + " за период";
-            TitleL1 = "Накопление брака, тонн";
-            TitleL2 = "Сумма брака по номеру ТС " + NumTS + ", тонн";
+            TitleL1 = "Сумма брака по номеру ТС " + NumTS + ", тонн";
+            TitleL2 = "Накопление брака, тонн";
             TitleY = "Брак, тонн";
             SetParamDiagramm(pv2, datestart, datefinish, false);
-            GetDataDGV(DGV);
+            SetFullDataGridView(DGV);
 
         }
         public static void FullBrigadeWeight(DateTime datestart, DateTime datefinish, string Brigade, PlotView pv1, PlotView pv2, DataGridView DGV)
         {
             //Создание листа для хранения данных
-            dataFullExports = new List<WrapData>();
+            dataFullExports = new List<WrapFullData>();
             //Запрос на получение данных
             var Group = from gp in SystemArgs.Positions
-                        where (gp.DateCreate >= datestart) && (gp.DateCreate <= datefinish)
-                        orderby gp.DateCreate ascending
-                        group gp by gp.DateCreate into g
-                        select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumDiameter = g.Where(t => t.NumBrigade.Name == Brigade).Sum(t => t.Weight) };
+                        where (gp.DateFormation >= datestart) && (gp.DateFormation <= datefinish)
+                        orderby gp.DateFormation ascending
+                        group gp by gp.DateFormation into g
+                        select new { Date = g.Key, SumWeight = g.Sum(t => t.Weight), SumBrigade = g.Where(t => t.NumBrigade.Name == Brigade).Sum(t => t.Weight) };
             //Запись данных
             foreach (var item in Group)
             {
                 if (dataFullExports.Count > 0)
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight + dataFullExports[dataFullExports.Count - 1].AccumulationWeight, DiameterWeight = item.SumBrigade, AccumulationDiameter = item.SumBrigade + dataFullExports[dataFullExports.Count - 1].AccumulationDiameter });
 
                 }
                 else
                 {
 
-                    dataFullExports.Add(new WrapData() { DateCreate = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumDiameter, AccumulationDiameter = item.SumDiameter });
+                    dataFullExports.Add(new WrapFullData() { DateFormation = item.Date, SumWeight = item.SumWeight, AccumulationWeight = item.SumWeight, DiameterWeight = item.SumBrigade, AccumulationDiameter = item.SumBrigade });
 
                 }
             }
@@ -452,17 +455,112 @@ namespace Rusal
             SetParamDiagramm(pv1, datestart, datefinish, true);
             //Задание тайтлов второй диаграммы
             Title = "Дефектность по бригаде " + Brigade + " за период";
-            TitleL1 = "Накопление брака, тонн";
-            TitleL2 = "Сумма брака по бригаде " + Brigade + ", тонн";
+            TitleL1 = "Сумма брака по бригаде " + Brigade + ", тонн";
+            TitleL2 = "Накопление брака, тонн";
             TitleY = "Брак, тонн";
             SetParamDiagramm(pv2, datestart, datefinish, false);
-            GetDataDGV(DGV);
+            SetFullDataGridView(DGV);
 
         }
-        public static void GetDataDGV(DataGridView DGV)
+        public static void ExcelFullExport(DateTime datestart, DateTime datefinish)
         {
-            DGV.DataSource = dataFullExports;
-            DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.DefaultExt = "";
+            sfd.Title = "Сохранение анализа";
+            sfd.Filter = "Файл Excel| *.xlsx";
+            sfd.FileName = Title + " от " + DateTime.Now.ToString().Replace('.', '_').Replace(':', '_');
+            sfd.RestoreDirectory = true;
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                if (!String.IsNullOrEmpty(sfd.FileName))
+                {
+                    using (ExcelPackage excelPackage = new ExcelPackage())
+                    {
+                        //Настройки excel отчета
+                        excelPackage.Workbook.Properties.Author = "Дефекты";
+                        excelPackage.Workbook.Properties.Title = Title + " от " + datestart.ToShortDateString() + " до " + datefinish.ToShortDateString();
+                        excelPackage.Workbook.Properties.Created = DateTime.Now;
+
+                        //Создания листа
+                        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Анализ");
+                        //Добавление шапки
+                        worksheet.Cells["E1:H1"].Merge = true;
+                        worksheet.Cells["E1"].Value = "Анализ по дефектности";
+                        worksheet.Cells["E1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        worksheet.Cells["E2:H2"].Merge = true;
+                        worksheet.Cells["E2"].Value = "слитков цилиндрических";
+                        worksheet.Cells["E2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        worksheet.Cells["E3:H3"].Merge = true;
+                        worksheet.Cells["E3"].Value = "за период с " + datestart.ToShortDateString() + " по " + datefinish.ToShortDateString();
+                        worksheet.Cells["E3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        //Создание таблицы
+                        worksheet.Cells["A7"].Value = "Дата формирования";
+                        worksheet.Cells["B7"].Value = "Сумма брака, тонн";
+                        worksheet.Cells["C7"].Value = TitleL2;
+                        worksheet.Cells["D7"].Value = TitleL1;
+                        worksheet.Cells["E7"].Value = TitleL2;
+                        int DimensionEndRow;
+                        foreach (var item in dataFullExports)
+                        {
+                            DimensionEndRow = worksheet.Dimension.End.Row + 1;
+                            worksheet.Cells["A" + DimensionEndRow.ToString()].Value = item.DateFormation.GetDateTimeFormats();
+                            worksheet.Cells["B" + DimensionEndRow.ToString()].Value = item.SumWeight;
+                            worksheet.Cells["C" + DimensionEndRow.ToString()].Value = item.AccumulationWeight;
+                            worksheet.Cells["D" + DimensionEndRow.ToString()].Value = item.DiameterWeight;
+                            worksheet.Cells["E" + DimensionEndRow.ToString()].Value = item.AccumulationDiameter;
+                        }
+                        DimensionEndRow = worksheet.Dimension.End.Row;
+                        var modelTable = worksheet.Cells["A7:E" + DimensionEndRow.ToString()];
+                        modelTable.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                        modelTable.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                        modelTable.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                        modelTable.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                        modelTable.AutoFitColumns();
+                        modelTable.Style.WrapText = true;
+                        modelTable.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        //Добавление диаграммы
+                        var chartOne = worksheet.Drawings.AddChart("Общая", eChartType.Line);
+                        chartOne.SetSize(800, 300);
+                        chartOne.SetPosition(6, 0, 6, 0);
+                        chartOne.Title.Text = "Общая дефектность за период";
+                        chartOne.Series.Add(worksheet.Cells[8, 2, DimensionEndRow, 2], worksheet.Cells[8, 1, DimensionEndRow, 1]);
+                        var chartOneb = chartOne.PlotArea.ChartTypes.Add(eChartType.Line);
+                        chartOneb.Series.Add(worksheet.Cells[8, 3, DimensionEndRow, 3], worksheet.Cells[8, 1, DimensionEndRow, 1]);
+                        chartOne.Series[0].Header = "Сумма брака, тонн";
+                        chartOneb.Series[0].Header = "Накопление брака, тонн";
+                        chartOneb.UseSecondaryAxis = true;
+                        chartOne.Legend.Position = eLegendPosition.Bottom;
+                        chartOne.YAxis.Title.Font.Size = 14;
+                        chartOne.YAxis.Title.Text = TitleY;
+                        var chartTwo = worksheet.Drawings.AddChart("По параметру", eChartType.Line);
+                        chartTwo.SetSize(800, 400);
+                        chartTwo.SetPosition(21, 0, 6, 0);
+                        chartTwo.Title.Text = Title;
+                        chartTwo.Series.Add(worksheet.Cells[8, 4, DimensionEndRow, 4], worksheet.Cells[8, 1, DimensionEndRow, 1]);
+                        var chartTwob = chartTwo.PlotArea.ChartTypes.Add(eChartType.Line);
+                        chartTwob.Series.Add(worksheet.Cells[8, 5, DimensionEndRow, 5], worksheet.Cells[8, 1, DimensionEndRow, 1]);
+                        chartTwo.Series[0].Header = TitleL1;
+                        chartTwob.Series[0].Header = TitleL2;
+                        chartTwob.UseSecondaryAxis = true;
+                        chartTwo.Legend.Position = eLegendPosition.Bottom;
+                        chartTwo.YAxis.Title.Font.Size = 14;
+                        chartTwo.YAxis.Title.Text = TitleY;
+                        //Изменение шрифта во всем документе
+                        var allCells = worksheet.Cells[1, 1, worksheet.Dimension.End.Row, worksheet.Dimension.End.Column];
+                        var cellFont = allCells.Style.Font;
+                        cellFont.SetFromFont(new Font("Times New Roman", 14));
+                        //Сохранение
+                        FileInfo fi = new FileInfo(sfd.FileName);
+                        excelPackage.SaveAs(fi);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Необходимо ввести названия файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         public static void ExcelBriefExport(DateTime datestart, DateTime datefinish)
         {

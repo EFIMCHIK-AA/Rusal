@@ -83,7 +83,7 @@ namespace Rusal
 
         private void Export_B_Click(object sender, EventArgs e)
         {
-            //GetExport(Индекс);
+            Analysis.ExcelFullExport(FirstDate, SecondDate);
         }
     }
 }

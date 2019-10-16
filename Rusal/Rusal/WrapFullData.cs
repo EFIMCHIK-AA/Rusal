@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Rusal
 {
-    public class WrapData
+    public class WrapFullData
     {
-        private DateTime _DateCreate;
+        private DateTime _DateFormation;
         private double _SumWeight;
         private double _AccumulationWeight;
         private double _DiameterWeight;
         private double _AccumulationDiameter;
 
-        public WrapData(DateTime DateCreate,double SumWeight,double AccumulationWeight,double DiameterWeight,double AccumulationDiameter)
+        public WrapFullData(DateTime DateFormation,double SumWeight,double AccumulationWeight,double DiameterWeight,double AccumulationDiameter)
         {
-            if(DateCreate!=null)
+            if(DateFormation!=null)
             {
-                _DateCreate = DateCreate;
+                _DateFormation = DateFormation;
             }
             if (SumWeight >= 0)
             {
@@ -37,18 +37,18 @@ namespace Rusal
                 _AccumulationDiameter = AccumulationDiameter;
             }
         }
-        public WrapData() : this(DateTime.Now, 1, 1, 1, 1) { }
-        public DateTime DateCreate
+        public WrapFullData() : this(DateTime.Now, 1, 1, 1, 1) { }
+        public DateTime DateFormation
         {
             get
             {
-                return _DateCreate;
+                return _DateFormation;
             }
             set
             {
                 if(value!=null)
                 {
-                    _DateCreate = value;
+                    _DateFormation = value;
                 }
             }
         }

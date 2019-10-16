@@ -138,7 +138,8 @@
     <Compile Include="TSN.cs" />
     <Compile Include="TypesAlloy.cs" />
     <Compile Include="TypesDefect.cs" />
-    <Compile Include="WrapData.cs" />
+    <Compile Include="WrapBriefData.cs" />
+    <Compile Include="WrapFullData.cs" />
     <EmbeddedResource Include="Add_F.resx">
       <DependentUpon>Add_F.cs</DependentUpon>
     </EmbeddedResource>

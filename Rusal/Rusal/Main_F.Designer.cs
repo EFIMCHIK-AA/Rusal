@@ -30,44 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_F));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.Menu_MS = new System.Windows.Forms.MenuStrip();
-            this.позицияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.анализToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.конфигурацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.базаДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Tool_TS = new System.Windows.Forms.ToolStrip();
-            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Search_TSL = new System.Windows.Forms.ToolStripLabel();
-            this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
-            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
-            this.ConnectDB_TB = new System.Windows.Forms.TextBox();
-            this.CountPos_TB = new System.Windows.Forms.TextBox();
-            this.ProgressBar_PB = new System.Windows.Forms.ProgressBar();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.обычныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.расширенныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.заПериодToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.Position_DGV = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DefectLocProduction_TB = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.Six_CB = new System.Windows.Forms.CheckBox();
@@ -112,14 +74,52 @@
             this.Date_TB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.Menu_MS = new System.Windows.Forms.MenuStrip();
+            this.позицияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.анализToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обычныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.расширенныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.заПериодToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.конфигурацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.базаДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tool_TS = new System.Windows.Forms.ToolStrip();
+            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Search_TSL = new System.Windows.Forms.ToolStripLabel();
+            this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
+            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
+            this.ConnectDB_TB = new System.Windows.Forms.TextBox();
+            this.CountPos_TB = new System.Windows.Forms.TextBox();
+            this.ProgressBar_PB = new System.Windows.Forms.ProgressBar();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Position_DGV = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,351 +175,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(740, 726);
             this.panel2.TabIndex = 36;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.DimGray;
-            this.panel6.Controls.Add(this.tableLayoutPanel1);
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1334, 2);
-            this.panel6.TabIndex = 42;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.DimGray;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(3, 700);
-            this.panel8.TabIndex = 40;
-            // 
-            // Menu_MS
-            // 
-            this.Menu_MS.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.Menu_MS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.позицияToolStripMenuItem,
-            this.анализToolStripMenuItem,
-            this.отчетToolStripMenuItem,
-            this.настройкиToolStripMenuItem});
-            this.Menu_MS.Location = new System.Drawing.Point(0, 0);
-            this.Menu_MS.Name = "Menu_MS";
-            this.Menu_MS.Size = new System.Drawing.Size(1334, 24);
-            this.Menu_MS.TabIndex = 44;
-            this.Menu_MS.Text = "menuStrip1";
-            this.Menu_MS.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_MS_ItemClicked);
-            // 
-            // позицияToolStripMenuItem
-            // 
-            this.позицияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem,
-            this.изменитьToolStripMenuItem,
-            this.удалитьToolStripMenuItem});
-            this.позицияToolStripMenuItem.Name = "позицияToolStripMenuItem";
-            this.позицияToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.позицияToolStripMenuItem.Text = "Позиция";
-            // 
-            // добавитьToolStripMenuItem
-            // 
-            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.добавитьToolStripMenuItem.Text = "Добавить";
-            this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
-            // 
-            // изменитьToolStripMenuItem
-            // 
-            this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.изменитьToolStripMenuItem.Text = "Изменить";
-            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
-            // 
-            // анализToolStripMenuItem
-            // 
-            this.анализToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.обычныйToolStripMenuItem,
-            this.расширенныйToolStripMenuItem});
-            this.анализToolStripMenuItem.Name = "анализToolStripMenuItem";
-            this.анализToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.анализToolStripMenuItem.Text = "Анализ";
-            // 
-            // отчетToolStripMenuItem
-            // 
-            this.отчетToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.заПериодToolStripMenuItem});
-            this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
-            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.отчетToolStripMenuItem.Text = "Отчет";
-            // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.конфигурацияToolStripMenuItem,
-            this.базаДанныхToolStripMenuItem});
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
-            // 
-            // конфигурацияToolStripMenuItem
-            // 
-            this.конфигурацияToolStripMenuItem.Name = "конфигурацияToolStripMenuItem";
-            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.конфигурацияToolStripMenuItem.Text = "Конфигурация";
-            this.конфигурацияToolStripMenuItem.Click += new System.EventHandler(this.конфигурацияToolStripMenuItem_Click);
-            // 
-            // базаДанныхToolStripMenuItem
-            // 
-            this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.базаДанныхToolStripMenuItem.Text = "База данных";
-            this.базаДанныхToolStripMenuItem.Click += new System.EventHandler(this.базаДанныхToolStripMenuItem_Click);
-            // 
-            // Tool_TS
-            // 
-            this.Tool_TS.AutoSize = false;
-            this.Tool_TS.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.Tool_TS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Add_TSB,
-            this.Change_TSB,
-            this.Delete_TSB,
-            this.Search_TSL,
-            this.Search_TSTB,
-            this.Search_TSB,
-            this.Reset_TSB});
-            this.Tool_TS.Location = new System.Drawing.Point(0, 24);
-            this.Tool_TS.Name = "Tool_TS";
-            this.Tool_TS.Size = new System.Drawing.Size(1334, 38);
-            this.Tool_TS.TabIndex = 45;
-            this.Tool_TS.Text = "toolStrip1";
-            // 
-            // Add_TSB
-            // 
-            this.Add_TSB.AutoSize = false;
-            this.Add_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Add_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Add_TSB.Image")));
-            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Add_TSB.Name = "Add_TSB";
-            this.Add_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Add_TSB.Text = "Добавить позицию";
-            // 
-            // Change_TSB
-            // 
-            this.Change_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Change_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Change_TSB.Image")));
-            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Change_TSB.Name = "Change_TSB";
-            this.Change_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Change_TSB.Text = "Изменить позицию";
-            // 
-            // Delete_TSB
-            // 
-            this.Delete_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Delete_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Delete_TSB.Image")));
-            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Delete_TSB.Name = "Delete_TSB";
-            this.Delete_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Delete_TSB.Text = "Удалить позицию";
-            // 
-            // Search_TSL
-            // 
-            this.Search_TSL.Name = "Search_TSL";
-            this.Search_TSL.Size = new System.Drawing.Size(41, 35);
-            this.Search_TSL.Text = "Найти";
-            // 
-            // Search_TSTB
-            // 
-            this.Search_TSTB.Name = "Search_TSTB";
-            this.Search_TSTB.Size = new System.Drawing.Size(100, 38);
-            // 
-            // Search_TSB
-            // 
-            this.Search_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Search_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Search_TSB.Image")));
-            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Search_TSB.Name = "Search_TSB";
-            this.Search_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Search_TSB.Text = "Найти";
-            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
-            // 
-            // Reset_TSB
-            // 
-            this.Reset_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Reset_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Reset_TSB.Image")));
-            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Reset_TSB.Name = "Reset_TSB";
-            this.Reset_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Reset_TSB.Text = "Сбросить фильтр";
-            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
-            // 
-            // ConnectDB_TB
-            // 
-            this.ConnectDB_TB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ConnectDB_TB.Location = new System.Drawing.Point(83, 9);
-            this.ConnectDB_TB.Name = "ConnectDB_TB";
-            this.ConnectDB_TB.Size = new System.Drawing.Size(256, 20);
-            this.ConnectDB_TB.TabIndex = 46;
-            // 
-            // CountPos_TB
-            // 
-            this.CountPos_TB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.CountPos_TB.Location = new System.Drawing.Point(555, 10);
-            this.CountPos_TB.Name = "CountPos_TB";
-            this.CountPos_TB.Size = new System.Drawing.Size(225, 20);
-            this.CountPos_TB.TabIndex = 48;
-            // 
-            // ProgressBar_PB
-            // 
-            this.ProgressBar_PB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ProgressBar_PB.Location = new System.Drawing.Point(918, 10);
-            this.ProgressBar_PB.Name = "ProgressBar_PB";
-            this.ProgressBar_PB.Size = new System.Drawing.Size(403, 8);
-            this.ProgressBar_PB.TabIndex = 49;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(842, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 13);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Выполнение";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(425, 13);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(124, 13);
-            this.label24.TabIndex = 51;
-            this.label24.Text = "Количество элементов";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(9, 12);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(68, 13);
-            this.label25.TabIndex = 52;
-            this.label25.Text = "Соединение";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
-            // 
-            // обычныйToolStripMenuItem
-            // 
-            this.обычныйToolStripMenuItem.Name = "обычныйToolStripMenuItem";
-            this.обычныйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.обычныйToolStripMenuItem.Text = "Стандартный";
-            this.обычныйToolStripMenuItem.Click += new System.EventHandler(this.обычныйToolStripMenuItem_Click);
-            // 
-            // расширенныйToolStripMenuItem
-            // 
-            this.расширенныйToolStripMenuItem.Name = "расширенныйToolStripMenuItem";
-            this.расширенныйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.расширенныйToolStripMenuItem.Text = "Расширенный";
-            this.расширенныйToolStripMenuItem.Click += new System.EventHandler(this.расширенныйToolStripMenuItem_Click);
-            // 
-            // заПериодToolStripMenuItem
-            // 
-            this.заПериодToolStripMenuItem.Name = "заПериодToolStripMenuItem";
-            this.заПериодToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.заПериодToolStripMenuItem.Text = "За период";
-            this.заПериодToolStripMenuItem.Click += new System.EventHandler(this.заПериодToolStripMenuItem_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1334, 813);
-            this.tableLayoutPanel1.TabIndex = 41;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.Position_DGV);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 62);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 726);
-            this.panel1.TabIndex = 53;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(210, 17);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(142, 18);
-            this.label21.TabIndex = 43;
-            this.label21.Text = "Список позиций";
-            // 
-            // Position_DGV
-            // 
-            this.Position_DGV.AllowUserToAddRows = false;
-            this.Position_DGV.AllowUserToDeleteRows = false;
-            this.Position_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Position_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.Position_DGV.Location = new System.Drawing.Point(9, 48);
-            this.Position_DGV.Name = "Position_DGV";
-            this.Position_DGV.RowHeadersVisible = false;
-            this.Position_DGV.Size = new System.Drawing.Size(567, 664);
-            this.Position_DGV.TabIndex = 42;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "DateFormation";
-            this.Column1.HeaderText = "Дата формирования";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Diameter";
-            this.Column2.HeaderText = "Диаметр";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "NumTS";
-            this.Column3.HeaderText = "ТС";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 96;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Count";
-            this.Column4.HeaderText = "Количество";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Weight";
-            this.Column5.HeaderText = "Вес";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 90;
             // 
             // DefectLocProduction_TB
             // 
@@ -946,6 +601,353 @@
             this.label22.TabIndex = 103;
             this.label22.Text = "Информация о позиции";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DimGray;
+            this.panel6.Controls.Add(this.tableLayoutPanel1);
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1334, 2);
+            this.panel6.TabIndex = 42;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1334, 813);
+            this.tableLayoutPanel1.TabIndex = 41;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.DimGray;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(3, 700);
+            this.panel8.TabIndex = 40;
+            // 
+            // Menu_MS
+            // 
+            this.Menu_MS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Menu_MS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.позицияToolStripMenuItem,
+            this.анализToolStripMenuItem,
+            this.отчетToolStripMenuItem,
+            this.настройкиToolStripMenuItem});
+            this.Menu_MS.Location = new System.Drawing.Point(0, 0);
+            this.Menu_MS.Name = "Menu_MS";
+            this.Menu_MS.Size = new System.Drawing.Size(1334, 24);
+            this.Menu_MS.TabIndex = 44;
+            this.Menu_MS.Text = "menuStrip1";
+            this.Menu_MS.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_MS_ItemClicked);
+            // 
+            // позицияToolStripMenuItem
+            // 
+            this.позицияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьToolStripMenuItem,
+            this.изменитьToolStripMenuItem,
+            this.удалитьToolStripMenuItem});
+            this.позицияToolStripMenuItem.Name = "позицияToolStripMenuItem";
+            this.позицияToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.позицияToolStripMenuItem.Text = "Позиция";
+            // 
+            // добавитьToolStripMenuItem
+            // 
+            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.добавитьToolStripMenuItem.Text = "Добавить";
+            this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
+            // 
+            // изменитьToolStripMenuItem
+            // 
+            this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.изменитьToolStripMenuItem.Text = "Изменить";
+            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
+            // 
+            // анализToolStripMenuItem
+            // 
+            this.анализToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.обычныйToolStripMenuItem,
+            this.расширенныйToolStripMenuItem});
+            this.анализToolStripMenuItem.Name = "анализToolStripMenuItem";
+            this.анализToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.анализToolStripMenuItem.Text = "Анализ";
+            // 
+            // обычныйToolStripMenuItem
+            // 
+            this.обычныйToolStripMenuItem.Name = "обычныйToolStripMenuItem";
+            this.обычныйToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.обычныйToolStripMenuItem.Text = "Стандартный";
+            this.обычныйToolStripMenuItem.Click += new System.EventHandler(this.обычныйToolStripMenuItem_Click);
+            // 
+            // расширенныйToolStripMenuItem
+            // 
+            this.расширенныйToolStripMenuItem.Name = "расширенныйToolStripMenuItem";
+            this.расширенныйToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.расширенныйToolStripMenuItem.Text = "Расширенный";
+            this.расширенныйToolStripMenuItem.Click += new System.EventHandler(this.расширенныйToolStripMenuItem_Click);
+            // 
+            // отчетToolStripMenuItem
+            // 
+            this.отчетToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.заПериодToolStripMenuItem});
+            this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
+            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.отчетToolStripMenuItem.Text = "Отчет";
+            // 
+            // заПериодToolStripMenuItem
+            // 
+            this.заПериодToolStripMenuItem.Name = "заПериодToolStripMenuItem";
+            this.заПериодToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.заПериодToolStripMenuItem.Text = "За период";
+            this.заПериодToolStripMenuItem.Click += new System.EventHandler(this.заПериодToolStripMenuItem_Click);
+            // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.конфигурацияToolStripMenuItem,
+            this.базаДанныхToolStripMenuItem});
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            // 
+            // конфигурацияToolStripMenuItem
+            // 
+            this.конфигурацияToolStripMenuItem.Name = "конфигурацияToolStripMenuItem";
+            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.конфигурацияToolStripMenuItem.Text = "Конфигурация";
+            this.конфигурацияToolStripMenuItem.Click += new System.EventHandler(this.конфигурацияToolStripMenuItem_Click);
+            // 
+            // базаДанныхToolStripMenuItem
+            // 
+            this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
+            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.базаДанныхToolStripMenuItem.Text = "База данных";
+            this.базаДанныхToolStripMenuItem.Click += new System.EventHandler(this.базаДанныхToolStripMenuItem_Click);
+            // 
+            // Tool_TS
+            // 
+            this.Tool_TS.AutoSize = false;
+            this.Tool_TS.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.Tool_TS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Add_TSB,
+            this.Change_TSB,
+            this.Delete_TSB,
+            this.Search_TSL,
+            this.Search_TSTB,
+            this.Search_TSB,
+            this.Reset_TSB});
+            this.Tool_TS.Location = new System.Drawing.Point(0, 24);
+            this.Tool_TS.Name = "Tool_TS";
+            this.Tool_TS.Size = new System.Drawing.Size(1334, 38);
+            this.Tool_TS.TabIndex = 45;
+            this.Tool_TS.Text = "toolStrip1";
+            // 
+            // Add_TSB
+            // 
+            this.Add_TSB.AutoSize = false;
+            this.Add_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Add_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Add_TSB.Image")));
+            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Add_TSB.Name = "Add_TSB";
+            this.Add_TSB.Size = new System.Drawing.Size(34, 35);
+            this.Add_TSB.Text = "Добавить позицию";
+            // 
+            // Change_TSB
+            // 
+            this.Change_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Change_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Change_TSB.Image")));
+            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Change_TSB.Name = "Change_TSB";
+            this.Change_TSB.Size = new System.Drawing.Size(34, 35);
+            this.Change_TSB.Text = "Изменить позицию";
+            // 
+            // Delete_TSB
+            // 
+            this.Delete_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Delete_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Delete_TSB.Image")));
+            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Delete_TSB.Name = "Delete_TSB";
+            this.Delete_TSB.Size = new System.Drawing.Size(34, 35);
+            this.Delete_TSB.Text = "Удалить позицию";
+            // 
+            // Search_TSL
+            // 
+            this.Search_TSL.Name = "Search_TSL";
+            this.Search_TSL.Size = new System.Drawing.Size(41, 35);
+            this.Search_TSL.Text = "Найти";
+            // 
+            // Search_TSTB
+            // 
+            this.Search_TSTB.Name = "Search_TSTB";
+            this.Search_TSTB.Size = new System.Drawing.Size(100, 38);
+            // 
+            // Search_TSB
+            // 
+            this.Search_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Search_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Search_TSB.Image")));
+            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Search_TSB.Name = "Search_TSB";
+            this.Search_TSB.Size = new System.Drawing.Size(34, 35);
+            this.Search_TSB.Text = "Найти";
+            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
+            // 
+            // Reset_TSB
+            // 
+            this.Reset_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Reset_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Reset_TSB.Image")));
+            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Reset_TSB.Name = "Reset_TSB";
+            this.Reset_TSB.Size = new System.Drawing.Size(34, 35);
+            this.Reset_TSB.Text = "Сбросить фильтр";
+            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
+            // 
+            // ConnectDB_TB
+            // 
+            this.ConnectDB_TB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ConnectDB_TB.Location = new System.Drawing.Point(83, 9);
+            this.ConnectDB_TB.Name = "ConnectDB_TB";
+            this.ConnectDB_TB.Size = new System.Drawing.Size(256, 20);
+            this.ConnectDB_TB.TabIndex = 46;
+            // 
+            // CountPos_TB
+            // 
+            this.CountPos_TB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.CountPos_TB.Location = new System.Drawing.Point(555, 10);
+            this.CountPos_TB.Name = "CountPos_TB";
+            this.CountPos_TB.Size = new System.Drawing.Size(225, 20);
+            this.CountPos_TB.TabIndex = 48;
+            // 
+            // ProgressBar_PB
+            // 
+            this.ProgressBar_PB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ProgressBar_PB.Location = new System.Drawing.Point(918, 10);
+            this.ProgressBar_PB.Name = "ProgressBar_PB";
+            this.ProgressBar_PB.Size = new System.Drawing.Size(403, 8);
+            this.ProgressBar_PB.TabIndex = 49;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(842, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 13);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Выполнение";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(425, 13);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(124, 13);
+            this.label24.TabIndex = 51;
+            this.label24.Text = "Количество элементов";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(9, 12);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(68, 13);
+            this.label25.TabIndex = 52;
+            this.label25.Text = "Соединение";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.Position_DGV);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(588, 726);
+            this.panel1.TabIndex = 53;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(210, 17);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(142, 18);
+            this.label21.TabIndex = 43;
+            this.label21.Text = "Список позиций";
+            // 
+            // Position_DGV
+            // 
+            this.Position_DGV.AllowUserToAddRows = false;
+            this.Position_DGV.AllowUserToDeleteRows = false;
+            this.Position_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Position_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.Position_DGV.Location = new System.Drawing.Point(9, 48);
+            this.Position_DGV.Name = "Position_DGV";
+            this.Position_DGV.RowHeadersVisible = false;
+            this.Position_DGV.Size = new System.Drawing.Size(567, 664);
+            this.Position_DGV.TabIndex = 42;
+            this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
+            this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DateFormation";
+            this.Column1.HeaderText = "Дата формирования";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Diameter";
+            this.Column2.HeaderText = "Диаметр";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NumTS";
+            this.Column3.HeaderText = "ТС";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 96;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Count";
+            this.Column4.HeaderText = "Количество";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Weight";
+            this.Column5.HeaderText = "Вес";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 90;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -981,6 +983,7 @@
             this.Load += new System.EventHandler(this.Main_F_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.Menu_MS.ResumeLayout(false);
             this.Menu_MS.PerformLayout();
@@ -989,7 +992,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plotView1 = new OxyPlot.WindowsForms.PlotView();
             this.Exit_B = new System.Windows.Forms.Button();
             this.Export_B = new System.Windows.Forms.Button();
@@ -51,6 +46,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,41 +70,6 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(571, 434);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "DateCreate";
-            this.Column1.HeaderText = "Дата появления";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "SumWeight";
-            this.Column2.HeaderText = "Брак";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 57;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "AccumulationWeight";
-            this.Column3.HeaderText = "Накопление брак";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 130;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "DiameterWeight";
-            this.Column4.HeaderText = "Диаметр брак";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 120;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "AccumulationDiameter";
-            this.Column5.HeaderText = "Накопление диаметр";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 140;
             // 
             // plotView1
             // 
@@ -275,6 +240,41 @@
             this.label7.TabIndex = 53;
             this.label7.Text = "по результатам анализа";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DateFormation";
+            this.Column1.HeaderText = "Дата появления";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "SumWeight";
+            this.Column2.HeaderText = "Брак";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 57;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "AccumulationWeight";
+            this.Column3.HeaderText = "Накопление брак";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 130;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "DiameterWeight";
+            this.Column4.HeaderText = "Диаметр брак";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 120;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "AccumulationDiameter";
+            this.Column5.HeaderText = "Накопление диаметр";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 140;
+            // 
             // FullAnalysis_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,11 +321,6 @@
         public OxyPlot.WindowsForms.PlotView plotView2;
         public System.Windows.Forms.ComboBox TypeArgument_CB;
         public System.Windows.Forms.ComboBox ListArgumnts_CB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         public System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -336,5 +331,10 @@
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.MonthCalendar FirstDate_CM;
         public System.Windows.Forms.MonthCalendar SecondDate_CM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

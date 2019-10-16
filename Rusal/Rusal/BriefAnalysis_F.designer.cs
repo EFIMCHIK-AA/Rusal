@@ -32,10 +32,6 @@
             this.Export_B = new System.Windows.Forms.Button();
             this.Exit_B = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label_x = new System.Windows.Forms.Label();
-            this.label_y = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +39,10 @@
             this.TypeArgumnts_CB = new System.Windows.Forms.ComboBox();
             this.SecondDate_CM = new System.Windows.Forms.MonthCalendar();
             this.FirstDate_CM = new System.Windows.Forms.MonthCalendar();
+            this.DGV_Brief = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Brief)).BeginInit();
             this.SuspendLayout();
             // 
             // pv
@@ -87,40 +87,6 @@
             this.label3.Size = new System.Drawing.Size(288, 18);
             this.label3.TabIndex = 48;
             this.label3.Text = "Результаты и диаграмма анализа";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(19, 288);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(280, 368);
-            this.listBox1.TabIndex = 0;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(322, 288);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(280, 368);
-            this.listBox2.TabIndex = 1;
-            // 
-            // label_x
-            // 
-            this.label_x.AutoSize = true;
-            this.label_x.Location = new System.Drawing.Point(16, 272);
-            this.label_x.Name = "label_x";
-            this.label_x.Size = new System.Drawing.Size(46, 13);
-            this.label_x.TabIndex = 6;
-            this.label_x.Text = "X_Label";
-            // 
-            // label_y
-            // 
-            this.label_y.AutoSize = true;
-            this.label_y.Location = new System.Drawing.Point(319, 272);
-            this.label_y.Name = "label_y";
-            this.label_y.Size = new System.Drawing.Size(46, 13);
-            this.label_y.TabIndex = 7;
-            this.label_y.Text = "Y_Label";
             // 
             // label5
             // 
@@ -186,12 +152,41 @@
             this.FirstDate_CM.Name = "FirstDate_CM";
             this.FirstDate_CM.TabIndex = 54;
             // 
+            // DGV_Brief
+            // 
+            this.DGV_Brief.AllowUserToAddRows = false;
+            this.DGV_Brief.AllowUserToDeleteRows = false;
+            this.DGV_Brief.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Brief.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column5});
+            this.DGV_Brief.Location = new System.Drawing.Point(19, 262);
+            this.DGV_Brief.Name = "DGV_Brief";
+            this.DGV_Brief.RowHeadersVisible = false;
+            this.DGV_Brief.Size = new System.Drawing.Size(582, 399);
+            this.DGV_Brief.TabIndex = 61;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Name";
+            this.Column4.HeaderText = "Диаметр брак";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 291;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Value";
+            this.Column5.HeaderText = "Накопление диаметр";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 291;
+            // 
             // BriefAnalysis_F
             // 
             this.AcceptButton = this.Exit_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 677);
+            this.Controls.Add(this.DGV_Brief);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -200,13 +195,9 @@
             this.Controls.Add(this.SecondDate_CM);
             this.Controls.Add(this.FirstDate_CM);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label_y);
-            this.Controls.Add(this.label_x);
             this.Controls.Add(this.Exit_B);
             this.Controls.Add(this.Export_B);
             this.Controls.Add(this.pv);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -214,6 +205,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Analysis_F";
             this.Load += new System.EventHandler(this.BriefAnalysis_F_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Brief)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,10 +216,6 @@
         public System.Windows.Forms.Button Export_B;
         private System.Windows.Forms.Button Exit_B;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.ListBox listBox1;
-        public System.Windows.Forms.ListBox listBox2;
-        public System.Windows.Forms.Label label_x;
-        public System.Windows.Forms.Label label_y;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -235,5 +223,8 @@
         public System.Windows.Forms.ComboBox TypeArgumnts_CB;
         public System.Windows.Forms.MonthCalendar SecondDate_CM;
         public System.Windows.Forms.MonthCalendar FirstDate_CM;
+        public System.Windows.Forms.DataGridView DGV_Brief;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

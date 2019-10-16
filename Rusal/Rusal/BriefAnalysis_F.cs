@@ -39,25 +39,25 @@ namespace Rusal
             switch (Key)
             {
                 case 0: //Вес | Бригада
-                    Analysis.BriefBrigadeWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
+                    Analysis.BriefBrigadeWeight(pv, FirstDate, SecondDate, DGV_Brief);
                     break;
                 case 1: //Вес | Диаметр
-                    Analysis.BriefDiametrWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
+                    Analysis.BriefDiametrWeight(pv, FirstDate, SecondDate, DGV_Brief);
                     break;
                 case 2://Вес | Описание
-                    Analysis.BriefDescriptionWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
+                    Analysis.BriefDescriptionWeight(pv, FirstDate, SecondDate, DGV_Brief);
                     break;
                 case 3://Вес | Номер ТС
-                    Analysis.BriefNumTSWeight(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
+                    Analysis.BriefNumTSWeight(pv, FirstDate, SecondDate, DGV_Brief);
                     break;
                 case 4://Количество | Бригада
-                    Analysis.BriefBrigadeCount(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
+                    Analysis.BriefBrigadeCount(pv, FirstDate, SecondDate, DGV_Brief);
                     break;
                 case 5://Количество | Номер ТС
-                    Analysis.BriefNumTSCount(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
+                    Analysis.BriefNumTSCount(pv, FirstDate, SecondDate, DGV_Brief);
                     break;
                 case 6://Количество | Описание
-                    Analysis.BriefDescriptionCount(pv, FirstDate, SecondDate, listBox1, listBox2, label_x, label_y);
+                    Analysis.BriefDescriptionCount(pv, FirstDate, SecondDate, DGV_Brief);
                     break;
             }
         }
