@@ -29,51 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_F));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.DefectLocProduction_TB = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.Six_CB = new System.Windows.Forms.CheckBox();
-            this.Five_CB = new System.Windows.Forms.CheckBox();
-            this.Four_CB = new System.Windows.Forms.CheckBox();
-            this.Three_CB = new System.Windows.Forms.CheckBox();
-            this.Two_CB = new System.Windows.Forms.CheckBox();
-            this.One_CB = new System.Windows.Forms.CheckBox();
-            this.East_CB = new System.Windows.Forms.CheckBox();
-            this.West_CB = new System.Windows.Forms.CheckBox();
-            this.South_CB = new System.Windows.Forms.CheckBox();
-            this.North_CB = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.Address_TB = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.StatusCorrection_TB = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Correction_TB = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.Reason_TB = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Weight_TB = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.Type_TB = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Count_TB = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.Description_TB = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.NumTC_TB = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Diameter_TB = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Melt_TB = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.NumSmeny_TB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.NumBrigade_TB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Date_TB = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -94,513 +49,69 @@
             this.Add_TSB = new System.Windows.Forms.ToolStripButton();
             this.Change_TSB = new System.Windows.Forms.ToolStripButton();
             this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Search_TSL = new System.Windows.Forms.ToolStripLabel();
-            this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
-            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
-            this.ConnectDB_TB = new System.Windows.Forms.TextBox();
-            this.CountPos_TB = new System.Windows.Forms.TextBox();
-            this.ProgressBar_PB = new System.Windows.Forms.ProgressBar();
+            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
+            this.Search_TSL = new System.Windows.Forms.ToolStripLabel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
+            this.ProgressBar_PB = new System.Windows.Forms.ProgressBar();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label24 = new System.Windows.Forms.Label();
+            this.CountPos_TB = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ConnectDB_TB = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.Description_TB = new System.Windows.Forms.TextBox();
+            this.StatusCorrection_TB = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Date_TB = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DefectLocProduction_TB = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.NumBrigade_TB = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Address_TB = new System.Windows.Forms.TextBox();
             this.Position_DGV = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Reason_TB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Type_TB = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DefectLocation_B = new System.Windows.Forms.Button();
+            this.Melt_TB = new System.Windows.Forms.TextBox();
+            this.Diameter_TB = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Weight_TB = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.NumSmeny_TB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.NumTC_TB = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Correction_TB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Count_TB = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.panel2.Controls.Add(this.DefectLocProduction_TB);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.Six_CB);
-            this.panel2.Controls.Add(this.Five_CB);
-            this.panel2.Controls.Add(this.Four_CB);
-            this.panel2.Controls.Add(this.Three_CB);
-            this.panel2.Controls.Add(this.Two_CB);
-            this.panel2.Controls.Add(this.One_CB);
-            this.panel2.Controls.Add(this.East_CB);
-            this.panel2.Controls.Add(this.West_CB);
-            this.panel2.Controls.Add(this.South_CB);
-            this.panel2.Controls.Add(this.North_CB);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.Address_TB);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.StatusCorrection_TB);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.Correction_TB);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.Reason_TB);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.Weight_TB);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.Type_TB);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.Count_TB);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.Description_TB);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.NumTC_TB);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.Diameter_TB);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.Melt_TB);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.NumSmeny_TB);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.NumBrigade_TB);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.Date_TB);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label22);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(594, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(740, 726);
-            this.panel2.TabIndex = 36;
-            // 
-            // DefectLocProduction_TB
-            // 
-            this.DefectLocProduction_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DefectLocProduction_TB.Location = new System.Drawing.Point(464, 185);
-            this.DefectLocProduction_TB.Name = "DefectLocProduction_TB";
-            this.DefectLocProduction_TB.ReadOnly = true;
-            this.DefectLocProduction_TB.Size = new System.Drawing.Size(197, 21);
-            this.DefectLocProduction_TB.TabIndex = 146;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(373, 188);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(85, 15);
-            this.label26.TabIndex = 145;
-            this.label26.Text = "Производтво";
-            // 
-            // Six_CB
-            // 
-            this.Six_CB.AutoSize = true;
-            this.Six_CB.Location = new System.Drawing.Point(529, 279);
-            this.Six_CB.Name = "Six_CB";
-            this.Six_CB.Size = new System.Drawing.Size(32, 17);
-            this.Six_CB.TabIndex = 144;
-            this.Six_CB.Text = "6";
-            this.Six_CB.UseVisualStyleBackColor = true;
-            // 
-            // Five_CB
-            // 
-            this.Five_CB.AutoSize = true;
-            this.Five_CB.Location = new System.Drawing.Point(491, 279);
-            this.Five_CB.Name = "Five_CB";
-            this.Five_CB.Size = new System.Drawing.Size(32, 17);
-            this.Five_CB.TabIndex = 143;
-            this.Five_CB.Text = "5";
-            this.Five_CB.UseVisualStyleBackColor = true;
-            // 
-            // Four_CB
-            // 
-            this.Four_CB.AutoSize = true;
-            this.Four_CB.Location = new System.Drawing.Point(453, 279);
-            this.Four_CB.Name = "Four_CB";
-            this.Four_CB.Size = new System.Drawing.Size(32, 17);
-            this.Four_CB.TabIndex = 142;
-            this.Four_CB.Text = "4";
-            this.Four_CB.UseVisualStyleBackColor = true;
-            // 
-            // Three_CB
-            // 
-            this.Three_CB.AutoSize = true;
-            this.Three_CB.Location = new System.Drawing.Point(415, 279);
-            this.Three_CB.Name = "Three_CB";
-            this.Three_CB.Size = new System.Drawing.Size(32, 17);
-            this.Three_CB.TabIndex = 141;
-            this.Three_CB.Text = "3";
-            this.Three_CB.UseVisualStyleBackColor = true;
-            // 
-            // Two_CB
-            // 
-            this.Two_CB.AutoSize = true;
-            this.Two_CB.Location = new System.Drawing.Point(377, 279);
-            this.Two_CB.Name = "Two_CB";
-            this.Two_CB.Size = new System.Drawing.Size(32, 17);
-            this.Two_CB.TabIndex = 140;
-            this.Two_CB.Text = "2";
-            this.Two_CB.UseVisualStyleBackColor = true;
-            // 
-            // One_CB
-            // 
-            this.One_CB.AutoSize = true;
-            this.One_CB.Location = new System.Drawing.Point(339, 279);
-            this.One_CB.Name = "One_CB";
-            this.One_CB.Size = new System.Drawing.Size(32, 17);
-            this.One_CB.TabIndex = 139;
-            this.One_CB.Text = "1";
-            this.One_CB.UseVisualStyleBackColor = true;
-            // 
-            // East_CB
-            // 
-            this.East_CB.AutoSize = true;
-            this.East_CB.Location = new System.Drawing.Point(190, 346);
-            this.East_CB.Name = "East_CB";
-            this.East_CB.Size = new System.Drawing.Size(62, 17);
-            this.East_CB.TabIndex = 138;
-            this.East_CB.Text = "Восток";
-            this.East_CB.UseVisualStyleBackColor = true;
-            // 
-            // West_CB
-            // 
-            this.West_CB.AutoSize = true;
-            this.West_CB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.West_CB.Location = new System.Drawing.Point(40, 346);
-            this.West_CB.Name = "West_CB";
-            this.West_CB.Size = new System.Drawing.Size(57, 17);
-            this.West_CB.TabIndex = 137;
-            this.West_CB.Text = "Запад";
-            this.West_CB.UseVisualStyleBackColor = true;
-            // 
-            // South_CB
-            // 
-            this.South_CB.AutoSize = true;
-            this.South_CB.Location = new System.Drawing.Point(121, 400);
-            this.South_CB.Name = "South_CB";
-            this.South_CB.Size = new System.Drawing.Size(40, 17);
-            this.South_CB.TabIndex = 136;
-            this.South_CB.Text = "Юг";
-            this.South_CB.UseVisualStyleBackColor = true;
-            // 
-            // North_CB
-            // 
-            this.North_CB.AutoSize = true;
-            this.North_CB.Location = new System.Drawing.Point(121, 288);
-            this.North_CB.Name = "North_CB";
-            this.North_CB.Size = new System.Drawing.Size(57, 17);
-            this.North_CB.TabIndex = 135;
-            this.North_CB.Text = "Север";
-            this.North_CB.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(237, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 18);
-            this.label1.TabIndex = 134;
-            this.label1.Text = "Место дефекта на слитке";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(16, 262);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(645, 210);
-            this.pictureBox1.TabIndex = 133;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(260, 484);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(187, 18);
-            this.label23.TabIndex = 132;
-            this.label23.Text = "Корректирущие меры";
-            // 
-            // Address_TB
-            // 
-            this.Address_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Address_TB.Location = new System.Drawing.Point(149, 184);
-            this.Address_TB.Name = "Address_TB";
-            this.Address_TB.ReadOnly = true;
-            this.Address_TB.Size = new System.Drawing.Size(206, 21);
-            this.Address_TB.TabIndex = 131;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(13, 187);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 15);
-            this.label16.TabIndex = 130;
-            this.label16.Text = "Адрес слитка";
-            // 
-            // StatusCorrection_TB
-            // 
-            this.StatusCorrection_TB.Location = new System.Drawing.Point(141, 685);
-            this.StatusCorrection_TB.Name = "StatusCorrection_TB";
-            this.StatusCorrection_TB.ReadOnly = true;
-            this.StatusCorrection_TB.Size = new System.Drawing.Size(87, 20);
-            this.StatusCorrection_TB.TabIndex = 129;
-            this.StatusCorrection_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(13, 686);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 15);
-            this.label15.TabIndex = 128;
-            this.label15.Text = "Статус выполнения";
-            // 
-            // Correction_TB
-            // 
-            this.Correction_TB.Location = new System.Drawing.Point(15, 608);
-            this.Correction_TB.Multiline = true;
-            this.Correction_TB.Name = "Correction_TB";
-            this.Correction_TB.ReadOnly = true;
-            this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Correction_TB.Size = new System.Drawing.Size(561, 71);
-            this.Correction_TB.TabIndex = 127;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(13, 590);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(165, 15);
-            this.label14.TabIndex = 126;
-            this.label14.Text = "Корректирующие действия";
-            // 
-            // Reason_TB
-            // 
-            this.Reason_TB.Location = new System.Drawing.Point(16, 516);
-            this.Reason_TB.Multiline = true;
-            this.Reason_TB.Name = "Reason_TB";
-            this.Reason_TB.ReadOnly = true;
-            this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Reason_TB.Size = new System.Drawing.Size(560, 71);
-            this.Reason_TB.TabIndex = 125;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(13, 498);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(114, 15);
-            this.label13.TabIndex = 124;
-            this.label13.Text = "Причины дефекта";
-            // 
-            // Weight_TB
-            // 
-            this.Weight_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Weight_TB.Location = new System.Drawing.Point(464, 132);
-            this.Weight_TB.Name = "Weight_TB";
-            this.Weight_TB.ReadOnly = true;
-            this.Weight_TB.Size = new System.Drawing.Size(197, 21);
-            this.Weight_TB.TabIndex = 123;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(373, 135);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 15);
-            this.label11.TabIndex = 122;
-            this.label11.Text = "Общий вес";
-            // 
-            // Type_TB
-            // 
-            this.Type_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Type_TB.Location = new System.Drawing.Point(464, 80);
-            this.Type_TB.Name = "Type_TB";
-            this.Type_TB.ReadOnly = true;
-            this.Type_TB.Size = new System.Drawing.Size(197, 21);
-            this.Type_TB.TabIndex = 121;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(373, 83);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 15);
-            this.label10.TabIndex = 120;
-            this.label10.Text = "Тип дефекта";
-            // 
-            // Count_TB
-            // 
-            this.Count_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Count_TB.Location = new System.Drawing.Point(464, 106);
-            this.Count_TB.Name = "Count_TB";
-            this.Count_TB.ReadOnly = true;
-            this.Count_TB.Size = new System.Drawing.Size(197, 21);
-            this.Count_TB.TabIndex = 119;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(373, 109);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 15);
-            this.label9.TabIndex = 118;
-            this.label9.Text = "Количество";
-            // 
-            // Description_TB
-            // 
-            this.Description_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Description_TB.Location = new System.Drawing.Point(464, 54);
-            this.Description_TB.Name = "Description_TB";
-            this.Description_TB.ReadOnly = true;
-            this.Description_TB.Size = new System.Drawing.Size(197, 21);
-            this.Description_TB.TabIndex = 117;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(373, 57);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 15);
-            this.label8.TabIndex = 116;
-            this.label8.Text = "Описание";
-            // 
-            // NumTC_TB
-            // 
-            this.NumTC_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NumTC_TB.Location = new System.Drawing.Point(149, 158);
-            this.NumTC_TB.Name = "NumTC_TB";
-            this.NumTC_TB.ReadOnly = true;
-            this.NumTC_TB.Size = new System.Drawing.Size(206, 21);
-            this.NumTC_TB.TabIndex = 115;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(13, 161);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 15);
-            this.label7.TabIndex = 114;
-            this.label7.Text = "Номер ТС";
-            // 
-            // Diameter_TB
-            // 
-            this.Diameter_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Diameter_TB.Location = new System.Drawing.Point(464, 158);
-            this.Diameter_TB.Name = "Diameter_TB";
-            this.Diameter_TB.ReadOnly = true;
-            this.Diameter_TB.Size = new System.Drawing.Size(197, 21);
-            this.Diameter_TB.TabIndex = 113;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(373, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 15);
-            this.label6.TabIndex = 112;
-            this.label6.Text = "Диаметр";
-            // 
-            // Melt_TB
-            // 
-            this.Melt_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Melt_TB.Location = new System.Drawing.Point(149, 132);
-            this.Melt_TB.Name = "Melt_TB";
-            this.Melt_TB.ReadOnly = true;
-            this.Melt_TB.Size = new System.Drawing.Size(206, 21);
-            this.Melt_TB.TabIndex = 111;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(13, 135);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 15);
-            this.label5.TabIndex = 110;
-            this.label5.Text = "Марка сплава";
-            // 
-            // NumSmeny_TB
-            // 
-            this.NumSmeny_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NumSmeny_TB.Location = new System.Drawing.Point(149, 106);
-            this.NumSmeny_TB.Name = "NumSmeny_TB";
-            this.NumSmeny_TB.ReadOnly = true;
-            this.NumSmeny_TB.Size = new System.Drawing.Size(206, 21);
-            this.NumSmeny_TB.TabIndex = 109;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(13, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 15);
-            this.label4.TabIndex = 108;
-            this.label4.Text = "Номер смены";
-            // 
-            // NumBrigade_TB
-            // 
-            this.NumBrigade_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NumBrigade_TB.Location = new System.Drawing.Point(149, 80);
-            this.NumBrigade_TB.Name = "NumBrigade_TB";
-            this.NumBrigade_TB.ReadOnly = true;
-            this.NumBrigade_TB.Size = new System.Drawing.Size(206, 21);
-            this.NumBrigade_TB.TabIndex = 107;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(13, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 15);
-            this.label3.TabIndex = 106;
-            this.label3.Text = "Номер бригады";
-            // 
-            // Date_TB
-            // 
-            this.Date_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Date_TB.Location = new System.Drawing.Point(149, 54);
-            this.Date_TB.Name = "Date_TB";
-            this.Date_TB.ReadOnly = true;
-            this.Date_TB.Size = new System.Drawing.Size(206, 21);
-            this.Date_TB.TabIndex = 105;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(13, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 15);
-            this.label2.TabIndex = 104;
-            this.label2.Text = "Дата формирования";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(242, 15);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(205, 18);
-            this.label22.TabIndex = 103;
-            this.label22.Text = "Информация о позиции";
             // 
             // panel6
             // 
@@ -633,6 +144,7 @@
             // 
             // Menu_MS
             // 
+            this.Menu_MS.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Menu_MS.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_MS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.позицияToolStripMenuItem,
@@ -641,7 +153,7 @@
             this.настройкиToolStripMenuItem});
             this.Menu_MS.Location = new System.Drawing.Point(0, 0);
             this.Menu_MS.Name = "Menu_MS";
-            this.Menu_MS.Size = new System.Drawing.Size(1334, 24);
+            this.Menu_MS.Size = new System.Drawing.Size(1112, 24);
             this.Menu_MS.TabIndex = 44;
             this.Menu_MS.Text = "menuStrip1";
             this.Menu_MS.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_MS_ItemClicked);
@@ -727,32 +239,33 @@
             // конфигурацияToolStripMenuItem
             // 
             this.конфигурацияToolStripMenuItem.Name = "конфигурацияToolStripMenuItem";
-            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.конфигурацияToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.конфигурацияToolStripMenuItem.Text = "Конфигурация";
             this.конфигурацияToolStripMenuItem.Click += new System.EventHandler(this.конфигурацияToolStripMenuItem_Click);
             // 
             // базаДанныхToolStripMenuItem
             // 
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.базаДанныхToolStripMenuItem.Text = "База данных";
             this.базаДанныхToolStripMenuItem.Click += new System.EventHandler(this.базаДанныхToolStripMenuItem_Click);
             // 
             // Tool_TS
             // 
             this.Tool_TS.AutoSize = false;
+            this.Tool_TS.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Tool_TS.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.Tool_TS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Add_TSB,
             this.Change_TSB,
             this.Delete_TSB,
-            this.Search_TSL,
-            this.Search_TSTB,
+            this.Reset_TSB,
             this.Search_TSB,
-            this.Reset_TSB});
+            this.Search_TSTB,
+            this.Search_TSL});
             this.Tool_TS.Location = new System.Drawing.Point(0, 24);
             this.Tool_TS.Name = "Tool_TS";
-            this.Tool_TS.Size = new System.Drawing.Size(1334, 38);
+            this.Tool_TS.Size = new System.Drawing.Size(1112, 38);
             this.Tool_TS.TabIndex = 45;
             this.Tool_TS.Text = "toolStrip1";
             // 
@@ -784,29 +297,9 @@
             this.Delete_TSB.Size = new System.Drawing.Size(34, 35);
             this.Delete_TSB.Text = "Удалить позицию";
             // 
-            // Search_TSL
-            // 
-            this.Search_TSL.Name = "Search_TSL";
-            this.Search_TSL.Size = new System.Drawing.Size(41, 35);
-            this.Search_TSL.Text = "Найти";
-            // 
-            // Search_TSTB
-            // 
-            this.Search_TSTB.Name = "Search_TSTB";
-            this.Search_TSTB.Size = new System.Drawing.Size(100, 38);
-            // 
-            // Search_TSB
-            // 
-            this.Search_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Search_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Search_TSB.Image")));
-            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Search_TSB.Name = "Search_TSB";
-            this.Search_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Search_TSB.Text = "Найти";
-            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
-            // 
             // Reset_TSB
             // 
+            this.Reset_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.Reset_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.Reset_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Reset_TSB.Image")));
             this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -815,93 +308,289 @@
             this.Reset_TSB.Text = "Сбросить фильтр";
             this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
             // 
-            // ConnectDB_TB
+            // Search_TSB
             // 
-            this.ConnectDB_TB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ConnectDB_TB.Location = new System.Drawing.Point(83, 9);
-            this.ConnectDB_TB.Name = "ConnectDB_TB";
-            this.ConnectDB_TB.Size = new System.Drawing.Size(112, 20);
-            this.ConnectDB_TB.TabIndex = 46;
-            this.ConnectDB_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Search_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Search_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Search_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Search_TSB.Image")));
+            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Search_TSB.Name = "Search_TSB";
+            this.Search_TSB.Size = new System.Drawing.Size(34, 35);
+            this.Search_TSB.Text = "Найти";
+            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
+            // 
+            // Search_TSTB
+            // 
+            this.Search_TSTB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Search_TSTB.Name = "Search_TSTB";
+            this.Search_TSTB.Size = new System.Drawing.Size(200, 38);
+            // 
+            // Search_TSL
+            // 
+            this.Search_TSL.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Search_TSL.Name = "Search_TSL";
+            this.Search_TSL.Size = new System.Drawing.Size(41, 35);
+            this.Search_TSL.Text = "Найти";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.AutoSize = true;
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 560);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1112, 32);
+            this.tableLayoutPanel2.TabIndex = 148;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.Controls.Add(this.label12);
+            this.flowLayoutPanel3.Controls.Add(this.ProgressBar_PB);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(666, 3);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(443, 26);
+            this.flowLayoutPanel3.TabIndex = 44;
+            this.flowLayoutPanel3.WrapContents = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 26);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Выполнение";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ProgressBar_PB
+            // 
+            this.ProgressBar_PB.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ProgressBar_PB.Location = new System.Drawing.Point(79, 3);
+            this.ProgressBar_PB.Name = "ProgressBar_PB";
+            this.ProgressBar_PB.Size = new System.Drawing.Size(361, 20);
+            this.ProgressBar_PB.TabIndex = 49;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.Controls.Add(this.label24);
+            this.flowLayoutPanel2.Controls.Add(this.CountPos_TB);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(201, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(197, 26);
+            this.flowLayoutPanel2.TabIndex = 44;
+            this.flowLayoutPanel2.WrapContents = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label24.Location = new System.Drawing.Point(3, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(124, 26);
+            this.label24.TabIndex = 51;
+            this.label24.Text = "Количество элементов";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CountPos_TB
             // 
-            this.CountPos_TB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.CountPos_TB.Location = new System.Drawing.Point(336, 9);
+            this.CountPos_TB.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CountPos_TB.Location = new System.Drawing.Point(133, 3);
             this.CountPos_TB.Name = "CountPos_TB";
             this.CountPos_TB.Size = new System.Drawing.Size(61, 20);
             this.CountPos_TB.TabIndex = 48;
             this.CountPos_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ProgressBar_PB
+            // flowLayoutPanel1
             // 
-            this.ProgressBar_PB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ProgressBar_PB.Location = new System.Drawing.Point(961, 6);
-            this.ProgressBar_PB.Name = "ProgressBar_PB";
-            this.ProgressBar_PB.Size = new System.Drawing.Size(361, 20);
-            this.ProgressBar_PB.TabIndex = 49;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.ConnectDB_TB);
+            this.flowLayoutPanel1.Controls.Add(this.label25);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(192, 26);
+            this.flowLayoutPanel1.TabIndex = 44;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
-            // label12
+            // ConnectDB_TB
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(880, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 13);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Выполнение";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(206, 12);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(124, 13);
-            this.label24.TabIndex = 51;
-            this.label24.Text = "Количество элементов";
+            this.ConnectDB_TB.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ConnectDB_TB.Location = new System.Drawing.Point(77, 3);
+            this.ConnectDB_TB.Name = "ConnectDB_TB";
+            this.ConnectDB_TB.Size = new System.Drawing.Size(112, 20);
+            this.ConnectDB_TB.TabIndex = 46;
+            this.ConnectDB_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label25
             // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(9, 12);
+            this.label25.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label25.Location = new System.Drawing.Point(3, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(68, 13);
+            this.label25.Size = new System.Drawing.Size(68, 26);
             this.label25.TabIndex = 52;
             this.label25.Text = "Соединение";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label25.Click += new System.EventHandler(this.label25_Click_1);
             // 
-            // panel1
+            // label26
             // 
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.Position_DGV);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 62);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 726);
-            this.panel1.TabIndex = 53;
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline);
+            this.label26.Location = new System.Drawing.Point(646, 254);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(394, 18);
+            this.label26.TabIndex = 238;
+            this.label26.Text = "Место дефекта в производственном процессе";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Description_TB
+            // 
+            this.Description_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Description_TB.Location = new System.Drawing.Point(926, 95);
+            this.Description_TB.Name = "Description_TB";
+            this.Description_TB.ReadOnly = true;
+            this.Description_TB.Size = new System.Drawing.Size(150, 21);
+            this.Description_TB.TabIndex = 223;
+            // 
+            // StatusCorrection_TB
+            // 
+            this.StatusCorrection_TB.Location = new System.Drawing.Point(689, 506);
+            this.StatusCorrection_TB.Name = "StatusCorrection_TB";
+            this.StatusCorrection_TB.ReadOnly = true;
+            this.StatusCorrection_TB.Size = new System.Drawing.Size(87, 20);
+            this.StatusCorrection_TB.TabIndex = 231;
+            this.StatusCorrection_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label21
             // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(210, 17);
+            this.label21.Location = new System.Drawing.Point(186, 74);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(142, 18);
-            this.label21.TabIndex = 43;
+            this.label21.TabIndex = 235;
             this.label21.Text = "Список позиций";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(657, 57);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(371, 35);
+            this.label22.TabIndex = 237;
+            this.label22.Text = "Информация о позиции";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Date_TB
+            // 
+            this.Date_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Date_TB.Location = new System.Drawing.Point(687, 95);
+            this.Date_TB.Name = "Date_TB";
+            this.Date_TB.ReadOnly = true;
+            this.Date_TB.Size = new System.Drawing.Size(131, 21);
+            this.Date_TB.TabIndex = 211;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(844, 125);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 15);
+            this.label10.TabIndex = 226;
+            this.label10.Text = "Тип дефекта";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DefectLocProduction_TB
+            // 
+            this.DefectLocProduction_TB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DefectLocProduction_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefectLocProduction_TB.Location = new System.Drawing.Point(564, 275);
+            this.DefectLocProduction_TB.Name = "DefectLocProduction_TB";
+            this.DefectLocProduction_TB.ReadOnly = true;
+            this.DefectLocProduction_TB.Size = new System.Drawing.Size(0, 21);
+            this.DefectLocProduction_TB.TabIndex = 239;
+            this.DefectLocProduction_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(856, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 15);
+            this.label8.TabIndex = 222;
+            this.label8.Text = "Описание";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NumBrigade_TB
+            // 
+            this.NumBrigade_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NumBrigade_TB.Location = new System.Drawing.Point(687, 122);
+            this.NumBrigade_TB.Name = "NumBrigade_TB";
+            this.NumBrigade_TB.ReadOnly = true;
+            this.NumBrigade_TB.Size = new System.Drawing.Size(131, 21);
+            this.NumBrigade_TB.TabIndex = 213;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(561, 507);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(122, 15);
+            this.label15.TabIndex = 230;
+            this.label15.Text = "Статус выполнения";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Address_TB
+            // 
+            this.Address_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Address_TB.Location = new System.Drawing.Point(687, 230);
+            this.Address_TB.Name = "Address_TB";
+            this.Address_TB.ReadOnly = true;
+            this.Address_TB.Size = new System.Drawing.Size(131, 21);
+            this.Address_TB.TabIndex = 233;
             // 
             // Position_DGV
             // 
             this.Position_DGV.AllowUserToAddRows = false;
             this.Position_DGV.AllowUserToDeleteRows = false;
+            this.Position_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Position_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Position_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -909,105 +598,399 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.Position_DGV.Location = new System.Drawing.Point(9, 48);
+            this.Position_DGV.Location = new System.Drawing.Point(9, 95);
             this.Position_DGV.MultiSelect = false;
             this.Position_DGV.Name = "Position_DGV";
             this.Position_DGV.ReadOnly = true;
             this.Position_DGV.RowHeadersVisible = false;
-            this.Position_DGV.Size = new System.Drawing.Size(567, 664);
-            this.Position_DGV.TabIndex = 42;
-            this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
-            this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
-            this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting_1);
-            this.Position_DGV.SelectionChanged += new System.EventHandler(this.Position_DGV_SelectionChanged);
+            this.Position_DGV.Size = new System.Drawing.Size(527, 427);
+            this.Position_DGV.TabIndex = 234;
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.DataPropertyName = "DateFormation";
+            this.Column1.FillWeight = 95.17767F;
             this.Column1.HeaderText = "Дата формирования";
+            this.Column1.MinimumWidth = 135;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.DataPropertyName = "Diameter";
+            this.Column2.FillWeight = 119.2894F;
             this.Column2.HeaderText = "Диаметр";
+            this.Column2.MinimumWidth = 60;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 90;
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.DataPropertyName = "NumTS";
+            this.Column3.FillWeight = 95.17767F;
             this.Column3.HeaderText = "ТС";
+            this.Column3.MinimumWidth = 70;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 96;
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.DataPropertyName = "Count";
+            this.Column4.FillWeight = 95.17767F;
             this.Column4.HeaderText = "Количество";
+            this.Column4.MinimumWidth = 80;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 90;
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.DataPropertyName = "Weight";
+            this.Column5.FillWeight = 95.17767F;
             this.Column5.HeaderText = "Вес";
+            this.Column5.MinimumWidth = 70;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 90;
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // panel3
+            // label2
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel3.Controls.Add(this.ConnectDB_TB);
-            this.panel3.Controls.Add(this.label25);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.ProgressBar_PB);
-            this.panel3.Controls.Add(this.CountPos_TB);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 788);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1334, 32);
-            this.panel3.TabIndex = 54;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(551, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 15);
+            this.label2.TabIndex = 210;
+            this.label2.Text = "Дата формирования";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline);
+            this.label13.Location = new System.Drawing.Point(766, 304);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(157, 18);
+            this.label13.TabIndex = 241;
+            this.label13.Text = "Причины дефекта";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Reason_TB
+            // 
+            this.Reason_TB.Location = new System.Drawing.Point(564, 325);
+            this.Reason_TB.Multiline = true;
+            this.Reason_TB.Name = "Reason_TB";
+            this.Reason_TB.ReadOnly = true;
+            this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Reason_TB.Size = new System.Drawing.Size(535, 72);
+            this.Reason_TB.TabIndex = 242;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(551, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 15);
+            this.label3.TabIndex = 212;
+            this.label3.Text = "Номер бригады";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Type_TB
+            // 
+            this.Type_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Type_TB.Location = new System.Drawing.Point(926, 122);
+            this.Type_TB.Name = "Type_TB";
+            this.Type_TB.ReadOnly = true;
+            this.Type_TB.Size = new System.Drawing.Size(150, 21);
+            this.Type_TB.TabIndex = 227;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(551, 230);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 15);
+            this.label16.TabIndex = 232;
+            this.label16.Text = "Адрес слитка";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(551, 206);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 15);
+            this.label7.TabIndex = 220;
+            this.label7.Text = "Номер ТС";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DefectLocation_B
+            // 
+            this.DefectLocation_B.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DefectLocation_B.Location = new System.Drawing.Point(564, 301);
+            this.DefectLocation_B.Name = "DefectLocation_B";
+            this.DefectLocation_B.Size = new System.Drawing.Size(0, 0);
+            this.DefectLocation_B.TabIndex = 240;
+            this.DefectLocation_B.Text = "Показать место дефкта на слитке";
+            this.DefectLocation_B.UseVisualStyleBackColor = true;
+            // 
+            // Melt_TB
+            // 
+            this.Melt_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Melt_TB.Location = new System.Drawing.Point(687, 176);
+            this.Melt_TB.Name = "Melt_TB";
+            this.Melt_TB.ReadOnly = true;
+            this.Melt_TB.Size = new System.Drawing.Size(131, 21);
+            this.Melt_TB.TabIndex = 217;
+            // 
+            // Diameter_TB
+            // 
+            this.Diameter_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Diameter_TB.Location = new System.Drawing.Point(926, 203);
+            this.Diameter_TB.Name = "Diameter_TB";
+            this.Diameter_TB.ReadOnly = true;
+            this.Diameter_TB.Size = new System.Drawing.Size(150, 21);
+            this.Diameter_TB.TabIndex = 219;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline);
+            this.label14.Location = new System.Drawing.Point(728, 403);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(233, 18);
+            this.label14.TabIndex = 243;
+            this.label14.Text = "Корректирующие действия";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(851, 152);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 15);
+            this.label9.TabIndex = 224;
+            this.label9.Text = "Количество";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Weight_TB
+            // 
+            this.Weight_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Weight_TB.Location = new System.Drawing.Point(926, 176);
+            this.Weight_TB.Name = "Weight_TB";
+            this.Weight_TB.ReadOnly = true;
+            this.Weight_TB.Size = new System.Drawing.Size(150, 21);
+            this.Weight_TB.TabIndex = 229;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(782, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(317, 26);
+            this.button1.TabIndex = 236;
+            this.button1.Text = "Изменить статус";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // NumSmeny_TB
+            // 
+            this.NumSmeny_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NumSmeny_TB.Location = new System.Drawing.Point(687, 149);
+            this.NumSmeny_TB.Name = "NumSmeny_TB";
+            this.NumSmeny_TB.ReadOnly = true;
+            this.NumSmeny_TB.Size = new System.Drawing.Size(131, 21);
+            this.NumSmeny_TB.TabIndex = 215;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(551, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 15);
+            this.label5.TabIndex = 216;
+            this.label5.Text = "Марка сплава";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NumTC_TB
+            // 
+            this.NumTC_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NumTC_TB.Location = new System.Drawing.Point(687, 203);
+            this.NumTC_TB.Name = "NumTC_TB";
+            this.NumTC_TB.ReadOnly = true;
+            this.NumTC_TB.Size = new System.Drawing.Size(131, 21);
+            this.NumTC_TB.TabIndex = 221;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(860, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 15);
+            this.label6.TabIndex = 218;
+            this.label6.Text = "Диаметр";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Correction_TB
+            // 
+            this.Correction_TB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Correction_TB.Location = new System.Drawing.Point(564, 424);
+            this.Correction_TB.Multiline = true;
+            this.Correction_TB.Name = "Correction_TB";
+            this.Correction_TB.ReadOnly = true;
+            this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Correction_TB.Size = new System.Drawing.Size(0, 0);
+            this.Correction_TB.TabIndex = 244;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(551, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 15);
+            this.label4.TabIndex = 214;
+            this.label4.Text = "Номер смены";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Count_TB
+            // 
+            this.Count_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Count_TB.Location = new System.Drawing.Point(926, 149);
+            this.Count_TB.Name = "Count_TB";
+            this.Count_TB.ReadOnly = true;
+            this.Count_TB.Size = new System.Drawing.Size(150, 21);
+            this.Count_TB.TabIndex = 225;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(851, 179);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 15);
+            this.label11.TabIndex = 228;
+            this.label11.Text = "Общий вес";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1334, 820);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1112, 592);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.Description_TB);
+            this.Controls.Add(this.StatusCorrection_TB);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.Date_TB);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.DefectLocProduction_TB);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.NumBrigade_TB);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.Address_TB);
+            this.Controls.Add(this.Position_DGV);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.Reason_TB);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Type_TB);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.DefectLocation_B);
+            this.Controls.Add(this.Melt_TB);
+            this.Controls.Add(this.Diameter_TB);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Weight_TB);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NumSmeny_TB);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.NumTC_TB);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Correction_TB);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Count_TB);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.Tool_TS);
             this.Controls.Add(this.Menu_MS);
             this.Controls.Add(this.panel6);
             this.MainMenuStrip = this.Menu_MS;
-            this.MaximizeBox = false;
             this.Name = "Main_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Анализатор";
             this.Load += new System.EventHandler(this.Main_F_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.Menu_MS.ResumeLayout(false);
             this.Menu_MS.PerformLayout();
             this.Tool_TS.ResumeLayout(false);
             this.Tool_TS.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Position_DGV)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.MenuStrip Menu_MS;
@@ -1028,69 +1011,60 @@
         public System.Windows.Forms.ToolStripLabel Search_TSL;
         public System.Windows.Forms.ToolStripTextBox Search_TSTB;
         private System.Windows.Forms.ToolStripButton Reset_TSB;
-        public System.Windows.Forms.TextBox ConnectDB_TB;
-        public System.Windows.Forms.TextBox CountPos_TB;
-        public System.Windows.Forms.ProgressBar ProgressBar_PB;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ToolStripMenuItem обычныйToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расширенныйToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem заПериодToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        public System.Windows.Forms.TextBox DefectLocProduction_TB;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.ProgressBar ProgressBar_PB;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label label24;
+        public System.Windows.Forms.TextBox CountPos_TB;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label25;
+        public System.Windows.Forms.TextBox ConnectDB_TB;
         public System.Windows.Forms.Label label26;
-        public System.Windows.Forms.CheckBox Six_CB;
-        public System.Windows.Forms.CheckBox Five_CB;
-        public System.Windows.Forms.CheckBox Four_CB;
-        public System.Windows.Forms.CheckBox Three_CB;
-        public System.Windows.Forms.CheckBox Two_CB;
-        public System.Windows.Forms.CheckBox One_CB;
-        public System.Windows.Forms.CheckBox East_CB;
-        public System.Windows.Forms.CheckBox West_CB;
-        public System.Windows.Forms.CheckBox South_CB;
-        public System.Windows.Forms.CheckBox North_CB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label label23;
-        public System.Windows.Forms.TextBox Address_TB;
-        public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.TextBox StatusCorrection_TB;
-        public System.Windows.Forms.Label label15;
-        public System.Windows.Forms.TextBox Correction_TB;
-        public System.Windows.Forms.Label label14;
-        public System.Windows.Forms.TextBox Reason_TB;
-        public System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox Weight_TB;
-        public System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox Type_TB;
-        public System.Windows.Forms.Label label10;
-        public System.Windows.Forms.TextBox Count_TB;
-        public System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox Description_TB;
-        public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox NumTC_TB;
-        public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox Diameter_TB;
-        public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox Melt_TB;
-        public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox NumSmeny_TB;
-        public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox NumBrigade_TB;
-        public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox Date_TB;
-        public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox StatusCorrection_TB;
         public System.Windows.Forms.Label label21;
+        public System.Windows.Forms.Label label22;
+        public System.Windows.Forms.TextBox Date_TB;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox DefectLocProduction_TB;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox NumBrigade_TB;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox Address_TB;
         public System.Windows.Forms.DataGridView Position_DGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox Reason_TB;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox Type_TB;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Button DefectLocation_B;
+        public System.Windows.Forms.TextBox Melt_TB;
+        public System.Windows.Forms.TextBox Diameter_TB;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox Weight_TB;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox NumSmeny_TB;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox NumTC_TB;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox Correction_TB;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox Count_TB;
+        public System.Windows.Forms.Label label11;
     }
 }
 

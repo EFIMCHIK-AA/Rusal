@@ -153,11 +153,6 @@ namespace Rusal
             ShowPosition(SystemArgs.Positions);
         }
 
-        private void Position_DGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
-        }
-
         private void базаДанныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SettingDB_F Dialog = new SettingDB_F();
@@ -203,17 +198,6 @@ namespace Rusal
             Correction_TB.Text = String.Empty;
             StatusCorrection_TB.Text = String.Empty;
             DefectLocProduction_TB.Text = String.Empty;
-
-            North_CB.Checked = false;
-            West_CB.Checked = false;
-            East_CB.Checked = false;
-            South_CB.Checked = false;
-            One_CB.Checked = false;
-            Two_CB.Checked = false;
-            Three_CB.Checked = false;
-            Four_CB.Checked = false;
-            Five_CB.Checked = false;
-            Six_CB.Checked = false;
         }
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -352,8 +336,9 @@ namespace Rusal
             Reason_TB.Text = Temp.Reason;
             Correction_TB.Text = Temp.Correction;
             StatusCorrection_TB.Text = Temp.ProgressMark.Name.ToString();
+            DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
 
-            if(Temp.ProgressMark.ID == 4)
+            if (Temp.ProgressMark.ID == 4)
             {
                 StatusCorrection_TB.BackColor = Color.FromArgb(6, 176, 37);
             }
@@ -362,26 +347,31 @@ namespace Rusal
                 StatusCorrection_TB.BackColor = Color.FromArgb(255, 144, 0);
             }
 
-            DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
+            
+        }
 
-            North_CB.Checked = false;
-            West_CB.Checked = false;
-            East_CB.Checked = false;
-            South_CB.Checked = false;
-            One_CB.Checked = false;
-            Two_CB.Checked = false;
-            Three_CB.Checked = false;
-            Four_CB.Checked = false;
-            Five_CB.Checked = false;
-            Six_CB.Checked = false;
+        private void Position_DGV_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(206, 200, 200);
+            e.CellStyle.SelectionForeColor = Color.Black;
+        }
 
-            if (Temp.DefectLocIngot != null)
+        private void label25_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DefectLocation_B_Click(object sender, EventArgs e)
+        {
+            DefectLocation Dialog = new DefectLocation();
+
+            if (SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot != null)
             {
-                String[] DefectLocIngot = Temp.DefectLocIngot.Split('_');
+                String[] DefectLocIngot = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot.Split('_');
 
                 foreach (String Name in DefectLocIngot)
                 {
-                    foreach (Control TypeControl in panel2.Controls)
+                    foreach (Control TypeControl in Dialog.Controls)
                     {
                         if (TypeControl is CheckBox)
                         {
@@ -397,12 +387,11 @@ namespace Rusal
                     }
                 }
             }
-        }
 
-        private void Position_DGV_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            e.CellStyle.SelectionBackColor = Color.FromArgb(206, 200, 200);
-            e.CellStyle.SelectionForeColor = Color.Black;
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

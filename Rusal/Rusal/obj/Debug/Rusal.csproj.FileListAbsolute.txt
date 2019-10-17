@@ -218,3 +218,4 @@ C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\ja\Npgsql.resources.
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\policy.2.0.Npgsql.config
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
+C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.DefectLocation.resources

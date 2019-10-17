@@ -35,6 +35,7 @@ namespace Rusal
         {
             diagrammline1 = new LineSeries()
             {
+                TrackerFormatString = "{0}\r\n{3} : {4:0.###}",
                 Title = TitleL1,
                 StrokeThickness = 3,
                 LineStyle = LineStyle.Automatic,
@@ -43,9 +44,11 @@ namespace Rusal
                 MarkerStroke = OxyColors.White,
                 MarkerFill = OxyColors.Automatic,
                 MarkerStrokeThickness = 1.5
+
             };
             diagrammline2 = new LineSeries()
             {
+                TrackerFormatString = "{0}\r\n{3} : {4:0.###}",
                 Title = TitleL2,
                 StrokeThickness = 3,
                 LineStyle = LineStyle.Automatic,
@@ -59,15 +62,20 @@ namespace Rusal
             {
                 Title = Title
             };
-            var minValue = DateTimeAxis.ToDouble(start);
-            var maxValue = DateTimeAxis.ToDouble(finish);
+            pv.Model.DefaultColors = new List<OxyColor>
+            {
+                OxyColor.FromRgb(30, 144, 255),
+                OxyColor.FromRgb(245, 37, 37)
+            };
+            var minValue = DateTimeAxis.ToDouble(start.Date);
+            var maxValue = DateTimeAxis.ToDouble(finish.Date);
             pv.Model.Axes.Add(new DateTimeAxis
             {
                 Position = AxisPosition.Bottom,
                 IntervalType = DateTimeIntervalType.Days,
                 MajorStep = 7,
                 MinorIntervalType = DateTimeIntervalType.Days,
-                MinorStep = 3,
+                MinorStep = 7,
                 Minimum = minValue,
                 Maximum = maxValue,
                 Angle = 90,
