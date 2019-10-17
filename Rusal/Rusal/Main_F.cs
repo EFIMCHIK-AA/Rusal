@@ -338,7 +338,7 @@ namespace Rusal
             StatusCorrection_TB.Text = Temp.ProgressMark.Name.ToString();
             DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
 
-            if (Temp.ProgressMark.ID == 4)
+            if (Temp.ProgressMark.Name == "Выполнено")
             {
                 StatusCorrection_TB.BackColor = Color.FromArgb(6, 176, 37);
             }
@@ -352,7 +352,7 @@ namespace Rusal
 
         private void Position_DGV_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            e.CellStyle.SelectionBackColor = Color.FromArgb(206, 200, 200);
+            e.CellStyle.SelectionBackColor = Color.FromArgb(220, 217, 217);
             e.CellStyle.SelectionForeColor = Color.Black;
         }
 
@@ -392,6 +392,11 @@ namespace Rusal
             {
 
             }
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
