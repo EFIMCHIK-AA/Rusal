@@ -198,6 +198,8 @@ namespace Rusal
             Correction_TB.Text = String.Empty;
             StatusCorrection_TB.Text = String.Empty;
             DefectLocProduction_TB.Text = String.Empty;
+
+            StatusCorrection_TB.BackColor = Color.FromArgb(249, 249, 249);
         }
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -283,7 +285,6 @@ namespace Rusal
                     ResetSearch();
 
                     ShowPosition(SystemArgs.Positions);
-                    ClearField();
                 }
             }
             else
@@ -302,6 +303,7 @@ namespace Rusal
                     ResetSearch();
 
                     ShowPosition(SystemArgs.Positions);
+                    Position_DGV.ClearSelection();
                     ClearField();
                 }
             }
@@ -313,7 +315,12 @@ namespace Rusal
 
         private void Position_DGV_SelectionChanged(object sender, EventArgs e)
         {
-            if(Position_DGV.CurrentCell == null)
+            if (Position_DGV.CurrentCell.RowIndex >= SystemArgs.View.Count)
+            {
+                return;
+            }
+
+            if (Position_DGV.CurrentCell == null)
             {
                 return;
             }
