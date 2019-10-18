@@ -71,6 +71,12 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.Position_DGV = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Left_TLP = new System.Windows.Forms.TableLayoutPanel();
@@ -109,12 +115,6 @@
             this.Reason_TB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
@@ -371,7 +371,7 @@
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 680);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 681);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -516,12 +516,87 @@
             this.Position_DGV.Name = "Position_DGV";
             this.Position_DGV.ReadOnly = true;
             this.Position_DGV.RowHeadersVisible = false;
-            this.Position_DGV.Size = new System.Drawing.Size(467, 565);
+            this.Position_DGV.Size = new System.Drawing.Size(467, 566);
             this.Position_DGV.TabIndex = 234;
             this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
             this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting_1);
             this.Position_DGV.SelectionChanged += new System.EventHandler(this.Position_DGV_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "DateFormation";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.FillWeight = 95.17767F;
+            this.Column1.HeaderText = "Дата появления";
+            this.Column1.MinimumWidth = 115;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "NumBrigade";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column6.HeaderText = "Бригада";
+            this.Column6.MinimumWidth = 65;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Diameter";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.FillWeight = 119.2894F;
+            this.Column2.HeaderText = "Диаметр";
+            this.Column2.MinimumWidth = 65;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "NumTS";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column3.FillWeight = 95.17767F;
+            this.Column3.HeaderText = "ТС";
+            this.Column3.MinimumWidth = 65;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "Count";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column4.FillWeight = 95.17767F;
+            this.Column4.HeaderText = "Кол-во";
+            this.Column4.MinimumWidth = 65;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "Weight";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column5.FillWeight = 95.17767F;
+            this.Column5.HeaderText = "Вес";
+            this.Column5.MinimumWidth = 65;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label7
             // 
@@ -555,7 +630,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel4);
             this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1143, 618);
+            this.splitContainer1.Size = new System.Drawing.Size(1143, 619);
             this.splitContainer1.SplitterDistance = 479;
             this.splitContainer1.TabIndex = 245;
             // 
@@ -572,7 +647,7 @@
             this.Left_TLP.RowCount = 2;
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Left_TLP.Size = new System.Drawing.Size(477, 616);
+            this.Left_TLP.Size = new System.Drawing.Size(477, 617);
             this.Left_TLP.TabIndex = 236;
             // 
             // tableLayoutPanel4
@@ -604,7 +679,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(658, 616);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(658, 617);
             this.tableLayoutPanel4.TabIndex = 277;
             // 
             // tableLayoutPanel5
@@ -987,7 +1062,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 392F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 393F));
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.StatusCorrection_TB, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -996,7 +1071,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(653, 26);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(653, 27);
             this.tableLayoutPanel3.TabIndex = 276;
             // 
             // label15
@@ -1094,87 +1169,12 @@
             this.Correction_TB.Size = new System.Drawing.Size(648, 84);
             this.Correction_TB.TabIndex = 275;
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "DateFormation";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.FillWeight = 95.17767F;
-            this.Column1.HeaderText = "Дата появления";
-            this.Column1.MinimumWidth = 115;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "NumBrigade";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column6.HeaderText = "Бригада";
-            this.Column6.MinimumWidth = 65;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "Diameter";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 119.2894F;
-            this.Column2.HeaderText = "Диаметр";
-            this.Column2.MinimumWidth = 65;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "NumTS";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column3.FillWeight = 95.17767F;
-            this.Column3.HeaderText = "ТС";
-            this.Column3.MinimumWidth = 65;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "Count";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column4.FillWeight = 95.17767F;
-            this.Column4.HeaderText = "Кол-во";
-            this.Column4.MinimumWidth = 65;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.DataPropertyName = "Weight";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column5.FillWeight = 95.17767F;
-            this.Column5.HeaderText = "Вес";
-            this.Column5.MinimumWidth = 65;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1143, 712);
+            this.ClientSize = new System.Drawing.Size(1143, 713);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.Tool_TS);
