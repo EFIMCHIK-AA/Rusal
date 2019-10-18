@@ -351,8 +351,6 @@ namespace Rusal
 
                 DateTime DateCreate = DateTime.Now;
 
-                Dialog.DateCreate_TB.Text = DateCreate.ToShortDateString();
-
                 SetComboBox(Dialog);
 
                 if (Dialog.ShowDialog() == DialogResult.OK)
@@ -436,8 +434,6 @@ namespace Rusal
             Dialog.Text = "Изменение параметров позиции";
 
             DateTime DateCreate = Position.DateCreate;
-
-            Dialog.DateCreate_TB.Text = DateCreate.ToShortDateString();
 
             SetComboBox(Dialog);
 
