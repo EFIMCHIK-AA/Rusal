@@ -28,6 +28,7 @@ namespace Rusal
         private void SettingConfiguration_F_Load(object sender, EventArgs e)
         {
             Params_CB.DataSource = ListParams;
+            Spisok_LB.DrawMode = DrawMode.OwnerDrawFixed;
         }
 
         object CurrentArgument = null;
@@ -267,8 +268,28 @@ namespace Rusal
         {
             if(MessageBox.Show("Удаление аргумента приведет к удалению всех позиций, которые ссылаются на выбранный аргумент. Продолжить?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                CurrentArgument = Spisok_LB.SelectedItem;
                 RequestStart(false, null);
             }
+        }
+
+        private void Spisok_LB_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0)
+            {
+                return;
+            }
+            
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            {
+                e = new DrawItemEventArgs(e.Graphics,e.Font, e.Bounds,e.Index,e.State ^ DrawItemState.Selected,e.ForeColor, Color.FromArgb(220, 217, 217));
+            }
+
+            e.DrawBackground();
+
+            e.Graphics.DrawString(Spisok_LB.Items[e.Index].ToString(), e.Font, Brushes.Black, e.Bounds, StringFormat.GenericDefault);
+
+            e.DrawFocusRectangle();
         }
     }
 }
