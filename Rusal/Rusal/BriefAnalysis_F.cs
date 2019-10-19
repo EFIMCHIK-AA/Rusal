@@ -65,6 +65,7 @@ namespace Rusal
         private void BriefAnalysis_F_Load(object sender, EventArgs e)
         {
             TypeArgumnts_CB.DataSource = ListParams;
+            DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void TypeArgumnts_CB_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,6 +76,17 @@ namespace Rusal
         private void Show_B_Click(object sender, EventArgs e)
         {
             GetAnalisys(TypeArgumnts_CB.SelectedIndex);
+        }
+
+        private void DGV_Brief_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(220, 217, 217);
+            e.CellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void DGV_Brief_SelectionChanged(object sender, EventArgs e)
+        {
+            DGV_Brief.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
         }
     }
 }

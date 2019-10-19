@@ -671,10 +671,10 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 10;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
@@ -1102,15 +1102,16 @@
             this.DefectLocation_B.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DefectLocation_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DefectLocation_B.BackColor = System.Drawing.Color.White;
             this.DefectLocation_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DefectLocation_B.Location = new System.Drawing.Point(5, 287);
             this.DefectLocation_B.Margin = new System.Windows.Forms.Padding(5);
             this.DefectLocation_B.Name = "DefectLocation_B";
-            this.DefectLocation_B.Size = new System.Drawing.Size(642, 25);
+            this.DefectLocation_B.Size = new System.Drawing.Size(642, 31);
             this.DefectLocation_B.TabIndex = 271;
-            this.DefectLocation_B.Text = "Показать место дефкта на слитке";
+            this.DefectLocation_B.Text = "Показать место дефекта на слитке";
             this.DefectLocation_B.UseVisualStyleBackColor = false;
+            this.DefectLocation_B.Click += new System.EventHandler(this.DefectLocation_B_Click);
             // 
             // label13
             // 
@@ -1121,7 +1122,7 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(162)))));
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(5, 322);
+            this.label13.Location = new System.Drawing.Point(5, 328);
             this.label13.Margin = new System.Windows.Forms.Padding(5);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(642, 31);
@@ -1133,13 +1134,13 @@
             // 
             this.Reason_TB.BackColor = System.Drawing.Color.White;
             this.Reason_TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Reason_TB.Location = new System.Drawing.Point(5, 363);
+            this.Reason_TB.Location = new System.Drawing.Point(5, 369);
             this.Reason_TB.Margin = new System.Windows.Forms.Padding(5);
             this.Reason_TB.Multiline = true;
             this.Reason_TB.Name = "Reason_TB";
             this.Reason_TB.ReadOnly = true;
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Reason_TB.Size = new System.Drawing.Size(642, 83);
+            this.Reason_TB.Size = new System.Drawing.Size(642, 80);
             this.Reason_TB.TabIndex = 273;
             // 
             // label14
@@ -1149,7 +1150,7 @@
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(5, 456);
+            this.label14.Location = new System.Drawing.Point(5, 459);
             this.label14.Margin = new System.Windows.Forms.Padding(5);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(642, 31);
@@ -1161,13 +1162,13 @@
             // 
             this.Correction_TB.BackColor = System.Drawing.Color.White;
             this.Correction_TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Correction_TB.Location = new System.Drawing.Point(5, 497);
+            this.Correction_TB.Location = new System.Drawing.Point(5, 500);
             this.Correction_TB.Margin = new System.Windows.Forms.Padding(5);
             this.Correction_TB.Multiline = true;
             this.Correction_TB.Name = "Correction_TB";
             this.Correction_TB.ReadOnly = true;
             this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Correction_TB.Size = new System.Drawing.Size(642, 83);
+            this.Correction_TB.Size = new System.Drawing.Size(642, 80);
             this.Correction_TB.TabIndex = 275;
             // 
             // Main_F

@@ -236,7 +236,7 @@ namespace Rusal
             DescriptionArg_F Dialog = new DescriptionArg_F(CurrentArgument);
 
             Dialog.Name_L.Text = "Добавление аргумента";
-            Dialog.ID_TB.Text = "Формируется после запроса";
+            Dialog.ID_TB.Text = "# # # # 1 # # # #";
 
             if(Dialog.ShowDialog() == DialogResult.OK)
             {
