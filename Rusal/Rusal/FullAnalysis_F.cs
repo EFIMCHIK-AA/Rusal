@@ -74,6 +74,7 @@ namespace Rusal
         private void FullAnalysis_F_Load(object sender, EventArgs e)
         {
             TypeArgument_CB.DataSource = ListParams;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void TypeArgument_CB_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,6 +85,17 @@ namespace Rusal
         private void Export_B_Click(object sender, EventArgs e)
         {
             Analysis.ExcelFullExport(FirstDate, SecondDate);
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(220, 217, 217);
+            e.CellStyle.SelectionForeColor = Color.Black;
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
         }
     }
 }

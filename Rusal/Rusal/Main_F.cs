@@ -372,28 +372,32 @@ namespace Rusal
         {
             DefectLocation Dialog = new DefectLocation();
 
-            if (SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot != null)
+            if(SystemArgs.View.Count > 0)
             {
-                String[] DefectLocIngot = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot.Split('_');
-
-                foreach (String Name in DefectLocIngot)
+                if (SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot != null)
                 {
-                    foreach (Control TypeControl in Dialog.Controls)
+                    String[] DefectLocIngot = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot.Split('_');
+
+                    foreach (String Name in DefectLocIngot)
                     {
-                        if (TypeControl is CheckBox)
+                        foreach (Control TypeControl in Dialog.Controls)
                         {
-                            if (TypeControl.Text == Name)
+                            if (TypeControl is CheckBox)
                             {
-                                (TypeControl as CheckBox).Checked = true;
+                                if (TypeControl.Text == Name)
+                                {
+                                    (TypeControl as CheckBox).Checked = true;
+                                }
                             }
-                        }
-                        else
-                        {
-                            continue;
+                            else
+                            {
+                                continue;
+                            }
                         }
                     }
                 }
             }
+
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
