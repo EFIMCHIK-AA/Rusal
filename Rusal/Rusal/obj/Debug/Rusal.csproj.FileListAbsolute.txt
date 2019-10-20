@@ -63,9 +63,6 @@ C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CoreCompileInputs.
 C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
 C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
 C:\Users\Tom\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe.config
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Rusal.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\EPPlus.dll
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\EPPlus.xml
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Npgsql.pdb
@@ -83,8 +80,6 @@ C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusa
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateResource.cache
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CoreCompileInputs.cache
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Add_F.resources
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
 C:\Users\User\Desktop\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe.config
@@ -220,3 +215,9 @@ C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\policy.2.0.Npgsql.co
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.DefectLocation.resources
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.DefectLocation.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.exe.config
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.exe
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.exe
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.CheckParam_F.resources

@@ -27,20 +27,25 @@ namespace Rusal
             SecondDate = SecondDate_CM.SelectionStart;
             String Param = ListArgumnts_CB.SelectedItem.ToString(); //Параметр в строковом представлении
 
-            switch (Key)
+            if(Param != String.Empty)
             {
-                case 0: //Бригады
-                    Analysis.FullBrigadeWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
-                    break;
-                case 1: //Диаметр
-                    Analysis.FullDiameterWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
-                    break;
-                case 2://Описание
-                    Analysis.FullDiscriptionWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
-                    break;
-                case 3://Номер ТС
-                    Analysis.FullNumTSWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
-                    break;
+                switch (Key)
+                {
+                    case 0: //Бригады
+                        Analysis.FullBrigadeWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        break;
+                    case 1: //Диаметр
+                        Analysis.FullDiameterWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        break;
+                    case 2://Описание
+                        Analysis.FullDiscriptionWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        break;
+                    case 3://Номер ТС
+                        Analysis.FullNumTSWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        break;
+                }
+
+                Export_B.Enabled = true;
             }
         }
 
@@ -69,12 +74,14 @@ namespace Rusal
         private void Button1_Click(object sender, EventArgs e)
         {
             GetAnalisys(TypeArgument_CB.SelectedIndex);
+
         }
 
         private void FullAnalysis_F_Load(object sender, EventArgs e)
         {
             TypeArgument_CB.DataSource = ListParams;
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Export_B.Enabled = false;
         }
 
         private void TypeArgument_CB_SelectedIndexChanged(object sender, EventArgs e)

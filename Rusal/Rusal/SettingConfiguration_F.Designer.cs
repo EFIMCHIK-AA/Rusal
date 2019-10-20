@@ -84,6 +84,8 @@
             this.Spisok_LB.ValueMember = "Name";
             this.Spisok_LB.Click += new System.EventHandler(this.Spisok_LB_Click);
             this.Spisok_LB.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.Spisok_LB_DrawItem);
+            this.Spisok_LB.SelectedIndexChanged += new System.EventHandler(this.Spisok_LB_SelectedIndexChanged);
+            this.Spisok_LB.StyleChanged += new System.EventHandler(this.Spisok_LB_StyleChanged);
             // 
             // label1
             // 

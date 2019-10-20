@@ -7,11 +7,26 @@
     <ProjectGuid>{DBD38B93-03E6-450E-8E11-EC126C4AB077}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Rusal</RootNamespace>
-    <AssemblyName>Rusal</AssemblyName>
+    <AssemblyName>Анализатор дефектов</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>graph 2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -84,6 +102,12 @@
       <DependentUpon>BriefAnalysis_F.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseDictionary.cs" />
+    <Compile Include="CheckParam_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckParam_F.Designer.cs">
+      <DependentUpon>CheckParam_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="DefectLocation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +144,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="ProgressMark.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Reports.cs" />
     <Compile Include="Report_F.cs">
       <SubType>Form</SubType>
@@ -152,6 +181,9 @@
     <EmbeddedResource Include="BriefAnalysis_F.resx">
       <DependentUpon>BriefAnalysis_F.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckParam_F.resx">
+      <DependentUpon>CheckParam_F.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DefectLocation.resx">
       <DependentUpon>DefectLocation.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,13 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Report_F.resx">
       <DependentUpon>Report_F.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +223,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plusGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trashRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refreshBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Слиток прозрачный фон v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="graph 2.ico" />
+    <None Include="Resources\Мэйн форма.png" />
+    <None Include="Resources\2980558359_6b8e754f8c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

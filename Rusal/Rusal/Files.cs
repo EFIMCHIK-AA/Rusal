@@ -46,6 +46,8 @@ namespace Rusal
                     sw.WriteLine(SystemArgs.IPDB);
                     sw.WriteLine(SystemArgs.PortDB);
                     sw.WriteLine(Encryption.EncryptRSA(SystemArgs.PasswordDB));
+
+                    MessageBox.Show("Параметры подключения успешно обновлены", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -62,6 +64,8 @@ namespace Rusal
                 {
                     sw.WriteLine(Path);
                 }
+
+                MessageBox.Show("Путь к файлу резервной копии успешно найден и сохранен", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

@@ -312,7 +312,7 @@ namespace Rusal
         {
             String LocaDefectIngot = String.Empty;
 
-            foreach (Control TypeControl in Dialog.Controls)
+            foreach (Control TypeControl in Dialog.splitContainer1.Panel2.Controls)
             {
                 if (TypeControl is CheckBox)
                 {
@@ -405,7 +405,7 @@ namespace Rusal
         {
             foreach (String Name in DefectLocIngot)
             {
-                foreach (Control TypeControl in Dialog.Controls)
+                foreach (Control TypeControl in Dialog.splitContainer1.Panel2.Controls)
                 {
                     if (TypeControl is CheckBox)
                     {

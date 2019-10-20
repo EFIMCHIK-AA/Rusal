@@ -66,6 +66,7 @@ namespace Rusal
         {
             TypeArgumnts_CB.DataSource = ListParams;
             DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Export_B.Enabled = false;
         }
 
         private void TypeArgumnts_CB_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +77,7 @@ namespace Rusal
         private void Show_B_Click(object sender, EventArgs e)
         {
             GetAnalisys(TypeArgumnts_CB.SelectedIndex);
+            Export_B.Enabled = true;
         }
 
         private void DGV_Brief_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

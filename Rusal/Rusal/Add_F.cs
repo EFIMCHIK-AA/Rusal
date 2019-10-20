@@ -26,7 +26,70 @@ namespace Rusal
 
                 try
                 {
-                    if(String.IsNullOrEmpty(NumMelt_TB.Text))
+                    if(Description_CB.SelectedIndex == -1)
+                    {
+                        Description_CB.Focus();
+                        Error = "Описание дефекта должно содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (Diameter_CB.SelectedIndex == -1)
+                    {
+                        Diameter_CB.Focus();
+                        Error = "Диаметер дефекта должен содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (LocationProduction_CB.SelectedIndex == -1)
+                    {
+                        LocationProduction_CB.Focus();
+                        Error = "Место дефекта в производстве должно содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (NumBrigade_CB.SelectedIndex == -1)
+                    {
+                        NumBrigade_CB.Focus();
+                        Error = "Номер бригады должен содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (NumSmeny_CB.SelectedIndex == -1)
+                    {
+                        NumSmeny_CB.Focus();
+                        Error = "Номер смены должен содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (NumTS_CB.SelectedIndex == -1)
+                    {
+                        NumTS_CB.Focus();
+                        Error = "Номер ТС должен содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (ProgressMark_CB.SelectedIndex == -1)
+                    {
+                        ProgressMark_CB.Focus();
+                        Error = "Прогресс выполнения должен содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (TypeAlloy_CB.SelectedIndex == -1)
+                    {
+                        TypeAlloy_CB.Focus();
+                        Error = "Марка сплава должна содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (TypeDefect_CB.SelectedIndex == -1)
+                    {
+                        TypeDefect_CB.Focus();
+                        Error = "Тип дефекта должен содержать значение";
+                        throw new Exception(Error);
+                    }
+
+                    if (String.IsNullOrEmpty(NumMelt_TB.Text))
                     {
                         NumMelt_TB.Focus();
                         Error = "Поле номера плавки должно содержать значение";
@@ -103,6 +166,11 @@ namespace Rusal
 
         private void Add_F_Load(object sender, EventArgs e)
         {
+        }
+
+        private void West_CB_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

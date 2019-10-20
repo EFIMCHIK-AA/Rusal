@@ -291,5 +291,24 @@ namespace Rusal
 
             e.DrawFocusRectangle();
         }
+
+        private void Spisok_LB_StyleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Spisok_LB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Spisok_LB.SelectedItem != null)
+            {
+                Change_B.Enabled = true;
+                Delete_B.Enabled = true;
+            }
+            else
+            {
+                Change_B.Enabled = false;
+                Delete_B.Enabled = false;
+            }
+        }
     }
 }

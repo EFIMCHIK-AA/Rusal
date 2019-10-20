@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_F));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_F));
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -52,11 +52,6 @@
             this.конфигурацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.базаДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tool_TS = new System.Windows.Forms.ToolStrip();
-            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
             this.Search_TSL = new System.Windows.Forms.ToolStripLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -115,6 +110,11 @@
             this.Reason_TB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
+            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
@@ -243,8 +243,8 @@
             // заПериодToolStripMenuItem
             // 
             this.заПериодToolStripMenuItem.Name = "заПериодToolStripMenuItem";
-            this.заПериодToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.заПериодToolStripMenuItem.Text = "За период";
+            this.заПериодToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.заПериодToolStripMenuItem.Text = "По дефектности";
             this.заПериодToolStripMenuItem.Click += new System.EventHandler(this.заПериодToolStripMenuItem_Click);
             // 
             // настройкиToolStripMenuItem
@@ -292,58 +292,6 @@
             this.Tool_TS.TabIndex = 45;
             this.Tool_TS.Text = "toolStrip1";
             // 
-            // Add_TSB
-            // 
-            this.Add_TSB.AutoSize = false;
-            this.Add_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Add_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Add_TSB.Image")));
-            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Add_TSB.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.Add_TSB.Name = "Add_TSB";
-            this.Add_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Add_TSB.Text = "Добавить позицию";
-            // 
-            // Change_TSB
-            // 
-            this.Change_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Change_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Change_TSB.Image")));
-            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Change_TSB.Name = "Change_TSB";
-            this.Change_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Change_TSB.Text = "Изменить позицию";
-            // 
-            // Delete_TSB
-            // 
-            this.Delete_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Delete_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Delete_TSB.Image")));
-            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Delete_TSB.Name = "Delete_TSB";
-            this.Delete_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Delete_TSB.Text = "Удалить позицию";
-            // 
-            // Reset_TSB
-            // 
-            this.Reset_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.Reset_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Reset_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Reset_TSB.Image")));
-            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Reset_TSB.Margin = new System.Windows.Forms.Padding(0, 0, 5, 2);
-            this.Reset_TSB.Name = "Reset_TSB";
-            this.Reset_TSB.Size = new System.Drawing.Size(34, 36);
-            this.Reset_TSB.Text = "Сбросить фильтр";
-            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
-            // 
-            // Search_TSB
-            // 
-            this.Search_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.Search_TSB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Search_TSB.Image = ((System.Drawing.Image)(resources.GetObject("Search_TSB.Image")));
-            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Search_TSB.Name = "Search_TSB";
-            this.Search_TSB.Size = new System.Drawing.Size(34, 35);
-            this.Search_TSB.Text = "Найти";
-            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
-            // 
             // Search_TSTB
             // 
             this.Search_TSTB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -356,8 +304,8 @@
             // 
             this.Search_TSL.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.Search_TSL.Name = "Search_TSL";
-            this.Search_TSL.Size = new System.Drawing.Size(41, 35);
-            this.Search_TSL.Text = "Найти";
+            this.Search_TSL.Size = new System.Drawing.Size(42, 35);
+            this.Search_TSL.Text = "Поиск";
             // 
             // tableLayoutPanel2
             // 
@@ -1102,7 +1050,7 @@
             this.DefectLocation_B.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DefectLocation_B.BackColor = System.Drawing.Color.White;
+            this.DefectLocation_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.DefectLocation_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DefectLocation_B.Location = new System.Drawing.Point(5, 287);
             this.DefectLocation_B.Margin = new System.Windows.Forms.Padding(5);
@@ -1171,6 +1119,59 @@
             this.Correction_TB.Size = new System.Drawing.Size(642, 80);
             this.Correction_TB.TabIndex = 275;
             // 
+            // Add_TSB
+            // 
+            this.Add_TSB.AutoSize = false;
+            this.Add_TSB.Image = global::Rusal.Properties.Resources.plusGreen;
+            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Add_TSB.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.Add_TSB.Name = "Add_TSB";
+            this.Add_TSB.Size = new System.Drawing.Size(150, 35);
+            this.Add_TSB.Text = "Добавить позицию";
+            this.Add_TSB.Click += new System.EventHandler(this.Add_TSB_Click);
+            // 
+            // Change_TSB
+            // 
+            this.Change_TSB.Image = global::Rusal.Properties.Resources.pen1;
+            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Change_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
+            this.Change_TSB.Name = "Change_TSB";
+            this.Change_TSB.Size = new System.Drawing.Size(148, 35);
+            this.Change_TSB.Text = "Изменить позицию";
+            this.Change_TSB.Click += new System.EventHandler(this.Change_TSB_Click);
+            // 
+            // Delete_TSB
+            // 
+            this.Delete_TSB.Image = global::Rusal.Properties.Resources.trashRed;
+            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Delete_TSB.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
+            this.Delete_TSB.Name = "Delete_TSB";
+            this.Delete_TSB.Size = new System.Drawing.Size(138, 35);
+            this.Delete_TSB.Text = "Удалить позицию";
+            this.Delete_TSB.Click += new System.EventHandler(this.Delete_TSB_Click);
+            // 
+            // Reset_TSB
+            // 
+            this.Reset_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Reset_TSB.Image = global::Rusal.Properties.Resources.refreshBlue;
+            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Reset_TSB.Margin = new System.Windows.Forms.Padding(0, 0, 5, 2);
+            this.Reset_TSB.Name = "Reset_TSB";
+            this.Reset_TSB.Size = new System.Drawing.Size(94, 36);
+            this.Reset_TSB.Text = "Сбросить";
+            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
+            // 
+            // Search_TSB
+            // 
+            this.Search_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Search_TSB.Image = global::Rusal.Properties.Resources.searchOrange;
+            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Search_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
+            this.Search_TSB.Name = "Search_TSB";
+            this.Search_TSB.Size = new System.Drawing.Size(75, 35);
+            this.Search_TSB.Text = "Найти";
+            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
+            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1182,11 +1183,12 @@
             this.Controls.Add(this.Tool_TS);
             this.Controls.Add(this.Menu_MS);
             this.Controls.Add(this.panel6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu_MS;
             this.MinimumSize = new System.Drawing.Size(1159, 751);
             this.Name = "Main_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Анализатор";
+            this.Text = "Система учета дефектов";
             this.Load += new System.EventHandler(this.Main_F_Load);
             this.panel6.ResumeLayout(false);
             this.Menu_MS.ResumeLayout(false);

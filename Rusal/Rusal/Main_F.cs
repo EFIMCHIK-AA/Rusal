@@ -20,18 +20,45 @@ namespace Rusal
             InitializeComponent();
         }
 
+        private void EnableField()
+        {
+            if (Position_DGV.RowCount == 0)
+            {
+                Change_TSB.Enabled = false;
+                Delete_TSB.Enabled = false;
+                изменитьToolStripMenuItem.Enabled = false;
+                удалитьToolStripMenuItem.Enabled = false;
+                DefectLocation_B.Enabled = false;
+            }
+            else
+            {
+                Change_TSB.Enabled = true;
+                Delete_TSB.Enabled = true;
+                изменитьToolStripMenuItem.Enabled = true;
+                удалитьToolStripMenuItem.Enabled = true;
+                DefectLocation_B.Enabled = true;
+            }
+        }
+
         private void Main_F_Load(object sender, EventArgs e)
         {
-            Files.GetParamDB();
+            CheckParam_F Dialog = new CheckParam_F();
+
             Operations.StatusConnectAsync(this);
 
-            Thread.Sleep(1000);
+            Dialog.Show();
+
+            Thread.Sleep(3500);
+
+            Dialog.Close();
 
             if (SystemArgs.StatusConnect)
             {
                 Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 GetAllData();
                 ShowPosition(SystemArgs.Positions);
+
+                EnableField();
             }
             else
             {
@@ -59,17 +86,6 @@ namespace Rusal
 
             ProgressBar_PB.Value = 100;
         }
-
-        //private void ButtonMode(bool Mode)
-        //{
-        //    Add_B.Enabled = Mode;
-        //    Change_B.Enabled = Mode;
-        //    Delete_B.Enabled = Mode;
-        //    Analysis_CB.Enabled = Mode;
-        //    AnalysisStart_B.Enabled = Mode;
-        //    Report_CB.Enabled = Mode;
-        //    ReportStart_B.Enabled = Mode;
-        //}
 
         private void Exit_B_Click(object sender, EventArgs e)
         {
@@ -199,6 +215,8 @@ namespace Rusal
             StatusCorrection_TB.Text = String.Empty;
             DefectLocProduction_TB.Text = String.Empty;
 
+            DefectLocation_B.Enabled = false;
+
             StatusCorrection_TB.BackColor = Color.FromArgb(249, 249, 249);
         }
 
@@ -261,71 +279,29 @@ namespace Rusal
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (SystemArgs.StatusConnect)
-            {
-                Operations.AddPosition();
-
-                ResetSearch();
-
-                ShowPosition(SystemArgs.Positions);
-            }
-            else
-            {
-                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            CreatePosition();
         }
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (SystemArgs.StatusConnect)
-            {
-                if (Position_DGV.CurrentCell != null)
-                {
-                    Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
-                    ResetSearch();
-
-                    ShowPosition(SystemArgs.Positions);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            ChangePosition();
         }
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (SystemArgs.StatusConnect)
-            {
-                if (Position_DGV.CurrentCell != null)
-                {
-                    Operations.DeletePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
-                    ResetSearch();
-
-                    ShowPosition(SystemArgs.Positions);
-                    Position_DGV.ClearSelection();
-                    ClearField();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            DeletePosition();
         }
 
         private void Position_DGV_SelectionChanged(object sender, EventArgs e)
         {
-            if (Position_DGV.CurrentCell.RowIndex >= SystemArgs.View.Count)
+            EnableField();
+
+            if (Position_DGV.CurrentCell.RowIndex > SystemArgs.View.Count - 1)
             {
                 return;
             }
 
-            if (Position_DGV.CurrentCell == null)
-            {
-                return;
-            }
-
-            Position_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
+            Position_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
 
@@ -374,9 +350,9 @@ namespace Rusal
 
             if(SystemArgs.View.Count > 0)
             {
-                if (SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot != null)
+                if (SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex].DefectLocIngot != null)
                 {
-                    String[] DefectLocIngot = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex).DefectLocIngot.Split('_');
+                    String[] DefectLocIngot = SystemArgs.Positions[Position_DGV.CurrentCell.RowIndex].DefectLocIngot.Split('_');
 
                     foreach (String Name in DefectLocIngot)
                     {
@@ -408,6 +384,78 @@ namespace Rusal
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void CreatePosition()
+        {
+            if (SystemArgs.StatusConnect)
+            {
+                Operations.AddPosition();
+
+                ResetSearch();
+
+                ShowPosition(SystemArgs.Positions);
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Add_TSB_Click(object sender, EventArgs e)
+        {
+            CreatePosition();
+        }
+
+        private void ChangePosition()
+        {
+            if (SystemArgs.StatusConnect)
+            {
+                if (Position_DGV.CurrentCell != null)
+                {
+                    Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+                    ResetSearch();
+
+                    ShowPosition(SystemArgs.Positions);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Change_TSB_Click(object sender, EventArgs e)
+        {
+            ChangePosition();
+        }
+
+        private void DeletePosition()
+        {
+            if (SystemArgs.StatusConnect)
+            {
+                if (Position_DGV.CurrentCell != null)
+                {
+                    if (MessageBox.Show("Вы действительно хотите удалить позицию?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                    {
+                        Operations.DeletePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
+                        ResetSearch();
+
+                        ShowPosition(SystemArgs.Positions);
+                        Position_DGV.ClearSelection();
+                        ClearField();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Delete_TSB_Click(object sender, EventArgs e)
+        {
+            DeletePosition();
         }
     }
 }

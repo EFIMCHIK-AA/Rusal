@@ -94,7 +94,7 @@ namespace Rusal
             OpenFileDialog OPD = new OpenFileDialog()
             {
                 DefaultExt = ".bat",
-                Title = "Файл бэкапа",
+                Title = "Файл резервной копии",
                 Filter = "Исполняемый файл Windows| *.bat",
                 RestoreDirectory = true
             };
@@ -107,9 +107,11 @@ namespace Rusal
 
         private void StartBackup_B_Click(object sender, EventArgs e)
         {
-            if(File.Exists(Files.GetBackupPath()))
+            if (File.Exists(Path_TB.Text.Trim()))
             {
-                System.Diagnostics.Process.Start(Files.GetBackupPath());
+                System.Diagnostics.Process.Start(Path_TB.Text.Trim());
+
+                MessageBox.Show("Резервная копия успешно создана", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

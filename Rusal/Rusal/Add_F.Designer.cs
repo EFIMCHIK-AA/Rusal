@@ -89,12 +89,12 @@
             this.label15 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.Cancel_B = new System.Windows.Forms.Button();
             this.OK_B = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -114,9 +114,9 @@
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -708,7 +708,7 @@
             // 
             this.North_CB.AutoSize = true;
             this.North_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.North_CB.Location = new System.Drawing.Point(113, 435);
+            this.North_CB.Location = new System.Drawing.Point(137, 415);
             this.North_CB.Name = "North_CB";
             this.North_CB.Size = new System.Drawing.Size(33, 17);
             this.North_CB.TabIndex = 323;
@@ -719,7 +719,7 @@
             // 
             this.South_CB.AutoSize = true;
             this.South_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.South_CB.Location = new System.Drawing.Point(113, 595);
+            this.South_CB.Location = new System.Drawing.Point(135, 622);
             this.South_CB.Name = "South_CB";
             this.South_CB.Size = new System.Drawing.Size(35, 17);
             this.South_CB.TabIndex = 324;
@@ -734,18 +734,19 @@
             this.West_CB.AutoSize = true;
             this.West_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.West_CB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.West_CB.Location = new System.Drawing.Point(20, 512);
+            this.West_CB.Location = new System.Drawing.Point(16, 519);
             this.West_CB.Name = "West_CB";
             this.West_CB.Size = new System.Drawing.Size(33, 17);
             this.West_CB.TabIndex = 325;
             this.West_CB.Text = "З";
             this.West_CB.UseVisualStyleBackColor = false;
+            this.West_CB.CheckedChanged += new System.EventHandler(this.West_CB_CheckedChanged);
             // 
             // East_CB
             // 
             this.East_CB.AutoSize = true;
             this.East_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.East_CB.Location = new System.Drawing.Point(192, 512);
+            this.East_CB.Location = new System.Drawing.Point(238, 519);
             this.East_CB.Name = "East_CB";
             this.East_CB.Size = new System.Drawing.Size(33, 17);
             this.East_CB.TabIndex = 326;
@@ -756,7 +757,7 @@
             // 
             this.One_CB.AutoSize = true;
             this.One_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.One_CB.Location = new System.Drawing.Point(320, 436);
+            this.One_CB.Location = new System.Drawing.Point(349, 415);
             this.One_CB.Name = "One_CB";
             this.One_CB.Size = new System.Drawing.Size(32, 17);
             this.One_CB.TabIndex = 327;
@@ -767,7 +768,7 @@
             // 
             this.Two_CB.AutoSize = true;
             this.Two_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Two_CB.Location = new System.Drawing.Point(389, 436);
+            this.Two_CB.Location = new System.Drawing.Point(416, 415);
             this.Two_CB.Name = "Two_CB";
             this.Two_CB.Size = new System.Drawing.Size(32, 17);
             this.Two_CB.TabIndex = 328;
@@ -778,7 +779,7 @@
             // 
             this.Three_CB.AutoSize = true;
             this.Three_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Three_CB.Location = new System.Drawing.Point(461, 435);
+            this.Three_CB.Location = new System.Drawing.Point(486, 415);
             this.Three_CB.Name = "Three_CB";
             this.Three_CB.Size = new System.Drawing.Size(32, 17);
             this.Three_CB.TabIndex = 329;
@@ -789,7 +790,7 @@
             // 
             this.Four_CB.AutoSize = true;
             this.Four_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Four_CB.Location = new System.Drawing.Point(535, 435);
+            this.Four_CB.Location = new System.Drawing.Point(555, 415);
             this.Four_CB.Name = "Four_CB";
             this.Four_CB.Size = new System.Drawing.Size(32, 17);
             this.Four_CB.TabIndex = 330;
@@ -800,7 +801,7 @@
             // 
             this.Five_CB.AutoSize = true;
             this.Five_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Five_CB.Location = new System.Drawing.Point(619, 435);
+            this.Five_CB.Location = new System.Drawing.Point(621, 415);
             this.Five_CB.Name = "Five_CB";
             this.Five_CB.Size = new System.Drawing.Size(32, 17);
             this.Five_CB.TabIndex = 331;
@@ -811,7 +812,7 @@
             // 
             this.Six_CB.AutoSize = true;
             this.Six_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Six_CB.Location = new System.Drawing.Point(692, 435);
+            this.Six_CB.Location = new System.Drawing.Point(693, 415);
             this.Six_CB.Name = "Six_CB";
             this.Six_CB.Size = new System.Drawing.Size(32, 17);
             this.Six_CB.TabIndex = 332;
@@ -963,16 +964,6 @@
             this.label14.Text = "Место дефекта на слитке";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 407);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(782, 239);
-            this.pictureBox1.TabIndex = 322;
-            this.pictureBox1.TabStop = false;
-            // 
             // label22
             // 
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(101)))));
@@ -1056,6 +1047,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1143, 35);
             this.tableLayoutPanel2.TabIndex = 175;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.BackgroundImage = global::Rusal.Properties.Resources.Слиток_прозрачный_фон_v2;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 407);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(782, 239);
+            this.pictureBox1.TabIndex = 322;
+            this.pictureBox1.TabStop = false;
+            // 
             // Add_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1108,18 +1110,16 @@
             this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.SplitContainer splitContainer1;
         public System.Windows.Forms.Label label22;
         public System.Windows.Forms.Button Cancel_B;
         public System.Windows.Forms.Button OK_B;
@@ -1186,5 +1186,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         public System.Windows.Forms.Label label13;
         public System.Windows.Forms.ComboBox LocationProduction_CB;
+        public System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
