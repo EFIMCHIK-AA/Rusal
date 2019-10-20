@@ -95,31 +95,6 @@ namespace Rusal
             }
         }
 
-        private void ReportStart_B_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Add_B_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Change_B_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Delete_B_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Position_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Search_TSB_Click(object sender, EventArgs e)
         {
             if (SystemArgs.StatusConnect)
@@ -220,21 +195,6 @@ namespace Rusal
             StatusCorrection_TB.BackColor = Color.FromArgb(249, 249, 249);
         }
 
-        private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Menu_MS_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void обычныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BriefAnalysis_F Dialog = new BriefAnalysis_F();
@@ -270,11 +230,6 @@ namespace Rusal
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void AnalysisStart_B_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -329,19 +284,12 @@ namespace Rusal
             {
                 StatusCorrection_TB.BackColor = Color.FromArgb(255, 144, 0);
             }
-
-            
         }
 
         private void Position_DGV_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
             e.CellStyle.SelectionBackColor = Color.FromArgb(220, 217, 217);
             e.CellStyle.SelectionForeColor = Color.Black;
-        }
-
-        private void label25_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void DefectLocation_B_Click(object sender, EventArgs e)
@@ -379,11 +327,6 @@ namespace Rusal
             {
 
             }
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void CreatePosition()

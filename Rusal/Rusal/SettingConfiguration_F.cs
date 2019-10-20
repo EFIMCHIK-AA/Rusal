@@ -23,7 +23,7 @@ namespace Rusal
         }
 
         String []ListParams = {"Номер бригады", "Номер смены", "Марка сплава", "Диаметер",
-                                  "Описание", "Тип дефекта", "Номет ТС", "Место дефекта в производственном процессе", "Прогресс"};
+                                  "Описание", "Номер ТС"};
 
         private void SettingConfiguration_F_Load(object sender, EventArgs e)
         {
@@ -191,26 +191,27 @@ namespace Rusal
                     NameTable = "DescriptionDefect";
                     NameColumn = "N_Description";
                     break;
+
                 case 5:
-                    Spisok_LB.DataSource = SystemArgs.TypesDefect;
-                    NameTable = "TypesDefect";
-                    NameColumn = "N_Defect";
-                    break;
-                case 6:
                     Spisok_LB.DataSource = SystemArgs.TSN;
                     NameTable = "TSN";
                     NameColumn = "N_TSN";
                     break;
-                case 7:
-                    Spisok_LB.DataSource = SystemArgs.DefectLocProduction;
-                    NameTable = "DefectLocationProduction";
-                    NameColumn = "N_Location";
-                    break;
-                case 8:
-                    Spisok_LB.DataSource = SystemArgs.ProgressMark;
-                    NameTable = "ProgressMark";
-                    NameColumn = "N_ProgressMark";
-                    break;
+                    //case 6:
+                    //    Spisok_LB.DataSource = SystemArgs.TypesDefect;
+                    //    NameTable = "TypesDefect";
+                    //    NameColumn = "N_Defect";
+                    //    break;
+                    //case 7:
+                    //    Spisok_LB.DataSource = SystemArgs.DefectLocProduction;
+                    //    NameTable = "DefectLocationProduction";
+                    //    NameColumn = "N_Location";
+                    //    break;
+                    //case 8:
+                    //    Spisok_LB.DataSource = SystemArgs.ProgressMark;
+                    //    NameTable = "ProgressMark";
+                    //    NameColumn = "N_ProgressMark";
+                    //    break;
             }
         }
 
@@ -254,7 +255,7 @@ namespace Rusal
 
                 Dialog.Name_L.Text = "Изменение аргумента";
                 Dialog.ID_TB.Text = (Spisok_LB.Items[Spisok_LB.SelectedIndex] as BaseDictionary).ID.ToString();
-
+                Dialog.Value_TB.Text = Spisok_LB.SelectedItem.ToString();
 
                 if (Dialog.ShowDialog() == DialogResult.OK)
                 {

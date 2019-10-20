@@ -52,6 +52,11 @@
             this.конфигурацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.базаДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tool_TS = new System.Windows.Forms.ToolStrip();
+            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
             this.Search_TSL = new System.Windows.Forms.ToolStripLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -110,11 +115,6 @@
             this.Reason_TB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
-            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
@@ -173,10 +173,9 @@
             this.настройкиToolStripMenuItem});
             this.Menu_MS.Location = new System.Drawing.Point(0, 0);
             this.Menu_MS.Name = "Menu_MS";
-            this.Menu_MS.Size = new System.Drawing.Size(1143, 24);
+            this.Menu_MS.Size = new System.Drawing.Size(1178, 24);
             this.Menu_MS.TabIndex = 44;
             this.Menu_MS.Text = "menuStrip1";
-            this.Menu_MS.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_MS_ItemClicked);
             // 
             // позицияToolStripMenuItem
             // 
@@ -288,9 +287,62 @@
             this.Tool_TS.Location = new System.Drawing.Point(0, 24);
             this.Tool_TS.Margin = new System.Windows.Forms.Padding(5);
             this.Tool_TS.Name = "Tool_TS";
-            this.Tool_TS.Size = new System.Drawing.Size(1143, 38);
+            this.Tool_TS.Size = new System.Drawing.Size(1178, 38);
             this.Tool_TS.TabIndex = 45;
             this.Tool_TS.Text = "toolStrip1";
+            // 
+            // Add_TSB
+            // 
+            this.Add_TSB.AutoSize = false;
+            this.Add_TSB.Image = global::Rusal.Properties.Resources.plusGreen;
+            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Add_TSB.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.Add_TSB.Name = "Add_TSB";
+            this.Add_TSB.Size = new System.Drawing.Size(150, 35);
+            this.Add_TSB.Text = "Добавить позицию";
+            this.Add_TSB.Click += new System.EventHandler(this.Add_TSB_Click);
+            // 
+            // Change_TSB
+            // 
+            this.Change_TSB.Image = global::Rusal.Properties.Resources.pen1;
+            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Change_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
+            this.Change_TSB.Name = "Change_TSB";
+            this.Change_TSB.Size = new System.Drawing.Size(148, 35);
+            this.Change_TSB.Text = "Изменить позицию";
+            this.Change_TSB.Click += new System.EventHandler(this.Change_TSB_Click);
+            // 
+            // Delete_TSB
+            // 
+            this.Delete_TSB.Image = global::Rusal.Properties.Resources.trashRed;
+            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Delete_TSB.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
+            this.Delete_TSB.Name = "Delete_TSB";
+            this.Delete_TSB.Size = new System.Drawing.Size(138, 35);
+            this.Delete_TSB.Text = "Удалить позицию";
+            this.Delete_TSB.Click += new System.EventHandler(this.Delete_TSB_Click);
+            // 
+            // Reset_TSB
+            // 
+            this.Reset_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Reset_TSB.Image = global::Rusal.Properties.Resources.refreshBlue;
+            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Reset_TSB.Margin = new System.Windows.Forms.Padding(0, 0, 5, 2);
+            this.Reset_TSB.Name = "Reset_TSB";
+            this.Reset_TSB.Size = new System.Drawing.Size(94, 36);
+            this.Reset_TSB.Text = "Сбросить";
+            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
+            // 
+            // Search_TSB
+            // 
+            this.Search_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Search_TSB.Image = global::Rusal.Properties.Resources.searchOrange;
+            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Search_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
+            this.Search_TSB.Name = "Search_TSB";
+            this.Search_TSB.Size = new System.Drawing.Size(75, 35);
+            this.Search_TSB.Text = "Найти";
+            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
             // 
             // Search_TSTB
             // 
@@ -319,11 +371,11 @@
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 681);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 700);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1143, 32);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1178, 32);
             this.tableLayoutPanel2.TabIndex = 148;
             // 
             // flowLayoutPanel3
@@ -332,7 +384,7 @@
             this.flowLayoutPanel3.Controls.Add(this.label12);
             this.flowLayoutPanel3.Controls.Add(this.ProgressBar_PB);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(697, 3);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(732, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(443, 26);
             this.flowLayoutPanel3.TabIndex = 44;
@@ -425,7 +477,6 @@
             this.label25.TabIndex = 52;
             this.label25.Text = "Соединение";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label25.Click += new System.EventHandler(this.label25_Click_1);
             // 
             // label21
             // 
@@ -437,7 +488,7 @@
             this.label21.Location = new System.Drawing.Point(5, 5);
             this.label21.Margin = new System.Windows.Forms.Padding(5);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(473, 31);
+            this.label21.Size = new System.Drawing.Size(461, 31);
             this.label21.TabIndex = 235;
             this.label21.Text = "Список позиций";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -465,10 +516,8 @@
             this.Position_DGV.Name = "Position_DGV";
             this.Position_DGV.ReadOnly = true;
             this.Position_DGV.RowHeadersVisible = false;
-            this.Position_DGV.Size = new System.Drawing.Size(473, 566);
+            this.Position_DGV.Size = new System.Drawing.Size(461, 585);
             this.Position_DGV.TabIndex = 234;
-            this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
-            this.Position_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellContentClick);
             this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting_1);
             this.Position_DGV.SelectionChanged += new System.EventHandler(this.Position_DGV_SelectionChanged);
             // 
@@ -578,9 +627,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel4);
             this.splitContainer1.Panel2.Controls.Add(this.label7);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1143, 619);
-            this.splitContainer1.SplitterDistance = 485;
+            this.splitContainer1.Size = new System.Drawing.Size(1178, 638);
+            this.splitContainer1.SplitterDistance = 473;
             this.splitContainer1.TabIndex = 245;
             // 
             // Left_TLP
@@ -596,7 +644,7 @@
             this.Left_TLP.RowCount = 2;
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Left_TLP.Size = new System.Drawing.Size(483, 617);
+            this.Left_TLP.Size = new System.Drawing.Size(471, 636);
             this.Left_TLP.TabIndex = 236;
             // 
             // tableLayoutPanel4
@@ -628,7 +676,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(652, 617);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(699, 636);
             this.tableLayoutPanel4.TabIndex = 277;
             // 
             // tableLayoutPanel5
@@ -672,7 +720,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(642, 159);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(689, 159);
             this.tableLayoutPanel5.TabIndex = 278;
             // 
             // label1
@@ -706,10 +754,10 @@
             this.Diameter_TB.BackColor = System.Drawing.Color.White;
             this.Diameter_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Diameter_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Diameter_TB.Location = new System.Drawing.Point(424, 111);
+            this.Diameter_TB.Location = new System.Drawing.Point(447, 111);
             this.Diameter_TB.Name = "Diameter_TB";
             this.Diameter_TB.ReadOnly = true;
-            this.Diameter_TB.Size = new System.Drawing.Size(215, 21);
+            this.Diameter_TB.Size = new System.Drawing.Size(239, 21);
             this.Diameter_TB.TabIndex = 256;
             this.Diameter_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -718,10 +766,10 @@
             this.Weight_TB.BackColor = System.Drawing.Color.White;
             this.Weight_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Weight_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Weight_TB.Location = new System.Drawing.Point(424, 84);
+            this.Weight_TB.Location = new System.Drawing.Point(447, 84);
             this.Weight_TB.Name = "Weight_TB";
             this.Weight_TB.ReadOnly = true;
-            this.Weight_TB.Size = new System.Drawing.Size(215, 21);
+            this.Weight_TB.Size = new System.Drawing.Size(239, 21);
             this.Weight_TB.TabIndex = 265;
             this.Weight_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -730,10 +778,10 @@
             this.Count_TB.BackColor = System.Drawing.Color.White;
             this.Count_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Count_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Count_TB.Location = new System.Drawing.Point(424, 57);
+            this.Count_TB.Location = new System.Drawing.Point(447, 57);
             this.Count_TB.Name = "Count_TB";
             this.Count_TB.ReadOnly = true;
-            this.Count_TB.Size = new System.Drawing.Size(215, 21);
+            this.Count_TB.Size = new System.Drawing.Size(239, 21);
             this.Count_TB.TabIndex = 261;
             this.Count_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -742,10 +790,10 @@
             this.Description_TB.BackColor = System.Drawing.Color.White;
             this.Description_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Description_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Description_TB.Location = new System.Drawing.Point(424, 3);
+            this.Description_TB.Location = new System.Drawing.Point(447, 3);
             this.Description_TB.Name = "Description_TB";
             this.Description_TB.ReadOnly = true;
-            this.Description_TB.Size = new System.Drawing.Size(215, 21);
+            this.Description_TB.Size = new System.Drawing.Size(239, 21);
             this.Description_TB.TabIndex = 259;
             this.Description_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -756,7 +804,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(334, 81);
+            this.label11.Location = new System.Drawing.Point(357, 81);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 27);
             this.label11.TabIndex = 264;
@@ -782,10 +830,10 @@
             this.Type_TB.BackColor = System.Drawing.Color.White;
             this.Type_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Type_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Type_TB.Location = new System.Drawing.Point(424, 30);
+            this.Type_TB.Location = new System.Drawing.Point(447, 30);
             this.Type_TB.Name = "Type_TB";
             this.Type_TB.ReadOnly = true;
-            this.Type_TB.Size = new System.Drawing.Size(215, 21);
+            this.Type_TB.Size = new System.Drawing.Size(239, 21);
             this.Type_TB.TabIndex = 263;
             this.Type_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -796,7 +844,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(334, 108);
+            this.label6.Location = new System.Drawing.Point(357, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 27);
             this.label6.TabIndex = 255;
@@ -839,7 +887,7 @@
             this.Date_TB.Location = new System.Drawing.Point(113, 3);
             this.Date_TB.Name = "Date_TB";
             this.Date_TB.ReadOnly = true;
-            this.Date_TB.Size = new System.Drawing.Size(215, 21);
+            this.Date_TB.Size = new System.Drawing.Size(238, 21);
             this.Date_TB.TabIndex = 248;
             this.Date_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Date_TB.WordWrap = false;
@@ -851,7 +899,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(334, 27);
+            this.label10.Location = new System.Drawing.Point(357, 27);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 27);
             this.label10.TabIndex = 262;
@@ -865,7 +913,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(334, 54);
+            this.label9.Location = new System.Drawing.Point(357, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 27);
             this.label9.TabIndex = 260;
@@ -891,7 +939,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(334, 0);
+            this.label8.Location = new System.Drawing.Point(357, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 27);
             this.label8.TabIndex = 258;
@@ -906,7 +954,7 @@
             this.NumTC_TB.Location = new System.Drawing.Point(113, 111);
             this.NumTC_TB.Name = "NumTC_TB";
             this.NumTC_TB.ReadOnly = true;
-            this.NumTC_TB.Size = new System.Drawing.Size(215, 21);
+            this.NumTC_TB.Size = new System.Drawing.Size(238, 21);
             this.NumTC_TB.TabIndex = 257;
             this.NumTC_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -918,7 +966,7 @@
             this.NumBrigade_TB.Location = new System.Drawing.Point(113, 30);
             this.NumBrigade_TB.Name = "NumBrigade_TB";
             this.NumBrigade_TB.ReadOnly = true;
-            this.NumBrigade_TB.Size = new System.Drawing.Size(215, 21);
+            this.NumBrigade_TB.Size = new System.Drawing.Size(238, 21);
             this.NumBrigade_TB.TabIndex = 250;
             this.NumBrigade_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -930,7 +978,7 @@
             this.Address_TB.Location = new System.Drawing.Point(113, 138);
             this.Address_TB.Name = "Address_TB";
             this.Address_TB.ReadOnly = true;
-            this.Address_TB.Size = new System.Drawing.Size(215, 21);
+            this.Address_TB.Size = new System.Drawing.Size(238, 21);
             this.Address_TB.TabIndex = 267;
             this.Address_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -942,7 +990,7 @@
             this.NumSmeny_TB.Location = new System.Drawing.Point(113, 57);
             this.NumSmeny_TB.Name = "NumSmeny_TB";
             this.NumSmeny_TB.ReadOnly = true;
-            this.NumSmeny_TB.Size = new System.Drawing.Size(215, 21);
+            this.NumSmeny_TB.Size = new System.Drawing.Size(238, 21);
             this.NumSmeny_TB.TabIndex = 252;
             this.NumSmeny_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -954,7 +1002,7 @@
             this.Melt_TB.Location = new System.Drawing.Point(113, 84);
             this.Melt_TB.Name = "Melt_TB";
             this.Melt_TB.ReadOnly = true;
-            this.Melt_TB.Size = new System.Drawing.Size(215, 21);
+            this.Melt_TB.Size = new System.Drawing.Size(238, 21);
             this.Melt_TB.TabIndex = 254;
             this.Melt_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -970,7 +1018,7 @@
             this.label22.Location = new System.Drawing.Point(5, 5);
             this.label22.Margin = new System.Windows.Forms.Padding(5);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(642, 31);
+            this.label22.Size = new System.Drawing.Size(689, 31);
             this.label22.TabIndex = 268;
             this.label22.Text = "Информация о позиции";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -986,7 +1034,7 @@
             this.DefectLocProduction_TB.Margin = new System.Windows.Forms.Padding(5);
             this.DefectLocProduction_TB.Name = "DefectLocProduction_TB";
             this.DefectLocProduction_TB.ReadOnly = true;
-            this.DefectLocProduction_TB.Size = new System.Drawing.Size(642, 21);
+            this.DefectLocProduction_TB.Size = new System.Drawing.Size(689, 21);
             this.DefectLocProduction_TB.TabIndex = 270;
             this.DefectLocProduction_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1000,7 +1048,7 @@
             this.label26.Location = new System.Drawing.Point(5, 215);
             this.label26.Margin = new System.Windows.Forms.Padding(5);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(642, 31);
+            this.label26.Size = new System.Drawing.Size(689, 31);
             this.label26.TabIndex = 269;
             this.label26.Text = "Место дефекта в производственном процессе";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1015,12 +1063,12 @@
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.StatusCorrection_TB, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 585);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 605);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(647, 27);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(694, 26);
             this.tableLayoutPanel3.TabIndex = 276;
             // 
             // label15
@@ -1055,7 +1103,7 @@
             this.DefectLocation_B.Location = new System.Drawing.Point(5, 287);
             this.DefectLocation_B.Margin = new System.Windows.Forms.Padding(5);
             this.DefectLocation_B.Name = "DefectLocation_B";
-            this.DefectLocation_B.Size = new System.Drawing.Size(642, 31);
+            this.DefectLocation_B.Size = new System.Drawing.Size(689, 31);
             this.DefectLocation_B.TabIndex = 271;
             this.DefectLocation_B.Text = "Показать место дефекта на слитке";
             this.DefectLocation_B.UseVisualStyleBackColor = false;
@@ -1073,7 +1121,7 @@
             this.label13.Location = new System.Drawing.Point(5, 328);
             this.label13.Margin = new System.Windows.Forms.Padding(5);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(642, 31);
+            this.label13.Size = new System.Drawing.Size(689, 31);
             this.label13.TabIndex = 272;
             this.label13.Text = "Причины дефекта";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1088,7 +1136,7 @@
             this.Reason_TB.Name = "Reason_TB";
             this.Reason_TB.ReadOnly = true;
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Reason_TB.Size = new System.Drawing.Size(642, 80);
+            this.Reason_TB.Size = new System.Drawing.Size(689, 90);
             this.Reason_TB.TabIndex = 273;
             // 
             // label14
@@ -1098,10 +1146,10 @@
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(5, 459);
+            this.label14.Location = new System.Drawing.Point(5, 469);
             this.label14.Margin = new System.Windows.Forms.Padding(5);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(642, 31);
+            this.label14.Size = new System.Drawing.Size(689, 31);
             this.label14.TabIndex = 274;
             this.label14.Text = "Корректирующие действия";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1110,74 +1158,21 @@
             // 
             this.Correction_TB.BackColor = System.Drawing.Color.White;
             this.Correction_TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Correction_TB.Location = new System.Drawing.Point(5, 500);
+            this.Correction_TB.Location = new System.Drawing.Point(5, 510);
             this.Correction_TB.Margin = new System.Windows.Forms.Padding(5);
             this.Correction_TB.Multiline = true;
             this.Correction_TB.Name = "Correction_TB";
             this.Correction_TB.ReadOnly = true;
             this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Correction_TB.Size = new System.Drawing.Size(642, 80);
+            this.Correction_TB.Size = new System.Drawing.Size(689, 90);
             this.Correction_TB.TabIndex = 275;
-            // 
-            // Add_TSB
-            // 
-            this.Add_TSB.AutoSize = false;
-            this.Add_TSB.Image = global::Rusal.Properties.Resources.plusGreen;
-            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Add_TSB.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.Add_TSB.Name = "Add_TSB";
-            this.Add_TSB.Size = new System.Drawing.Size(150, 35);
-            this.Add_TSB.Text = "Добавить позицию";
-            this.Add_TSB.Click += new System.EventHandler(this.Add_TSB_Click);
-            // 
-            // Change_TSB
-            // 
-            this.Change_TSB.Image = global::Rusal.Properties.Resources.pen1;
-            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Change_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
-            this.Change_TSB.Name = "Change_TSB";
-            this.Change_TSB.Size = new System.Drawing.Size(148, 35);
-            this.Change_TSB.Text = "Изменить позицию";
-            this.Change_TSB.Click += new System.EventHandler(this.Change_TSB_Click);
-            // 
-            // Delete_TSB
-            // 
-            this.Delete_TSB.Image = global::Rusal.Properties.Resources.trashRed;
-            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Delete_TSB.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
-            this.Delete_TSB.Name = "Delete_TSB";
-            this.Delete_TSB.Size = new System.Drawing.Size(138, 35);
-            this.Delete_TSB.Text = "Удалить позицию";
-            this.Delete_TSB.Click += new System.EventHandler(this.Delete_TSB_Click);
-            // 
-            // Reset_TSB
-            // 
-            this.Reset_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.Reset_TSB.Image = global::Rusal.Properties.Resources.refreshBlue;
-            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Reset_TSB.Margin = new System.Windows.Forms.Padding(0, 0, 5, 2);
-            this.Reset_TSB.Name = "Reset_TSB";
-            this.Reset_TSB.Size = new System.Drawing.Size(94, 36);
-            this.Reset_TSB.Text = "Сбросить";
-            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
-            // 
-            // Search_TSB
-            // 
-            this.Search_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.Search_TSB.Image = global::Rusal.Properties.Resources.searchOrange;
-            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Search_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
-            this.Search_TSB.Name = "Search_TSB";
-            this.Search_TSB.Size = new System.Drawing.Size(75, 35);
-            this.Search_TSB.Text = "Найти";
-            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
             // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1143, 713);
+            this.ClientSize = new System.Drawing.Size(1178, 732);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.Tool_TS);
@@ -1185,7 +1180,7 @@
             this.Controls.Add(this.panel6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu_MS;
-            this.MinimumSize = new System.Drawing.Size(1159, 751);
+            this.MinimumSize = new System.Drawing.Size(1194, 771);
             this.Name = "Main_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Система учета дефектов";
