@@ -25,6 +25,7 @@ namespace Rusal
 
         private void SaveConnect_B_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog($"Запук процедуры модификации параметров БД");
             String Error = String.Empty;
 
             try
@@ -82,15 +83,21 @@ namespace Rusal
                 SystemArgs.PasswordDB = Password_TB.Text.Trim();
 
                 Files.SetParamDB();
+
+                SystemArgs.PrintLog("Параметры подключения к базе данных успешно обновлены");
+                SystemArgs.PrintLog($"Процедуры модификации параметров БД успешно завершена");
             }
             catch (Exception)
             {
                 MessageBox.Show(Error, "Ошибка", MessageBoxButtons.OK,  MessageBoxIcon.Error);
+                SystemArgs.PrintLog($"Ошибка при получении параметров подключении к базе данных: {Error}");
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog($"Запуск процедуры выбора пути резервной копии БД");
+
             OpenFileDialog OPD = new OpenFileDialog()
             {
                 DefaultExt = ".bat",
@@ -102,28 +109,39 @@ namespace Rusal
             if(OPD.ShowDialog() == DialogResult.OK)
             {
                 Path_TB.Text = OPD.FileName;
+                SystemArgs.PrintLog($"Процедура выбора пути резервной копии БД успешно завершена");
             }
         }
 
         private void StartBackup_B_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog($"Запуск процедуры резервной копии БД");
+
             if (File.Exists(Path_TB.Text.Trim()))
             {
                 System.Diagnostics.Process.Start(Path_TB.Text.Trim());
 
                 MessageBox.Show("Резервная копия успешно создана", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SystemArgs.PrintLog($"Резервная копия успешно создана");
             }
             else
             {
                 MessageBox.Show("Запрашиваемый файл не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog($"Запрашиваемый файл не обнаружен");
             }
+
+            SystemArgs.PrintLog($"Процедура резервной копии БД завершена");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(Path_TB.Text))
+            SystemArgs.PrintLog($"Запуск процедуры записи пути резервной копии БД");
+
+            if (!String.IsNullOrEmpty(Path_TB.Text))
             {
                 Files.SetBackupPath(Path_TB.Text.Trim());
+
+                SystemArgs.PrintLog($"Процедурыа записи пути резервной копии БД завершена");
             }
             else
             {

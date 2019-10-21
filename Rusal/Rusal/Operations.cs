@@ -74,6 +74,7 @@ namespace Rusal
             if (!SystemArgs.StatusConnect)
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -117,10 +118,13 @@ namespace Rusal
 
                     Connect.Close();
                 }
+
+                SystemArgs.PrintLog("Получение списка позиций с сервера успешно завершено");
             }
             catch (Exception)
             {
                 MessageBox.Show("Ошибка при получении данных с сервера", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при получении данных с сервера");
                 return;
             }
         }
@@ -130,6 +134,7 @@ namespace Rusal
             if (!SystemArgs.StatusConnect)
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -163,6 +168,8 @@ namespace Rusal
                         }
                     }
 
+                    SystemArgs.PrintLog("Получение списка мест дефекта в производстве успешно завершено");
+
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_Description\"" +
                                                             "FROM public.\"DescriptionDefect\";", Connect))
                     {
@@ -174,6 +181,8 @@ namespace Rusal
                             }
                         }
                     }
+
+                    SystemArgs.PrintLog("Получение списка описаний дефекта успешно завершено");
 
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_Diameter\"" +
                                                             "FROM public.\"DiameterIngot\";", Connect))
@@ -187,6 +196,8 @@ namespace Rusal
                         }
                     }
 
+                    SystemArgs.PrintLog("Получение списка диаметров успешно завершено");
+
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_Brigade\"" +
                                                             "FROM public.\"ListBrigades\";", Connect))
                     {
@@ -198,6 +209,8 @@ namespace Rusal
                             }
                         }
                     }
+
+                    SystemArgs.PrintLog("Получение списка бригад успешно завершено");
 
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_Smena\"" +
                                                             "FROM public.\"ListSmen\";", Connect))
@@ -211,6 +224,8 @@ namespace Rusal
                         }
                     }
 
+                    SystemArgs.PrintLog("Получение списка смен успешно завершено");
+
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_ProgressMark\"" +
                                                             "FROM public.\"ProgressMark\";", Connect))
                     {
@@ -222,6 +237,8 @@ namespace Rusal
                             }
                         }
                     }
+
+                    SystemArgs.PrintLog("Получение списка статусов коррекции успешно завершено");
 
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_TSN\"" +
                                                             "FROM public.\"TSN\";", Connect))
@@ -235,6 +252,8 @@ namespace Rusal
                         }
                     }
 
+                    SystemArgs.PrintLog("Получение списка номеров ТС успешно завершено");
+
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_Alloy\"" +
                                                             "FROM public.\"TypesAlloy\";", Connect))
                     {
@@ -246,6 +265,8 @@ namespace Rusal
                             }
                         }
                     }
+
+                    SystemArgs.PrintLog("Получение списка марок сплавов успешно завершено");
 
                     using (var Command = new NpgsqlCommand($"SELECT \"ID\", \"N_Defect\"" +
                                                             "FROM public.\"TypesDefect\";", Connect))
@@ -259,17 +280,20 @@ namespace Rusal
                         }
                     }
 
+                    SystemArgs.PrintLog("Получение списка типов дефекта успешно завершено");
+
                     Connect.Close();
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Ошибка при получении данных с сервера", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при получении данных с сервера");
                 return;
             }
         }
 
-        private static  void SetComboBox(Add_F Dialog)
+        private static void SetComboBox(Add_F Dialog)
         {
             Dialog.NumBrigade_CB.DataSource = SystemArgs.Brigades;
             Dialog.NumBrigade_CB.DisplayMember = "Name";
@@ -342,6 +366,7 @@ namespace Rusal
             if (!SystemArgs.StatusConnect)
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -392,11 +417,14 @@ namespace Rusal
 
                         Connect.Close();
                     }
+
+                    SystemArgs.PrintLog("Добавление позиции успешно завершено");
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Ошибка при добавлении данных на сервер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при получении данных с сервера");
                 return;
             }
         }
@@ -427,6 +455,7 @@ namespace Rusal
             if (!SystemArgs.StatusConnect)
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -462,6 +491,8 @@ namespace Rusal
                 GetLocalDefectIngot(Dialog, DefectLocIngot);
             }
 
+            SystemArgs.PrintLog("Получение текущих данных выбранного объекта успешно завершено");
+
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
                 String LocDefIngot = SetLocalDefectIngot(Dialog);
@@ -491,6 +522,8 @@ namespace Rusal
 
                     Connect.Close();
                 }
+
+                SystemArgs.PrintLog("Изменение параметров позиции успешно завершено");
             }
         }
 
@@ -498,7 +531,8 @@ namespace Rusal
         {
             if (!SystemArgs.StatusConnect)
             {
-                MessageBox.Show("Не удалось полдлючиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -516,6 +550,8 @@ namespace Rusal
 
                 Connect.Close();
             }
+
+            SystemArgs.PrintLog("Удаление позиции успешно завершено");
         }
 
         public static List<Position> ResultSearch(String TextSearch)
@@ -533,6 +569,8 @@ namespace Rusal
                 }
             }
 
+            SystemArgs.PrintLog("Перебор значений по заданным параметрам успешно завершен");
+
             return Result;
         }
 
@@ -541,6 +579,7 @@ namespace Rusal
             if (!SystemArgs.StatusConnect)
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -564,6 +603,8 @@ namespace Rusal
                 Connect.Close();
             }
 
+            SystemArgs.PrintLog("Добавление параметра конфигурации успешно завершено");
+
             GetArguments();
         }
 
@@ -571,7 +612,8 @@ namespace Rusal
         {
             if (!SystemArgs.StatusConnect)
             {
-                MessageBox.Show("Не удалось полдлючиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -596,6 +638,8 @@ namespace Rusal
                 Connect.Close();
             }
 
+            SystemArgs.PrintLog("Изменение параметра конфигурации успешно завершено");
+
             GetArguments();
         }
 
@@ -603,7 +647,8 @@ namespace Rusal
         {
             if (!SystemArgs.StatusConnect)
             {
-                MessageBox.Show("Не удалось полдлючиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -620,6 +665,8 @@ namespace Rusal
                 Connect.Close();
             }
 
+            SystemArgs.PrintLog("Удаление параметра конфигурации успешно завершено");
+
             GetArguments();
         }
 
@@ -628,6 +675,7 @@ namespace Rusal
             if (!SystemArgs.StatusConnect)
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
                 return;
             }
 
@@ -644,6 +692,8 @@ namespace Rusal
 
                 Connect.Close();
             }
+
+            SystemArgs.PrintLog("Обновление статуса коррекции успешно завершено");
         }
     }
 }

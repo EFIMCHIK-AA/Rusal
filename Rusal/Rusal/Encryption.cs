@@ -55,7 +55,7 @@ namespace Rusal
 
             SymmKey.Clear();
 
-            SystemArgs.PrintLog($"Шифрование пароля завершено успешно");
+            SystemArgs.PrintLog($"Шифрование пароля успешно завершено");
 
             return Convert.ToBase64String(EncryptrTextBytes);
         }
@@ -98,7 +98,7 @@ namespace Rusal
 
             SymmKey.Clear();
 
-            SystemArgs.PrintLog($"Дешифрование пароля завершено успешно");
+            SystemArgs.PrintLog($"Дешифрование пароля успешно завершено");
 
             return Encoding.UTF8.GetString(InitialTextBytes, 0, ByteCount);
         }

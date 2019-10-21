@@ -16,5 +16,10 @@ namespace Rusal
         {
             InitializeComponent();
         }
+
+        private void Report_F_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

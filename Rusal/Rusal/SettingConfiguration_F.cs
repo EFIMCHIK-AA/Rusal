@@ -37,6 +37,8 @@ namespace Rusal
 
         private void RequestStart(bool Type, String Name)
         {
+            SystemArgs.PrintLog("Запуск процедуры модификации параметра конфигурации");
+
             if (CurrentArgument is ListBrigades)
             {
                 ListBrigades Temp = Spisok_LB.Items[Spisok_LB.SelectedIndex] as ListBrigades;
@@ -44,6 +46,7 @@ namespace Rusal
                 if (Type)
                 {
                     Operations.RequestChange(Temp.ID, Name, NameTable, NameColumn);
+
                 }
                 else
                 {
@@ -156,6 +159,8 @@ namespace Rusal
             }
 
             RefreshDataSource();
+
+            SystemArgs.PrintLog("Процедуры модификации параметра конфигурации завершена");
         }
 
         private void ShowPosition(Int32 Key)
@@ -233,16 +238,20 @@ namespace Rusal
 
         private void Add_B_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуры добавления параметра конфигурации");
+
             CurrentArgument = Spisok_LB.SelectedItem;
             DescriptionArg_F Dialog = new DescriptionArg_F(CurrentArgument);
 
             Dialog.Name_L.Text = "Добавление аргумента";
-            Dialog.ID_TB.Text = "# # # # 1 # # # #";
+            Dialog.ID_TB.Text = "Генерируется автоматически";
 
             if(Dialog.ShowDialog() == DialogResult.OK)
             {
                 Operations.RequestAdd(Dialog.Value_TB.Text.Trim(), NameTable, NameColumn);
                 RefreshDataSource();
+
+                SystemArgs.PrintLog("Процедура добавления параметра конфигурации завершена");
             }
         }
 
@@ -250,6 +259,9 @@ namespace Rusal
         {
             if (MessageBox.Show("Изменение аргумента приведет к изменению всех позиций, которые ссылаются на выбранный аргумент. Продолжить?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                SystemArgs.PrintLog("Получено подтверждения на изменение параметра конфигурации");
+                SystemArgs.PrintLog("Запуск процедуры изменения параметра конфигурации");
+
                 CurrentArgument = Spisok_LB.SelectedItem;
                 DescriptionArg_F Dialog = new DescriptionArg_F(CurrentArgument);
 
@@ -261,6 +273,9 @@ namespace Rusal
                 {
                     CurrentArgument = Spisok_LB.SelectedItem;
                     RequestStart(true, Dialog.Value_TB.Text.Trim());
+
+
+                    SystemArgs.PrintLog("Процедура изменения параметра конфигурации завершена");
                 }
             }
         }
@@ -269,8 +284,13 @@ namespace Rusal
         {
             if(MessageBox.Show("Удаление аргумента приведет к удалению всех позиций, которые ссылаются на выбранный аргумент. Продолжить?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                SystemArgs.PrintLog("Получено подтверждения на удаление параметра конфигурации");
+                SystemArgs.PrintLog("Запуск процедуры удаления параметра конфигурации");
+
                 CurrentArgument = Spisok_LB.SelectedItem;
                 RequestStart(false, null);
+
+                SystemArgs.PrintLog("Процедура удаления параметра конфигурации завершена");
             }
         }
 

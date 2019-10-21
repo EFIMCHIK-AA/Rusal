@@ -27,11 +27,16 @@ namespace Rusal
                     SystemArgs.PasswordDB = Encryption.DecryptRSA(sr.ReadLine());
 
                     SystemArgs.ConnectString = $@"Server = {SystemArgs.IPDB}; Port = {SystemArgs.PortDB}; User Id = {SystemArgs.OwnerDB}; Password = {SystemArgs.PasswordDB}; Database = {SystemArgs.NameDB};";
+
+                    SystemArgs.PrintLog("Процедура проверки целостности файлов успешно завершена");
                 }
             }
             else
             {
                 MessageBox.Show("Файл Param.conf не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                SystemArgs.PrintLog("Процедура проверки целостности файлов завершена аварийно. Остановка работы программного обеспечения");
+                Application.Exit();
             }
         }
 
@@ -48,11 +53,15 @@ namespace Rusal
                     sw.WriteLine(Encryption.EncryptRSA(SystemArgs.PasswordDB));
 
                     MessageBox.Show("Параметры подключения успешно обновлены", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    SystemArgs.PrintLog("Запись параметров подлючения к БД успешно завершена");
                 }
             }
             else
             {
                 MessageBox.Show("Файл Param.conf не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                SystemArgs.PrintLog("Ошибка при записи параметров подлючения к БД");
             }
         }
 
@@ -66,10 +75,14 @@ namespace Rusal
                 }
 
                 MessageBox.Show("Путь к файлу резервной копии успешно найден и сохранен", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                SystemArgs.PrintLog("Запись системного пути резервной копии БД успешно завершена");
             }
             else
             {
                 MessageBox.Show("Файл Backup.conf не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                SystemArgs.PrintLog("Файл Backup.conf не обнаружен");
             }
         }
 
@@ -79,12 +92,17 @@ namespace Rusal
             {
                 using (StreamReader sr = new StreamReader(File.Open(BackupPath, FileMode.Open)))
                 {
+                    SystemArgs.PrintLog("Получение системного пути резервной копии БД успешно завершено");
+
                     return sr.ReadLine();
                 }
             }
             else
             {
                 MessageBox.Show("Файл Backup.conf не обнаружен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                SystemArgs.PrintLog("Файл Backup.conf не обнаружен");
+
                 return String.Empty;
             }
         }

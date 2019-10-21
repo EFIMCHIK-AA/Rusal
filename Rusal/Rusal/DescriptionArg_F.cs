@@ -59,10 +59,13 @@ namespace Rusal
                             throw;
                         }
                     }
+
+                    SystemArgs.PrintLog("Данные модификации успешно получены");
                 }
                 catch
                 {
                     MessageBox.Show(Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SystemArgs.PrintLog($"ошибка при получении параметров модификации: {Error}");
                     e.Cancel = true;
                 }
 

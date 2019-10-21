@@ -46,12 +46,14 @@ namespace Rusal
         {
             CheckParam_F Dialog = new CheckParam_F();
             Operations.StatusConnectAsync(this);
+            SystemArgs.PrintLog("Процедура проверки целостности файлов запущена...");
             Dialog.Show();
             Thread.Sleep(3500);
             Dialog.Close();
 
             if (SystemArgs.StatusConnect)
             {
+                SystemArgs.PrintLog("Подключение к БД успешно установлено");
                 Position_DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 GetAllData();
                 ShowPosition(SystemArgs.Positions);
@@ -61,6 +63,7 @@ namespace Rusal
             else
             {
                 MessageBox.Show("Не удалось подключиться к базе данных. Запуск программного обеспечения остановлен", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД. Работа приложения остановлена");
                 Application.Exit();
             }
         }
@@ -77,24 +80,30 @@ namespace Rusal
 
         private void GetAllData()
         {
+            SystemArgs.PrintLog("Инициализация процедуры получения параметров с БД");
             ProgressBar_PB.Value = 2;
 
             Operations.GetArguments();
             Operations.GetPosition();
 
             ProgressBar_PB.Value = 100;
+
+            SystemArgs.PrintLog("Процедура получения параметров с БД успешно завершена");
         }
 
         private void Exit_B_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Вы действительно хотите выйти?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                SystemArgs.PrintLog("Успешное подтверждение выхода из программного обеспечения. Остановка работы ПО");
                 Application.Exit();
             }
         }
 
         private void Search_TSB_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процеры поиска по параметрам");
+
             if (SystemArgs.StatusConnect)
             {
                 if (!String.IsNullOrEmpty(Search_TSTB.Text.Trim()))
@@ -108,23 +117,29 @@ namespace Rusal
                     if (SystemArgs.Result.Count > 0)
                     {
                         ShowPosition(SystemArgs.Result);
+                        SystemArgs.PrintLog("Отображение позиций по заданным параметрам");
                     }
                     else
                     {
                         Search_TSTB.Focus();
                         MessageBox.Show("Поиск не дал результатов", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SystemArgs.PrintLog("Количество объектов по параметрам поиска 0");
                     }
                 }
                 else
                 {
                     Search_TSTB.Focus();
                     MessageBox.Show("Для поиска необходимо ввести значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SystemArgs.PrintLog("Получено пустое значение параметра поиска");
                 }
             }
             else
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
             }
+
+            SystemArgs.PrintLog("Процеры поиска по параметрам завершена");
         }
 
         private void ResetSearch()
@@ -138,12 +153,16 @@ namespace Rusal
 
         private void Reset_TSB_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процеду сброса параметров фильтрации");
             ResetSearch();
             ShowPosition(SystemArgs.Positions);
+
+            SystemArgs.PrintLog("Процедура сброса параметров фильтрации успешно завершена");
         }
 
         private void базаДанныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуру изменения параметров БД");
             SettingDB_F Dialog = new SettingDB_F();
 
             Dialog.Name_TB.Text = SystemArgs.NameDB;
@@ -153,20 +172,23 @@ namespace Rusal
             Dialog.Password_TB.Text = SystemArgs.PasswordDB;
             Dialog.Path_TB.Text = Files.GetBackupPath();
 
+
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
-
+                SystemArgs.PrintLog("Процедура изменения параметров БД успешно завершена");
             }
         }
 
         private void конфигурацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуры изменения конфигурации ПО");
             SettingConfiguration_F Dialog = new SettingConfiguration_F();
 
             if(Dialog.ShowDialog() == DialogResult.OK)
             {
                 Operations.GetPosition();
                 ShowPosition(SystemArgs.Positions);
+                SystemArgs.PrintLog("Процедура изменения конфигурации ПО успешно завершена");
             }
         }
 
@@ -195,26 +217,32 @@ namespace Rusal
 
         private void обычныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедура обычного анализа");
+
             BriefAnalysis_F Dialog = new BriefAnalysis_F();
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
-
+                SystemArgs.PrintLog("Процедура обычного анализа успешно завершена");
             }
         }
 
         private void расширенныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуры расширенного анализа");
+
             FullAnalysis_F Dialog = new FullAnalysis_F();
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
-
+                SystemArgs.PrintLog("Процедура расширенного анализа успешно завершена");
             }
         }
 
         private void заПериодToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуры построение отчета");
+
             if (SystemArgs.StatusConnect)
             {
                 Report_F Dialog = new Report_F();
@@ -222,11 +250,14 @@ namespace Rusal
                 if (Dialog.ShowDialog() == DialogResult.OK)
                 {
                     Reports.ByDate(Dialog.First_MC.SelectionStart, Dialog.Second_MC.SelectionStart);
+
+                    SystemArgs.PrintLog("Процедура построения отчета успешно завершена");
                 }
             }
             else
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к базе данных");
             }
         }
 
@@ -299,6 +330,8 @@ namespace Rusal
 
         private void DefectLocation_B_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуры демонстрации места дефекта на слитке");
+
             DefectLocation Dialog = new DefectLocation();
 
             if(SystemArgs.View.Count > 0)
@@ -330,12 +363,14 @@ namespace Rusal
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
-
+                SystemArgs.PrintLog("Процедуры демонстрации места дефекта на слитке успешна завершена");
             }
         }
 
         private void CreatePosition()
         {
+            SystemArgs.PrintLog("Запуск процедуры добавления позиции");
+
             if (SystemArgs.StatusConnect)
             {
                 Operations.AddPosition();
@@ -347,7 +382,10 @@ namespace Rusal
             else
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к базе данных");
             }
+
+            SystemArgs.PrintLog("Процедура добавления позиции завершена");
         }
 
         private void Add_TSB_Click(object sender, EventArgs e)
@@ -357,6 +395,8 @@ namespace Rusal
 
         private void ChangePosition()
         {
+            SystemArgs.PrintLog("Запуск процедуры изменения позиции");
+
             if (SystemArgs.StatusConnect)
             {
                 if (Position_DGV.CurrentCell != null)
@@ -370,7 +410,10 @@ namespace Rusal
             else
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к базе данных");
             }
+
+            SystemArgs.PrintLog("Процедура изменения позиции завершена");
         }
 
         private void Change_TSB_Click(object sender, EventArgs e)
@@ -380,6 +423,8 @@ namespace Rusal
 
         private void DeletePosition()
         {
+            SystemArgs.PrintLog("Запуск процедуры удаления позиции");
+
             if (SystemArgs.StatusConnect)
             {
                 if (Position_DGV.CurrentCell != null)
@@ -398,7 +443,10 @@ namespace Rusal
             else
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к базе данных");
             }
+
+            SystemArgs.PrintLog("Процедура удаления позиции завершена");
 
             EnableField();
         }

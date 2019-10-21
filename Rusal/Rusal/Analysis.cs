@@ -24,6 +24,7 @@ namespace Rusal
             public double SumWeight;
             public double SumParameter;
         }
+
         private static List<WrapFullData> dataFullExports;
         private static List<WrapBriefData> dataBriefExports;
         private static CategoryAxis Axis_X;
@@ -31,11 +32,13 @@ namespace Rusal
         private static ColumnSeries BriefDiagramm;
         private static LineSeries FullLineFirst;
         private static LineSeries FullLineSecond;
+
         private static string Title;
         private static string TitleL1;
         private static string TitleL2;
         private static string TitleX;
         private static string TitleY;
+
         public static void DisposeField()
         {
             dataBriefExports = null;
@@ -51,6 +54,7 @@ namespace Rusal
             TitleX = null;
             TitleY = null;
         }
+
         private static void SetParamDiagramm(PlotView pv,DateTime start,DateTime finish,bool FirstDiagramm)
         {
             FullLineFirst = new LineSeries()
@@ -141,6 +145,7 @@ namespace Rusal
                 }
             }
         }
+
         //Метод создания гистограммы и добавления данных в неё
         private static void SetParamBriefDiagramm(PlotView pv)
         {
@@ -193,6 +198,7 @@ namespace Rusal
                 Axis_X.Labels.Add(dataBriefExports[i].Name);
             }
         }
+
         private static void SetBriefDataGridView(DataGridView DGV)
         {
             DGV.DataSource = dataBriefExports;
@@ -202,6 +208,7 @@ namespace Rusal
 
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
+
         private static void SetFullDataGridView(DataGridView DGV)
         {
             DGV.DataSource = dataFullExports;
@@ -214,6 +221,7 @@ namespace Rusal
 
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
+
         public static void BriefDiametrWeight(PlotView pv,DateTime datestart, DateTime datefinish,DataGridView DGV)
         {
             dataBriefExports = new List<WrapBriefData>();
@@ -237,6 +245,7 @@ namespace Rusal
             SetBriefDataGridView(DGV);
 
         }
+
         public static void BriefBrigadeWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
             dataBriefExports = new List<WrapBriefData>();
@@ -259,6 +268,7 @@ namespace Rusal
 
             SetBriefDataGridView(DGV);
         }
+
         public static void BriefNumTSWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
             dataBriefExports = new List<WrapBriefData>();

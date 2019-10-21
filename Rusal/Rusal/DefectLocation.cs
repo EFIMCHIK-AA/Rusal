@@ -16,5 +16,10 @@ namespace Rusal
         {
             InitializeComponent();
         }
+
+        private void DefectLocation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

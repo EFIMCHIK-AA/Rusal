@@ -33,15 +33,19 @@ namespace Rusal
                 {
                     case 0: //Бригады
                         Analysis.FullBrigadeWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        SystemArgs.PrintLog("Выполнение анализа по параметрам: Бригады");
                         break;
                     case 1: //Диаметр
                         Analysis.FullDiameterWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        SystemArgs.PrintLog("Выполнение анализа по параметрам: Диаметр");
                         break;
                     case 2://Описание
                         Analysis.FullDiscriptionWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        SystemArgs.PrintLog("Выполнение анализа по параметрам: Описание");
                         break;
                     case 3://Номер ТС
                         Analysis.FullNumTSWeight(FirstDate, SecondDate, Param, plotView1, plotView2, dataGridView1);
+                        SystemArgs.PrintLog("Выполнение анализа по параметрам: Номер ТС");
                         break;
                 }
 
@@ -73,8 +77,9 @@ namespace Rusal
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуры получения анализа");
             GetAnalisys(TypeArgument_CB.SelectedIndex);
-
+            SystemArgs.PrintLog("Процедура получения анализа завершена");
         }
 
         private void FullAnalysis_F_Load(object sender, EventArgs e)
@@ -91,7 +96,9 @@ namespace Rusal
 
         private void Export_B_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog("Запуск процедуры экспорта данных анализа");
             Analysis.ExcelFullExport(FirstDate, SecondDate);
+            SystemArgs.PrintLog("Процедуры экспорта данных анализа завершена");
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -108,6 +115,7 @@ namespace Rusal
         private void FullAnalysis_F_FormClosing(object sender, FormClosingEventArgs e)
         {
             Analysis.DisposeField();
+            SystemArgs.PrintLog("Очистка данных после получения анализа успешно завершена");
         }
     }
 }

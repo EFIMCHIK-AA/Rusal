@@ -155,10 +155,13 @@ namespace Rusal
                         Error = "Поле коррекции должно содержать значение";
                         throw new Exception(Error);
                     }
+
+                    SystemArgs.PrintLog("Данные модификации позиции успешно получены");
                 }
                 catch(Exception)
                 {
                     MessageBox.Show(Error, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SystemArgs.PrintLog($"Ошибка получения параметров модификации позиции: {Error}");
                     e.Cancel = true;
                 }
             }
