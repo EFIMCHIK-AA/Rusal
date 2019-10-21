@@ -97,7 +97,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(532, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(532, 438);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -189,7 +189,7 @@
             this.plotView2.Location = new System.Drawing.Point(0, 0);
             this.plotView2.Name = "plotView2";
             this.plotView2.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.plotView2.Size = new System.Drawing.Size(585, 352);
+            this.plotView2.Size = new System.Drawing.Size(585, 353);
             this.plotView2.TabIndex = 13;
             this.plotView2.Text = "plotView2";
             this.plotView2.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
@@ -210,7 +210,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1143, 712);
+            this.splitContainer1.Size = new System.Drawing.Size(1143, 713);
             this.splitContainer1.SplitterDistance = 540;
             this.splitContainer1.TabIndex = 63;
             // 
@@ -230,7 +230,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(538, 710);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(538, 711);
             this.tableLayoutPanel2.TabIndex = 63;
             // 
             // tableLayoutPanel3
@@ -481,7 +481,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(597, 710);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(597, 711);
             this.tableLayoutPanel1.TabIndex = 63;
             // 
             // label13
@@ -515,7 +515,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.plotView2);
-            this.splitContainer2.Size = new System.Drawing.Size(587, 659);
+            this.splitContainer2.Size = new System.Drawing.Size(587, 660);
             this.splitContainer2.SplitterDistance = 301;
             this.splitContainer2.TabIndex = 65;
             // 
@@ -524,7 +524,7 @@
             this.AcceptButton = this.Exit_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 712);
+            this.ClientSize = new System.Drawing.Size(1143, 713);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimizeBox = false;
@@ -533,6 +533,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FullAnalysis_F";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FullAnalysis_F_FormClosing);
             this.Load += new System.EventHandler(this.FullAnalysis_F_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);

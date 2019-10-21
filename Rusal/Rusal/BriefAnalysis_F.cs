@@ -90,5 +90,10 @@ namespace Rusal
         {
             DGV_Brief.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
         }
+
+        private void BriefAnalysis_F_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Analysis.DisposeField();
+        }
     }
 }

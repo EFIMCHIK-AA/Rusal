@@ -409,6 +409,7 @@
             this.Name = "BriefAnalysis_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Стандартный анализ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BriefAnalysis_F_FormClosing);
             this.Load += new System.EventHandler(this.BriefAnalysis_F_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Brief)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);

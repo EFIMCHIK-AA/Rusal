@@ -36,6 +36,21 @@ namespace Rusal
         private static string TitleL2;
         private static string TitleX;
         private static string TitleY;
+        public static void DisposeField()
+        {
+            dataBriefExports = null;
+            dataFullExports = null;
+            Axis_X = null;
+            Axis_Y = null;
+            BriefDiagramm = null;
+            FullLineFirst = null;
+            FullLineSecond = null;
+            Title = null;
+            TitleL1 = null;
+            TitleL2 = null;
+            TitleX = null;
+            TitleY = null;
+        }
         private static void SetParamDiagramm(PlotView pv,DateTime start,DateTime finish,bool FirstDiagramm)
         {
             FullLineFirst = new LineSeries()
@@ -190,6 +205,12 @@ namespace Rusal
         private static void SetFullDataGridView(DataGridView DGV)
         {
             DGV.DataSource = dataFullExports;
+            DGV.Columns[0].HeaderText = "Дата";
+            DGV.Columns[1].HeaderText = "Сумма брака, тонн";
+            DGV.Columns[2].HeaderText = TitleL2;
+            DGV.Columns[3].HeaderText = TitleL1;
+            DGV.Columns[4].HeaderText = TitleL2;
+
 
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }

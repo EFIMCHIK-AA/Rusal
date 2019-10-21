@@ -104,5 +104,10 @@ namespace Rusal
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
         }
+
+        private void FullAnalysis_F_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Analysis.DisposeField();
+        }
     }
 }

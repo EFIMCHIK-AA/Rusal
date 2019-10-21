@@ -189,11 +189,6 @@ C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.Report_F.resou
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingConfiguration_F.resources
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingDB_F.resources
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateResource.cache
-C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.exe
-C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.pdb
-C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe.config
-C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Rusal.exe
-C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Rusal.pdb
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\EPPlus.dll
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.dll
@@ -221,3 +216,9 @@ C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Ан
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.exe
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.CheckParam_F.resources
+C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.exe.config
+C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.exe
+C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.pdb
+C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.CheckParam_F.resources
+C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.exe
+C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.pdb
