@@ -16,6 +16,7 @@ namespace Rusal
     {
         public static void ByDate(DateTime DateStart, DateTime DateFinish)
         {
+            SystemArgs.PrintLog("Началось формирование отчета");
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.DefaultExt = "";
             sfd.Title = "Сохранение отчета";
@@ -25,6 +26,7 @@ namespace Rusal
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
+                SystemArgs.PrintLog("Выбрано место сохранения отчета");
                 if (!String.IsNullOrEmpty(sfd.FileName))
                 {
                     using (ExcelPackage excelPackage = new ExcelPackage())
@@ -112,13 +114,22 @@ namespace Rusal
                         var cellFont = allCells.Style.Font;
                         cellFont.SetFromFont(new Font("Times New Roman", 14));
                         //Сохранение
-                        FileInfo fi = new FileInfo(sfd.FileName);
-                        excelPackage.SaveAs(fi);
+                        try
+                        {
+                            FileInfo fi = new FileInfo(sfd.FileName);
+                            excelPackage.SaveAs(fi);
+                        }
+                        catch
+                        {
+                            SystemArgs.PrintLog("Директория для сохранения отчета была утеряна");
+                            MessageBox.Show("Невозможно найти директорию для сохранения отчета", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
 
                 }
                 else
                 {
+                    SystemArgs.PrintLog("Место сохранения отчета равно null");
                     MessageBox.Show("Необходимо ввести названия файла", "Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }

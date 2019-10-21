@@ -53,6 +53,7 @@ namespace Rusal
             TitleL2 = null;
             TitleX = null;
             TitleY = null;
+            SystemArgs.PrintLog("Были очищены все поля класса анализа");
         }
 
         private static void SetParamDiagramm(PlotView pv,DateTime start,DateTime finish,bool FirstDiagramm)
@@ -144,6 +145,7 @@ namespace Rusal
                     FullLineSecond.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].AccumulationDiameter));
                 }
             }
+            SystemArgs.PrintLog("Создание диаграммы расширенного отчета завершено успешно");
         }
 
         //Метод создания гистограммы и добавления данных в неё
@@ -197,6 +199,7 @@ namespace Rusal
                 BriefDiagramm.Items.Add(new ColumnItem(dataBriefExports[i].Value));
                 Axis_X.Labels.Add(dataBriefExports[i].Name);
             }
+            SystemArgs.PrintLog("Создание диаграммы краткого отчета завершено успешно");
         }
 
         private static void SetBriefDataGridView(DataGridView DGV)
@@ -207,6 +210,7 @@ namespace Rusal
             DGV.Columns[1].HeaderText = TitleY;
 
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            SystemArgs.PrintLog("Заполнение таблицы краткого отчета завершено успешно");
         }
 
         private static void SetFullDataGridView(DataGridView DGV)
@@ -220,6 +224,7 @@ namespace Rusal
 
 
             DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            SystemArgs.PrintLog("Заполнение таблицы расширенного отчета завершено успешно");
         }
 
         public static void BriefDiametrWeight(PlotView pv,DateTime datestart, DateTime datefinish,DataGridView DGV)
@@ -243,6 +248,7 @@ namespace Rusal
             SetParamBriefDiagramm(pv);
 
             SetBriefDataGridView(DGV);
+            SystemArgs.PrintLog("Краткий анализ диаметр вес выполнен");
 
         }
 
@@ -267,6 +273,7 @@ namespace Rusal
             SetParamBriefDiagramm(pv);
 
             SetBriefDataGridView(DGV);
+            SystemArgs.PrintLog("Краткий анализ бригада вес выполнен");
         }
 
         public static void BriefNumTSWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
@@ -290,6 +297,7 @@ namespace Rusal
             SetParamBriefDiagramm(pv);
 
             SetBriefDataGridView(DGV);
+            SystemArgs.PrintLog("Краткий анализ номер ТС вес выполнен");
         }
         public static void BriefDescriptionWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
@@ -312,6 +320,7 @@ namespace Rusal
             SetParamBriefDiagramm(pv);
 
             SetBriefDataGridView(DGV);
+            SystemArgs.PrintLog("Краткий анализ описание вес выполнен");
         }
         public static void BriefBrigadeCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
@@ -334,6 +343,7 @@ namespace Rusal
             SetParamBriefDiagramm(pv);
 
             SetBriefDataGridView(DGV);
+            SystemArgs.PrintLog("Краткий анализ бригада количество выполнен");
         }
         public static void BriefNumTSCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
@@ -356,6 +366,7 @@ namespace Rusal
             SetParamBriefDiagramm(pv);
 
             SetBriefDataGridView(DGV);
+            SystemArgs.PrintLog("Краткий анализ номер ТС количество выполнен");
         }
         public static void BriefDescriptionCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
         {
@@ -378,10 +389,12 @@ namespace Rusal
             SetParamBriefDiagramm(pv);
 
             SetBriefDataGridView(DGV);
+            SystemArgs.PrintLog("Краткий анализ описание количество выполнен");
         }
         private static IEnumerable<IGrouping<DateTime,Position>> FullDataSelect(DateTime datestart, DateTime datefinish)
         {
             var Group = SystemArgs.Positions.Where(gp => gp.DateFormation >= datestart && gp.DateFormation <= datefinish).GroupBy(gp => gp.DateFormation).OrderBy(gp => gp.Key);
+            SystemArgs.PrintLog("Группировка для расширенного анализа выполнена успешно");
             return Group;
         }
         private static void FullDataExportToList(IEnumerable<FullGroup> Group1)
@@ -408,6 +421,7 @@ namespace Rusal
             TitleL1 = "Сумма брака, тонн";
             TitleL2 = "Накопление брака, тонн";
             TitleY = "Брак, тонн";
+            SystemArgs.PrintLog("Экспорт данных в лист выполнен успешно");
 
         }
         public static void FullDiameterWeight(DateTime datestart, DateTime datefinish, string Diameter,PlotView pv1,PlotView pv2,DataGridView DGV)
@@ -427,6 +441,7 @@ namespace Rusal
             SetParamDiagramm(pv2, datestart, datefinish,false);
 
             SetFullDataGridView(DGV);
+            SystemArgs.PrintLog("Расширенный анализ диаметр вес выполнен успешно");
 
         }
         public static void FullDiscriptionWeight(DateTime datestart, DateTime datefinish, string Discription, PlotView pv1, PlotView pv2, DataGridView DGV)
@@ -446,6 +461,7 @@ namespace Rusal
             SetParamDiagramm(pv2, datestart, datefinish, false);
 
             SetFullDataGridView(DGV);
+            SystemArgs.PrintLog("Расширенный анализ описание вес выполнен успешно");
 
         }
         public static void FullNumTSWeight(DateTime datestart, DateTime datefinish, string NumTS, PlotView pv1, PlotView pv2, DataGridView DGV)
@@ -465,6 +481,7 @@ namespace Rusal
             SetParamDiagramm(pv2, datestart, datefinish, false);
 
             SetFullDataGridView(DGV);
+            SystemArgs.PrintLog("Расширенный анализ номер ТС вес выполнен успешно");
 
         }
         public static void FullBrigadeWeight(DateTime datestart, DateTime datefinish, string Brigade, PlotView pv1, PlotView pv2, DataGridView DGV)
@@ -484,12 +501,14 @@ namespace Rusal
             SetParamDiagramm(pv2, datestart, datefinish, false);
 
             SetFullDataGridView(DGV);
+            SystemArgs.PrintLog("Расширенный анализ бригада вес выполнен успешно");
 
         }
         public static void ExcelFullExport(DateTime datestart, DateTime datefinish)
         {
             if (dataFullExports!= null)
             {
+                SystemArgs.PrintLog("Началось формирование выгрузки расширенного анализа");
                 SaveFileDialog sfd = new SaveFileDialog()
                 {
                     DefaultExt = "",
@@ -595,6 +614,7 @@ namespace Rusal
             }
             else
             {
+                SystemArgs.PrintLog("Не смогло начатся формирование выгрузки расширенного отчета лист равен null");
                 MessageBox.Show("Для экспорта необходимо сформировать анализ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -602,6 +622,7 @@ namespace Rusal
         {
             if (dataBriefExports != null)
             {
+                SystemArgs.PrintLog("Началось формирование выгрузки краткого анализа");
                 SaveFileDialog sfd = new SaveFileDialog()
                 {
                     DefaultExt = "",
@@ -686,6 +707,7 @@ namespace Rusal
             }
             else
             {
+                SystemArgs.PrintLog("Не смогло начатся формирование выгрузки краткого отчета лист равен null");
                 MessageBox.Show("Для экспорта необходимо сформировать анализ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
