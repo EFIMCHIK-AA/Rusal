@@ -110,12 +110,12 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
             this.StatusCorrection_TB = new System.Windows.Forms.TextBox();
+            this.ChangeStatus_B = new System.Windows.Forms.Button();
             this.DefectLocation_B = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.Reason_TB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
-            this.ChangeStatus_B = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
@@ -140,7 +140,7 @@
             this.panel6.Controls.Add(this.tableLayoutPanel1);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1779, 2);
             this.panel6.TabIndex = 42;
@@ -150,7 +150,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -161,7 +161,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.DimGray;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(4, 862);
             this.panel8.TabIndex = 40;
@@ -377,7 +377,7 @@
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 860);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -391,7 +391,7 @@
             this.flowLayoutPanel3.Controls.Add(this.ProgressBar_PB);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(979, 4);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(588, 33);
             this.flowLayoutPanel3.TabIndex = 44;
@@ -414,7 +414,7 @@
             this.ProgressBar_PB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.ProgressBar_PB.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ProgressBar_PB.Location = new System.Drawing.Point(103, 4);
-            this.ProgressBar_PB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProgressBar_PB.Margin = new System.Windows.Forms.Padding(4);
             this.ProgressBar_PB.Name = "ProgressBar_PB";
             this.ProgressBar_PB.Size = new System.Drawing.Size(481, 25);
             this.ProgressBar_PB.TabIndex = 49;
@@ -426,7 +426,7 @@
             this.flowLayoutPanel2.Controls.Add(this.CountPos_TB);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(265, 7);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(256, 30);
             this.flowLayoutPanel2.TabIndex = 44;
@@ -449,7 +449,7 @@
             this.CountPos_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(244)))));
             this.CountPos_TB.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CountPos_TB.Location = new System.Drawing.Point(172, 4);
-            this.CountPos_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CountPos_TB.Margin = new System.Windows.Forms.Padding(4);
             this.CountPos_TB.Name = "CountPos_TB";
             this.CountPos_TB.ReadOnly = true;
             this.CountPos_TB.Size = new System.Drawing.Size(80, 22);
@@ -464,7 +464,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 7);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(253, 30);
             this.flowLayoutPanel1.TabIndex = 44;
@@ -474,7 +474,7 @@
             // 
             this.ConnectDB_TB.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ConnectDB_TB.Location = new System.Drawing.Point(101, 4);
-            this.ConnectDB_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ConnectDB_TB.Margin = new System.Windows.Forms.Padding(4);
             this.ConnectDB_TB.Name = "ConnectDB_TB";
             this.ConnectDB_TB.ReadOnly = true;
             this.ConnectDB_TB.Size = new System.Drawing.Size(148, 22);
@@ -658,7 +658,7 @@
             this.Left_TLP.Controls.Add(this.Position_DGV, 0, 1);
             this.Left_TLP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Left_TLP.Location = new System.Drawing.Point(0, 0);
-            this.Left_TLP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Left_TLP.Margin = new System.Windows.Forms.Padding(4);
             this.Left_TLP.Name = "Left_TLP";
             this.Left_TLP.RowCount = 2;
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -683,7 +683,7 @@
             this.tableLayoutPanel4.Controls.Add(this.Correction_TB, 0, 8);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 10;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -777,7 +777,7 @@
             this.Diameter_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Diameter_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Diameter_TB.Location = new System.Drawing.Point(597, 132);
-            this.Diameter_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Diameter_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Diameter_TB.Name = "Diameter_TB";
             this.Diameter_TB.ReadOnly = true;
             this.Diameter_TB.Size = new System.Drawing.Size(319, 24);
@@ -790,7 +790,7 @@
             this.Weight_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Weight_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Weight_TB.Location = new System.Drawing.Point(597, 100);
-            this.Weight_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Weight_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Weight_TB.Name = "Weight_TB";
             this.Weight_TB.ReadOnly = true;
             this.Weight_TB.Size = new System.Drawing.Size(319, 24);
@@ -803,7 +803,7 @@
             this.Count_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Count_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Count_TB.Location = new System.Drawing.Point(597, 68);
-            this.Count_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Count_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Count_TB.Name = "Count_TB";
             this.Count_TB.ReadOnly = true;
             this.Count_TB.Size = new System.Drawing.Size(319, 24);
@@ -816,7 +816,7 @@
             this.Description_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Description_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Description_TB.Location = new System.Drawing.Point(597, 4);
-            this.Description_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Description_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Description_TB.Name = "Description_TB";
             this.Description_TB.ReadOnly = true;
             this.Description_TB.Size = new System.Drawing.Size(319, 24);
@@ -859,7 +859,7 @@
             this.Type_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Type_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Type_TB.Location = new System.Drawing.Point(597, 36);
-            this.Type_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Type_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Type_TB.Name = "Type_TB";
             this.Type_TB.ReadOnly = true;
             this.Type_TB.Size = new System.Drawing.Size(319, 24);
@@ -917,7 +917,7 @@
             this.Date_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Date_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Date_TB.Location = new System.Drawing.Point(151, 4);
-            this.Date_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Date_TB.Name = "Date_TB";
             this.Date_TB.ReadOnly = true;
             this.Date_TB.Size = new System.Drawing.Size(318, 24);
@@ -989,7 +989,7 @@
             this.NumTC_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NumTC_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NumTC_TB.Location = new System.Drawing.Point(151, 132);
-            this.NumTC_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumTC_TB.Margin = new System.Windows.Forms.Padding(4);
             this.NumTC_TB.Name = "NumTC_TB";
             this.NumTC_TB.ReadOnly = true;
             this.NumTC_TB.Size = new System.Drawing.Size(318, 24);
@@ -1002,7 +1002,7 @@
             this.NumBrigade_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NumBrigade_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NumBrigade_TB.Location = new System.Drawing.Point(151, 36);
-            this.NumBrigade_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumBrigade_TB.Margin = new System.Windows.Forms.Padding(4);
             this.NumBrigade_TB.Name = "NumBrigade_TB";
             this.NumBrigade_TB.ReadOnly = true;
             this.NumBrigade_TB.Size = new System.Drawing.Size(318, 24);
@@ -1015,7 +1015,7 @@
             this.Address_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Address_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Address_TB.Location = new System.Drawing.Point(151, 164);
-            this.Address_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Address_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Address_TB.Name = "Address_TB";
             this.Address_TB.ReadOnly = true;
             this.Address_TB.Size = new System.Drawing.Size(318, 24);
@@ -1028,7 +1028,7 @@
             this.NumSmeny_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NumSmeny_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NumSmeny_TB.Location = new System.Drawing.Point(151, 68);
-            this.NumSmeny_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumSmeny_TB.Margin = new System.Windows.Forms.Padding(4);
             this.NumSmeny_TB.Name = "NumSmeny_TB";
             this.NumSmeny_TB.ReadOnly = true;
             this.NumSmeny_TB.Size = new System.Drawing.Size(318, 24);
@@ -1041,7 +1041,7 @@
             this.Melt_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Melt_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Melt_TB.Location = new System.Drawing.Point(151, 100);
-            this.Melt_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Melt_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Melt_TB.Name = "Melt_TB";
             this.Melt_TB.ReadOnly = true;
             this.Melt_TB.Size = new System.Drawing.Size(318, 24);
@@ -1101,7 +1101,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 579F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 581F));
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.StatusCorrection_TB, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ChangeStatus_B, 2, 0);
@@ -1131,12 +1131,26 @@
             this.StatusCorrection_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.StatusCorrection_TB.Dock = System.Windows.Forms.DockStyle.Left;
             this.StatusCorrection_TB.Location = new System.Drawing.Point(177, 4);
-            this.StatusCorrection_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StatusCorrection_TB.Margin = new System.Windows.Forms.Padding(4);
             this.StatusCorrection_TB.Name = "StatusCorrection_TB";
             this.StatusCorrection_TB.ReadOnly = true;
             this.StatusCorrection_TB.Size = new System.Drawing.Size(164, 22);
             this.StatusCorrection_TB.TabIndex = 231;
             this.StatusCorrection_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ChangeStatus_B
+            // 
+            this.ChangeStatus_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.ChangeStatus_B.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ChangeStatus_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangeStatus_B.Location = new System.Drawing.Point(349, 0);
+            this.ChangeStatus_B.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.ChangeStatus_B.Name = "ChangeStatus_B";
+            this.ChangeStatus_B.Size = new System.Drawing.Size(200, 31);
+            this.ChangeStatus_B.TabIndex = 232;
+            this.ChangeStatus_B.Text = "Изменить статус";
+            this.ChangeStatus_B.UseVisualStyleBackColor = false;
+            this.ChangeStatus_B.Click += new System.EventHandler(this.ChangeStatus_B_Click);
             // 
             // DefectLocation_B
             // 
@@ -1212,20 +1226,6 @@
             this.Correction_TB.Size = new System.Drawing.Size(920, 114);
             this.Correction_TB.TabIndex = 275;
             // 
-            // ChangeStatus_B
-            // 
-            this.ChangeStatus_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.ChangeStatus_B.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ChangeStatus_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeStatus_B.Location = new System.Drawing.Point(349, 0);
-            this.ChangeStatus_B.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.ChangeStatus_B.Name = "ChangeStatus_B";
-            this.ChangeStatus_B.Size = new System.Drawing.Size(200, 31);
-            this.ChangeStatus_B.TabIndex = 232;
-            this.ChangeStatus_B.Text = "Изменить статус";
-            this.ChangeStatus_B.UseVisualStyleBackColor = false;
-            this.ChangeStatus_B.Click += new System.EventHandler(this.ChangeStatus_B_Click);
-            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1239,7 +1239,7 @@
             this.Controls.Add(this.panel6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu_MS;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1586, 938);
             this.Name = "Main_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

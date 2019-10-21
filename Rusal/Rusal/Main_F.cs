@@ -29,6 +29,7 @@ namespace Rusal
                 изменитьToolStripMenuItem.Enabled = false;
                 удалитьToolStripMenuItem.Enabled = false;
                 DefectLocation_B.Enabled = false;
+                ChangeStatus_B.Enabled = false;
             }
             else
             {
@@ -37,19 +38,16 @@ namespace Rusal
                 изменитьToolStripMenuItem.Enabled = true;
                 удалитьToolStripMenuItem.Enabled = true;
                 DefectLocation_B.Enabled = true;
+                ChangeStatus_B.Enabled = true;
             }
         }
 
         private void Main_F_Load(object sender, EventArgs e)
         {
             CheckParam_F Dialog = new CheckParam_F();
-
             Operations.StatusConnectAsync(this);
-
             Dialog.Show();
-
             Thread.Sleep(3500);
-
             Dialog.Close();
 
             if (SystemArgs.StatusConnect)
@@ -249,7 +247,48 @@ namespace Rusal
 
         private void Position_DGV_SelectionChanged(object sender, EventArgs e)
         {
-            
+            EnableField();
+
+            if (Position_DGV.CurrentCell == null)
+            {
+                return;
+            }
+
+            if (Position_DGV.CurrentCell.RowIndex > SystemArgs.View.Count - 1)
+            {
+                return;
+            }
+
+            Position_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
+
+            Date_TB.Text = Temp.DateFormation.ToShortDateString();
+            NumBrigade_TB.Text = Temp.NumBrigade.Name;
+            NumSmeny_TB.Text = Temp.NumSmeny.Name;
+            Melt_TB.Text = Temp.NumMelt;
+            NumTC_TB.Text = Temp.NumTS.Name;
+            Address_TB.Text = Temp.Address;
+            Description_TB.Text = Temp.Description.Name;
+            Type_TB.Text = Temp.Defect.Name;
+            Count_TB.Text = Temp.Count.ToString();
+            Weight_TB.Text = Temp.Weight.ToString();
+            Diameter_TB.Text = Temp.Diameter.Name.ToString();
+            Reason_TB.Text = Temp.Reason;
+            Correction_TB.Text = Temp.Correction;
+            StatusCorrection_TB.Text = Temp.ProgressMark.Name.ToString();
+            DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
+
+            if (Temp.ProgressMark.Name == "Выполнено")
+            {
+                StatusCorrection_TB.BackColor = Color.FromArgb(6, 176, 37);
+                ChangeStatus_B.Text = "Отменить";
+            }
+            else
+            {
+                StatusCorrection_TB.BackColor = Color.FromArgb(255, 144, 0);
+                ChangeStatus_B.Text = "Подтвердить";
+            }
         }
 
         private void Position_DGV_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
@@ -360,6 +399,8 @@ namespace Rusal
             {
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            EnableField();
         }
 
         private void Delete_TSB_Click(object sender, EventArgs e)
@@ -371,49 +412,34 @@ namespace Rusal
         {
             if(MessageBox.Show("Вы действительно хотите изменить статус выполнения корректирующего действия?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
 
+                if(Temp.ProgressMark.Name == "Не выполнено")
+                {
+                    Operations.UpdateStatusCorrection(Temp.ID, "Выполнено");
+                    SystemArgs.Positions.Remove(Temp);
+                    Temp.ProgressMark.Name = "Выполнено";
+                    SystemArgs.Positions.Add(Temp);
+                }
+                else if(Temp.ProgressMark.Name == "Выполнено")
+                {
+                    Operations.UpdateStatusCorrection(Temp.ID, "Не выполнено");
+                    SystemArgs.Positions.Remove(Temp);
+                    Temp.ProgressMark.Name = "Не выполнено";
+                    SystemArgs.Positions.Add(Temp);
+                }
+                else
+                {
+                    MessageBox.Show("Произошла ошибка при попытке обновления статуса. Пожалуйста воспользуйтесь функцией изменения позиции", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
+            ShowPosition(SystemArgs.Positions);
         }
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            EnableField();
-
-            if (Position_DGV.CurrentCell.RowIndex > SystemArgs.View.Count - 1)
-            {
-                return;
-            }
-
-            Position_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
-
-            Date_TB.Text = Temp.DateFormation.ToShortDateString();
-            NumBrigade_TB.Text = Temp.NumBrigade.Name;
-            NumSmeny_TB.Text = Temp.NumSmeny.Name;
-            Melt_TB.Text = Temp.NumMelt;
-            NumTC_TB.Text = Temp.NumTS.Name;
-            Address_TB.Text = Temp.Address;
-            Description_TB.Text = Temp.Description.Name;
-            Type_TB.Text = Temp.Defect.Name;
-            Count_TB.Text = Temp.Count.ToString();
-            Weight_TB.Text = Temp.Weight.ToString();
-            Diameter_TB.Text = Temp.Diameter.Name.ToString();
-            Reason_TB.Text = Temp.Reason;
-            Correction_TB.Text = Temp.Correction;
-            StatusCorrection_TB.Text = Temp.ProgressMark.Name.ToString();
-            DefectLocProduction_TB.Text = Temp.DefectLocProduction.Name;
-
-            if (Temp.ProgressMark.Name == "Выполнено")
-            {
-                StatusCorrection_TB.BackColor = Color.FromArgb(6, 176, 37);
-                ChangeStatus_B.Text = "Отменить";
-            }
-            else
-            {
-                StatusCorrection_TB.BackColor = Color.FromArgb(255, 144, 0);
-                ChangeStatus_B.Text = "Подтвердить";
-            }
+            
         }
     }
 }

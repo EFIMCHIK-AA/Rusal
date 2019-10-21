@@ -622,5 +622,28 @@ namespace Rusal
 
             GetArguments();
         }
+
+        public static void UpdateStatusCorrection(Int64 PositionID, String NameStatus)
+        {
+            if (!SystemArgs.StatusConnect)
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
+            {
+                Connect.Open();
+
+                using (var Command = new NpgsqlCommand($"UPDATE public.\"Ingot\"" +
+                                                       $"SET \"ProgressMark\" = (SELECT \"ID\" FROM public.\"ProgressMark\" WHERE \"N_ProgressMark\" = '{NameStatus}')" +
+                                                       $"WHERE \"ID\" = {PositionID};", Connect))
+                {
+                    Command.ExecuteNonQuery();
+                }
+
+                Connect.Close();
+            }
+        }
     }
 }
