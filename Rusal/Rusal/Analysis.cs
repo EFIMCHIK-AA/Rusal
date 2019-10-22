@@ -136,6 +136,7 @@ namespace Rusal
                     FullLineFirst.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].SumWeight));
                     FullLineSecond.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].AccumulationWeight));
                 }
+                SystemArgs.PrintLog("Создание первой диаграммы расширенного отчета завершено успешно");
             }
             else
             {
@@ -144,8 +145,8 @@ namespace Rusal
                     FullLineFirst.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].DiameterWeight));
                     FullLineSecond.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dataFullExports[i].DateFormation), dataFullExports[i].AccumulationDiameter));
                 }
+                SystemArgs.PrintLog("Создание второй диаграммы расширенного отчета завершено успешно");
             }
-            SystemArgs.PrintLog("Создание диаграммы расширенного отчета завершено успешно");
         }
 
         //Метод создания гистограммы и добавления данных в неё
@@ -608,6 +609,7 @@ namespace Rusal
                     }
                     else
                     {
+                        SystemArgs.PrintLog("Место сохранения отчета равно null");
                         MessageBox.Show("Необходимо ввести названия файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -701,6 +703,7 @@ namespace Rusal
                     }
                     else
                     {
+                        SystemArgs.PrintLog("Место сохранения отчета равно null");
                         MessageBox.Show("Необходимо ввести названия файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
