@@ -50,6 +50,9 @@ namespace Rusal
             Dialog.Show();
             Thread.Sleep(3500);
             Dialog.Close();
+            Position_DGV.AutoGenerateColumns = false;
+
+            ProgressBar_PB.Value = 10;
 
             if (SystemArgs.StatusConnect)
             {
@@ -59,6 +62,7 @@ namespace Rusal
                 ShowPosition(SystemArgs.Positions);
 
                 EnableField();
+                this.WindowState = FormWindowState.Maximized;
             }
             else
             {
@@ -66,13 +70,18 @@ namespace Rusal
                 SystemArgs.PrintLog("Ошибка при подключении к БД. Работа приложения остановлена");
                 Application.Exit();
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void ShowPosition(List<Position> List)
         {
+            SystemArgs.View = null;
+            Position_DGV.DataSource = null;
             SystemArgs.View = new BindingListView<Position>(List);
 
-            Position_DGV.AutoGenerateColumns = false;
             Position_DGV.DataSource = SystemArgs.View;
 
             CountPos_TB.Text = SystemArgs.View.Count.ToString();
@@ -80,24 +89,34 @@ namespace Rusal
 
         private void GetAllData()
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Инициализация процедуры получения параметров с БД");
-            ProgressBar_PB.Value = 2;
 
             Operations.GetArguments();
+            ProgressBar_PB.Value = 50;
             Operations.GetPosition();
 
-            ProgressBar_PB.Value = 100;
-
             SystemArgs.PrintLog("Процедура получения параметров с БД успешно завершена");
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void Exit_B_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Вы действительно хотите выйти?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            ProgressBar_PB.Value = 10;
+
+            if (MessageBox.Show("Вы действительно хотите выйти?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 SystemArgs.PrintLog("Успешное подтверждение выхода из программного обеспечения. Остановка работы ПО");
                 Application.Exit();
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void Search_TSB_Click(object sender, EventArgs e)
@@ -155,6 +174,7 @@ namespace Rusal
         {
             SystemArgs.PrintLog("Запуск процеду сброса параметров фильтрации");
             ResetSearch();
+
             ShowPosition(SystemArgs.Positions);
 
             SystemArgs.PrintLog("Процедура сброса параметров фильтрации успешно завершена");
@@ -162,6 +182,8 @@ namespace Rusal
 
         private void базаДанныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуру изменения параметров БД");
             SettingDB_F Dialog = new SettingDB_F();
 
@@ -172,24 +194,37 @@ namespace Rusal
             Dialog.Password_TB.Text = SystemArgs.PasswordDB;
             Dialog.Path_TB.Text = Files.GetBackupPath();
 
+            ProgressBar_PB.Value = 50;
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
                 SystemArgs.PrintLog("Процедура изменения параметров БД успешно завершена");
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void конфигурацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуры изменения конфигурации ПО");
             SettingConfiguration_F Dialog = new SettingConfiguration_F();
 
-            if(Dialog.ShowDialog() == DialogResult.OK)
+            ProgressBar_PB.Value = 50;
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
             {
                 Operations.GetPosition();
                 ShowPosition(SystemArgs.Positions);
                 SystemArgs.PrintLog("Процедура изменения конфигурации ПО успешно завершена");
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void ClearField()
@@ -217,35 +252,55 @@ namespace Rusal
 
         private void обычныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедура обычного анализа");
 
             BriefAnalysis_F Dialog = new BriefAnalysis_F();
+
+            ProgressBar_PB.Value = 50;
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
                 SystemArgs.PrintLog("Процедура обычного анализа успешно завершена");
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void расширенныйToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуры расширенного анализа");
 
             FullAnalysis_F Dialog = new FullAnalysis_F();
+
+            ProgressBar_PB.Value = 50;
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
                 SystemArgs.PrintLog("Процедура расширенного анализа успешно завершена");
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void заПериодToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуры построение отчета");
 
             if (SystemArgs.StatusConnect)
             {
                 Report_F Dialog = new Report_F();
+
+                ProgressBar_PB.Value = 50;
 
                 if (Dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -259,6 +314,10 @@ namespace Rusal
                 MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 SystemArgs.PrintLog("Ошибка при подключении к базе данных");
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -280,12 +339,17 @@ namespace Rusal
         {
             EnableField();
 
+            if(SystemArgs.View == null)
+            {
+                return;
+            }
+
             if (Position_DGV.CurrentCell == null)
             {
                 return;
             }
 
-            if (Position_DGV.CurrentCell.RowIndex > SystemArgs.View.Count - 1)
+            if (Position_DGV.CurrentCell.RowIndex > SystemArgs.View.Count)
             {
                 return;
             }
@@ -315,7 +379,7 @@ namespace Rusal
                 StatusCorrection_TB.BackColor = Color.FromArgb(6, 176, 37);
                 ChangeStatus_B.Text = "Отменить";
             }
-            else
+            else if(Temp.ProgressMark.Name == "Не выполнено")
             {
                 StatusCorrection_TB.BackColor = Color.FromArgb(255, 144, 0);
                 ChangeStatus_B.Text = "Подтвердить";
@@ -330,6 +394,8 @@ namespace Rusal
 
         private void DefectLocation_B_Click(object sender, EventArgs e)
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуры демонстрации места дефекта на слитке");
 
             DefectLocation Dialog = new DefectLocation();
@@ -360,15 +426,22 @@ namespace Rusal
                 }
             }
 
+            ProgressBar_PB.Value = 50;
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
                 SystemArgs.PrintLog("Процедуры демонстрации места дефекта на слитке успешна завершена");
             }
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void CreatePosition()
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуры добавления позиции");
 
             if (SystemArgs.StatusConnect)
@@ -378,6 +451,8 @@ namespace Rusal
                 ResetSearch();
 
                 ShowPosition(SystemArgs.Positions);
+
+                ProgressBar_PB.Value = 80;
             }
             else
             {
@@ -386,6 +461,10 @@ namespace Rusal
             }
 
             SystemArgs.PrintLog("Процедура добавления позиции завершена");
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void Add_TSB_Click(object sender, EventArgs e)
@@ -395,6 +474,8 @@ namespace Rusal
 
         private void ChangePosition()
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуры изменения позиции");
 
             if (SystemArgs.StatusConnect)
@@ -403,6 +484,8 @@ namespace Rusal
                 {
                     Operations.ChangePosition((Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex]);
                     ResetSearch();
+
+                    ProgressBar_PB.Value = 50;
 
                     ShowPosition(SystemArgs.Positions);
                 }
@@ -414,6 +497,10 @@ namespace Rusal
             }
 
             SystemArgs.PrintLog("Процедура изменения позиции завершена");
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void Change_TSB_Click(object sender, EventArgs e)
@@ -423,6 +510,8 @@ namespace Rusal
 
         private void DeletePosition()
         {
+            ProgressBar_PB.Value = 10;
+
             SystemArgs.PrintLog("Запуск процедуры удаления позиции");
 
             if (SystemArgs.StatusConnect)
@@ -435,7 +524,10 @@ namespace Rusal
                         ResetSearch();
 
                         ShowPosition(SystemArgs.Positions);
-                        Position_DGV.ClearSelection();
+
+                        ProgressBar_PB.Value = 50;
+
+                        //Position_DGV.ClearSelection();
                         ClearField();
                     }
                 }
@@ -449,6 +541,10 @@ namespace Rusal
             SystemArgs.PrintLog("Процедура удаления позиции завершена");
 
             EnableField();
+
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void Delete_TSB_Click(object sender, EventArgs e)
@@ -458,31 +554,34 @@ namespace Rusal
 
         private void ChangeStatus_B_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Вы действительно хотите изменить статус выполнения корректирующего действия?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                Position Temp = SystemArgs.View.ElementAt(Position_DGV.CurrentCell.RowIndex);
+            ProgressBar_PB.Value = 10;
 
-                if(Temp.ProgressMark.Name == "Не выполнено")
+            if (MessageBox.Show("Вы действительно хотите изменить статус выполнения корректирующего действия?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                Position Temp = (Position)SystemArgs.View[Position_DGV.CurrentCell.RowIndex];
+
+                if (Temp.ProgressMark.Name == "Не выполнено")
                 {
-                    Operations.UpdateStatusCorrection(Temp.ID, "Выполнено");
-                    SystemArgs.Positions.Remove(Temp);
-                    Temp.ProgressMark.Name = "Выполнено";
-                    SystemArgs.Positions.Add(Temp);
+                    Operations.UpdateStatusCorrection(Temp, "Выполнено");
                 }
                 else if(Temp.ProgressMark.Name == "Выполнено")
                 {
-                    Operations.UpdateStatusCorrection(Temp.ID, "Не выполнено");
-                    SystemArgs.Positions.Remove(Temp);
-                    Temp.ProgressMark.Name = "Не выполнено";
-                    SystemArgs.Positions.Add(Temp);
+                    Operations.UpdateStatusCorrection(Temp, "Не выполнено");
                 }
                 else
                 {
                     MessageBox.Show("Произошла ошибка при попытке обновления статуса. Пожалуйста воспользуйтесь функцией изменения позиции", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                Operations.GetArguments();
+                Operations.GetPosition();
+
+                ShowPosition(SystemArgs.Positions);
             }
 
-            ShowPosition(SystemArgs.Positions);
+            ProgressBar_PB.Value = 100;
+            
+            ProgressBar_PB.Value = 0;
         }
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)

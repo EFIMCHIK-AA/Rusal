@@ -78,8 +78,8 @@ namespace Rusal
                 return;
             }
 
-            try
-            {
+            //try
+            //{
                 SystemArgs.Positions.Clear();
                 SystemArgs.Result.Clear();
 
@@ -120,13 +120,13 @@ namespace Rusal
                 }
 
                 SystemArgs.PrintLog("Получение списка позиций с сервера успешно завершено");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ошибка при получении данных с сервера", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                SystemArgs.PrintLog("Ошибка при получении данных с сервера");
-                return;
-            }
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Ошибка при получении данных с сервера", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        SystemArgs.PrintLog("Ошибка при получении данных с сервера");
+        //        return;
+        //    }
         }
 
         public static void  GetArguments()
@@ -670,7 +670,7 @@ namespace Rusal
             GetArguments();
         }
 
-        public static void UpdateStatusCorrection(Int64 PositionID, String NameStatus)
+        public static void UpdateStatusCorrection(Position Temp, String NameStatus)
         {
             if (!SystemArgs.StatusConnect)
             {
@@ -679,19 +679,41 @@ namespace Rusal
                 return;
             }
 
+            Int32 IDProgressMark = -1;
+
             using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
             {
                 Connect.Open();
 
+                using (var Command = new NpgsqlCommand($"SELECT \"ID\"" +
+                                                       $"FROM public.\"ProgressMark\"" +
+                                                       $"WHERE \"N_ProgressMark\" = '{NameStatus}';", Connect))
+                {
+                    using (var Reader = Command.ExecuteReader())
+                    {
+                        while (Reader.Read())
+                        {
+                            IDProgressMark = Reader.GetInt32(0);
+                        }
+                    }
+                }
+
                 using (var Command = new NpgsqlCommand($"UPDATE public.\"Ingot\"" +
-                                                       $"SET \"ProgressMark\" = (SELECT \"ID\" FROM public.\"ProgressMark\" WHERE \"N_ProgressMark\" = '{NameStatus}')" +
-                                                       $"WHERE \"ID\" = {PositionID};", Connect))
+                                                       $"SET \"ProgressMark\" = {IDProgressMark}" +
+                                                       $"WHERE \"ID\" = {Temp.ID};", Connect))
                 {
                     Command.ExecuteNonQuery();
                 }
 
                 Connect.Close();
             }
+
+            SystemArgs.Positions.Remove(Temp);
+
+            Temp.ProgressMark.ID = IDProgressMark;
+            Temp.ProgressMark.Name = NameStatus;
+            SystemArgs.Positions.Add(Temp);
+
 
             SystemArgs.PrintLog("Обновление статуса коррекции успешно завершено");
         }
