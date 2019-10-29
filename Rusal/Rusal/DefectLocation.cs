@@ -21,5 +21,18 @@ namespace Rusal
         {
 
         }
+
+        private void North_CB_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void North_CB_Click(object sender, EventArgs e)
+        {
+            if (sender is CheckBox)
+            {
+                ((CheckBox)sender).Checked = !((CheckBox)sender).Checked;
+            }
+        }
     }
 }

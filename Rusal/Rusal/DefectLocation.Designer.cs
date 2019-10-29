@@ -81,7 +81,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -112,7 +112,7 @@
             this.tableLayoutPanel2.Controls.Add(this.OK_B, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 352);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -133,27 +133,28 @@
             // 
             this.North_CB.AutoSize = true;
             this.North_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.North_CB.Enabled = false;
             this.North_CB.Location = new System.Drawing.Point(181, 64);
-            this.North_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.North_CB.Margin = new System.Windows.Forms.Padding(4);
             this.North_CB.Name = "North_CB";
             this.North_CB.Size = new System.Drawing.Size(39, 21);
             this.North_CB.TabIndex = 348;
             this.North_CB.Text = "С";
             this.North_CB.UseVisualStyleBackColor = false;
+            this.North_CB.CheckedChanged += new System.EventHandler(this.North_CB_CheckedChanged);
+            this.North_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // South_CB
             // 
             this.South_CB.AutoSize = true;
             this.South_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.South_CB.Enabled = false;
             this.South_CB.Location = new System.Drawing.Point(181, 318);
-            this.South_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.South_CB.Margin = new System.Windows.Forms.Padding(4);
             this.South_CB.Name = "South_CB";
             this.South_CB.Size = new System.Drawing.Size(44, 21);
             this.South_CB.TabIndex = 349;
             this.South_CB.Text = "Ю";
             this.South_CB.UseVisualStyleBackColor = false;
+            this.South_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // West_CB
             // 
@@ -162,106 +163,106 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.West_CB.AutoSize = true;
             this.West_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.West_CB.Enabled = false;
             this.West_CB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.West_CB.Location = new System.Drawing.Point(21, 191);
-            this.West_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.West_CB.Margin = new System.Windows.Forms.Padding(4);
             this.West_CB.Name = "West_CB";
             this.West_CB.Size = new System.Drawing.Size(39, 21);
             this.West_CB.TabIndex = 350;
             this.West_CB.Text = "З";
             this.West_CB.UseVisualStyleBackColor = false;
+            this.West_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // East_CB
             // 
             this.East_CB.AutoSize = true;
             this.East_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.East_CB.Enabled = false;
             this.East_CB.Location = new System.Drawing.Point(320, 191);
-            this.East_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.East_CB.Margin = new System.Windows.Forms.Padding(4);
             this.East_CB.Name = "East_CB";
             this.East_CB.Size = new System.Drawing.Size(39, 21);
             this.East_CB.TabIndex = 351;
             this.East_CB.Text = "В";
             this.East_CB.UseVisualStyleBackColor = false;
+            this.East_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // One_CB
             // 
             this.One_CB.AutoSize = true;
             this.One_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.One_CB.Enabled = false;
             this.One_CB.Location = new System.Drawing.Point(465, 63);
-            this.One_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.One_CB.Margin = new System.Windows.Forms.Padding(4);
             this.One_CB.Name = "One_CB";
             this.One_CB.Size = new System.Drawing.Size(38, 21);
             this.One_CB.TabIndex = 352;
             this.One_CB.Text = "1";
             this.One_CB.UseVisualStyleBackColor = false;
+            this.One_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // Two_CB
             // 
             this.Two_CB.AutoSize = true;
             this.Two_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Two_CB.Enabled = false;
             this.Two_CB.Location = new System.Drawing.Point(555, 63);
-            this.Two_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Two_CB.Margin = new System.Windows.Forms.Padding(4);
             this.Two_CB.Name = "Two_CB";
             this.Two_CB.Size = new System.Drawing.Size(38, 21);
             this.Two_CB.TabIndex = 353;
             this.Two_CB.Text = "2";
             this.Two_CB.UseVisualStyleBackColor = false;
+            this.Two_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // Three_CB
             // 
             this.Three_CB.AutoSize = true;
             this.Three_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Three_CB.Enabled = false;
             this.Three_CB.Location = new System.Drawing.Point(648, 63);
-            this.Three_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Three_CB.Margin = new System.Windows.Forms.Padding(4);
             this.Three_CB.Name = "Three_CB";
             this.Three_CB.Size = new System.Drawing.Size(38, 21);
             this.Three_CB.TabIndex = 354;
             this.Three_CB.Text = "3";
             this.Three_CB.UseVisualStyleBackColor = false;
+            this.Three_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // Four_CB
             // 
             this.Four_CB.AutoSize = true;
             this.Four_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Four_CB.Enabled = false;
             this.Four_CB.Location = new System.Drawing.Point(740, 63);
-            this.Four_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Four_CB.Margin = new System.Windows.Forms.Padding(4);
             this.Four_CB.Name = "Four_CB";
             this.Four_CB.Size = new System.Drawing.Size(38, 21);
             this.Four_CB.TabIndex = 355;
             this.Four_CB.Text = "4";
             this.Four_CB.UseVisualStyleBackColor = false;
+            this.Four_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // Five_CB
             // 
             this.Five_CB.AutoSize = true;
             this.Five_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Five_CB.Enabled = false;
             this.Five_CB.Location = new System.Drawing.Point(828, 63);
-            this.Five_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Five_CB.Margin = new System.Windows.Forms.Padding(4);
             this.Five_CB.Name = "Five_CB";
             this.Five_CB.Size = new System.Drawing.Size(38, 21);
             this.Five_CB.TabIndex = 356;
             this.Five_CB.Text = "5";
             this.Five_CB.UseVisualStyleBackColor = false;
+            this.Five_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // Six_CB
             // 
             this.Six_CB.AutoSize = true;
             this.Six_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Six_CB.Enabled = false;
             this.Six_CB.Location = new System.Drawing.Point(924, 63);
-            this.Six_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Six_CB.Margin = new System.Windows.Forms.Padding(4);
             this.Six_CB.Name = "Six_CB";
             this.Six_CB.Size = new System.Drawing.Size(38, 21);
             this.Six_CB.TabIndex = 357;
             this.Six_CB.Text = "6";
             this.Six_CB.UseVisualStyleBackColor = false;
+            this.Six_CB.Click += new System.EventHandler(this.North_CB_Click);
             // 
             // DefectLocation
             // 
@@ -283,7 +284,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DefectLocation";
