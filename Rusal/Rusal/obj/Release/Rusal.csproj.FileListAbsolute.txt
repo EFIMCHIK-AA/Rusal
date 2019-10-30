@@ -1,0 +1,50 @@
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.csprojAssemblyReference.cache
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.Add_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.BriefAnalysis_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.CheckParam_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.DefectLocation.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.DescriptionArg_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.FullAnalysis_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.Main_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.Properties.Resources.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.Report_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.SettingConfiguration_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.SettingDB_F.resources
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.csproj.GenerateResource.cache
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.csproj.CoreCompileInputs.cache
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Анализатор дефектов.exe.config
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Анализатор дефектов.exe
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Анализатор дефектов.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\EPPlus.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Equin.ApplicationFramework.BindingListView.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Npgsql.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\OxyPlot.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\OxyPlot.WindowsForms.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Buffers.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Memory.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Numerics.Vectors.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Text.Encodings.Web.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Text.Json.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.ValueTuple.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\EPPlus.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Npgsql.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\Npgsql.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\OxyPlot.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\OxyPlot.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\OxyPlot.WindowsForms.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\OxyPlot.WindowsForms.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Buffers.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Memory.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Numerics.Vectors.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Text.Encodings.Web.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Text.Json.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Release\System.ValueTuple.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Rusal.csproj.CopyComplete
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Анализатор дефектов.exe
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Release\Анализатор дефектов.pdb

@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_F));
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -52,11 +51,6 @@
             this.конфигурацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.базаДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tool_TS = new System.Windows.Forms.ToolStrip();
-            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
             this.Search_TSTB = new System.Windows.Forms.ToolStripTextBox();
             this.Search_TSL = new System.Windows.Forms.ToolStripLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -71,12 +65,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.Position_DGV = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Left_TLP = new System.Windows.Forms.TableLayoutPanel();
@@ -116,6 +104,17 @@
             this.Reason_TB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Correction_TB = new System.Windows.Forms.TextBox();
+            this.Add_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Change_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Delete_TSB = new System.Windows.Forms.ToolStripButton();
+            this.SearchParam_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Search_TSB = new System.Windows.Forms.ToolStripButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
@@ -177,6 +176,7 @@
             this.Menu_MS.Size = new System.Drawing.Size(1155, 24);
             this.Menu_MS.TabIndex = 44;
             this.Menu_MS.Text = "menuStrip1";
+            this.Menu_MS.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_MS_ItemClicked);
             // 
             // позицияToolStripMenuItem
             // 
@@ -281,69 +281,17 @@
             this.Add_TSB,
             this.Change_TSB,
             this.Delete_TSB,
+            this.SearchParam_TSB,
             this.Reset_TSB,
             this.Search_TSB,
             this.Search_TSTB,
             this.Search_TSL});
             this.Tool_TS.Location = new System.Drawing.Point(0, 24);
-            this.Tool_TS.Margin = new System.Windows.Forms.Padding(5);
+            this.Tool_TS.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Tool_TS.Name = "Tool_TS";
             this.Tool_TS.Size = new System.Drawing.Size(1155, 38);
             this.Tool_TS.TabIndex = 45;
             this.Tool_TS.Text = "toolStrip1";
-            // 
-            // Add_TSB
-            // 
-            this.Add_TSB.AutoSize = false;
-            this.Add_TSB.Image = global::Rusal.Properties.Resources.plusGreen;
-            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Add_TSB.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.Add_TSB.Name = "Add_TSB";
-            this.Add_TSB.Size = new System.Drawing.Size(150, 35);
-            this.Add_TSB.Text = "Добавить позицию";
-            this.Add_TSB.Click += new System.EventHandler(this.Add_TSB_Click);
-            // 
-            // Change_TSB
-            // 
-            this.Change_TSB.Image = global::Rusal.Properties.Resources.pen1;
-            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Change_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
-            this.Change_TSB.Name = "Change_TSB";
-            this.Change_TSB.Size = new System.Drawing.Size(148, 35);
-            this.Change_TSB.Text = "Изменить позицию";
-            this.Change_TSB.Click += new System.EventHandler(this.Change_TSB_Click);
-            // 
-            // Delete_TSB
-            // 
-            this.Delete_TSB.Image = global::Rusal.Properties.Resources.trashRed;
-            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Delete_TSB.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
-            this.Delete_TSB.Name = "Delete_TSB";
-            this.Delete_TSB.Size = new System.Drawing.Size(138, 35);
-            this.Delete_TSB.Text = "Удалить позицию";
-            this.Delete_TSB.Click += new System.EventHandler(this.Delete_TSB_Click);
-            // 
-            // Reset_TSB
-            // 
-            this.Reset_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.Reset_TSB.Image = global::Rusal.Properties.Resources.refreshBlue;
-            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Reset_TSB.Margin = new System.Windows.Forms.Padding(0, 0, 5, 2);
-            this.Reset_TSB.Name = "Reset_TSB";
-            this.Reset_TSB.Size = new System.Drawing.Size(94, 36);
-            this.Reset_TSB.Text = "Сбросить";
-            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
-            // 
-            // Search_TSB
-            // 
-            this.Search_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.Search_TSB.Image = global::Rusal.Properties.Resources.searchOrange;
-            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Search_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
-            this.Search_TSB.Name = "Search_TSB";
-            this.Search_TSB.Size = new System.Drawing.Size(75, 35);
-            this.Search_TSB.Text = "Найти";
-            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
             // 
             // Search_TSTB
             // 
@@ -488,9 +436,9 @@
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label21.Location = new System.Drawing.Point(5, 5);
-            this.label21.Margin = new System.Windows.Forms.Padding(5);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(451, 31);
+            this.label21.Size = new System.Drawing.Size(450, 31);
             this.label21.TabIndex = 235;
             this.label21.Text = "Список позиций";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -509,97 +457,21 @@
             this.Position_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Position_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column6,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
             this.Position_DGV.Location = new System.Drawing.Point(5, 46);
-            this.Position_DGV.Margin = new System.Windows.Forms.Padding(5);
+            this.Position_DGV.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Position_DGV.MultiSelect = false;
             this.Position_DGV.Name = "Position_DGV";
             this.Position_DGV.ReadOnly = true;
             this.Position_DGV.RowHeadersVisible = false;
-            this.Position_DGV.Size = new System.Drawing.Size(451, 540);
+            this.Position_DGV.Size = new System.Drawing.Size(450, 540);
             this.Position_DGV.TabIndex = 234;
             this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting_1);
             this.Position_DGV.SelectionChanged += new System.EventHandler(this.Position_DGV_SelectionChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "DateFormation";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.FillWeight = 95.17767F;
-            this.Column1.HeaderText = "Дата появления";
-            this.Column1.MinimumWidth = 115;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "NumBrigade";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column6.HeaderText = "Бригада";
-            this.Column6.MinimumWidth = 65;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "Diameter";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 119.2894F;
-            this.Column2.HeaderText = "Диаметр";
-            this.Column2.MinimumWidth = 65;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "NumTS";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column3.FillWeight = 95.17767F;
-            this.Column3.HeaderText = "ТС";
-            this.Column3.MinimumWidth = 65;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "Count";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column4.FillWeight = 95.17767F;
-            this.Column4.HeaderText = "Кол-во";
-            this.Column4.MinimumWidth = 65;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.DataPropertyName = "Weight";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column5.FillWeight = 95.17767F;
-            this.Column5.HeaderText = "Вес";
-            this.Column5.MinimumWidth = 65;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label7
             // 
@@ -633,7 +505,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel4);
             this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Size = new System.Drawing.Size(1155, 593);
-            this.splitContainer1.SplitterDistance = 463;
+            this.splitContainer1.SplitterDistance = 462;
             this.splitContainer1.TabIndex = 245;
             // 
             // Left_TLP
@@ -649,7 +521,7 @@
             this.Left_TLP.RowCount = 2;
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Left_TLP.Size = new System.Drawing.Size(461, 591);
+            this.Left_TLP.Size = new System.Drawing.Size(460, 591);
             this.Left_TLP.TabIndex = 236;
             // 
             // tableLayoutPanel4
@@ -681,7 +553,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(686, 591);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(687, 591);
             this.tableLayoutPanel4.TabIndex = 277;
             // 
             // tableLayoutPanel5
@@ -716,7 +588,7 @@
             this.tableLayoutPanel5.Controls.Add(this.Melt_TB, 1, 3);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(5, 46);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 6;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -725,7 +597,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(676, 159);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(677, 159);
             this.tableLayoutPanel5.TabIndex = 278;
             // 
             // label1
@@ -762,7 +634,7 @@
             this.Diameter_TB.Location = new System.Drawing.Point(441, 111);
             this.Diameter_TB.Name = "Diameter_TB";
             this.Diameter_TB.ReadOnly = true;
-            this.Diameter_TB.Size = new System.Drawing.Size(232, 21);
+            this.Diameter_TB.Size = new System.Drawing.Size(233, 21);
             this.Diameter_TB.TabIndex = 256;
             this.Diameter_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -774,7 +646,7 @@
             this.Weight_TB.Location = new System.Drawing.Point(441, 84);
             this.Weight_TB.Name = "Weight_TB";
             this.Weight_TB.ReadOnly = true;
-            this.Weight_TB.Size = new System.Drawing.Size(232, 21);
+            this.Weight_TB.Size = new System.Drawing.Size(233, 21);
             this.Weight_TB.TabIndex = 265;
             this.Weight_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -786,7 +658,7 @@
             this.Count_TB.Location = new System.Drawing.Point(441, 57);
             this.Count_TB.Name = "Count_TB";
             this.Count_TB.ReadOnly = true;
-            this.Count_TB.Size = new System.Drawing.Size(232, 21);
+            this.Count_TB.Size = new System.Drawing.Size(233, 21);
             this.Count_TB.TabIndex = 261;
             this.Count_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -798,7 +670,7 @@
             this.Description_TB.Location = new System.Drawing.Point(441, 3);
             this.Description_TB.Name = "Description_TB";
             this.Description_TB.ReadOnly = true;
-            this.Description_TB.Size = new System.Drawing.Size(232, 21);
+            this.Description_TB.Size = new System.Drawing.Size(233, 21);
             this.Description_TB.TabIndex = 259;
             this.Description_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -838,7 +710,7 @@
             this.Type_TB.Location = new System.Drawing.Point(441, 30);
             this.Type_TB.Name = "Type_TB";
             this.Type_TB.ReadOnly = true;
-            this.Type_TB.Size = new System.Drawing.Size(232, 21);
+            this.Type_TB.Size = new System.Drawing.Size(233, 21);
             this.Type_TB.TabIndex = 263;
             this.Type_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1021,9 +893,9 @@
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label22.Location = new System.Drawing.Point(5, 5);
-            this.label22.Margin = new System.Windows.Forms.Padding(5);
+            this.label22.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(676, 31);
+            this.label22.Size = new System.Drawing.Size(677, 31);
             this.label22.TabIndex = 268;
             this.label22.Text = "Информация о позиции";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1036,10 +908,10 @@
             this.DefectLocProduction_TB.BackColor = System.Drawing.Color.White;
             this.DefectLocProduction_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DefectLocProduction_TB.Location = new System.Drawing.Point(5, 256);
-            this.DefectLocProduction_TB.Margin = new System.Windows.Forms.Padding(5);
+            this.DefectLocProduction_TB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.DefectLocProduction_TB.Name = "DefectLocProduction_TB";
             this.DefectLocProduction_TB.ReadOnly = true;
-            this.DefectLocProduction_TB.Size = new System.Drawing.Size(676, 21);
+            this.DefectLocProduction_TB.Size = new System.Drawing.Size(677, 21);
             this.DefectLocProduction_TB.TabIndex = 270;
             this.DefectLocProduction_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1051,9 +923,9 @@
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label26.Location = new System.Drawing.Point(5, 215);
-            this.label26.Margin = new System.Windows.Forms.Padding(5);
+            this.label26.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(676, 31);
+            this.label26.Size = new System.Drawing.Size(677, 31);
             this.label26.TabIndex = 269;
             this.label26.Text = "Место дефекта в производственном процессе";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1069,12 +941,12 @@
             this.tableLayoutPanel3.Controls.Add(this.StatusCorrection_TB, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ChangeStatus_B, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 559);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 557);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(681, 27);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(682, 29);
             this.tableLayoutPanel3.TabIndex = 276;
             // 
             // label15
@@ -1107,7 +979,7 @@
             this.ChangeStatus_B.Location = new System.Drawing.Point(262, 0);
             this.ChangeStatus_B.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ChangeStatus_B.Name = "ChangeStatus_B";
-            this.ChangeStatus_B.Size = new System.Drawing.Size(150, 27);
+            this.ChangeStatus_B.Size = new System.Drawing.Size(150, 29);
             this.ChangeStatus_B.TabIndex = 232;
             this.ChangeStatus_B.Text = "Изменить статус";
             this.ChangeStatus_B.UseVisualStyleBackColor = false;
@@ -1121,9 +993,9 @@
             this.DefectLocation_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.DefectLocation_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DefectLocation_B.Location = new System.Drawing.Point(5, 287);
-            this.DefectLocation_B.Margin = new System.Windows.Forms.Padding(5);
+            this.DefectLocation_B.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.DefectLocation_B.Name = "DefectLocation_B";
-            this.DefectLocation_B.Size = new System.Drawing.Size(676, 31);
+            this.DefectLocation_B.Size = new System.Drawing.Size(677, 31);
             this.DefectLocation_B.TabIndex = 271;
             this.DefectLocation_B.Text = "Показать место дефекта на слитке";
             this.DefectLocation_B.UseVisualStyleBackColor = false;
@@ -1139,9 +1011,9 @@
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.Location = new System.Drawing.Point(5, 328);
-            this.label13.Margin = new System.Windows.Forms.Padding(5);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(676, 31);
+            this.label13.Size = new System.Drawing.Size(677, 31);
             this.label13.TabIndex = 272;
             this.label13.Text = "Причины дефекта";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1151,12 +1023,12 @@
             this.Reason_TB.BackColor = System.Drawing.Color.White;
             this.Reason_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Reason_TB.Location = new System.Drawing.Point(5, 369);
-            this.Reason_TB.Margin = new System.Windows.Forms.Padding(5);
+            this.Reason_TB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Reason_TB.Multiline = true;
             this.Reason_TB.Name = "Reason_TB";
             this.Reason_TB.ReadOnly = true;
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Reason_TB.Size = new System.Drawing.Size(676, 67);
+            this.Reason_TB.Size = new System.Drawing.Size(677, 66);
             this.Reason_TB.TabIndex = 273;
             // 
             // label14
@@ -1166,10 +1038,10 @@
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(5, 446);
-            this.label14.Margin = new System.Windows.Forms.Padding(5);
+            this.label14.Location = new System.Drawing.Point(5, 445);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(676, 31);
+            this.label14.Size = new System.Drawing.Size(677, 31);
             this.label14.TabIndex = 274;
             this.label14.Text = "Корректирующие действия";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1178,14 +1050,143 @@
             // 
             this.Correction_TB.BackColor = System.Drawing.Color.White;
             this.Correction_TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Correction_TB.Location = new System.Drawing.Point(5, 487);
-            this.Correction_TB.Margin = new System.Windows.Forms.Padding(5);
+            this.Correction_TB.Location = new System.Drawing.Point(5, 486);
+            this.Correction_TB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Correction_TB.Multiline = true;
             this.Correction_TB.Name = "Correction_TB";
             this.Correction_TB.ReadOnly = true;
             this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Correction_TB.Size = new System.Drawing.Size(676, 67);
+            this.Correction_TB.Size = new System.Drawing.Size(677, 66);
             this.Correction_TB.TabIndex = 275;
+            // 
+            // Add_TSB
+            // 
+            this.Add_TSB.AutoSize = false;
+            this.Add_TSB.Image = global::Rusal.Properties.Resources.plusGreen;
+            this.Add_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Add_TSB.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.Add_TSB.Name = "Add_TSB";
+            this.Add_TSB.Size = new System.Drawing.Size(150, 35);
+            this.Add_TSB.Text = "Добавить позицию";
+            this.Add_TSB.Click += new System.EventHandler(this.Add_TSB_Click);
+            // 
+            // Change_TSB
+            // 
+            this.Change_TSB.Image = global::Rusal.Properties.Resources.pen1;
+            this.Change_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Change_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
+            this.Change_TSB.Name = "Change_TSB";
+            this.Change_TSB.Size = new System.Drawing.Size(148, 35);
+            this.Change_TSB.Text = "Изменить позицию";
+            this.Change_TSB.Click += new System.EventHandler(this.Change_TSB_Click);
+            // 
+            // Delete_TSB
+            // 
+            this.Delete_TSB.Image = global::Rusal.Properties.Resources.trashRed;
+            this.Delete_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Delete_TSB.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
+            this.Delete_TSB.Name = "Delete_TSB";
+            this.Delete_TSB.Size = new System.Drawing.Size(138, 35);
+            this.Delete_TSB.Text = "Удалить позицию";
+            this.Delete_TSB.Click += new System.EventHandler(this.Delete_TSB_Click);
+            // 
+            // SearchParam_TSB
+            // 
+            this.SearchParam_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.SearchParam_TSB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(222)))));
+            this.SearchParam_TSB.Image = global::Rusal.Properties.Resources.note;
+            this.SearchParam_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SearchParam_TSB.Margin = new System.Windows.Forms.Padding(0, 0, 5, 2);
+            this.SearchParam_TSB.Name = "SearchParam_TSB";
+            this.SearchParam_TSB.Size = new System.Drawing.Size(157, 36);
+            this.SearchParam_TSB.Text = "Расширенный поиск";
+            // 
+            // Reset_TSB
+            // 
+            this.Reset_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Reset_TSB.Image = global::Rusal.Properties.Resources.refreshBlue;
+            this.Reset_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Reset_TSB.Margin = new System.Windows.Forms.Padding(0, 0, 3, 2);
+            this.Reset_TSB.Name = "Reset_TSB";
+            this.Reset_TSB.Size = new System.Drawing.Size(94, 36);
+            this.Reset_TSB.Text = "Сбросить";
+            this.Reset_TSB.Click += new System.EventHandler(this.Reset_TSB_Click);
+            // 
+            // Search_TSB
+            // 
+            this.Search_TSB.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Search_TSB.Image = global::Rusal.Properties.Resources.searchOrange;
+            this.Search_TSB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Search_TSB.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
+            this.Search_TSB.Name = "Search_TSB";
+            this.Search_TSB.Size = new System.Drawing.Size(75, 35);
+            this.Search_TSB.Text = "Найти";
+            this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "DateFormation";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.FillWeight = 95.17767F;
+            this.Column1.HeaderText = "Дата появления";
+            this.Column1.MinimumWidth = 115;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "DiameterSort";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column2.FillWeight = 119.2894F;
+            this.Column2.HeaderText = "Диаметр";
+            this.Column2.MinimumWidth = 65;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "NumTSSort";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.FillWeight = 95.17767F;
+            this.Column3.HeaderText = "ТС";
+            this.Column3.MinimumWidth = 65;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "Count";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column4.FillWeight = 95.17767F;
+            this.Column4.HeaderText = "Кол-во";
+            this.Column4.MinimumWidth = 65;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "Weight";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column5.FillWeight = 95.17767F;
+            this.Column5.HeaderText = "Вес";
+            this.Column5.MinimumWidth = 65;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Main_F
             // 
@@ -1200,7 +1201,7 @@
             this.Controls.Add(this.panel6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu_MS;
-            this.MinimumSize = new System.Drawing.Size(1096, 708);
+            this.MinimumSize = new System.Drawing.Size(1095, 707);
             this.Name = "Main_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Система учета дефектов";
@@ -1312,13 +1313,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button ChangeStatus_B;
+        private System.Windows.Forms.ToolStripButton SearchParam_TSB;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        public System.Windows.Forms.Button ChangeStatus_B;
     }
 }
 

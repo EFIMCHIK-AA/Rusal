@@ -67,12 +67,6 @@ C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\EPPl
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\EPPlus.xml
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Npgsql.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Npgsql.xml
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\de\Npgsql.resources.dll
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\es\Npgsql.resources.dll
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\fi\Npgsql.resources.dll
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\fr\Npgsql.resources.dll
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\ja\Npgsql.resources.dll
-C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\policy.2.0.Npgsql.config
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.csprojAssemblyReference.cache
 C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\obj\Debug\Rusal.Main_F.resources
@@ -222,3 +216,22 @@ C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\bin\Debug\Анализатор
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.CheckParam_F.resources
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.exe
 C:\Users\dmitriy.skokov\Desktop\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Npgsql.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Buffers.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Memory.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Text.Json.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.ValueTuple.dll
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Buffers.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Memory.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Text.Json.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\vipef\OneDrive\Рабочий стол\Rusal\Rusal\Rusal\bin\Debug\System.ValueTuple.xml

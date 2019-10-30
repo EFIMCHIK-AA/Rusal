@@ -55,7 +55,7 @@ namespace Rusal
 
         public override String ToString()
         {
-            return _Name.ToString();
+            return Convert.ToString(_Name);
         }
     }
 }

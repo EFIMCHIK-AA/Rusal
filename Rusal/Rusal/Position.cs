@@ -428,6 +428,22 @@ namespace Rusal
             }
         }
 
+        public String DiameterSort
+        {
+            get
+            {
+                return _Diameter.ToString();
+            }
+        }
+
+        public String NumTSSort
+        {
+            get
+            {
+                return _NumTS.ToString();
+            }
+        }
+
         public ProgressMark ProgressMark
         {
             get

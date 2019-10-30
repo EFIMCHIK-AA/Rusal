@@ -339,7 +339,7 @@ namespace Rusal
         {
             EnableField();
 
-            if(SystemArgs.View == null)
+            if (SystemArgs.View == null)
             {
                 return;
             }
@@ -379,7 +379,7 @@ namespace Rusal
                 StatusCorrection_TB.BackColor = Color.FromArgb(6, 176, 37);
                 ChangeStatus_B.Text = "Отменить";
             }
-            else if(Temp.ProgressMark.Name == "Не выполнено")
+            else if (Temp.ProgressMark.Name == "Не выполнено")
             {
                 StatusCorrection_TB.BackColor = Color.FromArgb(255, 144, 0);
                 ChangeStatus_B.Text = "Подтвердить";
@@ -580,13 +580,20 @@ namespace Rusal
             }
 
             ProgressBar_PB.Value = 100;
-            
+
+            ResetSearch();
+
             ProgressBar_PB.Value = 0;
         }
 
         private void Position_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void Menu_MS_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
