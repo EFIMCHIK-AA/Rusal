@@ -400,7 +400,7 @@
             // FirstDate_CM
             // 
             this.FirstDate_CM.Location = new System.Drawing.Point(5, 21);
-            this.FirstDate_CM.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FirstDate_CM.Margin = new System.Windows.Forms.Padding(5);
             this.FirstDate_CM.MaxSelectionCount = 1;
             this.FirstDate_CM.Name = "FirstDate_CM";
             this.FirstDate_CM.TabIndex = 54;
@@ -436,7 +436,7 @@
             // SecondDate_CM
             // 
             this.SecondDate_CM.Location = new System.Drawing.Point(5, 21);
-            this.SecondDate_CM.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SecondDate_CM.Margin = new System.Windows.Forms.Padding(5);
             this.SecondDate_CM.MaxSelectionCount = 1;
             this.SecondDate_CM.Name = "SecondDate_CM";
             this.SecondDate_CM.TabIndex = 54;
@@ -449,7 +449,7 @@
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Verdana", 12F);
             this.label11.Location = new System.Drawing.Point(5, 231);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label11.Margin = new System.Windows.Forms.Padding(5);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(528, 31);
             this.label11.TabIndex = 64;
@@ -464,7 +464,7 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Verdana", 12F);
             this.label12.Location = new System.Drawing.Point(5, 5);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label12.Margin = new System.Windows.Forms.Padding(5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(528, 31);
             this.label12.TabIndex = 48;
@@ -494,7 +494,7 @@
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Verdana", 12F);
             this.label13.Location = new System.Drawing.Point(5, 5);
-            this.label13.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label13.Margin = new System.Windows.Forms.Padding(5);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(587, 31);
             this.label13.TabIndex = 64;
@@ -506,7 +506,7 @@
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(5, 46);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(5);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 

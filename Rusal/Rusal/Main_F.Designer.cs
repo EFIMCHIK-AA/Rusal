@@ -65,6 +65,11 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.Position_DGV = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Left_TLP = new System.Windows.Forms.TableLayoutPanel();
@@ -110,11 +115,6 @@
             this.SearchParam_TSB = new System.Windows.Forms.ToolStripButton();
             this.Reset_TSB = new System.Windows.Forms.ToolStripButton();
             this.Search_TSB = new System.Windows.Forms.ToolStripButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6.SuspendLayout();
             this.Menu_MS.SuspendLayout();
             this.Tool_TS.SuspendLayout();
@@ -299,7 +299,7 @@
             this.Search_TSTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.Search_TSTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Search_TSTB.Name = "Search_TSTB";
-            this.Search_TSTB.Size = new System.Drawing.Size(200, 38);
+            this.Search_TSTB.Size = new System.Drawing.Size(150, 38);
             // 
             // Search_TSL
             // 
@@ -472,6 +472,71 @@
             this.Position_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Position_DGV_CellClick);
             this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting_1);
             this.Position_DGV.SelectionChanged += new System.EventHandler(this.Position_DGV_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "DateFormation";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.FillWeight = 95.17767F;
+            this.Column1.HeaderText = "Дата появления";
+            this.Column1.MinimumWidth = 115;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "DiameterSort";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column2.FillWeight = 119.2894F;
+            this.Column2.HeaderText = "Диаметр";
+            this.Column2.MinimumWidth = 65;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "NumTSSort";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.FillWeight = 95.17767F;
+            this.Column3.HeaderText = "ТС";
+            this.Column3.MinimumWidth = 65;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "Count";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column4.FillWeight = 95.17767F;
+            this.Column4.HeaderText = "Кол-во";
+            this.Column4.MinimumWidth = 65;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "Weight";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column5.FillWeight = 95.17767F;
+            this.Column5.HeaderText = "Вес";
+            this.Column5.MinimumWidth = 65;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label7
             // 
@@ -941,12 +1006,12 @@
             this.tableLayoutPanel3.Controls.Add(this.StatusCorrection_TB, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ChangeStatus_B, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 557);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 551);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(682, 29);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(682, 35);
             this.tableLayoutPanel3.TabIndex = 276;
             // 
             // label15
@@ -979,7 +1044,7 @@
             this.ChangeStatus_B.Location = new System.Drawing.Point(262, 0);
             this.ChangeStatus_B.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ChangeStatus_B.Name = "ChangeStatus_B";
-            this.ChangeStatus_B.Size = new System.Drawing.Size(150, 29);
+            this.ChangeStatus_B.Size = new System.Drawing.Size(150, 35);
             this.ChangeStatus_B.TabIndex = 232;
             this.ChangeStatus_B.Text = "Изменить статус";
             this.ChangeStatus_B.UseVisualStyleBackColor = false;
@@ -1028,7 +1093,7 @@
             this.Reason_TB.Name = "Reason_TB";
             this.Reason_TB.ReadOnly = true;
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Reason_TB.Size = new System.Drawing.Size(677, 66);
+            this.Reason_TB.Size = new System.Drawing.Size(677, 63);
             this.Reason_TB.TabIndex = 273;
             // 
             // label14
@@ -1038,7 +1103,7 @@
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(5, 445);
+            this.label14.Location = new System.Drawing.Point(5, 442);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(677, 31);
@@ -1050,13 +1115,13 @@
             // 
             this.Correction_TB.BackColor = System.Drawing.Color.White;
             this.Correction_TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Correction_TB.Location = new System.Drawing.Point(5, 486);
+            this.Correction_TB.Location = new System.Drawing.Point(5, 483);
             this.Correction_TB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Correction_TB.Multiline = true;
             this.Correction_TB.Name = "Correction_TB";
             this.Correction_TB.ReadOnly = true;
             this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Correction_TB.Size = new System.Drawing.Size(677, 66);
+            this.Correction_TB.Size = new System.Drawing.Size(677, 63);
             this.Correction_TB.TabIndex = 275;
             // 
             // Add_TSB
@@ -1100,6 +1165,7 @@
             this.SearchParam_TSB.Name = "SearchParam_TSB";
             this.SearchParam_TSB.Size = new System.Drawing.Size(157, 36);
             this.SearchParam_TSB.Text = "Расширенный поиск";
+            this.SearchParam_TSB.Click += new System.EventHandler(this.SearchParam_TSB_Click);
             // 
             // Reset_TSB
             // 
@@ -1123,71 +1189,6 @@
             this.Search_TSB.Text = "Найти";
             this.Search_TSB.Click += new System.EventHandler(this.Search_TSB_Click);
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "DateFormation";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.FillWeight = 95.17767F;
-            this.Column1.HeaderText = "Дата появления";
-            this.Column1.MinimumWidth = 115;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "DiameterSort";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column2.FillWeight = 119.2894F;
-            this.Column2.HeaderText = "Диаметр";
-            this.Column2.MinimumWidth = 65;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "NumTSSort";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column3.FillWeight = 95.17767F;
-            this.Column3.HeaderText = "ТС";
-            this.Column3.MinimumWidth = 65;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "Count";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column4.FillWeight = 95.17767F;
-            this.Column4.HeaderText = "Кол-во";
-            this.Column4.MinimumWidth = 65;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.DataPropertyName = "Weight";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column5.FillWeight = 95.17767F;
-            this.Column5.HeaderText = "Вес";
-            this.Column5.MinimumWidth = 65;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1201,7 +1202,7 @@
             this.Controls.Add(this.panel6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu_MS;
-            this.MinimumSize = new System.Drawing.Size(1095, 707);
+            this.MinimumSize = new System.Drawing.Size(1094, 704);
             this.Name = "Main_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Система учета дефектов";

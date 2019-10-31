@@ -48,7 +48,7 @@ namespace Rusal
             Operations.StatusConnectAsync(this);
             SystemArgs.PrintLog("Процедура проверки целостности файлов запущена...");
             Dialog.Show();
-            Thread.Sleep(3500);
+            Thread.Sleep(6000);
             Dialog.Close();
             Position_DGV.AutoGenerateColumns = false;
 
@@ -594,6 +594,108 @@ namespace Rusal
         private void Menu_MS_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void SearchParam_TSB_Click(object sender, EventArgs e)
+        {
+            SystemArgs.PrintLog("Запуск процеры поиска по параметрам");
+
+            if (SystemArgs.StatusConnect)
+            {
+                ParamSearch_F Dialog = new ParamSearch_F();
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    DateTime TempDate = Dialog.Calendar_DP.Value.Date;
+
+                    SystemArgs.Result = SystemArgs.Positions;
+
+                    SystemArgs.Result = SystemArgs.Result.Where(p => p.DateFormation == TempDate).ToList();
+
+                    if (Dialog.NumSmeny_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.NumSmeny == Dialog.NumSmeny_CB.SelectedItem).ToList();
+                    }
+
+                    if (!String.IsNullOrEmpty(Dialog.NumMelt_TB.Text))
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.NumMelt == Dialog.NumMelt_TB.Text.Trim()).ToList();
+                    }
+
+                    if (Dialog.TypeAlloy_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.TypeAlloy == Dialog.TypeAlloy_CB.SelectedItem).ToList();
+                    }
+
+                    if (!String.IsNullOrEmpty(Dialog.Address_TB.Text))
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.Address == Dialog.Address_TB.Text.Trim()).ToList();
+                    }
+
+                    if (!String.IsNullOrEmpty(Dialog.Count_TB.Text))
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.Count == Convert.ToInt64(Dialog.Count_TB.Text.Trim())).ToList();
+                    }
+
+                    if (!String.IsNullOrEmpty(Dialog.Weight_TB.Text))
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.Weight == Convert.ToDouble(Dialog.Weight_TB.Text.Trim())).ToList();
+                    }
+
+                    if (Dialog.Diameter_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.Diameter == Dialog.Diameter_CB.SelectedItem).ToList();
+                    }
+
+                    if (Dialog.Description_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.Description == Dialog.Description_CB.SelectedItem).ToList();
+                    }
+
+                    if (Dialog.TypeDefect_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.Defect == Dialog.TypeDefect_CB.SelectedItem).ToList();
+                    }
+
+                    if (Dialog.NumTS_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.NumTS == Dialog.NumTS_CB.SelectedItem).ToList();
+                    }
+
+                    if (Dialog.NumBrigade_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.NumBrigade == Dialog.NumBrigade_CB.SelectedItem).ToList();
+                    }
+
+                    if (Dialog.LocationProduction_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.DefectLocProduction == Dialog.LocationProduction_CB.SelectedItem).ToList();
+                    }
+
+                    if (Dialog.ProgressMark_CB.SelectedIndex != 0)
+                    {
+                        SystemArgs.Result = SystemArgs.Result.Where(p => p.ProgressMark == Dialog.ProgressMark_CB.SelectedItem).ToList();
+                    }
+
+                    if (SystemArgs.Result.Count == 0)
+                    {
+                        MessageBox.Show("Расширенный поиск не дал результатов", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        ShowPosition(SystemArgs.Result);
+                        SystemArgs.PrintLog("Отображение позиций по заданным параметрам");
+                        MessageBox.Show($"Объектов найдено: {SystemArgs.Result.Count}", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не удалось подключиться в базе данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при подключении к БД");
+            }
+
+            SystemArgs.PrintLog("Процеры поиска по параметрам завершена");
         }
     }
 }

@@ -12,10 +12,7 @@ namespace Rusal
 
         public BaseDictionary (Int32 ID)
         {
-            if(ID >= 0)
-            {
-                this.ID = ID;
-            }
+            this.ID = ID;
         }
 
         public BaseDictionary() : this(0) { }

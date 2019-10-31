@@ -168,6 +168,12 @@
       <DependentUpon>Main_F.cs</DependentUpon>
     </Compile>
     <Compile Include="Operations.cs" />
+    <Compile Include="ParamSearch_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParamSearch_F.Designer.cs">
+      <DependentUpon>ParamSearch_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgressMark.cs" />
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_F.resx">
       <DependentUpon>Main_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParamSearch_F.resx">
+      <DependentUpon>ParamSearch_F.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

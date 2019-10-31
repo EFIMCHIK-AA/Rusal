@@ -78,8 +78,8 @@ namespace Rusal
                 return;
             }
 
-            //try
-            //{
+            try
+            {
                 SystemArgs.Positions.Clear();
                 SystemArgs.Result.Clear();
 
@@ -120,13 +120,13 @@ namespace Rusal
                 }
 
                 SystemArgs.PrintLog("Получение списка позиций с сервера успешно завершено");
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("Ошибка при получении данных с сервера", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        SystemArgs.PrintLog("Ошибка при получении данных с сервера");
-        //        return;
-        //    }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка при получении данных с сервера", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemArgs.PrintLog("Ошибка при получении данных с сервера");
+                return;
+            }
         }
 
         public static void  GetArguments()
