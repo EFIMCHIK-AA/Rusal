@@ -89,7 +89,7 @@
             this.First_MC.Margin = new System.Windows.Forms.Padding(5, 5, 3, 5);
             this.First_MC.MaxSelectionCount = 1;
             this.First_MC.Name = "First_MC";
-            this.First_MC.TabIndex = 121;
+            this.First_MC.TabIndex = 1;
             this.First_MC.TrailingForeColor = System.Drawing.Color.Tomato;
             // 
             // Second_MC
@@ -99,7 +99,7 @@
             this.Second_MC.Margin = new System.Windows.Forms.Padding(3, 5, 5, 5);
             this.Second_MC.MaxSelectionCount = 1;
             this.Second_MC.Name = "Second_MC";
-            this.Second_MC.TabIndex = 122;
+            this.Second_MC.TabIndex = 2;
             this.Second_MC.TrailingForeColor = System.Drawing.Color.Tomato;
             // 
             // OK_B
@@ -189,8 +189,10 @@
             // 
             // Report_F
             // 
+            this.AcceptButton = this.OK_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.Cancel_B;
             this.ClientSize = new System.Drawing.Size(346, 266);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pv = new OxyPlot.WindowsForms.PlotView();
             this.label3 = new System.Windows.Forms.Label();
             this.DGV_Brief = new System.Windows.Forms.DataGridView();
@@ -71,7 +71,7 @@
             this.pv.BackColor = System.Drawing.Color.White;
             this.pv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pv.Location = new System.Drawing.Point(5, 46);
-            this.pv.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pv.Margin = new System.Windows.Forms.Padding(5);
             this.pv.Name = "pv";
             this.pv.PanCursor = System.Windows.Forms.Cursors.Hand;
             this.pv.Size = new System.Drawing.Size(587, 634);
@@ -89,7 +89,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F);
             this.label3.Location = new System.Drawing.Point(5, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(528, 31);
             this.label3.TabIndex = 48;
@@ -109,7 +109,7 @@
             this.Column5});
             this.DGV_Brief.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGV_Brief.Location = new System.Drawing.Point(5, 272);
-            this.DGV_Brief.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DGV_Brief.Margin = new System.Windows.Forms.Padding(5);
             this.DGV_Brief.Name = "DGV_Brief";
             this.DGV_Brief.ReadOnly = true;
             this.DGV_Brief.RowHeadersVisible = false;
@@ -122,8 +122,8 @@
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.DataPropertyName = "Name";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column4.HeaderText = "Параметр #1";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -133,8 +133,8 @@
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.DataPropertyName = "Value";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column5.HeaderText = "Параметр #2";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -314,7 +314,7 @@
             // FirstDate_CM
             // 
             this.FirstDate_CM.Location = new System.Drawing.Point(5, 21);
-            this.FirstDate_CM.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FirstDate_CM.Margin = new System.Windows.Forms.Padding(5);
             this.FirstDate_CM.MaxSelectionCount = 1;
             this.FirstDate_CM.Name = "FirstDate_CM";
             this.FirstDate_CM.TabIndex = 54;
@@ -350,7 +350,7 @@
             // SecondDate_CM
             // 
             this.SecondDate_CM.Location = new System.Drawing.Point(5, 21);
-            this.SecondDate_CM.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SecondDate_CM.Margin = new System.Windows.Forms.Padding(5);
             this.SecondDate_CM.MaxSelectionCount = 1;
             this.SecondDate_CM.Name = "SecondDate_CM";
             this.SecondDate_CM.TabIndex = 54;
@@ -363,7 +363,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F);
             this.label6.Location = new System.Drawing.Point(5, 231);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label6.Margin = new System.Windows.Forms.Padding(5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(528, 31);
             this.label6.TabIndex = 64;
@@ -393,7 +393,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F);
             this.label4.Location = new System.Drawing.Point(5, 5);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label4.Margin = new System.Windows.Forms.Padding(5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(587, 31);
             this.label4.TabIndex = 64;
@@ -407,12 +407,14 @@
             this.ClientSize = new System.Drawing.Size(1143, 687);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.MinimizeBox = false;
             this.Name = "BriefAnalysis_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Стандартный анализ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BriefAnalysis_F_FormClosing);
             this.Load += new System.EventHandler(this.BriefAnalysis_F_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BriefAnalysis_F_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Brief)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

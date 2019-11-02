@@ -181,7 +181,7 @@
     <value>238, 27</value>
   </data>
   <data name="OK_B.TabIndex" type="System.Int32, mscorlib">
-    <value>126</value>
+    <value>6</value>
   </data>
   <data name="OK_B.Text" xml:space="preserve">
     <value>Завершить</value>
@@ -211,7 +211,7 @@
     <value>475, 21</value>
   </data>
   <data name="Params_CB.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;Params_CB.Name" xml:space="preserve">
     <value>Params_CB</value>
@@ -277,7 +277,7 @@
     <value>232, 407</value>
   </data>
   <data name="Spisok_LB.TabIndex" type="System.Int32, mscorlib">
-    <value>129</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;Spisok_LB.Name" xml:space="preserve">
     <value>Spisok_LB</value>
@@ -355,7 +355,7 @@
     <value>238, 27</value>
   </data>
   <data name="Add_B.TabIndex" type="System.Int32, mscorlib">
-    <value>131</value>
+    <value>3</value>
   </data>
   <data name="Add_B.Text" xml:space="preserve">
     <value>Добавить</value>
@@ -391,7 +391,7 @@
     <value>238, 27</value>
   </data>
   <data name="Change_B.TabIndex" type="System.Int32, mscorlib">
-    <value>132</value>
+    <value>4</value>
   </data>
   <data name="Change_B.Text" xml:space="preserve">
     <value>Изменить</value>
@@ -427,7 +427,7 @@
     <value>238, 27</value>
   </data>
   <data name="Delete_B.TabIndex" type="System.Int32, mscorlib">
-    <value>133</value>
+    <value>5</value>
   </data>
   <data name="Delete_B.Text" xml:space="preserve">
     <value>Удалить</value>

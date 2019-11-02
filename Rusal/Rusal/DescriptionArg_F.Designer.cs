@@ -32,17 +32,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Name_L = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.OK_B = new System.Windows.Forms.Button();
+            this.Cancel_B = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.ID_TB = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.OK_B = new System.Windows.Forms.Button();
-            this.Cancel_B = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Value_TB
@@ -52,7 +52,7 @@
             this.Value_TB.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.Value_TB.Name = "Value_TB";
             this.Value_TB.Size = new System.Drawing.Size(228, 20);
-            this.Value_TB.TabIndex = 20;
+            this.Value_TB.TabIndex = 1;
             // 
             // label2
             // 
@@ -99,6 +99,54 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(306, 134);
             this.tableLayoutPanel1.TabIndex = 44;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.OK_B, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.Cancel_B, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 93);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(306, 41);
+            this.tableLayoutPanel4.TabIndex = 48;
+            // 
+            // OK_B
+            // 
+            this.OK_B.AutoSize = true;
+            this.OK_B.BackColor = System.Drawing.Color.White;
+            this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.OK_B.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OK_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OK_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OK_B.Location = new System.Drawing.Point(5, 5);
+            this.OK_B.Margin = new System.Windows.Forms.Padding(5);
+            this.OK_B.Name = "OK_B";
+            this.OK_B.Size = new System.Drawing.Size(143, 31);
+            this.OK_B.TabIndex = 16;
+            this.OK_B.Text = "ОК";
+            this.OK_B.UseVisualStyleBackColor = false;
+            // 
+            // Cancel_B
+            // 
+            this.Cancel_B.AutoSize = true;
+            this.Cancel_B.BackColor = System.Drawing.Color.White;
+            this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancel_B.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Cancel_B.Location = new System.Drawing.Point(158, 5);
+            this.Cancel_B.Margin = new System.Windows.Forms.Padding(5);
+            this.Cancel_B.Name = "Cancel_B";
+            this.Cancel_B.Size = new System.Drawing.Size(143, 31);
+            this.Cancel_B.TabIndex = 15;
+            this.Cancel_B.Text = "Отмена";
+            this.Cancel_B.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -155,59 +203,14 @@
             this.ID_TB.ReadOnly = true;
             this.ID_TB.Size = new System.Drawing.Size(228, 20);
             this.ID_TB.TabIndex = 18;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.OK_B, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.Cancel_B, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 93);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(306, 41);
-            this.tableLayoutPanel4.TabIndex = 48;
-            // 
-            // OK_B
-            // 
-            this.OK_B.AutoSize = true;
-            this.OK_B.BackColor = System.Drawing.Color.White;
-            this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.OK_B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OK_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OK_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OK_B.Location = new System.Drawing.Point(5, 5);
-            this.OK_B.Margin = new System.Windows.Forms.Padding(5);
-            this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(143, 31);
-            this.OK_B.TabIndex = 16;
-            this.OK_B.Text = "ОК";
-            this.OK_B.UseVisualStyleBackColor = false;
-            // 
-            // Cancel_B
-            // 
-            this.Cancel_B.AutoSize = true;
-            this.Cancel_B.BackColor = System.Drawing.Color.White;
-            this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel_B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cancel_B.Location = new System.Drawing.Point(158, 5);
-            this.Cancel_B.Margin = new System.Windows.Forms.Padding(5);
-            this.Cancel_B.Name = "Cancel_B";
-            this.Cancel_B.Size = new System.Drawing.Size(143, 31);
-            this.Cancel_B.TabIndex = 15;
-            this.Cancel_B.Text = "Отмена";
-            this.Cancel_B.UseVisualStyleBackColor = false;
+            this.ID_TB.TabStop = false;
             // 
             // DescriptionArg_F
             // 
+            this.AcceptButton = this.OK_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.Cancel_B;
             this.ClientSize = new System.Drawing.Size(306, 134);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -221,12 +224,12 @@
             this.Load += new System.EventHandler(this.DescriptionArg_F_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

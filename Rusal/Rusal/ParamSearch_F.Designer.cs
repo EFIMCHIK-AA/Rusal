@@ -31,6 +31,10 @@
             this.OK_B = new System.Windows.Forms.Button();
             this.Cancel_B = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.ProgressMark_CB = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.NumBrigade_CB = new System.Windows.Forms.ComboBox();
@@ -69,12 +73,10 @@
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.LocationProduction_CB = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.ProgressMark_CB = new System.Windows.Forms.ComboBox();
             this.Calendar_DP = new System.Windows.Forms.DateTimePicker();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
@@ -87,8 +89,6 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // OK_B
@@ -169,6 +169,61 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(353, 578);
             this.tableLayoutPanel3.TabIndex = 317;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.OK_B, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Cancel_B, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 540);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(347, 35);
+            this.tableLayoutPanel1.TabIndex = 322;
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.AutoSize = true;
+            this.tableLayoutPanel16.ColumnCount = 2;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.ProgressMark_CB, 1, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 507);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(347, 27);
+            this.tableLayoutPanel16.TabIndex = 321;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(5, 0);
+            this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(146, 27);
+            this.label18.TabIndex = 313;
+            this.label18.Text = "Отметка о выполнении";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ProgressMark_CB
+            // 
+            this.ProgressMark_CB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProgressMark_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProgressMark_CB.FormattingEnabled = true;
+            this.ProgressMark_CB.Location = new System.Drawing.Point(157, 3);
+            this.ProgressMark_CB.Name = "ProgressMark_CB";
+            this.ProgressMark_CB.Size = new System.Drawing.Size(187, 21);
+            this.ProgressMark_CB.TabIndex = 14;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.AutoSize = true;
@@ -206,7 +261,7 @@
             this.NumBrigade_CB.Location = new System.Drawing.Point(103, 3);
             this.NumBrigade_CB.Name = "NumBrigade_CB";
             this.NumBrigade_CB.Size = new System.Drawing.Size(241, 21);
-            this.NumBrigade_CB.TabIndex = 303;
+            this.NumBrigade_CB.TabIndex = 12;
             // 
             // label1
             // 
@@ -260,7 +315,7 @@
             this.NumTS_CB.Location = new System.Drawing.Point(103, 3);
             this.NumTS_CB.Name = "NumTS_CB";
             this.NumTS_CB.Size = new System.Drawing.Size(241, 21);
-            this.NumTS_CB.TabIndex = 298;
+            this.NumTS_CB.TabIndex = 11;
             // 
             // tableLayoutPanel13
             // 
@@ -299,7 +354,7 @@
             this.TypeDefect_CB.Location = new System.Drawing.Point(103, 3);
             this.TypeDefect_CB.Name = "TypeDefect_CB";
             this.TypeDefect_CB.Size = new System.Drawing.Size(241, 21);
-            this.TypeDefect_CB.TabIndex = 301;
+            this.TypeDefect_CB.TabIndex = 10;
             // 
             // tableLayoutPanel12
             // 
@@ -338,7 +393,7 @@
             this.Description_CB.Location = new System.Drawing.Point(103, 3);
             this.Description_CB.Name = "Description_CB";
             this.Description_CB.Size = new System.Drawing.Size(241, 21);
-            this.Description_CB.TabIndex = 300;
+            this.Description_CB.TabIndex = 9;
             // 
             // tableLayoutPanel11
             // 
@@ -377,7 +432,7 @@
             this.Diameter_CB.Location = new System.Drawing.Point(103, 3);
             this.Diameter_CB.Name = "Diameter_CB";
             this.Diameter_CB.Size = new System.Drawing.Size(241, 21);
-            this.Diameter_CB.TabIndex = 302;
+            this.Diameter_CB.TabIndex = 8;
             // 
             // tableLayoutPanel10
             // 
@@ -416,7 +471,7 @@
             this.Weight_TB.Location = new System.Drawing.Point(103, 3);
             this.Weight_TB.Name = "Weight_TB";
             this.Weight_TB.Size = new System.Drawing.Size(241, 21);
-            this.Weight_TB.TabIndex = 291;
+            this.Weight_TB.TabIndex = 7;
             // 
             // tableLayoutPanel9
             // 
@@ -455,7 +510,7 @@
             this.Count_TB.Location = new System.Drawing.Point(103, 3);
             this.Count_TB.Name = "Count_TB";
             this.Count_TB.Size = new System.Drawing.Size(241, 21);
-            this.Count_TB.TabIndex = 288;
+            this.Count_TB.TabIndex = 6;
             // 
             // tableLayoutPanel8
             // 
@@ -494,7 +549,7 @@
             this.Address_TB.Location = new System.Drawing.Point(103, 3);
             this.Address_TB.Name = "Address_TB";
             this.Address_TB.Size = new System.Drawing.Size(241, 21);
-            this.Address_TB.TabIndex = 293;
+            this.Address_TB.TabIndex = 5;
             // 
             // tableLayoutPanel7
             // 
@@ -533,7 +588,7 @@
             this.TypeAlloy_CB.Location = new System.Drawing.Point(103, 3);
             this.TypeAlloy_CB.Name = "TypeAlloy_CB";
             this.TypeAlloy_CB.Size = new System.Drawing.Size(241, 21);
-            this.TypeAlloy_CB.TabIndex = 305;
+            this.TypeAlloy_CB.TabIndex = 4;
             // 
             // tableLayoutPanel6
             // 
@@ -572,7 +627,7 @@
             this.NumMelt_TB.Location = new System.Drawing.Point(103, 3);
             this.NumMelt_TB.Name = "NumMelt_TB";
             this.NumMelt_TB.Size = new System.Drawing.Size(241, 21);
-            this.NumMelt_TB.TabIndex = 297;
+            this.NumMelt_TB.TabIndex = 3;
             // 
             // tableLayoutPanel5
             // 
@@ -611,7 +666,7 @@
             this.NumSmeny_CB.Location = new System.Drawing.Point(103, 3);
             this.NumSmeny_CB.Name = "NumSmeny_CB";
             this.NumSmeny_CB.Size = new System.Drawing.Size(241, 21);
-            this.NumSmeny_CB.TabIndex = 304;
+            this.NumSmeny_CB.TabIndex = 2;
             // 
             // label2
             // 
@@ -665,46 +720,7 @@
             this.LocationProduction_CB.Location = new System.Drawing.Point(133, 3);
             this.LocationProduction_CB.Name = "LocationProduction_CB";
             this.LocationProduction_CB.Size = new System.Drawing.Size(211, 21);
-            this.LocationProduction_CB.TabIndex = 306;
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.AutoSize = true;
-            this.tableLayoutPanel16.ColumnCount = 2;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Controls.Add(this.label18, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.ProgressMark_CB, 1, 0);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 507);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 1;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(347, 27);
-            this.tableLayoutPanel16.TabIndex = 321;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(5, 0);
-            this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(146, 27);
-            this.label18.TabIndex = 313;
-            this.label18.Text = "Отметка о выполнении";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ProgressMark_CB
-            // 
-            this.ProgressMark_CB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProgressMark_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProgressMark_CB.FormattingEnabled = true;
-            this.ProgressMark_CB.Location = new System.Drawing.Point(157, 3);
-            this.ProgressMark_CB.Name = "ProgressMark_CB";
-            this.ProgressMark_CB.Size = new System.Drawing.Size(187, 21);
-            this.ProgressMark_CB.TabIndex = 314;
+            this.LocationProduction_CB.TabIndex = 13;
             // 
             // Calendar_DP
             // 
@@ -713,23 +729,7 @@
             this.Calendar_DP.Margin = new System.Windows.Forms.Padding(95, 3, 3, 3);
             this.Calendar_DP.Name = "Calendar_DP";
             this.Calendar_DP.Size = new System.Drawing.Size(161, 20);
-            this.Calendar_DP.TabIndex = 318;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.OK_B, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Cancel_B, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 540);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(347, 35);
-            this.tableLayoutPanel1.TabIndex = 322;
+            this.Calendar_DP.TabIndex = 1;
             // 
             // ParamSearch_F
             // 
@@ -748,6 +748,9 @@
             this.Load += new System.EventHandler(this.ParamSearch_F_Load);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel14.ResumeLayout(false);
@@ -772,9 +775,6 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

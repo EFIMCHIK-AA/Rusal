@@ -45,9 +45,9 @@ namespace Rusal
         private void Main_F_Load(object sender, EventArgs e)
         {
             CheckParam_F Dialog = new CheckParam_F();
+            Dialog.Show();
             Operations.StatusConnectAsync(this);
             SystemArgs.PrintLog("Процедура проверки целостности файлов запущена...");
-            Dialog.Show();
             Thread.Sleep(6000);
             Dialog.Close();
             Position_DGV.AutoGenerateColumns = false;
@@ -696,6 +696,39 @@ namespace Rusal
             }
 
             SystemArgs.PrintLog("Процеры поиска по параметрам завершена");
+        }
+
+        private void Weight_TB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_F_KeyUp(object sender, KeyEventArgs e)
+        {
+ 
+        }
+
+        private void Search_TSTB_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Main_F_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && ActiveControl == Search_TSTB.Control)
+            {
+                Search_TSB.PerformClick();
+            }
+            else if (e.Control && e.KeyCode == Keys.S)
+            {
+                DefectLocation_B.PerformClick();
+            }
+            else if(e.KeyCode == Keys.Escape)
+            {
+                if (MessageBox.Show("Вы дейстивтельно хотите выйти?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+            }
         }
     }
 }

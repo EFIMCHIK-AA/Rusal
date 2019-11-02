@@ -104,8 +104,31 @@ namespace Rusal
 
         private void BriefAnalysis_F_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Analysis.DisposeField();
-            SystemArgs.PrintLog("Очистка памяти после выполнения анализа успешно завершена");
+            if (MessageBox.Show("Завершить просмотр анализа?", "Внимание", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                Analysis.DisposeField();
+                SystemArgs.PrintLog("Очистка памяти после выполнения анализа успешно завершена");
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void BriefAnalysis_F_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Show_B.PerformClick();
+            }
+            else if (e.Control && e.KeyCode == Keys.S)
+            {
+                Export_B.PerformClick();
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                Exit_B.PerformClick();
+            }
         }
     }
 }

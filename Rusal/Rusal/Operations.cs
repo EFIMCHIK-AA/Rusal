@@ -19,54 +19,65 @@ namespace Rusal
 
         private static void StatusConnect(Main_F Form)
         {
-            while (true)
+            try
             {
-                bool Status = false;
-
-                try
+                while (true)
                 {
-                    using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
-                    {
-                        Connect.Open();
+                    bool Status = false;
 
-                        using (var Command = new NpgsqlCommand("SELECT 1", Connect))
+                    try
+                    {
+                        using (var Connect = new NpgsqlConnection(SystemArgs.ConnectString))
                         {
-                            using (var Reader = Command.ExecuteReader())
+                            Connect.Open();
+
+                            using (var Command = new NpgsqlCommand("SELECT 1", Connect))
                             {
-                                while (Reader.Read())
+                                using (var Reader = Command.ExecuteReader())
                                 {
-                                    Status = true;
+                                    while (Reader.Read())
+                                    {
+                                        Status = true;
+                                    }
                                 }
                             }
+
+                            Connect.Close();
                         }
                     }
-                }
-                catch (Exception)
-                {
-                    Status = false;
-                }
-
-                SystemArgs.StatusConnect = Status;
-
-                if (Status)
-                {
-                    Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
+                    catch (Exception)
                     {
-                        Form.ConnectDB_TB.Text = "Установлено";
-                        Form.ConnectDB_TB.BackColor = Color.FromArgb(188, 220, 244);
-                    }));
-                }
-                else
-                {
-                    Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
-                    {
-                        Form.ConnectDB_TB.Text = "Не установлено";
-                        Form.ConnectDB_TB.BackColor = Color.Red;
-                    }));
-                }
+                        Status = false;
+                        throw;
+                    }
 
-                Thread.Sleep(3000);
+                    SystemArgs.StatusConnect = Status;
+
+                    if (Status)
+                    {
+                        Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
+                        {
+                            Form.ConnectDB_TB.Text = "Установлено";
+                            Form.ConnectDB_TB.BackColor = Color.FromArgb(188, 220, 244);
+                        }));
+                    }
+
+                    Thread.Sleep(1000);
+                }
             }
+            catch(Exception)
+            {
+                Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
+                {
+                    Form.ConnectDB_TB.Text = "Не установлено";
+                    Form.ConnectDB_TB.BackColor = Color.Red;
+                    if(MessageBox.Show("Соединение с базой данных потеряно. Восстановите подключение и перезапустите программное обеспечение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        SystemArgs.PrintLog("Ошибка при подключении к БД");
+                        Application.Exit();
+                    }
+                }));
+            }          
         }
 
         public static void GetPosition()

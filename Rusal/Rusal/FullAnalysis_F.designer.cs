@@ -101,6 +101,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(532, 412);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -179,6 +180,7 @@
             this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
             this.plotView1.Size = new System.Drawing.Size(585, 285);
             this.plotView1.TabIndex = 1;
+            this.plotView1.TabStop = false;
             this.plotView1.Text = "plotView1";
             this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.plotView1.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -193,6 +195,7 @@
             this.plotView2.PanCursor = System.Windows.Forms.Cursors.Hand;
             this.plotView2.Size = new System.Drawing.Size(585, 341);
             this.plotView2.TabIndex = 13;
+            this.plotView2.TabStop = false;
             this.plotView2.Text = "plotView2";
             this.plotView2.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.plotView2.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -289,7 +292,7 @@
             this.ListArgumnts_CB.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
             this.ListArgumnts_CB.Name = "ListArgumnts_CB";
             this.ListArgumnts_CB.Size = new System.Drawing.Size(187, 21);
-            this.ListArgumnts_CB.TabIndex = 67;
+            this.ListArgumnts_CB.TabIndex = 2;
             // 
             // label14
             // 
@@ -324,7 +327,7 @@
             this.TypeArgument_CB.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
             this.TypeArgument_CB.Name = "TypeArgument_CB";
             this.TypeArgument_CB.Size = new System.Drawing.Size(187, 21);
-            this.TypeArgument_CB.TabIndex = 56;
+            this.TypeArgument_CB.TabIndex = 1;
             this.TypeArgument_CB.SelectedIndexChanged += new System.EventHandler(this.TypeArgument_CB_SelectedIndexChanged);
             // 
             // Exit_B
@@ -337,7 +340,7 @@
             this.Exit_B.Margin = new System.Windows.Forms.Padding(5, 3, 0, 5);
             this.Exit_B.Name = "Exit_B";
             this.Exit_B.Size = new System.Drawing.Size(187, 23);
-            this.Exit_B.TabIndex = 5;
+            this.Exit_B.TabIndex = 7;
             this.Exit_B.Text = "Закрыть";
             this.Exit_B.UseVisualStyleBackColor = false;
             // 
@@ -350,7 +353,7 @@
             this.Export_B.Margin = new System.Windows.Forms.Padding(5, 3, 0, 3);
             this.Export_B.Name = "Export_B";
             this.Export_B.Size = new System.Drawing.Size(187, 24);
-            this.Export_B.TabIndex = 4;
+            this.Export_B.TabIndex = 6;
             this.Export_B.Text = "Экспорт";
             this.Export_B.UseVisualStyleBackColor = false;
             this.Export_B.Click += new System.EventHandler(this.Export_B_Click);
@@ -364,7 +367,7 @@
             this.Show_B.Margin = new System.Windows.Forms.Padding(5, 3, 0, 3);
             this.Show_B.Name = "Show_B";
             this.Show_B.Size = new System.Drawing.Size(187, 24);
-            this.Show_B.TabIndex = 57;
+            this.Show_B.TabIndex = 5;
             this.Show_B.Text = "Сформировать";
             this.Show_B.UseVisualStyleBackColor = false;
             this.Show_B.Click += new System.EventHandler(this.Button1_Click);
@@ -403,7 +406,7 @@
             this.FirstDate_CM.Margin = new System.Windows.Forms.Padding(5);
             this.FirstDate_CM.MaxSelectionCount = 1;
             this.FirstDate_CM.Name = "FirstDate_CM";
-            this.FirstDate_CM.TabIndex = 54;
+            this.FirstDate_CM.TabIndex = 3;
             // 
             // tableLayoutPanel5
             // 
@@ -439,7 +442,7 @@
             this.SecondDate_CM.Margin = new System.Windows.Forms.Padding(5);
             this.SecondDate_CM.MaxSelectionCount = 1;
             this.SecondDate_CM.Name = "SecondDate_CM";
-            this.SecondDate_CM.TabIndex = 54;
+            this.SecondDate_CM.TabIndex = 4;
             // 
             // label11
             // 
@@ -529,6 +532,7 @@
             this.ClientSize = new System.Drawing.Size(1143, 687);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1095, 707);
             this.Name = "FullAnalysis_F";
@@ -537,6 +541,7 @@
             this.Text = "Расширенный анализ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FullAnalysis_F_FormClosing);
             this.Load += new System.EventHandler(this.FullAnalysis_F_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FullAnalysis_F_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

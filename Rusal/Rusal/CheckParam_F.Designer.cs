@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckParam_F));
             this.SuspendLayout();
             // 
             // CheckParam_F
@@ -38,9 +39,11 @@
             this.BackgroundImage = global::Rusal.Properties.Resources.Мэйн_форма;
             this.ClientSize = new System.Drawing.Size(580, 375);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckParam_F";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CheckParam_F";
+            this.Text = "Проверка целостности";
             this.Load += new System.EventHandler(this.CheckParam_F_Load);
             this.ResumeLayout(false);
 

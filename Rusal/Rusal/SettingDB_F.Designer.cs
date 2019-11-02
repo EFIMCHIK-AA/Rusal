@@ -89,7 +89,7 @@
             this.SaveConnect_B.Margin = new System.Windows.Forms.Padding(5, 5, 5, 3);
             this.SaveConnect_B.Name = "SaveConnect_B";
             this.SaveConnect_B.Size = new System.Drawing.Size(349, 27);
-            this.SaveConnect_B.TabIndex = 15;
+            this.SaveConnect_B.TabIndex = 6;
             this.SaveConnect_B.Text = "Сохранить";
             this.SaveConnect_B.UseVisualStyleBackColor = false;
             this.SaveConnect_B.Click += new System.EventHandler(this.SaveConnect_B_Click);
@@ -103,7 +103,7 @@
             this.Name_TB.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Name_TB.Name = "Name_TB";
             this.Name_TB.Size = new System.Drawing.Size(259, 21);
-            this.Name_TB.TabIndex = 59;
+            this.Name_TB.TabIndex = 5;
             // 
             // Password_TB
             // 
@@ -114,7 +114,7 @@
             this.Password_TB.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Password_TB.Name = "Password_TB";
             this.Password_TB.Size = new System.Drawing.Size(259, 21);
-            this.Password_TB.TabIndex = 58;
+            this.Password_TB.TabIndex = 4;
             // 
             // Owner_TB
             // 
@@ -125,7 +125,7 @@
             this.Owner_TB.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Owner_TB.Name = "Owner_TB";
             this.Owner_TB.Size = new System.Drawing.Size(259, 21);
-            this.Owner_TB.TabIndex = 57;
+            this.Owner_TB.TabIndex = 3;
             // 
             // Port_TB
             // 
@@ -136,7 +136,7 @@
             this.Port_TB.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Port_TB.Name = "Port_TB";
             this.Port_TB.Size = new System.Drawing.Size(259, 21);
-            this.Port_TB.TabIndex = 56;
+            this.Port_TB.TabIndex = 2;
             // 
             // Server_TB
             // 
@@ -147,7 +147,7 @@
             this.Server_TB.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Server_TB.Name = "Server_TB";
             this.Server_TB.Size = new System.Drawing.Size(259, 21);
-            this.Server_TB.TabIndex = 55;
+            this.Server_TB.TabIndex = 1;
             // 
             // label1
             // 
@@ -235,7 +235,7 @@
             this.StartBackup_B.Margin = new System.Windows.Forms.Padding(5, 5, 5, 3);
             this.StartBackup_B.Name = "StartBackup_B";
             this.StartBackup_B.Size = new System.Drawing.Size(349, 27);
-            this.StartBackup_B.TabIndex = 66;
+            this.StartBackup_B.TabIndex = 10;
             this.StartBackup_B.Text = "Выполнить";
             this.StartBackup_B.UseVisualStyleBackColor = false;
             this.StartBackup_B.Click += new System.EventHandler(this.StartBackup_B_Click);
@@ -249,7 +249,7 @@
             this.Path_TB.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Path_TB.Name = "Path_TB";
             this.Path_TB.Size = new System.Drawing.Size(264, 21);
-            this.Path_TB.TabIndex = 67;
+            this.Path_TB.TabIndex = 7;
             // 
             // label7
             // 
@@ -274,7 +274,7 @@
             this.OK_B.Margin = new System.Windows.Forms.Padding(5, 5, 5, 3);
             this.OK_B.Name = "OK_B";
             this.OK_B.Size = new System.Drawing.Size(349, 27);
-            this.OK_B.TabIndex = 69;
+            this.OK_B.TabIndex = 11;
             this.OK_B.Text = "Завершить редактирование";
             this.OK_B.UseVisualStyleBackColor = false;
             // 
@@ -288,7 +288,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(349, 27);
-            this.button1.TabIndex = 70;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -318,7 +318,7 @@
             this.Review_B.Margin = new System.Windows.Forms.Padding(5, 5, 5, 3);
             this.Review_B.Name = "Review_B";
             this.Review_B.Size = new System.Drawing.Size(349, 27);
-            this.Review_B.TabIndex = 72;
+            this.Review_B.TabIndex = 8;
             this.Review_B.Text = "Выбрать в проводнике";
             this.Review_B.UseVisualStyleBackColor = false;
             this.Review_B.Click += new System.EventHandler(this.button2_Click);

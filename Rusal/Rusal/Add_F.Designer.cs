@@ -230,7 +230,7 @@
             this.NumBrigade_CB.Location = new System.Drawing.Point(103, 3);
             this.NumBrigade_CB.Name = "NumBrigade_CB";
             this.NumBrigade_CB.Size = new System.Drawing.Size(263, 21);
-            this.NumBrigade_CB.TabIndex = 303;
+            this.NumBrigade_CB.TabIndex = 12;
             // 
             // label1
             // 
@@ -284,7 +284,7 @@
             this.NumTS_CB.Location = new System.Drawing.Point(103, 3);
             this.NumTS_CB.Name = "NumTS_CB";
             this.NumTS_CB.Size = new System.Drawing.Size(263, 21);
-            this.NumTS_CB.TabIndex = 298;
+            this.NumTS_CB.TabIndex = 11;
             // 
             // tableLayoutPanel13
             // 
@@ -323,7 +323,7 @@
             this.TypeDefect_CB.Location = new System.Drawing.Point(103, 3);
             this.TypeDefect_CB.Name = "TypeDefect_CB";
             this.TypeDefect_CB.Size = new System.Drawing.Size(263, 21);
-            this.TypeDefect_CB.TabIndex = 301;
+            this.TypeDefect_CB.TabIndex = 10;
             // 
             // tableLayoutPanel12
             // 
@@ -362,7 +362,7 @@
             this.Description_CB.Location = new System.Drawing.Point(103, 3);
             this.Description_CB.Name = "Description_CB";
             this.Description_CB.Size = new System.Drawing.Size(263, 21);
-            this.Description_CB.TabIndex = 300;
+            this.Description_CB.TabIndex = 9;
             // 
             // tableLayoutPanel11
             // 
@@ -401,7 +401,7 @@
             this.Diameter_CB.Location = new System.Drawing.Point(103, 3);
             this.Diameter_CB.Name = "Diameter_CB";
             this.Diameter_CB.Size = new System.Drawing.Size(263, 21);
-            this.Diameter_CB.TabIndex = 302;
+            this.Diameter_CB.TabIndex = 8;
             // 
             // tableLayoutPanel10
             // 
@@ -440,7 +440,7 @@
             this.Weight_TB.Location = new System.Drawing.Point(103, 3);
             this.Weight_TB.Name = "Weight_TB";
             this.Weight_TB.Size = new System.Drawing.Size(263, 21);
-            this.Weight_TB.TabIndex = 291;
+            this.Weight_TB.TabIndex = 7;
             // 
             // tableLayoutPanel9
             // 
@@ -479,7 +479,7 @@
             this.Count_TB.Location = new System.Drawing.Point(103, 3);
             this.Count_TB.Name = "Count_TB";
             this.Count_TB.Size = new System.Drawing.Size(263, 21);
-            this.Count_TB.TabIndex = 288;
+            this.Count_TB.TabIndex = 6;
             // 
             // tableLayoutPanel8
             // 
@@ -518,7 +518,7 @@
             this.Address_TB.Location = new System.Drawing.Point(103, 3);
             this.Address_TB.Name = "Address_TB";
             this.Address_TB.Size = new System.Drawing.Size(263, 21);
-            this.Address_TB.TabIndex = 293;
+            this.Address_TB.TabIndex = 5;
             // 
             // tableLayoutPanel7
             // 
@@ -557,7 +557,7 @@
             this.TypeAlloy_CB.Location = new System.Drawing.Point(103, 3);
             this.TypeAlloy_CB.Name = "TypeAlloy_CB";
             this.TypeAlloy_CB.Size = new System.Drawing.Size(263, 21);
-            this.TypeAlloy_CB.TabIndex = 305;
+            this.TypeAlloy_CB.TabIndex = 4;
             // 
             // tableLayoutPanel6
             // 
@@ -596,7 +596,7 @@
             this.NumMelt_TB.Location = new System.Drawing.Point(103, 3);
             this.NumMelt_TB.Name = "NumMelt_TB";
             this.NumMelt_TB.Size = new System.Drawing.Size(263, 21);
-            this.NumMelt_TB.TabIndex = 297;
+            this.NumMelt_TB.TabIndex = 3;
             // 
             // tableLayoutPanel5
             // 
@@ -635,7 +635,7 @@
             this.NumSmeny_CB.Location = new System.Drawing.Point(103, 3);
             this.NumSmeny_CB.Name = "NumSmeny_CB";
             this.NumSmeny_CB.Size = new System.Drawing.Size(263, 21);
-            this.NumSmeny_CB.TabIndex = 304;
+            this.NumSmeny_CB.TabIndex = 2;
             // 
             // label2
             // 
@@ -661,7 +661,7 @@
             this.Calendar_MC.MaxSelectionCount = 1;
             this.Calendar_MC.MinimumSize = new System.Drawing.Size(2, 1);
             this.Calendar_MC.Name = "Calendar_MC";
-            this.Calendar_MC.TabIndex = 318;
+            this.Calendar_MC.TabIndex = 1;
             this.Calendar_MC.TrailingForeColor = System.Drawing.Color.Tomato;
             // 
             // tableLayoutPanel15
@@ -701,7 +701,7 @@
             this.LocationProduction_CB.Location = new System.Drawing.Point(133, 3);
             this.LocationProduction_CB.Name = "LocationProduction_CB";
             this.LocationProduction_CB.Size = new System.Drawing.Size(233, 21);
-            this.LocationProduction_CB.TabIndex = 306;
+            this.LocationProduction_CB.TabIndex = 13;
             // 
             // North_CB
             // 
@@ -711,6 +711,7 @@
             this.North_CB.Name = "North_CB";
             this.North_CB.Size = new System.Drawing.Size(33, 17);
             this.North_CB.TabIndex = 323;
+            this.North_CB.TabStop = false;
             this.North_CB.Text = "С";
             this.North_CB.UseVisualStyleBackColor = false;
             // 
@@ -722,6 +723,7 @@
             this.South_CB.Name = "South_CB";
             this.South_CB.Size = new System.Drawing.Size(35, 17);
             this.South_CB.TabIndex = 324;
+            this.South_CB.TabStop = false;
             this.South_CB.Text = "Ю";
             this.South_CB.UseVisualStyleBackColor = false;
             // 
@@ -737,6 +739,7 @@
             this.West_CB.Name = "West_CB";
             this.West_CB.Size = new System.Drawing.Size(33, 17);
             this.West_CB.TabIndex = 325;
+            this.West_CB.TabStop = false;
             this.West_CB.Text = "З";
             this.West_CB.UseVisualStyleBackColor = false;
             this.West_CB.CheckedChanged += new System.EventHandler(this.West_CB_CheckedChanged);
@@ -749,6 +752,7 @@
             this.East_CB.Name = "East_CB";
             this.East_CB.Size = new System.Drawing.Size(33, 17);
             this.East_CB.TabIndex = 326;
+            this.East_CB.TabStop = false;
             this.East_CB.Text = "В";
             this.East_CB.UseVisualStyleBackColor = false;
             // 
@@ -760,6 +764,7 @@
             this.One_CB.Name = "One_CB";
             this.One_CB.Size = new System.Drawing.Size(32, 17);
             this.One_CB.TabIndex = 327;
+            this.One_CB.TabStop = false;
             this.One_CB.Text = "1";
             this.One_CB.UseVisualStyleBackColor = false;
             // 
@@ -771,6 +776,7 @@
             this.Two_CB.Name = "Two_CB";
             this.Two_CB.Size = new System.Drawing.Size(32, 17);
             this.Two_CB.TabIndex = 328;
+            this.Two_CB.TabStop = false;
             this.Two_CB.Text = "2";
             this.Two_CB.UseVisualStyleBackColor = false;
             // 
@@ -782,6 +788,7 @@
             this.Three_CB.Name = "Three_CB";
             this.Three_CB.Size = new System.Drawing.Size(32, 17);
             this.Three_CB.TabIndex = 329;
+            this.Three_CB.TabStop = false;
             this.Three_CB.Text = "3";
             this.Three_CB.UseVisualStyleBackColor = false;
             // 
@@ -793,6 +800,7 @@
             this.Four_CB.Name = "Four_CB";
             this.Four_CB.Size = new System.Drawing.Size(32, 17);
             this.Four_CB.TabIndex = 330;
+            this.Four_CB.TabStop = false;
             this.Four_CB.Text = "4";
             this.Four_CB.UseVisualStyleBackColor = false;
             // 
@@ -804,6 +812,7 @@
             this.Five_CB.Name = "Five_CB";
             this.Five_CB.Size = new System.Drawing.Size(32, 17);
             this.Five_CB.TabIndex = 331;
+            this.Five_CB.TabStop = false;
             this.Five_CB.Text = "5";
             this.Five_CB.UseVisualStyleBackColor = false;
             // 
@@ -815,6 +824,7 @@
             this.Six_CB.Name = "Six_CB";
             this.Six_CB.Size = new System.Drawing.Size(32, 17);
             this.Six_CB.TabIndex = 332;
+            this.Six_CB.TabStop = false;
             this.Six_CB.Text = "6";
             this.Six_CB.UseVisualStyleBackColor = false;
             // 
@@ -910,7 +920,7 @@
             this.ProgressMark_CB.Location = new System.Drawing.Point(157, 3);
             this.ProgressMark_CB.Name = "ProgressMark_CB";
             this.ProgressMark_CB.Size = new System.Drawing.Size(96, 21);
-            this.ProgressMark_CB.TabIndex = 314;
+            this.ProgressMark_CB.TabIndex = 16;
             // 
             // Reason_TB
             // 
@@ -922,7 +932,7 @@
             this.Reason_TB.Name = "Reason_TB";
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Reason_TB.Size = new System.Drawing.Size(782, 110);
-            this.Reason_TB.TabIndex = 308;
+            this.Reason_TB.TabIndex = 14;
             // 
             // label15
             // 
@@ -946,7 +956,7 @@
             this.Correction_TB.Name = "Correction_TB";
             this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Correction_TB.Size = new System.Drawing.Size(782, 110);
-            this.Correction_TB.TabIndex = 311;
+            this.Correction_TB.TabIndex = 15;
             // 
             // label14
             // 
@@ -1059,8 +1069,10 @@
             // 
             // Add_F
             // 
+            this.AcceptButton = this.OK_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.Cancel_B;
             this.ClientSize = new System.Drawing.Size(1175, 728);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
