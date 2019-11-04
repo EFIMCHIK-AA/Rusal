@@ -2,7 +2,7 @@ CLS
 ECHO OFF
 CHCP 1251
 REM Установка переменных окружения
-SET PGBIN=c:\Program Files\PostgreSQL\11\bin
+SET PGBIN=D:\PostgreSQL\bin
 SET PGDATABASE=Rusal
 SET PGHOST=localhost
 SET PGPORT=5432
