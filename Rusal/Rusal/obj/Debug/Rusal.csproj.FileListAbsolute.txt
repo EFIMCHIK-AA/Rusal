@@ -338,3 +338,54 @@ C:\Users\Unix\Desktop\Projects\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.Generate
 C:\Users\Unix\Desktop\Projects\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
 C:\Users\Unix\Desktop\Projects\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.exe
 C:\Users\Unix\Desktop\Projects\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.pdb
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.exe.config
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.exe
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Анализатор дефектов.pdb
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\EPPlus.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Npgsql.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Buffers.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Memory.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Text.Json.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.ValueTuple.dll
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\EPPlus.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Npgsql.pdb
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\Npgsql.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.pdb
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Buffers.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Memory.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Text.Json.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\System.ValueTuple.xml
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\bin\Debug\policy.2.0.Npgsql.config
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Add_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.BriefAnalysis_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.CheckParam_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.DefectLocation.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.DescriptionArg_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.FullAnalysis_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Main_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.ParamSearch_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Properties.Resources.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.Report_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingConfiguration_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.SettingDB_F.resources
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.exe
+C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.pdb
