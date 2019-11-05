@@ -23,8 +23,8 @@ namespace Rusal
 
         private void GetAnalisys(Int32 Key)
         {
-            FirstDate = FirstDate_CM.SelectionStart;
-            SecondDate = SecondDate_CM.SelectionStart;
+            FirstDate = FirstDate_CM.SelectionStart.Date;
+            SecondDate = SecondDate_CM.SelectionStart.Date;
             String Param = ListArgumnts_CB.SelectedItem.ToString(); //Параметр в строковом представлении
 
             if(Param != String.Empty)

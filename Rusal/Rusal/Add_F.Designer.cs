@@ -124,7 +124,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 41);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 50);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -146,8 +146,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.Six_CB);
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel17);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1175, 652);
-            this.splitContainer1.SplitterDistance = 377;
+            this.splitContainer1.Size = new System.Drawing.Size(1567, 803);
+            this.splitContainer1.SplitterDistance = 502;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 123;
             // 
             // tableLayoutPanel3
@@ -173,11 +174,12 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel15, 0, 14);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 15;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -190,23 +192,24 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(375, 650);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(500, 801);
             this.tableLayoutPanel3.TabIndex = 316;
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.AutoSize = true;
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.NumBrigade_CB, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 586);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 714);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel4.TabIndex = 333;
             // 
             // label3
@@ -214,10 +217,10 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(5, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label3.Location = new System.Drawing.Point(7, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 27);
+            this.label3.Size = new System.Drawing.Size(122, 32);
             this.label3.TabIndex = 271;
             this.label3.Text = "№ Бригады";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,9 +230,10 @@
             this.NumBrigade_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NumBrigade_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NumBrigade_CB.FormattingEnabled = true;
-            this.NumBrigade_CB.Location = new System.Drawing.Point(103, 3);
+            this.NumBrigade_CB.Location = new System.Drawing.Point(137, 4);
+            this.NumBrigade_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumBrigade_CB.Name = "NumBrigade_CB";
-            this.NumBrigade_CB.Size = new System.Drawing.Size(263, 21);
+            this.NumBrigade_CB.Size = new System.Drawing.Size(351, 24);
             this.NumBrigade_CB.TabIndex = 12;
             // 
             // label1
@@ -239,10 +243,10 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F);
-            this.label1.Location = new System.Drawing.Point(5, 217);
-            this.label1.Margin = new System.Windows.Forms.Padding(5);
+            this.label1.Location = new System.Drawing.Point(7, 266);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(365, 31);
+            this.label1.Size = new System.Drawing.Size(486, 38);
             this.label1.TabIndex = 333;
             this.label1.Text = "Общая информация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,16 +255,17 @@
             // 
             this.tableLayoutPanel14.AutoSize = true;
             this.tableLayoutPanel14.ColumnCount = 2;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel14.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel14.Controls.Add(this.NumTS_CB, 1, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 553);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(4, 674);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel14.TabIndex = 320;
             // 
             // label7
@@ -268,10 +273,10 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(5, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label7.Location = new System.Drawing.Point(7, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 27);
+            this.label7.Size = new System.Drawing.Size(122, 32);
             this.label7.TabIndex = 282;
             this.label7.Text = "Номер ТС";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,25 +286,27 @@
             this.NumTS_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NumTS_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NumTS_CB.FormattingEnabled = true;
-            this.NumTS_CB.Location = new System.Drawing.Point(103, 3);
+            this.NumTS_CB.Location = new System.Drawing.Point(137, 4);
+            this.NumTS_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumTS_CB.Name = "NumTS_CB";
-            this.NumTS_CB.Size = new System.Drawing.Size(263, 21);
+            this.NumTS_CB.Size = new System.Drawing.Size(351, 24);
             this.NumTS_CB.TabIndex = 11;
             // 
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.AutoSize = true;
             this.tableLayoutPanel13.ColumnCount = 2;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.TypeDefect_CB, 1, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 520);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(4, 634);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel13.TabIndex = 320;
             // 
             // label10
@@ -307,10 +314,10 @@
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(5, 0);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label10.Location = new System.Drawing.Point(7, 0);
+            this.label10.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 27);
+            this.label10.Size = new System.Drawing.Size(122, 32);
             this.label10.TabIndex = 289;
             this.label10.Text = "Тип дефекта";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,25 +327,27 @@
             this.TypeDefect_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TypeDefect_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TypeDefect_CB.FormattingEnabled = true;
-            this.TypeDefect_CB.Location = new System.Drawing.Point(103, 3);
+            this.TypeDefect_CB.Location = new System.Drawing.Point(137, 4);
+            this.TypeDefect_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TypeDefect_CB.Name = "TypeDefect_CB";
-            this.TypeDefect_CB.Size = new System.Drawing.Size(263, 21);
+            this.TypeDefect_CB.Size = new System.Drawing.Size(351, 24);
             this.TypeDefect_CB.TabIndex = 10;
             // 
             // tableLayoutPanel12
             // 
             this.tableLayoutPanel12.AutoSize = true;
             this.tableLayoutPanel12.ColumnCount = 2;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel12.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.Description_CB, 1, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 487);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(4, 594);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel12.TabIndex = 320;
             // 
             // label8
@@ -346,10 +355,10 @@
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(5, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label8.Location = new System.Drawing.Point(7, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 27);
+            this.label8.Size = new System.Drawing.Size(122, 32);
             this.label8.TabIndex = 286;
             this.label8.Text = "Описание";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,25 +368,27 @@
             this.Description_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Description_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Description_CB.FormattingEnabled = true;
-            this.Description_CB.Location = new System.Drawing.Point(103, 3);
+            this.Description_CB.Location = new System.Drawing.Point(137, 4);
+            this.Description_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Description_CB.Name = "Description_CB";
-            this.Description_CB.Size = new System.Drawing.Size(263, 21);
+            this.Description_CB.Size = new System.Drawing.Size(351, 24);
             this.Description_CB.TabIndex = 9;
             // 
             // tableLayoutPanel11
             // 
             this.tableLayoutPanel11.AutoSize = true;
             this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.Diameter_CB, 1, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 454);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(4, 554);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel11.TabIndex = 320;
             // 
             // label6
@@ -385,10 +396,10 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(5, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label6.Location = new System.Drawing.Point(7, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 27);
+            this.label6.Size = new System.Drawing.Size(122, 32);
             this.label6.TabIndex = 280;
             this.label6.Text = "Диаметр";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -398,25 +409,27 @@
             this.Diameter_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Diameter_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Diameter_CB.FormattingEnabled = true;
-            this.Diameter_CB.Location = new System.Drawing.Point(103, 3);
+            this.Diameter_CB.Location = new System.Drawing.Point(137, 4);
+            this.Diameter_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Diameter_CB.Name = "Diameter_CB";
-            this.Diameter_CB.Size = new System.Drawing.Size(263, 21);
+            this.Diameter_CB.Size = new System.Drawing.Size(351, 24);
             this.Diameter_CB.TabIndex = 8;
             // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.AutoSize = true;
             this.tableLayoutPanel10.ColumnCount = 2;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.Weight_TB, 1, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 421);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(4, 514);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel10.TabIndex = 320;
             // 
             // label11
@@ -424,10 +437,10 @@
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(5, 0);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label11.Location = new System.Drawing.Point(7, 0);
+            this.label11.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 27);
+            this.label11.Size = new System.Drawing.Size(122, 32);
             this.label11.TabIndex = 290;
             this.label11.Text = "Общий вес";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -437,25 +450,27 @@
             this.Weight_TB.BackColor = System.Drawing.Color.White;
             this.Weight_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Weight_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Weight_TB.Location = new System.Drawing.Point(103, 3);
+            this.Weight_TB.Location = new System.Drawing.Point(137, 4);
+            this.Weight_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Weight_TB.Name = "Weight_TB";
-            this.Weight_TB.Size = new System.Drawing.Size(263, 21);
+            this.Weight_TB.Size = new System.Drawing.Size(351, 24);
             this.Weight_TB.TabIndex = 7;
             // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.AutoSize = true;
             this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.Count_TB, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 388);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(4, 474);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel9.TabIndex = 320;
             // 
             // label9
@@ -463,10 +478,10 @@
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(5, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label9.Location = new System.Drawing.Point(7, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 27);
+            this.label9.Size = new System.Drawing.Size(122, 32);
             this.label9.TabIndex = 287;
             this.label9.Text = "Количество";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -476,25 +491,27 @@
             this.Count_TB.BackColor = System.Drawing.Color.White;
             this.Count_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Count_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Count_TB.Location = new System.Drawing.Point(103, 3);
+            this.Count_TB.Location = new System.Drawing.Point(137, 4);
+            this.Count_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Count_TB.Name = "Count_TB";
-            this.Count_TB.Size = new System.Drawing.Size(263, 21);
+            this.Count_TB.Size = new System.Drawing.Size(351, 24);
             this.Count_TB.TabIndex = 6;
             // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.AutoSize = true;
             this.tableLayoutPanel8.ColumnCount = 2;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Controls.Add(this.label16, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.Address_TB, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 355);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 434);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel8.TabIndex = 320;
             // 
             // label16
@@ -502,10 +519,10 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(5, 0);
-            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label16.Location = new System.Drawing.Point(7, 0);
+            this.label16.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 27);
+            this.label16.Size = new System.Drawing.Size(122, 32);
             this.label16.TabIndex = 292;
             this.label16.Text = "Адрес слитка";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -515,25 +532,27 @@
             this.Address_TB.BackColor = System.Drawing.Color.White;
             this.Address_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Address_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Address_TB.Location = new System.Drawing.Point(103, 3);
+            this.Address_TB.Location = new System.Drawing.Point(137, 4);
+            this.Address_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Address_TB.Name = "Address_TB";
-            this.Address_TB.Size = new System.Drawing.Size(263, 21);
+            this.Address_TB.Size = new System.Drawing.Size(351, 24);
             this.Address_TB.TabIndex = 5;
             // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.AutoSize = true;
             this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.TypeAlloy_CB, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 322);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 394);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel7.TabIndex = 320;
             // 
             // label5
@@ -541,10 +560,10 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(5, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label5.Location = new System.Drawing.Point(7, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 27);
+            this.label5.Size = new System.Drawing.Size(122, 32);
             this.label5.TabIndex = 276;
             this.label5.Text = "Марка сплава";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -554,25 +573,27 @@
             this.TypeAlloy_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TypeAlloy_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TypeAlloy_CB.FormattingEnabled = true;
-            this.TypeAlloy_CB.Location = new System.Drawing.Point(103, 3);
+            this.TypeAlloy_CB.Location = new System.Drawing.Point(137, 4);
+            this.TypeAlloy_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TypeAlloy_CB.Name = "TypeAlloy_CB";
-            this.TypeAlloy_CB.Size = new System.Drawing.Size(263, 21);
+            this.TypeAlloy_CB.Size = new System.Drawing.Size(351, 24);
             this.TypeAlloy_CB.TabIndex = 4;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.AutoSize = true;
             this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.NumMelt_TB, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 289);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 354);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel6.TabIndex = 319;
             // 
             // label12
@@ -580,10 +601,10 @@
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(5, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label12.Location = new System.Drawing.Point(7, 0);
+            this.label12.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 27);
+            this.label12.Size = new System.Drawing.Size(122, 32);
             this.label12.TabIndex = 296;
             this.label12.Text = "№ Плавки";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -593,25 +614,27 @@
             this.NumMelt_TB.BackColor = System.Drawing.Color.White;
             this.NumMelt_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NumMelt_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NumMelt_TB.Location = new System.Drawing.Point(103, 3);
+            this.NumMelt_TB.Location = new System.Drawing.Point(137, 4);
+            this.NumMelt_TB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumMelt_TB.Name = "NumMelt_TB";
-            this.NumMelt_TB.Size = new System.Drawing.Size(263, 21);
+            this.NumMelt_TB.Size = new System.Drawing.Size(351, 24);
             this.NumMelt_TB.TabIndex = 3;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.AutoSize = true;
             this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.NumSmeny_CB, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 256);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 314);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel5.TabIndex = 317;
             // 
             // label4
@@ -619,10 +642,10 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(5, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label4.Location = new System.Drawing.Point(7, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 27);
+            this.label4.Size = new System.Drawing.Size(122, 32);
             this.label4.TabIndex = 273;
             this.label4.Text = "№ Смены";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -632,9 +655,10 @@
             this.NumSmeny_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NumSmeny_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NumSmeny_CB.FormattingEnabled = true;
-            this.NumSmeny_CB.Location = new System.Drawing.Point(103, 3);
+            this.NumSmeny_CB.Location = new System.Drawing.Point(137, 4);
+            this.NumSmeny_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumSmeny_CB.Name = "NumSmeny_CB";
-            this.NumSmeny_CB.Size = new System.Drawing.Size(263, 21);
+            this.NumSmeny_CB.Size = new System.Drawing.Size(351, 24);
             this.NumSmeny_CB.TabIndex = 2;
             // 
             // label2
@@ -644,10 +668,10 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F);
-            this.label2.Location = new System.Drawing.Point(5, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(5);
+            this.label2.Location = new System.Drawing.Point(7, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(365, 31);
+            this.label2.Size = new System.Drawing.Size(486, 38);
             this.label2.TabIndex = 270;
             this.label2.Text = "Дата появления";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -656,10 +680,10 @@
             // 
             this.Calendar_MC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Calendar_MC.BackColor = System.Drawing.SystemColors.Control;
-            this.Calendar_MC.Location = new System.Drawing.Point(105, 46);
-            this.Calendar_MC.Margin = new System.Windows.Forms.Padding(5);
+            this.Calendar_MC.Location = new System.Drawing.Point(154, 56);
+            this.Calendar_MC.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Calendar_MC.MaxSelectionCount = 1;
-            this.Calendar_MC.MinimumSize = new System.Drawing.Size(2, 1);
+            this.Calendar_MC.MinimumSize = new System.Drawing.Size(3, 1);
             this.Calendar_MC.Name = "Calendar_MC";
             this.Calendar_MC.TabIndex = 1;
             this.Calendar_MC.TrailingForeColor = System.Drawing.Color.Tomato;
@@ -668,16 +692,17 @@
             // 
             this.tableLayoutPanel15.AutoSize = true;
             this.tableLayoutPanel15.ColumnCount = 2;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel15.Controls.Add(this.label13, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.LocationProduction_CB, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 619);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(4, 754);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(369, 27);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(492, 32);
             this.tableLayoutPanel15.TabIndex = 334;
             // 
             // label13
@@ -685,10 +710,10 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(5, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label13.Location = new System.Drawing.Point(7, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 27);
+            this.label13.Size = new System.Drawing.Size(162, 32);
             this.label13.TabIndex = 299;
             this.label13.Text = "МД в производстве";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -698,18 +723,20 @@
             this.LocationProduction_CB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LocationProduction_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocationProduction_CB.FormattingEnabled = true;
-            this.LocationProduction_CB.Location = new System.Drawing.Point(133, 3);
+            this.LocationProduction_CB.Location = new System.Drawing.Point(177, 4);
+            this.LocationProduction_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LocationProduction_CB.Name = "LocationProduction_CB";
-            this.LocationProduction_CB.Size = new System.Drawing.Size(233, 21);
+            this.LocationProduction_CB.Size = new System.Drawing.Size(311, 24);
             this.LocationProduction_CB.TabIndex = 13;
             // 
             // North_CB
             // 
             this.North_CB.AutoSize = true;
             this.North_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.North_CB.Location = new System.Drawing.Point(137, 415);
+            this.North_CB.Location = new System.Drawing.Point(183, 511);
+            this.North_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.North_CB.Name = "North_CB";
-            this.North_CB.Size = new System.Drawing.Size(33, 17);
+            this.North_CB.Size = new System.Drawing.Size(39, 21);
             this.North_CB.TabIndex = 323;
             this.North_CB.TabStop = false;
             this.North_CB.Text = "С";
@@ -719,9 +746,10 @@
             // 
             this.South_CB.AutoSize = true;
             this.South_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.South_CB.Location = new System.Drawing.Point(135, 622);
+            this.South_CB.Location = new System.Drawing.Point(180, 766);
+            this.South_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.South_CB.Name = "South_CB";
-            this.South_CB.Size = new System.Drawing.Size(35, 17);
+            this.South_CB.Size = new System.Drawing.Size(44, 21);
             this.South_CB.TabIndex = 324;
             this.South_CB.TabStop = false;
             this.South_CB.Text = "Ю";
@@ -735,9 +763,10 @@
             this.West_CB.AutoSize = true;
             this.West_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.West_CB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.West_CB.Location = new System.Drawing.Point(16, 519);
+            this.West_CB.Location = new System.Drawing.Point(21, 639);
+            this.West_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.West_CB.Name = "West_CB";
-            this.West_CB.Size = new System.Drawing.Size(33, 17);
+            this.West_CB.Size = new System.Drawing.Size(39, 21);
             this.West_CB.TabIndex = 325;
             this.West_CB.TabStop = false;
             this.West_CB.Text = "З";
@@ -748,9 +777,10 @@
             // 
             this.East_CB.AutoSize = true;
             this.East_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.East_CB.Location = new System.Drawing.Point(238, 519);
+            this.East_CB.Location = new System.Drawing.Point(317, 639);
+            this.East_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.East_CB.Name = "East_CB";
-            this.East_CB.Size = new System.Drawing.Size(33, 17);
+            this.East_CB.Size = new System.Drawing.Size(39, 21);
             this.East_CB.TabIndex = 326;
             this.East_CB.TabStop = false;
             this.East_CB.Text = "В";
@@ -760,9 +790,10 @@
             // 
             this.One_CB.AutoSize = true;
             this.One_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.One_CB.Location = new System.Drawing.Point(349, 415);
+            this.One_CB.Location = new System.Drawing.Point(465, 511);
+            this.One_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.One_CB.Name = "One_CB";
-            this.One_CB.Size = new System.Drawing.Size(32, 17);
+            this.One_CB.Size = new System.Drawing.Size(38, 21);
             this.One_CB.TabIndex = 327;
             this.One_CB.TabStop = false;
             this.One_CB.Text = "1";
@@ -772,9 +803,10 @@
             // 
             this.Two_CB.AutoSize = true;
             this.Two_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Two_CB.Location = new System.Drawing.Point(416, 415);
+            this.Two_CB.Location = new System.Drawing.Point(555, 511);
+            this.Two_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Two_CB.Name = "Two_CB";
-            this.Two_CB.Size = new System.Drawing.Size(32, 17);
+            this.Two_CB.Size = new System.Drawing.Size(38, 21);
             this.Two_CB.TabIndex = 328;
             this.Two_CB.TabStop = false;
             this.Two_CB.Text = "2";
@@ -784,9 +816,10 @@
             // 
             this.Three_CB.AutoSize = true;
             this.Three_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Three_CB.Location = new System.Drawing.Point(486, 415);
+            this.Three_CB.Location = new System.Drawing.Point(648, 511);
+            this.Three_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Three_CB.Name = "Three_CB";
-            this.Three_CB.Size = new System.Drawing.Size(32, 17);
+            this.Three_CB.Size = new System.Drawing.Size(38, 21);
             this.Three_CB.TabIndex = 329;
             this.Three_CB.TabStop = false;
             this.Three_CB.Text = "3";
@@ -796,9 +829,10 @@
             // 
             this.Four_CB.AutoSize = true;
             this.Four_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Four_CB.Location = new System.Drawing.Point(555, 415);
+            this.Four_CB.Location = new System.Drawing.Point(740, 511);
+            this.Four_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Four_CB.Name = "Four_CB";
-            this.Four_CB.Size = new System.Drawing.Size(32, 17);
+            this.Four_CB.Size = new System.Drawing.Size(38, 21);
             this.Four_CB.TabIndex = 330;
             this.Four_CB.TabStop = false;
             this.Four_CB.Text = "4";
@@ -808,9 +842,10 @@
             // 
             this.Five_CB.AutoSize = true;
             this.Five_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Five_CB.Location = new System.Drawing.Point(621, 415);
+            this.Five_CB.Location = new System.Drawing.Point(828, 511);
+            this.Five_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Five_CB.Name = "Five_CB";
-            this.Five_CB.Size = new System.Drawing.Size(32, 17);
+            this.Five_CB.Size = new System.Drawing.Size(38, 21);
             this.Five_CB.TabIndex = 331;
             this.Five_CB.TabStop = false;
             this.Five_CB.Text = "5";
@@ -820,9 +855,10 @@
             // 
             this.Six_CB.AutoSize = true;
             this.Six_CB.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Six_CB.Location = new System.Drawing.Point(693, 415);
+            this.Six_CB.Location = new System.Drawing.Point(924, 511);
+            this.Six_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Six_CB.Name = "Six_CB";
-            this.Six_CB.Size = new System.Drawing.Size(32, 17);
+            this.Six_CB.Size = new System.Drawing.Size(38, 21);
             this.Six_CB.TabIndex = 332;
             this.Six_CB.TabStop = false;
             this.Six_CB.Text = "6";
@@ -843,16 +879,17 @@
             this.tableLayoutPanel17.Controls.Add(this.label14, 0, 6);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 7;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(792, 405);
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(1058, 498);
             this.tableLayoutPanel17.TabIndex = 321;
             // 
             // label23
@@ -862,10 +899,10 @@
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label23.Font = new System.Drawing.Font("Verdana", 12F);
-            this.label23.Location = new System.Drawing.Point(5, 5);
-            this.label23.Margin = new System.Windows.Forms.Padding(5);
+            this.label23.Location = new System.Drawing.Point(7, 6);
+            this.label23.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(782, 31);
+            this.label23.Size = new System.Drawing.Size(1044, 38);
             this.label23.TabIndex = 310;
             this.label23.Text = "Корректирущие меры";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -875,10 +912,10 @@
             this.label17.AutoSize = true;
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(5, 41);
-            this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label17.Location = new System.Drawing.Point(7, 50);
+            this.label17.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(784, 25);
+            this.label17.Size = new System.Drawing.Size(1047, 31);
             this.label17.TabIndex = 307;
             this.label17.Text = "Причины дефекта";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -887,16 +924,17 @@
             // 
             this.tableLayoutPanel16.AutoSize = true;
             this.tableLayoutPanel16.ColumnCount = 2;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel16.Controls.Add(this.label18, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.ProgressMark_CB, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 334);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(4, 412);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(786, 27);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1050, 32);
             this.tableLayoutPanel16.TabIndex = 320;
             // 
             // label18
@@ -904,10 +942,10 @@
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(5, 0);
-            this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.label18.Location = new System.Drawing.Point(7, 0);
+            this.label18.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(146, 27);
+            this.label18.Size = new System.Drawing.Size(194, 32);
             this.label18.TabIndex = 313;
             this.label18.Text = "Отметка о выполнении";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -917,21 +955,22 @@
             this.ProgressMark_CB.Dock = System.Windows.Forms.DockStyle.Left;
             this.ProgressMark_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProgressMark_CB.FormattingEnabled = true;
-            this.ProgressMark_CB.Location = new System.Drawing.Point(157, 3);
+            this.ProgressMark_CB.Location = new System.Drawing.Point(209, 4);
+            this.ProgressMark_CB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProgressMark_CB.Name = "ProgressMark_CB";
-            this.ProgressMark_CB.Size = new System.Drawing.Size(96, 21);
+            this.ProgressMark_CB.Size = new System.Drawing.Size(127, 24);
             this.ProgressMark_CB.TabIndex = 16;
             // 
             // Reason_TB
             // 
             this.Reason_TB.BackColor = System.Drawing.Color.White;
             this.Reason_TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Reason_TB.Location = new System.Drawing.Point(5, 71);
-            this.Reason_TB.Margin = new System.Windows.Forms.Padding(5);
+            this.Reason_TB.Location = new System.Drawing.Point(7, 87);
+            this.Reason_TB.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Reason_TB.Multiline = true;
             this.Reason_TB.Name = "Reason_TB";
             this.Reason_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Reason_TB.Size = new System.Drawing.Size(782, 110);
+            this.Reason_TB.Size = new System.Drawing.Size(1044, 136);
             this.Reason_TB.TabIndex = 14;
             // 
             // label15
@@ -939,9 +978,10 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(3, 186);
+            this.label15.Location = new System.Drawing.Point(4, 229);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(786, 25);
+            this.label15.Size = new System.Drawing.Size(1050, 31);
             this.label15.TabIndex = 309;
             this.label15.Text = "Корректирующие действия";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -950,12 +990,12 @@
             // 
             this.Correction_TB.BackColor = System.Drawing.Color.White;
             this.Correction_TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Correction_TB.Location = new System.Drawing.Point(5, 216);
-            this.Correction_TB.Margin = new System.Windows.Forms.Padding(5);
+            this.Correction_TB.Location = new System.Drawing.Point(7, 266);
+            this.Correction_TB.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Correction_TB.Multiline = true;
             this.Correction_TB.Name = "Correction_TB";
             this.Correction_TB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Correction_TB.Size = new System.Drawing.Size(782, 110);
+            this.Correction_TB.Size = new System.Drawing.Size(1044, 136);
             this.Correction_TB.TabIndex = 15;
             // 
             // label14
@@ -965,10 +1005,10 @@
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Verdana", 12F);
-            this.label14.Location = new System.Drawing.Point(5, 369);
-            this.label14.Margin = new System.Windows.Forms.Padding(5);
+            this.label14.Location = new System.Drawing.Point(7, 454);
+            this.label14.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(782, 31);
+            this.label14.Size = new System.Drawing.Size(1044, 38);
             this.label14.TabIndex = 287;
             this.label14.Text = "Место дефекта на слитке";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -977,10 +1017,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.BackgroundImage = global::Rusal.Properties.Resources.Слиток_прозрачный_фон_v2;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 407);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 501);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(782, 239);
+            this.pictureBox1.Size = new System.Drawing.Size(1043, 294);
             this.pictureBox1.TabIndex = 322;
             this.pictureBox1.TabStop = false;
             // 
@@ -990,10 +1030,10 @@
             this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label22.Font = new System.Drawing.Font("Verdana", 12F);
-            this.label22.Location = new System.Drawing.Point(5, 5);
-            this.label22.Margin = new System.Windows.Forms.Padding(5);
+            this.label22.Location = new System.Drawing.Point(7, 6);
+            this.label22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(1165, 31);
+            this.label22.Size = new System.Drawing.Size(1553, 38);
             this.label22.TabIndex = 128;
             this.label22.Text = "Добавление информации о дефекте";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1006,10 +1046,10 @@
             this.Cancel_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cancel_B.Location = new System.Drawing.Point(592, 5);
-            this.Cancel_B.Margin = new System.Windows.Forms.Padding(5);
+            this.Cancel_B.Location = new System.Drawing.Point(790, 6);
+            this.Cancel_B.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Cancel_B.Name = "Cancel_B";
-            this.Cancel_B.Size = new System.Drawing.Size(578, 25);
+            this.Cancel_B.Size = new System.Drawing.Size(770, 31);
             this.Cancel_B.TabIndex = 124;
             this.Cancel_B.Text = "Отмена";
             this.Cancel_B.UseVisualStyleBackColor = false;
@@ -1022,10 +1062,10 @@
             this.OK_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OK_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OK_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OK_B.Location = new System.Drawing.Point(5, 5);
-            this.OK_B.Margin = new System.Windows.Forms.Padding(5);
+            this.OK_B.Location = new System.Drawing.Point(7, 6);
+            this.OK_B.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(577, 25);
+            this.OK_B.Size = new System.Drawing.Size(769, 31);
             this.OK_B.TabIndex = 125;
             this.OK_B.Text = "ОК";
             this.OK_B.UseVisualStyleBackColor = false;
@@ -1042,10 +1082,10 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1175, 728);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1567, 896);
             this.tableLayoutPanel1.TabIndex = 174;
             // 
             // tableLayoutPanel2
@@ -1058,27 +1098,28 @@
             this.tableLayoutPanel2.Controls.Add(this.OK_B, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Cancel_B, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 693);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 853);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1175, 35);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1567, 43);
             this.tableLayoutPanel2.TabIndex = 175;
             // 
             // Add_F
             // 
             this.AcceptButton = this.OK_B;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_B;
-            this.ClientSize = new System.Drawing.Size(1175, 728);
+            this.ClientSize = new System.Drawing.Size(1567, 896);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1095, 707);
+            this.MinimumSize = new System.Drawing.Size(1454, 859);
             this.Name = "Add_F";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

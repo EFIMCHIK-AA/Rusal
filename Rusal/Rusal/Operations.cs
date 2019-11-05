@@ -410,7 +410,7 @@ namespace Rusal
                             }
                         }
 
-                        Position Temp = new Position(ID + 1, DateCreate, Dialog.Calendar_MC.SelectionStart, Dialog.NumMelt_TB.Text.Trim(), Convert.ToInt64(Dialog.Count_TB.Text.Trim()),
+                        Position Temp = new Position(ID + 1, DateCreate, Dialog.Calendar_MC.SelectionStart.Date, Dialog.NumMelt_TB.Text.Trim(), Convert.ToInt64(Dialog.Count_TB.Text.Trim()),
                                                      Convert.ToDouble(Dialog.Weight_TB.Text.Trim()), LocDefIngot, Dialog.Correction_TB.Text.Trim(), Dialog.Address_TB.Text.Trim(),Dialog.Reason_TB.Text.Trim(), (TSN)Dialog.NumTS_CB.SelectedItem, (ListBrigades)Dialog.NumBrigade_CB.SelectedItem,
                                                      (DefectProduction)Dialog.LocationProduction_CB.SelectedItem, (ListSmen)Dialog.NumSmeny_CB.SelectedItem, (TypesDefect)Dialog.TypeDefect_CB.SelectedItem, (TypesAlloy)Dialog.TypeAlloy_CB.SelectedItem,
                                                      (DescriptionDefect)Dialog.Description_CB.SelectedItem, (DiameterIngot)Dialog.Diameter_CB.SelectedItem, (ProgressMark)Dialog.ProgressMark_CB.SelectedItem);
@@ -512,7 +512,7 @@ namespace Rusal
                 {
                     Connect.Open();
 
-                    Position Temp = new Position(Position.ID, DateCreate, Dialog.Calendar_MC.SelectionStart, Dialog.NumMelt_TB.Text.Trim(), Convert.ToInt64(Dialog.Count_TB.Text.Trim()),
+                    Position Temp = new Position(Position.ID, DateCreate, Dialog.Calendar_MC.SelectionStart.Date, Dialog.NumMelt_TB.Text.Trim(), Convert.ToInt64(Dialog.Count_TB.Text.Trim()),
                                                  Convert.ToDouble(Dialog.Weight_TB.Text.Trim()), LocDefIngot, Dialog.Correction_TB.Text.Trim(), Dialog.Address_TB.Text.Trim(), Dialog.Reason_TB.Text.Trim(), (TSN)Dialog.NumTS_CB.SelectedItem, (ListBrigades)Dialog.NumBrigade_CB.SelectedItem,
                                                  (DefectProduction)Dialog.LocationProduction_CB.SelectedItem, (ListSmen)Dialog.NumSmeny_CB.SelectedItem, (TypesDefect)Dialog.TypeDefect_CB.SelectedItem, (TypesAlloy)Dialog.TypeAlloy_CB.SelectedItem,
                                                  (DescriptionDefect)Dialog.Description_CB.SelectedItem, (DiameterIngot)Dialog.Diameter_CB.SelectedItem, (ProgressMark)Dialog.ProgressMark_CB.SelectedItem);
