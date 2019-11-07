@@ -40,7 +40,10 @@
             this.ClientSize = new System.Drawing.Size(580, 375);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(580, 375);
+            this.MinimumSize = new System.Drawing.Size(580, 375);
             this.Name = "CheckParam_F";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Проверка целостности";

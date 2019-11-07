@@ -23,7 +23,7 @@ namespace Rusal
         }
 
         String []ListParams = {"Номер бригады", "Номер смены", "Марка сплава", "Диаметер",
-                                  "Описание", "Номер ТС"};
+                                  "Описание", "Номер ТС", "Тип дефекта", "Место дефекта в производстве"};
 
         private void SettingConfiguration_F_Load(object sender, EventArgs e)
         {
@@ -196,22 +196,21 @@ namespace Rusal
                     NameTable = "DescriptionDefect";
                     NameColumn = "N_Description";
                     break;
-
                 case 5:
                     Spisok_LB.DataSource = SystemArgs.TSN;
                     NameTable = "TSN";
                     NameColumn = "N_TSN";
                     break;
-                    //case 6:
-                    //    Spisok_LB.DataSource = SystemArgs.TypesDefect;
-                    //    NameTable = "TypesDefect";
-                    //    NameColumn = "N_Defect";
-                    //    break;
-                    //case 7:
-                    //    Spisok_LB.DataSource = SystemArgs.DefectLocProduction;
-                    //    NameTable = "DefectLocationProduction";
-                    //    NameColumn = "N_Location";
-                    //    break;
+                case 6:
+                    Spisok_LB.DataSource = SystemArgs.TypesDefect;
+                    NameTable = "TypesDefect";
+                    NameColumn = "N_Defect";
+                    break;
+                case 7:
+                    Spisok_LB.DataSource = SystemArgs.DefectLocProduction;
+                    NameTable = "DefectLocationProduction";
+                    NameColumn = "N_Location";
+                    break;
                     //case 8:
                     //    Spisok_LB.DataSource = SystemArgs.ProgressMark;
                     //    NameTable = "ProgressMark";

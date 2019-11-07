@@ -67,6 +67,11 @@ namespace Rusal
             }
             catch(Exception)
             {
+                if (Form.InvokeRequired)
+                {
+                    return;
+                }
+
                 Form.ConnectDB_TB.BeginInvoke(new MethodInvoker(delegate
                 {
                     Form.ConnectDB_TB.Text = "Не установлено";

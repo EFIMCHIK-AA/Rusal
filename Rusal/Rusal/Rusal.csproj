@@ -203,6 +203,18 @@
     <Compile Include="SettingDB_F.Designer.cs">
       <DependentUpon>SettingDB_F.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatisticsIngot_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatisticsIngot_F.Designer.cs">
+      <DependentUpon>StatisticsIngot_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsProduction_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatisticsProduction_F.Designer.cs">
+      <DependentUpon>StatisticsProduction_F.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemArgs.cs" />
     <Compile Include="Files.cs" />
     <Compile Include="TSN.cs" />
@@ -247,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingDB_F.resx">
       <DependentUpon>SettingDB_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticsIngot_F.resx">
+      <DependentUpon>StatisticsIngot_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticsProduction_F.resx">
+      <DependentUpon>StatisticsProduction_F.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

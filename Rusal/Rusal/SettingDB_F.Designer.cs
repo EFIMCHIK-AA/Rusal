@@ -113,6 +113,7 @@
             this.Password_TB.Location = new System.Drawing.Point(95, 3);
             this.Password_TB.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Password_TB.Name = "Password_TB";
+            this.Password_TB.ReadOnly = true;
             this.Password_TB.Size = new System.Drawing.Size(259, 21);
             this.Password_TB.TabIndex = 4;
             // 

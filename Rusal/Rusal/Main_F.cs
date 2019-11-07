@@ -84,6 +84,8 @@ namespace Rusal
 
             Position_DGV.DataSource = SystemArgs.View;
 
+            Position_DGV.Sort(Position_DGV.Columns[0], ListSortDirection.Ascending);
+
             CountPos_TB.Text = SystemArgs.View.Count.ToString();
         }
 
@@ -606,11 +608,12 @@ namespace Rusal
 
                 if (Dialog.ShowDialog() == DialogResult.OK)
                 {
-                    DateTime TempDate = Dialog.Calendar_DP.Value.Date;
+                    DateTime DateFirst = Dialog.CalendarFirst_DP.Value.Date;
+                    DateTime DateSecond = Dialog.CalendarSecond_DP.Value.Date;
 
                     SystemArgs.Result = SystemArgs.Positions;
 
-                    SystemArgs.Result = SystemArgs.Result.Where(p => p.DateFormation == TempDate).ToList();
+                    SystemArgs.Result = SystemArgs.Result.Where(p => (p.DateFormation >= DateFirst) && (p.DateFormation <= DateSecond)).ToList();
 
                     if (Dialog.NumSmeny_CB.SelectedIndex != 0)
                     {
@@ -728,6 +731,31 @@ namespace Rusal
                 {
                     Application.Exit();
                 }
+            }
+        }
+
+        private void статистикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void местоНаСлиткеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StatisticsIngot_F Dialog = new StatisticsIngot_F();
+
+            if(Dialog.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void местоВПроизводствеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StatisticsProduction_F Dialog = new StatisticsProduction_F();
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
     }

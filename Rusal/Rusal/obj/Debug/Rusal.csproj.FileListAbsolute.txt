@@ -389,3 +389,5 @@ C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.GenerateRes
 C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Rusal.csproj.CopyComplete
 C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.exe
 C:\Users\Admin\Desktop\Work\Rusal\Rusal\Rusal\obj\Debug\Анализатор дефектов.pdb
+C:\Users\Unix\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.StatisticsIngot_F.resources
+C:\Users\Unix\Desktop\Rusal\Rusal\Rusal\obj\Debug\Rusal.StatisticsProduction_F.resources
