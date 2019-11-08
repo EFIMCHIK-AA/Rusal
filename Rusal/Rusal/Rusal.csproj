@@ -158,7 +158,6 @@
     <Compile Include="FullAnalysis_F.designer.cs">
       <DependentUpon>FullAnalysis_F.cs</DependentUpon>
     </Compile>
-    <Compile Include="HotKeys.cs" />
     <Compile Include="ListBrigades.cs" />
     <Compile Include="ListSmen.cs" />
     <Compile Include="Log.cs" />
