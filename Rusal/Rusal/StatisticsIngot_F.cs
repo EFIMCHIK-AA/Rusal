@@ -32,15 +32,11 @@ namespace Rusal
             }
         }
 
-        private void StatisticsIngot_F_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void OK_B_Click(object sender, EventArgs e)
         {
             FirstDate = First_MC.SelectionStart.Date;
             SecondDate = Second_MC.SelectionStart.Date;
+            Statistic.Ingot(FirstDate, SecondDate, North_TB, South_TB, West_TB, East_TB, One_TB, Two_TB, Three_TB, Four_TB, Five_TB, Six_TB);
         }
 
         private void StatisticsIngot_F_KeyDown(object sender, KeyEventArgs e)
@@ -52,6 +48,14 @@ namespace Rusal
             else if (e.KeyCode == Keys.Escape)
             {
                 Exit_B.PerformClick();
+            }
+        }
+
+        private void One_CB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is CheckBox)
+            {
+                ((CheckBox)sender).Checked = !((CheckBox)sender).Checked;
             }
         }
     }

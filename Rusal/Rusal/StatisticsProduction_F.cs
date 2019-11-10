@@ -29,6 +29,7 @@ namespace Rusal
         {
             FirstDate = First_MC.SelectionStart.Date;
             SecondDate = Second_MC.SelectionStart.Date;
+            Statistic.Production(FirstDate, SecondDate, Position_DGV);
         }
 
         private void StatisticsProduction_F_KeyDown(object sender, KeyEventArgs e)

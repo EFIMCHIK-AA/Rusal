@@ -254,6 +254,7 @@
             this.North_CB.TabStop = false;
             this.North_CB.Text = "С";
             this.North_CB.UseVisualStyleBackColor = false;
+            this.North_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // South_CB
             // 
@@ -268,6 +269,7 @@
             this.South_CB.TabStop = false;
             this.South_CB.Text = "Ю";
             this.South_CB.UseVisualStyleBackColor = false;
+            this.South_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // West_CB
             // 
@@ -286,6 +288,7 @@
             this.West_CB.TabStop = false;
             this.West_CB.Text = "З";
             this.West_CB.UseVisualStyleBackColor = false;
+            this.West_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // East_CB
             // 
@@ -300,6 +303,7 @@
             this.East_CB.TabStop = false;
             this.East_CB.Text = "В";
             this.East_CB.UseVisualStyleBackColor = false;
+            this.East_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // One_CB
             // 
@@ -314,6 +318,7 @@
             this.One_CB.TabStop = false;
             this.One_CB.Text = "1";
             this.One_CB.UseVisualStyleBackColor = false;
+            this.One_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // Two_CB
             // 
@@ -328,6 +333,7 @@
             this.Two_CB.TabStop = false;
             this.Two_CB.Text = "2";
             this.Two_CB.UseVisualStyleBackColor = false;
+            this.Two_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // Three_CB
             // 
@@ -342,6 +348,7 @@
             this.Three_CB.TabStop = false;
             this.Three_CB.Text = "3";
             this.Three_CB.UseVisualStyleBackColor = false;
+            this.Three_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // Four_CB
             // 
@@ -356,6 +363,7 @@
             this.Four_CB.TabStop = false;
             this.Four_CB.Text = "4";
             this.Four_CB.UseVisualStyleBackColor = false;
+            this.Four_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // Five_CB
             // 
@@ -370,6 +378,7 @@
             this.Five_CB.TabStop = false;
             this.Five_CB.Text = "5";
             this.Five_CB.UseVisualStyleBackColor = false;
+            this.Five_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // Six_CB
             // 
@@ -384,6 +393,7 @@
             this.Six_CB.TabStop = false;
             this.Six_CB.Text = "6";
             this.Six_CB.UseVisualStyleBackColor = false;
+            this.Six_CB.Click += new System.EventHandler(this.One_CB_CheckedChanged);
             // 
             // North_TB
             // 
@@ -535,7 +545,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Статистика по дефектности";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StatisticsIngot_F_FormClosing);
-            this.Load += new System.EventHandler(this.StatisticsIngot_F_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StatisticsIngot_F_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
