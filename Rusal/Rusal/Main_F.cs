@@ -149,8 +149,7 @@ namespace Rusal
                 }
                 else
                 {
-                    Search_TSTB.Focus();
-                    MessageBox.Show("Для поиска необходимо ввести значение", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ResetSearch();
                     SystemArgs.PrintLog("Получено пустое значение параметра поиска");
                 }
             }
@@ -170,6 +169,8 @@ namespace Rusal
             SystemArgs.ModePosition = false;
 
             SystemArgs.Result.Clear();
+
+            ShowPosition(SystemArgs.Positions);
         }
 
         private void Reset_TSB_Click(object sender, EventArgs e)
