@@ -55,5 +55,16 @@ namespace Rusal
                 e.Cancel = true;
             }
         }
+
+        private void Position_DGV_SelectionChanged(object sender, EventArgs e)
+        {
+            Position_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void Position_DGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.SelectionBackColor = Color.FromArgb(220, 217, 217);
+            e.CellStyle.SelectionForeColor = Color.Black;
+        }
     }
 }

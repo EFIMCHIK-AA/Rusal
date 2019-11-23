@@ -53,7 +53,7 @@
             this.label21.Location = new System.Drawing.Point(5, 5);
             this.label21.Margin = new System.Windows.Forms.Padding(5);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(336, 31);
+            this.label21.Size = new System.Drawing.Size(334, 31);
             this.label21.TabIndex = 42;
             this.label21.Text = "Отчет по дефектоности";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,7 +65,7 @@
             this.label1.Location = new System.Drawing.Point(5, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 13);
+            this.label1.Size = new System.Drawing.Size(162, 13);
             this.label1.TabIndex = 44;
             this.label1.Text = "Начало  периода";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,10 +74,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Location = new System.Drawing.Point(176, 5);
+            this.label2.Location = new System.Drawing.Point(175, 5);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 3, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 13);
+            this.label2.Size = new System.Drawing.Size(164, 13);
             this.label2.TabIndex = 46;
             this.label2.Text = "Окончание периода";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@
             // Second_MC
             // 
             this.Second_MC.BackColor = System.Drawing.SystemColors.Control;
-            this.Second_MC.Location = new System.Drawing.Point(176, 23);
+            this.Second_MC.Location = new System.Drawing.Point(175, 23);
             this.Second_MC.Margin = new System.Windows.Forms.Padding(3, 5, 5, 5);
             this.Second_MC.MaxSelectionCount = 1;
             this.Second_MC.Name = "Second_MC";
@@ -112,7 +112,7 @@
             this.OK_B.Location = new System.Drawing.Point(5, 3);
             this.OK_B.Margin = new System.Windows.Forms.Padding(5, 3, 5, 5);
             this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(163, 27);
+            this.OK_B.Size = new System.Drawing.Size(162, 27);
             this.OK_B.TabIndex = 124;
             this.OK_B.Text = "ОК";
             this.OK_B.UseVisualStyleBackColor = false;
@@ -124,10 +124,10 @@
             this.Cancel_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cancel_B.Location = new System.Drawing.Point(178, 3);
+            this.Cancel_B.Location = new System.Drawing.Point(177, 3);
             this.Cancel_B.Margin = new System.Windows.Forms.Padding(5, 3, 5, 5);
             this.Cancel_B.Name = "Cancel_B";
-            this.Cancel_B.Size = new System.Drawing.Size(163, 27);
+            this.Cancel_B.Size = new System.Drawing.Size(162, 27);
             this.Cancel_B.TabIndex = 123;
             this.Cancel_B.Text = "Отмена";
             this.Cancel_B.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 187F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(346, 263);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(344, 263);
             this.tableLayoutPanel1.TabIndex = 125;
             // 
             // tableLayoutPanel3
@@ -167,7 +167,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(346, 187);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(344, 187);
             this.tableLayoutPanel3.TabIndex = 126;
             // 
             // tableLayoutPanel2
@@ -184,7 +184,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(346, 35);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(344, 35);
             this.tableLayoutPanel2.TabIndex = 126;
             // 
             // Report_F
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_B;
-            this.ClientSize = new System.Drawing.Size(346, 266);
+            this.ClientSize = new System.Drawing.Size(344, 266);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);

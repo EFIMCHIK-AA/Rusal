@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 187F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(569, 228);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(640, 228);
             this.tableLayoutPanel1.TabIndex = 347;
             // 
             // tableLayoutPanel3
@@ -90,7 +90,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(569, 187);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(640, 187);
             this.tableLayoutPanel3.TabIndex = 126;
             // 
             // label1
@@ -119,7 +119,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 72);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(296, 72);
             this.tableLayoutPanel4.TabIndex = 127;
             // 
             // Exit_B
@@ -132,7 +132,7 @@
             this.Exit_B.Location = new System.Drawing.Point(0, 42);
             this.Exit_B.Margin = new System.Windows.Forms.Padding(0, 3, 5, 5);
             this.Exit_B.Name = "Exit_B";
-            this.Exit_B.Size = new System.Drawing.Size(220, 28);
+            this.Exit_B.Size = new System.Drawing.Size(291, 28);
             this.Exit_B.TabIndex = 127;
             this.Exit_B.Text = "Завершить просмотр";
             this.Exit_B.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@
             this.Show_B.Location = new System.Drawing.Point(0, 6);
             this.Show_B.Margin = new System.Windows.Forms.Padding(0, 6, 5, 5);
             this.Show_B.Name = "Show_B";
-            this.Show_B.Size = new System.Drawing.Size(220, 28);
+            this.Show_B.Size = new System.Drawing.Size(291, 28);
             this.Show_B.TabIndex = 125;
             this.Show_B.Text = "Сформировать";
             this.Show_B.UseVisualStyleBackColor = false;
@@ -194,7 +194,7 @@
             this.label21.Location = new System.Drawing.Point(5, 5);
             this.label21.Margin = new System.Windows.Forms.Padding(5);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(559, 31);
+            this.label21.Size = new System.Drawing.Size(630, 31);
             this.label21.TabIndex = 42;
             this.label21.Text = "Параметры";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,7 +210,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(569, 41);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(640, 41);
             this.tableLayoutPanel2.TabIndex = 349;
             // 
             // label14
@@ -222,7 +222,7 @@
             this.label14.Location = new System.Drawing.Point(5, 5);
             this.label14.Margin = new System.Windows.Forms.Padding(5);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(559, 31);
+            this.label14.Size = new System.Drawing.Size(630, 31);
             this.label14.TabIndex = 344;
             this.label14.Text = "Статистика по дефектности в производстве";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -238,8 +238,8 @@
             this.Left_TLP.Name = "Left_TLP";
             this.Left_TLP.RowCount = 1;
             this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Left_TLP.Size = new System.Drawing.Size(569, 409);
+            this.Left_TLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 409F));
+            this.Left_TLP.Size = new System.Drawing.Size(640, 409);
             this.Left_TLP.TabIndex = 350;
             // 
             // Position_DGV
@@ -264,15 +264,17 @@
             this.Position_DGV.ReadOnly = true;
             this.Position_DGV.RowHeadersVisible = false;
             this.Position_DGV.RowHeadersWidth = 51;
-            this.Position_DGV.Size = new System.Drawing.Size(559, 399);
+            this.Position_DGV.Size = new System.Drawing.Size(630, 399);
             this.Position_DGV.TabIndex = 3;
+            this.Position_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Position_DGV_CellFormatting);
+            this.Position_DGV.SelectionChanged += new System.EventHandler(this.Position_DGV_SelectionChanged);
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.FillWeight = 108.8665F;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column1.FillWeight = 143.7038F;
             this.Column1.HeaderText = "Наименование";
             this.Column1.MinimumWidth = 100;
             this.Column1.Name = "Column1";
@@ -282,10 +284,9 @@
             // 
             // Column2
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column2.FillWeight = 105.6005F;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column2.FillWeight = 70.76323F;
             this.Column2.HeaderText = "Значение";
             this.Column2.MinimumWidth = 65;
             this.Column2.Name = "Column2";
@@ -298,7 +299,7 @@
             this.AcceptButton = this.Exit_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 678);
+            this.ClientSize = new System.Drawing.Size(640, 678);
             this.Controls.Add(this.Left_TLP);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);

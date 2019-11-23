@@ -84,7 +84,7 @@ namespace Rusal
 
             Position_DGV.DataSource = SystemArgs.View;
 
-            Position_DGV.Sort(Position_DGV.Columns[0], ListSortDirection.Ascending);
+            //Position_DGV.Sort(Position_DGV.Columns[0], ListSortDirection.Ascending);
 
             CountPos_TB.Text = SystemArgs.View.Count.ToString();
         }

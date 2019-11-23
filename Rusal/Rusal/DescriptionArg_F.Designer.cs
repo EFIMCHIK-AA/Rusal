@@ -51,7 +51,7 @@
             this.Value_TB.Location = new System.Drawing.Point(73, 3);
             this.Value_TB.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.Value_TB.Name = "Value_TB";
-            this.Value_TB.Size = new System.Drawing.Size(228, 20);
+            this.Value_TB.Size = new System.Drawing.Size(293, 20);
             this.Value_TB.TabIndex = 1;
             // 
             // label2
@@ -76,7 +76,7 @@
             this.Name_L.Location = new System.Drawing.Point(5, 5);
             this.Name_L.Margin = new System.Windows.Forms.Padding(5);
             this.Name_L.Name = "Name_L";
-            this.Name_L.Size = new System.Drawing.Size(296, 31);
+            this.Name_L.Size = new System.Drawing.Size(361, 31);
             this.Name_L.TabIndex = 43;
             this.Name_L.Text = "Добавление аргумента";
             this.Name_L.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,7 +97,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(306, 134);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(371, 134);
             this.tableLayoutPanel1.TabIndex = 44;
             // 
             // tableLayoutPanel4
@@ -113,7 +113,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(306, 41);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(371, 41);
             this.tableLayoutPanel4.TabIndex = 48;
             // 
             // OK_B
@@ -127,7 +127,7 @@
             this.OK_B.Location = new System.Drawing.Point(5, 5);
             this.OK_B.Margin = new System.Windows.Forms.Padding(5);
             this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(143, 31);
+            this.OK_B.Size = new System.Drawing.Size(175, 31);
             this.OK_B.TabIndex = 16;
             this.OK_B.Text = "ОК";
             this.OK_B.UseVisualStyleBackColor = false;
@@ -140,10 +140,10 @@
             this.Cancel_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cancel_B.Location = new System.Drawing.Point(158, 5);
+            this.Cancel_B.Location = new System.Drawing.Point(190, 5);
             this.Cancel_B.Margin = new System.Windows.Forms.Padding(5);
             this.Cancel_B.Name = "Cancel_B";
-            this.Cancel_B.Size = new System.Drawing.Size(143, 31);
+            this.Cancel_B.Size = new System.Drawing.Size(176, 31);
             this.Cancel_B.TabIndex = 15;
             this.Cancel_B.Text = "Отмена";
             this.Cancel_B.UseVisualStyleBackColor = false;
@@ -162,7 +162,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(306, 26);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(371, 26);
             this.tableLayoutPanel3.TabIndex = 46;
             // 
             // tableLayoutPanel2
@@ -179,7 +179,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(306, 26);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(371, 26);
             this.tableLayoutPanel2.TabIndex = 45;
             // 
             // label1
@@ -201,7 +201,7 @@
             this.ID_TB.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.ID_TB.Name = "ID_TB";
             this.ID_TB.ReadOnly = true;
-            this.ID_TB.Size = new System.Drawing.Size(228, 20);
+            this.ID_TB.Size = new System.Drawing.Size(293, 20);
             this.ID_TB.TabIndex = 18;
             this.ID_TB.TabStop = false;
             // 
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_B;
-            this.ClientSize = new System.Drawing.Size(306, 134);
+            this.ClientSize = new System.Drawing.Size(371, 134);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
