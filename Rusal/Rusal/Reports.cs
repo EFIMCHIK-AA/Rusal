@@ -55,9 +55,7 @@ namespace Rusal
                         var CountReport = PositionsReport.Sum(pos => pos.Count);
                         worksheet.Cells["A7"].Value = "-";
                         worksheet.Cells["A8"].Value = "-";
-                        worksheet.Cells["B7:D7"].Merge = true;
                         worksheet.Cells["B7"].Value = WeightReport.ToString() + " тонн(ы)";
-                        worksheet.Cells["B8:D8"].Merge = true;
                         worksheet.Cells["B8"].Value = CountReport.ToString() + " слитки(ов)";
                         //По видам деффектов
                         worksheet.Cells["A10:F10"].Merge = true;
@@ -70,9 +68,8 @@ namespace Rusal
                         {
                             DimensionEndRow = worksheet.Dimension.End.Row + 1;
                             worksheet.Cells["A" + DimensionEndRow.ToString()].Value = "-";
-                            worksheet.Cells["B" + DimensionEndRow.ToString() + ":C" + DimensionEndRow.ToString()].Merge = true;
                             worksheet.Cells["B" + DimensionEndRow.ToString()].Value = item.NameDefect;
-                            worksheet.Cells["D" + DimensionEndRow.ToString()].Value = item.Value;
+                            worksheet.Cells["C" + DimensionEndRow.ToString()].Value = item.Value;
                         }
                         //По бригадам (включая нулевые)
                         DimensionEndRow = worksheet.Dimension.End.Row + 2;
@@ -86,33 +83,26 @@ namespace Rusal
                         {
                             DimensionEndRow = worksheet.Dimension.End.Row + 1;
                             worksheet.Cells["A" + DimensionEndRow.ToString()].Value = "-";
-                            worksheet.Cells["B" + DimensionEndRow.ToString() + ":C" + DimensionEndRow.ToString()].Merge = true;
                             worksheet.Cells["B" + DimensionEndRow.ToString()].Value = item.NameBrigade;
-                            worksheet.Cells["D" + DimensionEndRow.ToString()].Value = item.Weight;
-                            worksheet.Cells["E" + DimensionEndRow.ToString()].Value = " тонн(ы)";
-                            worksheet.Cells["F" + DimensionEndRow.ToString()].Value = item.Melt;
-                            worksheet.Cells["G" + DimensionEndRow.ToString()].Value = " плавка(и)";
+                            worksheet.Cells["C" + DimensionEndRow.ToString()].Value = item.Weight;
+                            worksheet.Cells["D" + DimensionEndRow.ToString()].Value = " тонн(ы)";
+                            worksheet.Cells["E" + DimensionEndRow.ToString()].Value = item.Melt;
+                            worksheet.Cells["F" + DimensionEndRow.ToString()].Value = " плавка(и)";
                         }
-                        worksheet.Cells["A6:G" + DimensionEndRow + 1.ToString()].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        worksheet.Cells["A6:F" + DimensionEndRow + 1.ToString()].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                         worksheet.Cells["B7:B8"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
                         worksheet.Cells["A6:G" + DimensionEndRow + 1.ToString()].AutoFitColumns();
-                        worksheet.Column(5).Width = 15;
-                        worksheet.Column(7).Width = 15;
                         //Добавление диаграммы
                         var chart = (ExcelBarChart)worksheet.Drawings.AddChart("Отчет по параметрам", eChartType.ColumnClustered);
                         chart.Legend.Position = eLegendPosition.Bottom;
                         chart.SetSize(600, 300);
                         chart.SetPosition(4, 0, 10, 0);
                         chart.Title.Text = "Отчет по параметрам";
-                        chart.Series.Add(ExcelRange.GetAddress(ForDiag, 4, DimensionEndRow, 4), ExcelRange.GetAddress(ForDiag, 2, DimensionEndRow, 2));
+                        chart.Series.Add(ExcelRange.GetAddress(ForDiag, 3, DimensionEndRow, 3), ExcelRange.GetAddress(ForDiag, 2, DimensionEndRow, 2));
                         chart.Series[0].Header = "тонн(ы)";
                         var chartType2 = chart.PlotArea.ChartTypes.Add(eChartType.LineMarkers);
-                        var serie2 = chartType2.Series.Add(ExcelRange.GetAddress(ForDiag, 6, DimensionEndRow, 6), ExcelRange.GetAddress(ForDiag, 2, DimensionEndRow, 2));
+                        var serie2 = chartType2.Series.Add(ExcelRange.GetAddress(ForDiag, 5, DimensionEndRow, 5), ExcelRange.GetAddress(ForDiag, 2, DimensionEndRow, 2));
                         serie2.Header = "плавка(и)";
-                        //Изменение шрифта во всем документе
-                        var allCells = worksheet.Cells[1, 1, worksheet.Dimension.End.Row, worksheet.Dimension.End.Column];
-                        var cellFont = allCells.Style.Font;
-                        cellFont.SetFromFont(new Font("Times New Roman", 14));
                         //Сохранение
                         try
                         {

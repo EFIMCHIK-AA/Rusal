@@ -598,10 +598,6 @@ namespace Rusal
                             chartTwo.YAxis.Title.Font.Size = 14;
                             chartTwo.YAxis.Title.Text = TitleY;
 
-                            var allCells = worksheet.Cells[1, 1, worksheet.Dimension.End.Row, worksheet.Dimension.End.Column];
-                            var cellFont = allCells.Style.Font;
-                            cellFont.SetFromFont(new Font("Times New Roman", 14));
-
                             FileInfo fi = new FileInfo(sfd.FileName);
                             excelPackage.SaveAs(fi);
                         }
@@ -656,25 +652,21 @@ namespace Rusal
                             worksheet.Cells["G3"].Value = "за период с " + datestart.ToShortDateString() + " по " + datefinish.ToShortDateString();
                             worksheet.Cells["G3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                            worksheet.Cells["B7:C7"].Merge = true;
-                            worksheet.Cells["D7:E7"].Merge = true;
                             worksheet.Cells["B7"].Value = TitleX;
-                            worksheet.Cells["D7"].Value = TitleY;
+                            worksheet.Cells["C7"].Value = TitleY;
 
                             int DimensionEndRow;
 
                             foreach (var item in dataBriefExports)
                             {
                                 DimensionEndRow = worksheet.Dimension.End.Row + 1;
-                                worksheet.Cells["B" + DimensionEndRow.ToString() + ":C" + DimensionEndRow.ToString()].Merge = true;
-                                worksheet.Cells["D" + DimensionEndRow.ToString() + ":E" + DimensionEndRow.ToString()].Merge = true;
                                 worksheet.Cells["B" + DimensionEndRow.ToString()].Value = item.Name;
-                                worksheet.Cells["D" + DimensionEndRow.ToString()].Value = item.Value;
+                                worksheet.Cells["C" + DimensionEndRow.ToString()].Value = item.Value;
                             }
 
                             DimensionEndRow = worksheet.Dimension.End.Row;
 
-                            var modelTable = worksheet.Cells["B7:E" + DimensionEndRow.ToString()];
+                            var modelTable = worksheet.Cells["B7:C" + DimensionEndRow.ToString()];
                             modelTable.Style.Border.Top.Style = ExcelBorderStyle.Thin;
                             modelTable.Style.Border.Left.Style = ExcelBorderStyle.Thin;
                             modelTable.Style.Border.Right.Style = ExcelBorderStyle.Thin;
@@ -685,16 +677,12 @@ namespace Rusal
                             chart.SetSize(600, 600);
                             chart.SetPosition(6, 0, 10, 0);
                             chart.Title.Text = Title;
-                            chart.Series.Add(ExcelRange.GetAddress(8, 4, DimensionEndRow, 4), ExcelRange.GetAddress(8, 2, DimensionEndRow, 2));
+                            chart.Series.Add(ExcelRange.GetAddress(8, 3, DimensionEndRow, 3), ExcelRange.GetAddress(8, 2, DimensionEndRow, 2));
                             chart.Legend.Remove();
                             chart.XAxis.Title.Text = TitleX;
                             chart.YAxis.Title.Font.Size = 14;
                             chart.XAxis.Title.Font.Size = 14;
                             chart.YAxis.Title.Text = TitleY;
-
-                            var allCells = worksheet.Cells[1, 1, worksheet.Dimension.End.Row, worksheet.Dimension.End.Column];
-                            var cellFont = allCells.Style.Font;
-                            cellFont.SetFromFont(new Font("Times New Roman", 14));
 
                             FileInfo fi = new FileInfo(sfd.FileName);
                             excelPackage.SaveAs(fi);
