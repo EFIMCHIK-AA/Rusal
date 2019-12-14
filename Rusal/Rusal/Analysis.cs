@@ -1,4 +1,5 @@
 ﻿using System;
+using Equin.ApplicationFramework;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -203,17 +204,6 @@ namespace Rusal
             SystemArgs.PrintLog("Создание диаграммы краткого отчета завершено успешно");
         }
 
-        private static void SetBriefDataGridView(DataGridView DGV)
-        {
-            DGV.DataSource = dataBriefExports;
-
-            DGV.Columns[0].HeaderText = TitleX;
-            DGV.Columns[1].HeaderText = TitleY;
-
-            DGV.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            SystemArgs.PrintLog("Заполнение таблицы краткого отчета завершено успешно");
-        }
-
         private static void SetFullDataGridView(DataGridView DGV)
         {
             DGV.DataSource = dataFullExports;
@@ -228,7 +218,7 @@ namespace Rusal
             SystemArgs.PrintLog("Заполнение таблицы расширенного отчета завершено успешно");
         }
 
-        public static void BriefDiametrWeight(PlotView pv,DateTime datestart, DateTime datefinish,DataGridView DGV)
+        public static List<WrapBriefData> BriefDiametrWeight(PlotView pv,DateTime datestart, DateTime datefinish)
         {
             dataBriefExports = new List<WrapBriefData>();
 
@@ -248,12 +238,11 @@ namespace Rusal
 
             SetParamBriefDiagramm(pv);
 
-            SetBriefDataGridView(DGV);
             SystemArgs.PrintLog("Краткий анализ диаметр вес выполнен");
-
+            return dataBriefExports;
         }
 
-        public static void BriefBrigadeWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
+        public static List<WrapBriefData> BriefBrigadeWeight(PlotView pv, DateTime datestart, DateTime datefinish)
         {
             dataBriefExports = new List<WrapBriefData>();
 
@@ -273,11 +262,11 @@ namespace Rusal
 
             SetParamBriefDiagramm(pv);
 
-            SetBriefDataGridView(DGV);
             SystemArgs.PrintLog("Краткий анализ бригада вес выполнен");
+            return dataBriefExports;
         }
 
-        public static void BriefNumTSWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
+        public static List<WrapBriefData> BriefNumTSWeight(PlotView pv, DateTime datestart, DateTime datefinish)
         {
             dataBriefExports = new List<WrapBriefData>();
 
@@ -297,10 +286,10 @@ namespace Rusal
 
             SetParamBriefDiagramm(pv);
 
-            SetBriefDataGridView(DGV);
             SystemArgs.PrintLog("Краткий анализ номер ТС вес выполнен");
+            return dataBriefExports;
         }
-        public static void BriefDescriptionWeight(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
+        public static List<WrapBriefData> BriefDescriptionWeight(PlotView pv, DateTime datestart, DateTime datefinish)
         {
             dataBriefExports = new List<WrapBriefData>();
 
@@ -320,10 +309,10 @@ namespace Rusal
 
             SetParamBriefDiagramm(pv);
 
-            SetBriefDataGridView(DGV);
             SystemArgs.PrintLog("Краткий анализ описание вес выполнен");
+            return dataBriefExports;
         }
-        public static void BriefBrigadeCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
+        public static List<WrapBriefData> BriefBrigadeCount(PlotView pv, DateTime datestart, DateTime datefinish)
         {
             dataBriefExports = new List<WrapBriefData>();
 
@@ -343,10 +332,10 @@ namespace Rusal
 
             SetParamBriefDiagramm(pv);
 
-            SetBriefDataGridView(DGV);
             SystemArgs.PrintLog("Краткий анализ бригада количество выполнен");
+            return dataBriefExports;
         }
-        public static void BriefNumTSCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
+        public static List<WrapBriefData> BriefNumTSCount(PlotView pv, DateTime datestart, DateTime datefinish)
         {
             dataBriefExports = new List<WrapBriefData>();
 
@@ -366,10 +355,10 @@ namespace Rusal
 
             SetParamBriefDiagramm(pv);
 
-            SetBriefDataGridView(DGV);
             SystemArgs.PrintLog("Краткий анализ номер ТС количество выполнен");
+            return dataBriefExports;
         }
-        public static void BriefDescriptionCount(PlotView pv, DateTime datestart, DateTime datefinish, DataGridView DGV)
+        public static List<WrapBriefData> BriefDescriptionCount(PlotView pv, DateTime datestart, DateTime datefinish)
         {
             dataBriefExports = new List<WrapBriefData>();
 
@@ -389,8 +378,8 @@ namespace Rusal
 
             SetParamBriefDiagramm(pv);
 
-            SetBriefDataGridView(DGV);
             SystemArgs.PrintLog("Краткий анализ описание количество выполнен");
+            return dataBriefExports;
         }
         private static IEnumerable<IGrouping<DateTime,Position>> FullDataSelect(DateTime datestart, DateTime datefinish)
         {
@@ -616,9 +605,9 @@ namespace Rusal
                 MessageBox.Show("Для экспорта необходимо сформировать анализ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public static void ExcelBriefExport(DateTime datestart, DateTime datefinish)
+        public static void ExcelBriefExport(DateTime datestart, DateTime datefinish,BindingListView<WrapBriefData> Data)
         {
-            if (dataBriefExports != null)
+            if (Data != null)
             {
                 SystemArgs.PrintLog("Началось формирование выгрузки краткого анализа");
                 SaveFileDialog sfd = new SaveFileDialog()
@@ -657,7 +646,7 @@ namespace Rusal
 
                             int DimensionEndRow;
 
-                            foreach (var item in dataBriefExports)
+                            foreach(var item in Data)
                             {
                                 DimensionEndRow = worksheet.Dimension.End.Row + 1;
                                 worksheet.Cells["B" + DimensionEndRow.ToString()].Value = item.Name;

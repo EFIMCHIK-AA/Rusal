@@ -84,6 +84,8 @@
             this.Left_TLP = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.NumMelt_TB = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Diameter_TB = new System.Windows.Forms.TextBox();
@@ -725,6 +727,8 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.NumMelt_TB, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.label17, 0, 5);
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.Diameter_TB, 3, 4);
@@ -760,6 +764,32 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.Size = new System.Drawing.Size(677, 159);
             this.tableLayoutPanel5.TabIndex = 278;
+            // 
+            // NumMelt_TB
+            // 
+            this.NumMelt_TB.BackColor = System.Drawing.Color.White;
+            this.NumMelt_TB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NumMelt_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NumMelt_TB.Location = new System.Drawing.Point(113, 138);
+            this.NumMelt_TB.Name = "NumMelt_TB";
+            this.NumMelt_TB.ReadOnly = true;
+            this.NumMelt_TB.Size = new System.Drawing.Size(232, 21);
+            this.NumMelt_TB.TabIndex = 280;
+            this.NumMelt_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(3, 135);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 27);
+            this.label17.TabIndex = 281;
+            this.label17.Text = "Номер плавки";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -964,9 +994,9 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(3, 135);
+            this.label16.Location = new System.Drawing.Point(351, 135);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 27);
+            this.label16.Size = new System.Drawing.Size(84, 27);
             this.label16.TabIndex = 266;
             this.label16.Text = "Адрес слитка";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1014,10 +1044,10 @@
             this.Address_TB.BackColor = System.Drawing.Color.White;
             this.Address_TB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Address_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Address_TB.Location = new System.Drawing.Point(113, 138);
+            this.Address_TB.Location = new System.Drawing.Point(441, 138);
             this.Address_TB.Name = "Address_TB";
             this.Address_TB.ReadOnly = true;
-            this.Address_TB.Size = new System.Drawing.Size(232, 21);
+            this.Address_TB.Size = new System.Drawing.Size(233, 21);
             this.Address_TB.TabIndex = 9;
             this.Address_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1359,6 +1389,8 @@
         private System.Windows.Forms.ToolStripMenuItem статистикаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem местоНаСлиткеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem местоВПроизводствеToolStripMenuItem;
+        public System.Windows.Forms.TextBox NumMelt_TB;
+        public System.Windows.Forms.Label label17;
     }
 }
 

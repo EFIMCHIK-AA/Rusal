@@ -364,7 +364,8 @@ namespace Rusal
             Date_TB.Text = Temp.DateFormation.ToShortDateString();
             NumBrigade_TB.Text = Temp.NumBrigade.Name;
             NumSmeny_TB.Text = Temp.NumSmeny.Name;
-            Melt_TB.Text = Temp.NumMelt;
+            Melt_TB.Text = Temp.TypeAlloy.Name;
+            NumMelt_TB.Text = Temp.NumMelt;
             NumTC_TB.Text = Temp.NumTS.Name;
             Address_TB.Text = Temp.Address;
             Description_TB.Text = Temp.Description.Name;

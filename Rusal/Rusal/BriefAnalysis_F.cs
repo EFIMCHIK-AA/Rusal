@@ -1,4 +1,5 @@
 ﻿using System;
+using Equin.ApplicationFramework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,12 +25,14 @@ namespace Rusal
         private void Export_B_Click(object sender, EventArgs e)
         {
             SystemArgs.PrintLog("Запуск процедуры экспорта данных анализа");
-            Analysis.ExcelBriefExport(FirstDate, SecondDate);
+            Analysis.ExcelBriefExport(FirstDate, SecondDate,Temp);
             SystemArgs.PrintLog("Процедура экспорта данных анализа завершена");
         }
 
         DateTime FirstDate;//Начало периода
         DateTime SecondDate; //Конец периода
+        BindingListView<WrapBriefData> Temp; //Обертка для выгрузки
+        List<WrapBriefData> Data; //Результаты выгрузки
 
         String[] ListParams = { "Вес | Бригада", "Вес | Диаметр", "Вес | Описание", "Вес | Номер ТС", "Количество | Бригада", "Количество | Номер ТС", "Количество | Описание"};
 
@@ -41,34 +44,57 @@ namespace Rusal
             switch (Key)
             {
                 case 0: //Вес | Бригада
-                    Analysis.BriefBrigadeWeight(pv, FirstDate, SecondDate, DGV_Brief);
+                    Data = Analysis.BriefBrigadeWeight(pv, FirstDate, SecondDate);
+                    DGV_Brief.Columns[0].HeaderText = "Бригада";
+                    DGV_Brief.Columns[1].HeaderText = "Брак, тонн";
+                    DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     SystemArgs.PrintLog("Выполнение анализа по параметру: Вес | Бригада");
                     break;
                 case 1: //Вес | Диаметр
-                    Analysis.BriefDiametrWeight(pv, FirstDate, SecondDate, DGV_Brief);
+                    Data = Analysis.BriefDiametrWeight(pv, FirstDate, SecondDate);
+                    DGV_Brief.Columns[0].HeaderText = "Диаметр";
+                    DGV_Brief.Columns[1].HeaderText = "Брак, тонн";
+                    DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     SystemArgs.PrintLog("Выполнение анализа по параметру: Вес | Диаметр");
                     break;
                 case 2://Вес | Описание
-                    Analysis.BriefDescriptionWeight(pv, FirstDate, SecondDate, DGV_Brief);
+                    Data = Analysis.BriefDescriptionWeight(pv, FirstDate, SecondDate);
+                    DGV_Brief.Columns[0].HeaderText = "Дефект";
+                    DGV_Brief.Columns[1].HeaderText = "Брак, тонн";
+                    DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     SystemArgs.PrintLog("Выполнение анализа по параметру: Вес | Описание");
                     break;
                 case 3://Вес | Номер ТС
-                    Analysis.BriefNumTSWeight(pv, FirstDate, SecondDate, DGV_Brief);
+                    Data = Analysis.BriefNumTSWeight(pv, FirstDate, SecondDate);
+                    DGV_Brief.Columns[0].HeaderText = "Номер ТС";
+                    DGV_Brief.Columns[1].HeaderText = "Брак, тонн";
+                    DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     SystemArgs.PrintLog("Выполнение анализа по параметру: Вес | Номер ТС");
                     break;
                 case 4://Количество | Бригада
-                    Analysis.BriefBrigadeCount(pv, FirstDate, SecondDate, DGV_Brief);
+                    Data = Analysis.BriefBrigadeCount(pv, FirstDate, SecondDate);
+                    DGV_Brief.Columns[0].HeaderText = "Бригада";
+                    DGV_Brief.Columns[1].HeaderText = "Количество";
+                    DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     SystemArgs.PrintLog("Выполнение анализа по параметру: Количество | Бригада");
                     break;
                 case 5://Количество | Номер ТС
-                    Analysis.BriefNumTSCount(pv, FirstDate, SecondDate, DGV_Brief);
+                    Data = Analysis.BriefNumTSCount(pv, FirstDate, SecondDate);
+                    DGV_Brief.Columns[0].HeaderText = "Номер ТС";
+                    DGV_Brief.Columns[1].HeaderText = "Количество";
+                    DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     SystemArgs.PrintLog("Выполнение анализа по параметру: Количество | Номер ТС");
                     break;
                 case 6://Количество | Описание
-                    Analysis.BriefDescriptionCount(pv, FirstDate, SecondDate, DGV_Brief);
+                    Data = Analysis.BriefDescriptionCount(pv, FirstDate, SecondDate);
+                    DGV_Brief.Columns[0].HeaderText = "Дефект";
+                    DGV_Brief.Columns[1].HeaderText = "Количество";
+                    DGV_Brief.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     SystemArgs.PrintLog("Выполнение анализа по параметру: Количество | Описание");
                     break;
             }
+            Temp = new BindingListView<WrapBriefData>(Data);
+            DGV_Brief.DataSource = Temp;
         }
 
         private void BriefAnalysis_F_Load(object sender, EventArgs e)
