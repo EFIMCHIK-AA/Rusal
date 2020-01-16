@@ -140,6 +140,37 @@ namespace Rusal
             }
         }
 
+        public static bool CheckConnectDataBase(String ConnectString)
+        {
+            try
+            {
+                using (var Connect = new NpgsqlConnection(ConnectString))
+                {
+                    Connect.Open();
+
+                    using (var Command = new NpgsqlCommand($"SELECT 1", Connect))
+                    {
+                        using (var Reader = Command.ExecuteReader())
+                        {
+                            while (Reader.Read())
+                            {
+                                Connect.Close();
+                                return true;
+                            }
+                        }
+                    }
+
+                    Connect.Close();
+                }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public static void  GetArguments()
         {
             if (!SystemArgs.StatusConnect)

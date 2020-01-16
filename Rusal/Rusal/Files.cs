@@ -14,6 +14,11 @@ namespace Rusal
         public static String ParamDBPath = $@"System\Connect\Param.conf"; //Место аргументов БД
         public static String BackupPath = $@"System\Backup\Backup.conf"; //Место хранения файла бэкапа
 
+        public static void GetConnString()
+        {
+            SystemArgs.ConnectString = $@"Server = {SystemArgs.IPDB}; Port = {SystemArgs.PortDB}; User Id = {SystemArgs.OwnerDB}; Password = {SystemArgs.PasswordDB}; Database = {SystemArgs.NameDB};";
+        }
+
         public static void GetParamDB()
         {
             if (File.Exists(ParamDBPath))
@@ -26,7 +31,7 @@ namespace Rusal
                     SystemArgs.PortDB = sr.ReadLine();
                     SystemArgs.PasswordDB = Encryption.DecryptRSA(sr.ReadLine());
 
-                    SystemArgs.ConnectString = $@"Server = {SystemArgs.IPDB}; Port = {SystemArgs.PortDB}; User Id = {SystemArgs.OwnerDB}; Password = {SystemArgs.PasswordDB}; Database = {SystemArgs.NameDB};";
+                    GetConnString();
 
                     SystemArgs.PrintLog("Процедура проверки целостности файлов успешно завершена");
                 }

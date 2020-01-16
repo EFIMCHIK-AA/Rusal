@@ -82,7 +82,17 @@ namespace Rusal
                 SystemArgs.PortDB = Port_TB.Text.Trim();
                 SystemArgs.PasswordDB = Password_TB.Text.Trim();
 
-                Files.SetParamDB();
+                String TempConn = $@"Server = {SystemArgs.IPDB}; Port = {SystemArgs.PortDB}; User Id = {SystemArgs.OwnerDB}; Password = {SystemArgs.PasswordDB}; Database = {SystemArgs.NameDB};";
+
+                if (Operations.CheckConnectDataBase(TempConn))
+                {
+                    Files.SetParamDB();
+                }
+                else
+                {
+                    Error = "Ошибка при проверке подключения к базе данных. Данные не будут записаны";
+                    throw new Exception(Error);
+                }
 
                 SystemArgs.PrintLog("Параметры подключения к базе данных успешно обновлены");
                 SystemArgs.PrintLog($"Процедуры модификации параметров БД успешно завершена");

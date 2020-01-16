@@ -71,6 +71,8 @@ namespace Rusal
         }
         public static void Production(DateTime start,DateTime finish,DataGridView DGV)
         {
+            DGV.RowCount = 0;
+
             var Group = from gp in SystemArgs.Positions
                         where (gp.DateFormation >= start) && (gp.DateFormation <= finish)
                         group gp by gp.DefectLocProduction.Name into g
